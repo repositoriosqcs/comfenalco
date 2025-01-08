@@ -1,0 +1,188 @@
+/* Ajustar el contenedor principal para que sea más ancho y responda mejor */
+.md-content {
+    max-width: 1200px;
+    /* Aumenta el ancho del contenedor principal */
+    margin: auto;
+    /* Centrar el contenido */
+}
+
+/* Cambiar el color de la barra de navegación superior */
+.md-header {
+    background-color: #F1A700;
+    /* Color personalizado para la barra superior */
+}
+
+/* Cambiar el color de los elementos de la barra superior, como el título del sitio */
+.md-header .md-header-nav__title,
+.md-header .md-header-nav__button {
+    color: #ffffff;
+    /* Cambiar el color del texto a blanco para mejor contraste */
+}
+
+/* Cambiar el color del icono del menú en la vista móvil */
+.md-header .md-icon {
+    color: #ffffff;
+    /* Cambiar el color del icono a blanco */
+}
+
+
+/* Estilo general de la tabla */
+table {
+    width: 100%;
+    /* Ocupa el 100% del ancho disponible */
+    border-collapse: collapse;
+    /* Eliminar el espaciado entre las celdas */
+    margin: 20px 0;
+    /* Añadir margen entre tablas y otros elementos */
+    font-size: 0.9em;
+    /* Fuente ligeramente más pequeña para simular una cuadrícula */
+    text-align: left;
+    table-layout: fixed;
+    /* Asegurar que el ancho de la tabla sea fijo */
+    border: 1px solid #dcdcdc;
+    /* Borde exterior de la tabla */
+    background-color: #fdfdfd;
+    /* Fondo ligeramente gris para simular el aspecto de MySQL Workbench */
+}
+
+/* Encabezados de tabla */
+th {
+    background-color: #f0f0f0;
+    /* Fondo neutro para los encabezados */
+    color: #333;
+    /* Texto oscuro */
+    padding: 8px 10px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Alinear al centro */
+    font-weight: normal;
+    /* No usar negrita para los encabezados para un aspecto limpio */
+    border: 1px solid #dcdcdc;
+    /* Bordes alrededor de los encabezados */
+    font-family: Arial, sans-serif;
+    /* Fuente sencilla similar a las bases de datos */
+}
+
+/* Estilo para las celdas de la tabla */
+td {
+    padding: 8px 10px;
+    /* Añadir espacio entre el contenido y el borde */
+    border: 1px solid #dcdcdc;
+    /* Añadir borde a las celdas para simular una cuadrícula */
+    text-align: left;
+    /* Alinear el contenido de las celdas a la izquierda */
+    font-family: Consolas, "Courier New", monospace;
+    /* Fuente monoespaciada para un estilo de base de datos */
+    color: #333;
+    /* Color oscuro para el texto */
+    background-color: #ffffff;
+    /* Fondo blanco para las celdas */
+}
+
+/* Alternar color de las filas */
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+    /* Fondo ligeramente gris para las filas pares */
+}
+
+/* Fondo de las filas al pasar el ratón */
+tr:hover {
+    background-color: #e8f4fc;
+    /* Color azul claro al pasar el ratón para destacar la fila */
+}
+
+/* Estilo de tablas dentro del contenido Markdown */
+.md-typeset table {
+    display: block;
+    /* Asegura que la tabla se comporte como un bloque para controlar el desbordamiento */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    overflow-x: auto;
+    /* Añadir scroll horizontal si es necesario */
+    -webkit-overflow-scrolling: touch;
+    /* Mejora la experiencia de desplazamiento en dispositivos táctiles */
+    white-space: nowrap;
+    /* Evita que las celdas de la tabla se ajusten en múltiples líneas */
+}
+
+/* Estilo específico para hacer más visible la barra de desplazamiento horizontal */
+.md-typeset table::-webkit-scrollbar {
+    height: 10px;
+}
+
+.md-typeset table::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.md-typeset table::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Ajuste del contenedor del contenido para tablas muy anchas */
+.md-typeset {
+    overflow-x: auto;
+    /* Añadir scroll horizontal si es necesario para el contenido completo */
+}
+
+/* Mejorar la presentación general del contenido */
+p,
+li {
+    line-height: 1.6;
+    /* Incrementar el espaciado entre líneas para mejorar la legibilidad */
+    font-size: 1.1em;
+    /* Incrementar ligeramente el tamaño del texto */
+}
+
+/* Ajustar el contenedor de los diagramas para asegurar un buen ajuste en pantallas pequeñas */
+.mermaid {
+    max-width: 100%;
+    margin: 20px auto;
+    overflow-x: auto;
+    /* Permitir scroll horizontal si el diagrama es demasiado ancho */
+}
+
+/* Cambiar el fondo y el espaciado de los diagramas para destacarlos */
+.mermaid svg {
+    background-color: #ffffff;
+    /* Fondo blanco para una apariencia profesional */
+    padding: 20px;
+    /* Espaciado interno para separar el contenido del borde */
+    border-radius: 8px;
+    /* Bordes redondeados para una apariencia más elegante */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para resaltar el diagrama */
+}
+
+/* Aumentar el contraste del texto en los nodos */
+.mermaid .label,
+.mermaid .edgeLabel {
+    fill: #333333;
+    /* Color del texto para mejorar la legibilidad */
+    font-weight: bold;
+    /* Negrita para destacar el contenido */
+    font-family: Arial, sans-serif;
+    /* Cambiar la fuente a Arial */
+}
+
+/* Estilo para bordes y conectores */
+.mermaid .edgePath path {
+    stroke-width: 2px;
+    /* Ajustar grosor de las líneas para darles más presencia */
+    stroke: #b1740f;
+    /* Color de las líneas de conexión */
+}
+
+/* Estilo específico para hacer más visible la barra de desplazamiento horizontal */
+.mermaid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.mermaid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.mermaid::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
