@@ -41,7 +41,7 @@
 /* Estilos para Títulos de Secciones en color amarillo y en negrita */
 .section-title,
 h1, h2, h3 {
-    color: rgb(241, 167, 0); /* Amarillo QCS */
+    color: rgb(35, 171, 247); /* Amarillo QCS */
     font-weight: bold;
     text-transform: uppercase; /* Mayúsculas */
 }
@@ -50,7 +50,7 @@ h1, h2, h3 {
 h1.section-title,
 h2.section-title,
 h3.section-title {
-    color: rgb(241, 167, 0); /* Amarillo QCS */
+    color: rgb(35, 171, 247); /* Amarillo QCS */
     font-weight: bold;
 }
 
@@ -91,7 +91,7 @@ h3.section-title {
     top: 10px;
     left: 10px;
     z-index: 1000;
-    background-color: #d89717;
+    background-color: 23abf7;
     color: #ffffff;
     padding: 10px;
     border-radius: 4px;
@@ -103,7 +103,7 @@ h3.section-title {
 /* --- Ajustes de Color de la Barra Superior --- */
 
 .md-header {
-    background-color: #F1A700;
+    background-color: 23abf7;
 }
 
 .md-header .md-header-nav__title,
