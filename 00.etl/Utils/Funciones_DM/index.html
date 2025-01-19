@@ -1,0 +1,3146 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Funciones/">
+      
+      
+        <link rel="next" href="../c4c_from_sharepoint/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Funciones_DM.py - COMFENALCO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="23abf7" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuracion-e-importacion-de-librerias" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="COMFENALCO" class="md-header__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            COMFENALCO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Funciones_DM.py
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="COMFENALCO" class="md-nav__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    COMFENALCO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00. INICIO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            00. INICIO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INTRODUCCIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INSTALACIÓN Y CONFIGURACIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Conexiones_BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CONEXIÓN A BASE DE DATOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../buenaspracticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BUENAS PRÁCTICAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. SCRIPTS SQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. SCRIPTS SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/00.Inicio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/00.Eliminar_todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. Eliminar Todo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/01.Transversal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. Transversal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/02.Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. Cedesarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/03.Proteccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. Proteccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/04.Colegio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. Colegio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. ESTRUCTURA SHAREPOINT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. ESTRUCTURA SHAREPOINT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04.sharepoint/estructura_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura carpeta Sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04.sharepoint/estructura_archivos_actualizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura Archivos Actualizacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. BI COMFENALCO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. BI COMFENALCO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/00.params/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/00-SCRAPING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. WEB SCRAPING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/01.TRANSVERSAL_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. TRANSVERSAL_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/02-TRANSVERSAL_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TRANSVERSAL_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/03-COLEGIO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. COLEGIO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/04-COLEGIO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. COLEGIO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/05-CEDESARROLLO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05. CEDESARROLLO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/06-CEDESARROLLO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. CEDESARROLLO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/07-PROTECCION_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07. PROTECCION_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/08-PROTECCION_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08. PROTECCION_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/09-ETLS_CUBO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09. ETLS_CUBO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04. COMFENALCO EDUCACION
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            04. COMFENALCO EDUCACION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 SCRIPTS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 SCRIPTS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. Q10
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. Q10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_1" id="__nav_5_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.1. Educación Tecnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            0.1. Educación Tecnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/01.Docentes_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Cedesarrollo.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/02.Disenio_curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Diseño Curricular.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/03.Listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/04.Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Ingresos.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/05.Historico_notas_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Histórico notas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/06.Egresados_graduados_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/07.Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.7. Desertores.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_2" id="__nav_5_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.2. Educación Continua
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            0.2. Educación Continua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/01.Docentes_desarrollo_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Desarrollo Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/02.Preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Preinscritos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/03.Listado_matriculas_emp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/04.Consolidado_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/05.Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/06.Egresados_graduados_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados Graduados Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_3" id="__nav_5_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sharepoint
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sharepoint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_01_procesar_docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_01 procesar_docentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_02_procesar_Dise%C3%B1o_Curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_02 procesar_Diseño_Curricular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_03_procesar_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_03 procesar_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_04_procesar_cede_Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_04 procesar_Ingresos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_05_cede_Historico_Notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_05 cede_Historico_Notas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_06_cede_Egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_06 cede_Egresados_Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_07_Cancelados_Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_07 Cancelados Desertores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_01_Docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_01 Docentes Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_02_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_02 Listado Matrículas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_03_preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_03 Preinscritos Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_04_egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_04 Egresados Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_05_Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_05 Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_06_consolidado_Inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_06 Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_3" id="__nav_5_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. C4C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. C4C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_02.C4C/01.C4C_webscraping_v4_Actualizable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Webscraping Actualizable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_02.C4C/02.C4C_webscraping_v4_Historico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Webscraping Histórico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Funciones_DM.py
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Funciones_DM.py
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-e-importacion-de-librerias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración e importación de Librerías
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración e importación de Librerías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#librerias-estandar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Librerías estándar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#librerias-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Librerías externas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_file_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_file_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list_files_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      list_files_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-process_files_from_folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función process_files_from_folder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      normalize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-presave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función PreSave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-sorted_answer-y-fix_table_answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones Sorted_Answer y Fix_Table_Answers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-fix_id_type_caract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función Fix_Id_Type_Caract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-fix_questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función Fix_Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-charge_excel_fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función Charge_Excel_Fixed
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c4c_from_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c4c_from_sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dim_Estudiantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_Estudiantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dim_periodo_academico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_periodo_academico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fact_facturacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_facturacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fact_graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fact_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05. CUBO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            05. CUBO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.Cubo/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.Cubo/01.Origen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. ORIGEN Y MEDIDAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.Cubo/02.Tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TABLAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06. POWER BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            06. POWER BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05.Power_BI/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05.Power_BI/01.Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. DASHBOARD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-e-importacion-de-librerias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración e importación de Librerías
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración e importación de Librerías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#librerias-estandar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Librerías estándar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#librerias-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Librerías externas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_file_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_file_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list_files_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      list_files_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-process_files_from_folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función process_files_from_folder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      normalize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-presave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función PreSave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-sorted_answer-y-fix_table_answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones Sorted_Answer y Fix_Table_Answers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-fix_id_type_caract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función Fix_Id_Type_Caract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-fix_questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función Fix_Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-charge_excel_fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función Charge_Excel_Fixed
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Funciones_DM.py</h1>
+
+<!-- markdownlint-disable -->
+<p>Este archivo contiene una serie de funciones automatizadas desarrolladas para gestionar tareas comunes en la manipulación de datos y la interacción con sistemas externos. Las funciones descritas están diseñadas principalmente para automatizar procesos en plataformas como SharePoint y sistemas como C4C, así como para facilitar el procesamiento de datos utilizando herramientas como pandas y xlwings.</p>
+<p>Las funciones cubren una variedad de tareas, incluyendo:</p>
+<ol>
+<li>
+<p><strong>Autenticación y acceso a plataformas externas:</strong></p>
+<ul>
+<li><code>get_file_from_sharepoint</code>: Automatiza la descarga de archivos desde SharePoint.</li>
+<li><code>list_files_from_sharepoint</code>: Lista archivos en una carpeta de SharePoint.</li>
+<li><code>process_files_from_folder</code>: Procesa archivos en una carpeta de SharePoint.</li>
+</ul>
+</li>
+<li>
+<p><strong>Interacción con menús desplegables y formularios web:</strong></p>
+<ul>
+<li>No se incluyen funciones específicas para esta tarea en el código proporcionado.</li>
+</ul>
+</li>
+<li>
+<p><strong>Descarga y procesamiento de datos:</strong></p>
+<ul>
+<li><code>get_file_from_sharepoint</code>: Descarga archivos desde SharePoint.</li>
+<li><code>process_files_from_folder</code>: Procesa y lee archivos Excel sin descargarlos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Manejo de archivos y directorios:</strong></p>
+<ul>
+<li><code>Charge_Excel_Fixed</code>: Carga y procesa archivos Excel, incluso si están comprimidos en un archivo ZIP.</li>
+<li><code>_Charge_Excel_Fixed</code>: Carga archivos Excel utilizando xlwings.</li>
+</ul>
+</li>
+<li>
+<p><strong>Limpieza y normalización de datos:</strong></p>
+<ul>
+<li><code>normalize</code>: Normaliza cadenas de texto.</li>
+<li><code>PreSave</code>: Preprocesa y limpia datos en un DataFrame.</li>
+<li><code>Sorted_Answer</code>: Ordena respuestas en una cadena separada por punto y coma.</li>
+<li><code>Fix_Table_Answers</code>: Ajusta respuestas en una tabla.</li>
+<li><code>Fix_Id_Type_Caract</code> y <code>Fix_Id_Type</code>: Normalizan tipos de identificación.</li>
+<li><code>Truncate_Column</code>: Trunca columnas a una longitud específica.</li>
+<li><code>Fix_Datetime</code> y <code>Fix_DatetimeFinal</code>: Ajustan formatos de fecha y hora.</li>
+<li><code>Fix_Questions</code>: Modifica y transpone columnas de preguntas en un DataFrame.</li>
+</ul>
+</li>
+</ol>
+<p>Este conjunto de herramientas es esencial para mejorar la eficiencia en tareas repetitivas, reduciendo la necesidad de intervención manual y permitiendo una integración más fluida entre los sistemas externos y el entorno de trabajo. La automatización de estos procesos optimiza el flujo de trabajo y facilita la administración y procesamiento de grandes volúmenes de datos.</p>
+<h2 id="configuracion-e-importacion-de-librerias">Configuración e importación de Librerías<a class="headerlink" href="#configuracion-e-importacion-de-librerias" title="Permanent link">&para;</a></h2>
+<p>Este bloque de código configura el entorno de trabajo importando todas las librerías necesarias para manipulación de datos, automatización de Excel, autenticación y automatización de navegadores web. <code>Funciones.py</code> importa varias librerías estándar y externas necesarias para el funcionamiento del script.</p>
+<h3 id="librerias-estandar">Librerías estándar<a class="headerlink" href="#librerias-estandar" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>datetime</code></li>
+<li><code>json</code></li>
+<li><code>re</code></li>
+<li><code>requests</code></li>
+<li><code>timedelta</code></li>
+</ul>
+<h3 id="librerias-externas">Librerías externas<a class="headerlink" href="#librerias-externas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>numpy</code></li>
+<li><code>pandas</code></li>
+<li><code>xlwings</code></li>
+<li><code>zipfile</code></li>
+<li><code>log_step_decorator</code> (de <code>Utils.Funciones</code>)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># pylint: disable=all</span>
+<span class="c1"># import pandas lib as pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xlwings</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xw</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Utils.Funciones</span><span class="w"> </span><span class="kn">import</span> <span class="n">log_step_decorator</span>
+</code></pre></div>
+<h2 id="get_file_from_sharepoint"><code>get_file_from_sharepoint</code><a class="headerlink" href="#get_file_from_sharepoint" title="Permanent link">&para;</a></h2>
+<p>Descarga un archivo desde SharePoint utilizando su URL. Recibe como entrada <code>file_url</code> (str), que especifica la ubicación del archivo, y devuelve el contenido del archivo como bytes si la solicitud es exitosa. En caso de error, retorna <code>None</code> y registra una advertencia con el código de estado de la respuesta.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@log_step_decorator</span><span class="p">(</span><span class="s2">&quot;Obtener archivo de SharePoint&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_file_from_sharepoint</span><span class="p">(</span><span class="n">file_url</span><span class="p">,</span> <span class="n">headers</span><span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Response Status Code: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error al acceder al archivo. Código de estado: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+<h2 id="list_files_from_sharepoint"><code>list_files_from_sharepoint</code><a class="headerlink" href="#list_files_from_sharepoint" title="Permanent link">&para;</a></h2>
+<p>Obtiene una lista de archivos presentes en una carpeta de SharePoint indicada por la URL proporcionada. Recibe como entrada <code>folder_url</code> (str), que especifica la ubicación de la carpeta, y devuelve una lista de archivos si la solicitud es exitosa o una lista vacía en caso de fallo. También registra advertencias en caso de errores durante la solicitud.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@log_step_decorator</span><span class="p">(</span><span class="s2">&quot;Listar archivos de SharePoint&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">list_files_from_sharepoint</span><span class="p">(</span><span class="n">folder_url</span><span class="p">,</span><span class="n">headers</span><span class="p">,</span><span class="n">sharepoint_base_url</span><span class="p">):</span>
+    <span class="n">list_files_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sharepoint_base_url</span><span class="si">}</span><span class="s2">/_api/web/GetFolderByServerRelativeUrl(&#39;</span><span class="si">{</span><span class="n">folder_url</span><span class="si">}</span><span class="s2">&#39;)/Files&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">list_files_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;d&#39;</span><span class="p">][</span><span class="s1">&#39;results&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">files</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error al listar los archivos. Código de estado: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+</code></pre></div>
+<h2 id="funcion-process_files_from_folder">Función <code>process_files_from_folder</code><a class="headerlink" href="#funcion-process_files_from_folder" title="Permanent link">&para;</a></h2>
+<h4 id="proposito"><strong>Propósito</strong><a class="headerlink" href="#proposito" title="Permanent link">&para;</a></h4>
+<p>Procesa archivos de una carpeta de SharePoint que han sido modificados en los últimos seis meses, almacenando los datos en una lista de DataFrames.</p>
+<hr />
+<h4 id="entradas"><strong>Entradas</strong><a class="headerlink" href="#entradas" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>folder_url</code> (str):</strong> URL de la carpeta en SharePoint desde donde se obtendrán los archivos.</li>
+<li><strong><code>dfs</code> (list):</strong> Lista utilizada para almacenar los DataFrames procesados.</li>
+</ul>
+<hr />
+<h4 id="funcionamiento"><strong>Funcionamiento</strong><a class="headerlink" href="#funcionamiento" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Listar archivos:</strong> Obtiene la lista de archivos en la carpeta de SharePoint.</li>
+<li><strong>Filtrar por fecha:</strong> Identifica archivos modificados en los últimos seis meses.</li>
+<li><strong>Procesar archivos:</strong><ul>
+<li>Recupera el contenido de los archivos seleccionados desde SharePoint.</li>
+<li>Lee el contenido de los archivos como DataFrames utilizando <code>pandas</code>.</li>
+<li>Registra información sobre el contenido y lo almacena en la lista <code>dfs</code>.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h4 id="salida"><strong>Salida</strong><a class="headerlink" href="#salida" title="Permanent link">&para;</a></h4>
+<ul>
+<li>No retorna ningún valor. Modifica la lista <code>dfs</code> proporcionada al agregar los DataFrames procesados.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nd">@log_step_decorator</span><span class="p">(</span><span class="s2">&quot;Procesar archivos&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">process_files_from_folder</span><span class="p">(</span><span class="n">folder_url</span><span class="p">,</span> <span class="n">dfs</span><span class="p">,</span><span class="n">headers</span><span class="p">,</span> <span class="n">sharepoint_base_url</span><span class="p">):</span>
+
+    <span class="n">files</span> <span class="o">=</span> <span class="n">list_files_from_sharepoint</span><span class="p">(</span><span class="n">folder_url</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">sharepoint_base_url</span><span class="p">)</span>
+    <span class="n">six_months_ago</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">180</span><span class="p">)</span>
+
+
+
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span>
+        <span class="n">file_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sharepoint_base_url</span><span class="si">}</span><span class="s2">/_api/web/GetFolderByServerRelativeUrl(&#39;</span><span class="si">{</span><span class="n">folder_url</span><span class="si">}</span><span class="s2">&#39;)/Files(&#39;</span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">&#39;)/$value&quot;</span>
+        <span class="n">modified_date_str</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="s1">&#39;TimeLastModified&#39;</span><span class="p">]</span>
+        <span class="n">modified_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">modified_date_str</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">T%H:%M:%SZ&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;MODIFY&#39;</span><span class="p">,</span> <span class="n">modified_date</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">modified_date</span> <span class="o">&gt;=</span> <span class="n">six_months_ago</span><span class="p">:</span>
+
+            <span class="c1"># Obtener el archivo de SharePoint</span>
+            <span class="n">file_content</span> <span class="o">=</span> <span class="n">get_file_from_sharepoint</span><span class="p">(</span><span class="n">file_url</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">file_content</span><span class="p">:</span>
+                <span class="c1"># Leer el archivo Excel sin descargar</span>
+                <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_content</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Contenido de </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+                <span class="n">dfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="normalize"><code>normalize</code><a class="headerlink" href="#normalize" title="Permanent link">&para;</a></h2>
+<p>Elimina las tildes de un texto, reemplazándolas por sus versiones sin acento, tanto en minúsculas como en mayúsculas.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">normalize</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">replacements</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="s2">&quot;á&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;é&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;í&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ó&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ú&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">replacements</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">b</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div>
+<h2 id="funcion-presave">Función <code>PreSave</code><a class="headerlink" href="#funcion-presave" title="Permanent link">&para;</a></h2>
+<h4 id="proposito_1"><strong>Propósito</strong><a class="headerlink" href="#proposito_1" title="Permanent link">&para;</a></h4>
+<p>Realiza un preprocesamiento de columnas en un DataFrame, limpiando y normalizando valores textuales, y opcionalmente eliminando signos de puntuación específicos.</p>
+<hr />
+<h4 id="entradas_1"><strong>Entradas</strong><a class="headerlink" href="#entradas_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>df</code> (DataFrame):</strong> DataFrame original que se desea procesar.</li>
+<li><strong><code>columnList</code> (list):</strong> Lista de columnas del DataFrame que serán procesadas.</li>
+<li><strong><code>signs</code> (bool, opcional):</strong> Si es <code>True</code>, elimina signos de puntuación como <code>¡</code>, <code>!</code>, <code>?</code>, <code>¿</code> de las columnas. Por defecto: <code>False</code>.</li>
+</ul>
+<hr />
+<h4 id="funcionamiento_1"><strong>Funcionamiento</strong><a class="headerlink" href="#funcionamiento_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Copiar el DataFrame:</strong></p>
+<ul>
+<li>Crea una copia del DataFrame original para evitar modificaciones en el objeto original.</li>
+</ul>
+</li>
+<li>
+<p><strong>Limpieza y normalización:</strong></p>
+<ul>
+<li><strong>Reemplazos específicos:</strong><ul>
+<li>Convierte <code>\xf1</code> a <code>ni</code> (e.g., "ñ" a "ni").</li>
+<li>Convierte <code>\xD1</code> a <code>NI</code> (e.g., "Ñ" a "NI").</li>
+<li>Sustituye caracteres no rompibles (<code>\u00A0</code>) por espacios.</li>
+</ul>
+</li>
+<li><strong>Eliminación de espacios:</strong><ul>
+<li>Reemplaza espacios dobles por simples.</li>
+<li>Elimina espacios al inicio y final de las cadenas.</li>
+</ul>
+</li>
+<li><strong>Normalización de texto:</strong><ul>
+<li>Convierte los valores a cadenas en mayúsculas.</li>
+<li>Aplica la función <code>normalize</code> para eliminar tildes.</li>
+<li>Reemplaza comas por espacios.</li>
+</ul>
+</li>
+<li><strong>Gestión de valores nulos:</strong><ul>
+<li>Sustituye valores <code>"NAN"</code> por <code>np.nan</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Eliminación de signos (opcional):</strong></p>
+<ul>
+<li>Si <code>signs=True</code>, elimina signos de puntuación (<code>¡</code>, <code>!</code>, <code>?</code>, <code>¿</code>) utilizando expresiones regulares.</li>
+</ul>
+</li>
+<li>
+<p><strong>Salida:</strong></p>
+<ul>
+<li>Devuelve el DataFrame procesado.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h4 id="salida_1"><strong>Salida</strong><a class="headerlink" href="#salida_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>DataFrame</code>:</strong> DataFrame con las columnas especificadas procesadas y normalizadas.</li>
+</ul>
+<hr />
+<h4 id="ejemplo-de-uso"><strong>Ejemplo de uso</strong><a class="headerlink" href="#ejemplo-de-uso" title="Permanent link">&para;</a></h4>
+<p>Si la entrada es:
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;¡Hola, mundo!&#39;</span><span class="p">,</span> <span class="s1">&#39;¿Qué tal?&#39;</span><span class="p">]})</span>
+<span class="n">PreSave</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">],</span> <span class="n">signs</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div></p>
+<p>La salida será:
+<div class="highlight"><pre><span></span><code>      <span class="n">col1</span>
+<span class="mi">0</span>    <span class="n">HOLA</span> <span class="n">MUNDO</span>
+<span class="mi">1</span>    <span class="n">QUE</span> <span class="n">TAL</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">PreSave</span><span class="p">(</span><span class="n">df</span> <span class="p">,</span> <span class="n">columnList</span><span class="p">,</span> <span class="n">signs</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="c1">#datfra[columnList] = datfra[columnList].apply(lambda x: x.astype(str).str.decode(&#39;utf-8&#39;).replace(u&#39;\xf1&#39;, &#39;ni&#39;))</span>
+    <span class="c1">#datfra[columnList] = datfra[columnList].apply(lambda x: x.astype(str).str.decode(&#39;utf-8&#39;).replace(u&#39;\xD1&#39;, &#39;NI&#39;))</span>
+
+    <span class="n">datfra</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\xf1</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;ni&#39;</span><span class="p">))</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\xD1</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;NI&#39;</span><span class="p">))</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\u00A0</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">))</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">))</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">normalize</span><span class="p">)</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">))</span>
+    <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">columnList</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;NAN&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">signs</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columnList</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">datfra</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">datfra</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[¡!?¿]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not Signs fixed for &#39;</span><span class="o">+</span> <span class="n">col</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">datfra</span>
+</code></pre></div>
+<h2 id="funciones-sorted_answer-y-fix_table_answers">Funciones <code>Sorted_Answer</code> y <code>Fix_Table_Answers</code><a class="headerlink" href="#funciones-sorted_answer-y-fix_table_answers" title="Permanent link">&para;</a></h2>
+<hr />
+<h4 id="funcion-sorted_answer"><strong>Función <code>Sorted_Answer</code></strong><a class="headerlink" href="#funcion-sorted_answer" title="Permanent link">&para;</a></h4>
+<p><strong>Propósito:</strong>
+Ordena alfabéticamente las respuestas separadas por punto y coma (<code>;</code>) dentro de una cadena. Elimina valores vacíos si existen.</p>
+<hr />
+<p><strong>Entradas:</strong></p>
+<ul>
+<li><strong><code>x</code> (str o NaN):</strong> Cadena de texto con respuestas separadas por punto y coma o un valor nulo.</li>
+</ul>
+<hr />
+<p><strong>Funcionamiento:</strong></p>
+<ol>
+<li>Verifica si la entrada es nula (<code>NaN</code>). Si es así, retorna la entrada sin cambios.</li>
+<li>Divide la cadena en una lista utilizando <code>split(';')</code>.</li>
+<li>Si hay más de una respuesta:<ul>
+<li>Ordena alfabéticamente la lista.</li>
+<li>Elimina entradas vacías si están presentes.</li>
+<li>Reconstruye la cadena uniendo los valores con <code>;</code>.</li>
+</ul>
+</li>
+<li>Retorna la cadena ordenada o la entrada original si no se cumplen las condiciones.</li>
+</ol>
+<hr />
+<p><strong>Salida:</strong></p>
+<ul>
+<li><strong><code>str</code> o <code>NaN</code>:</strong> Cadena con las respuestas ordenadas alfabéticamente o valor original si no hay cambios.</li>
+</ul>
+<h4 id="funcion-fix_table_answers"><strong>Función <code>Fix_Table_Answers</code></strong><a class="headerlink" href="#funcion-fix_table_answers" title="Permanent link">&para;</a></h4>
+<p><strong>Propósito:</strong></p>
+<p>Aplica la función <code>Sorted_Answer</code> a una columna específica de un DataFrame, actualizando la columna con las respuestas ordenadas.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Sorted_Answer</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span>
+    <span class="n">p</span> <span class="o">=</span>  <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="s1">&#39;;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">p</span>
+    <span class="k">return</span> <span class="n">x</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Fix_Table_Answers</span><span class="p">(</span> <span class="n">table</span> <span class="p">,</span> <span class="n">column_name</span> <span class="p">):</span>
+    <span class="n">table</span><span class="p">[</span><span class="s1">&#39;RESPUESTA_LIST&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">Sorted_Answer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span> <span class="n">column_name</span> <span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;RESPUESTA_LIST&#39;</span><span class="p">:</span> <span class="n">column_name</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">table</span>
+</code></pre></div>
+<h2 id="funcion-fix_id_type_caract">Función <code>Fix_Id_Type_Caract</code><a class="headerlink" href="#funcion-fix_id_type_caract" title="Permanent link">&para;</a></h2>
+<h4 id="proposito_2"><strong>Propósito</strong><a class="headerlink" href="#proposito_2" title="Permanent link">&para;</a></h4>
+<p>Estandariza y transforma diferentes representaciones de tipos de identificación en códigos abreviados predefinidos.</p>
+<hr />
+<h4 id="entradas_2"><strong>Entradas</strong><a class="headerlink" href="#entradas_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>id_type</code> (str):</strong> Cadena de texto que representa un tipo de identificación, como "CEDULA DE CIUDADANIA" o "TARJETA DE IDENTIDAD".</li>
+</ul>
+<hr />
+<h4 id="funcionamiento_2"><strong>Funcionamiento</strong><a class="headerlink" href="#funcionamiento_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Utiliza una estructura <code>match-case</code> para comparar el valor de <code>id_type</code> con diferentes representaciones conocidas.</li>
+<li>Devuelve el código abreviado correspondiente:<ul>
+<li><strong><code>CC</code></strong>: Cédula de ciudadanía.</li>
+<li><strong><code>TI</code></strong>: Tarjeta de identidad.</li>
+<li><strong><code>RC</code></strong>: Registro civil.</li>
+<li><strong><code>PE</code></strong>: Permiso especial de permanencia.</li>
+<li><strong><code>PPT</code></strong>: Permiso especial de permanencia temporal.</li>
+<li><strong><code>PA</code></strong>: Pasaporte.</li>
+<li><strong><code>CE</code></strong>: Identificación extranjera.</li>
+<li><strong><code>NI</code></strong>: NIT.</li>
+<li><strong><code>NA</code></strong>: No aplica o no reconocido.</li>
+</ul>
+</li>
+<li>Si no encuentra una coincidencia, devuelve el valor por defecto <code>NA</code>.</li>
+</ol>
+<hr />
+<h4 id="salida_2"><strong>Salida</strong><a class="headerlink" href="#salida_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>str</code>:</strong> Código abreviado del tipo de identificación.</li>
+</ul>
+<hr />
+<h4 id="ejemplo-de-uso_1"><strong>Ejemplo de uso</strong><a class="headerlink" href="#ejemplo-de-uso_1" title="Permanent link">&para;</a></h4>
+<p>Entrada:
+<div class="highlight"><pre><span></span><code><span class="n">Fix_Id_Type_Caract</span><span class="p">(</span><span class="s1">&#39;CEDULA DE CIUDADANIA&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Salida:
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;CC&#39;</span>
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Fix_Id_Type_Caract</span><span class="p">(</span><span class="n">id_type</span><span class="p">):</span>
+    <span class="k">match</span> <span class="n">id_type</span><span class="p">:</span>
+        <span class="k">case</span> <span class="s1">&#39;1.CEDULA DE CIUDADANIA&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;CC&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;2.TARJETA DE IDENTIDAD&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;TI&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;3.REGISTRO CIVIL&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;RC&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;1. CEDULA&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;CC&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;TARJETA DE IDENTIDAD&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;TI&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;CEDULA DE CIUDADANIA&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;CC&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;REGISTRO CIVIL&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;RC&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;2. TARJETA DE IDENTIDAD&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;TI&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;3. REGISTRO CIVIL&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;RC&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;9. PERMISO ESPECIAL DE PERMANENCIA (P.E.P)&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;PE&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;15. PERMISO ESPECIAL DE PERMANENCIA TEMPORAL&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;PPT&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;11.</span><span class="se">\xa0</span><span class="s1"> IDENTIFICACION DADA POR LA SECRETARIA DE EDUCACION&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;NA&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;14. ID EXTRANJEROS DIFERENTE A LA CEDULA DE EXTRANJERIA (SOLO PARA FONINIEZ)&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;C1X&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;6. PASAPORTE&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;PA&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;5. NUIP&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;NA&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;CERTIFICADO DE NACIMIENTO&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;RC&#39;</span>
+        <span class="k">case</span> <span class="s1">&#39;ID EXTRANJERO&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;CE&#39;</span>   
+        <span class="k">case</span> <span class="s1">&#39;NIT&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;NI&#39;</span> 
+        <span class="k">case</span> <span class="s1">&#39;NONE&#39;</span><span class="p">:</span>
+             <span class="k">return</span> <span class="s1">&#39;NA&#39;</span>         
+        <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;NA&#39;</span>
+
+    <span class="k">return</span> <span class="s1">&#39;NA&#39;</span>
+</code></pre></div>
+<code>Fix_Id_Type</code> aplica la transformación de tipos de identificación en una columna específica de una tabla si el nombre de la tabla es <code>"CARACTERIZACION"</code>.</p>
+<p><code>Truncate_Column</code> trunca el contenido de las columnas especificadas a un máximo de 255 caracteres. Por otro lado, <code>Fix_Datetime</code> convierte valores tipo <code>NaT</code> a un valor predeterminado (<code>2009-01-01 00:00:00</code>) y agrega la hora inicial a fechas válidas. </p>
+<p>Finalmente, <code>Fix_DatetimeFinal</code> normaliza una columna de fechas en un DataFrame, convirtiéndolas a formato <code>datetime</code>, estableciendo la hora como 00:00:00, y manejando errores de conversión de forma segura.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Fix_Id_Type</span><span class="p">(</span> <span class="n">table</span> <span class="p">,</span> <span class="n">typeIdColumn</span> <span class="p">,</span> <span class="n">tableName</span> <span class="p">):</span>
+    <span class="k">if</span> <span class="n">tableName</span> <span class="o">==</span> <span class="s1">&#39;CARACTERIZACION&#39;</span><span class="p">:</span>
+        <span class="n">table</span><span class="p">[</span><span class="n">typeIdColumn</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">typeIdColumn</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span> <span class="n">Fix_Id_Type_Caract</span> <span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Truncate_Column</span><span class="p">(</span> <span class="n">table</span> <span class="p">,</span> <span class="n">columnsToTruncate</span> <span class="p">):</span>
+    <span class="n">table</span><span class="p">[</span><span class="n">columnsToTruncate</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">columnsToTruncate</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">str</span><span class="p">[:</span><span class="mi">255</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Fix_Datetime</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;NaT&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;2009-01-01 00:00:00&#39;</span>    
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="s1">&#39; 00:00:00&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Fix_DatetimeFinal</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">columnName</span><span class="p">):</span>
+    <span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">,</span><span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+    <span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">Fix_Datetime</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="p">)</span>
+</code></pre></div>
+<h2 id="funcion-fix_questions">Función <code>Fix_Questions</code><a class="headerlink" href="#funcion-fix_questions" title="Permanent link">&para;</a></h2>
+<h4 id="proposito_3"><strong>Propósito</strong><a class="headerlink" href="#proposito_3" title="Permanent link">&para;</a></h4>
+<p>Transforma y organiza un DataFrame de respuestas de encuestas, estructurándolo para análisis, incluyendo la identificación de preguntas relacionadas con NPS (Net Promoter Score).</p>
+<hr />
+<h4 id="entradas_3"><strong>Entradas</strong><a class="headerlink" href="#entradas_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>data</code> (DataFrame):</strong> DataFrame original con datos de encuestas.</li>
+<li><strong><code>servicio</code> (str):</strong> Nombre del servicio asociado a las encuestas.</li>
+<li><strong><code>nps</code> (dict):</strong> Diccionario que mapea servicios a preguntas relacionadas con NPS.</li>
+<li><strong><code>filename</code> (str):</strong> Nombre del archivo relacionado para fines de registro.</li>
+</ul>
+<h4 id="funcionamiento_3"><strong>Funcionamiento</strong><a class="headerlink" href="#funcionamiento_3" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Renombramiento de columnas:</strong></p>
+<ul>
+<li>Cambia el nombre de las columnas <code>fecha</code> a <code>FECHA_ENCUESTA</code> y <code>identificacion</code> a <code>DOCUMENTO</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Identificación de preguntas:</strong></p>
+<ul>
+<li>Busca columnas cuyo nombre comience con <code>"etapa3"</code>, que representan preguntas con calificación.</li>
+</ul>
+</li>
+<li>
+<p><strong>Filtrado de columnas relevantes:</strong></p>
+<ul>
+<li>Redefine el DataFrame para incluir solo las columnas: <code>FECHA_ENCUESTA</code>, <code>DOCUMENTO</code>, y las preguntas identificadas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación de datos:</strong></p>
+<ul>
+<li>Transforma el DataFrame a un formato largo utilizando <code>melt</code>:<ul>
+<li><strong><code>id_vars</code></strong>: Columnas constantes (<code>FECHA_ENCUESTA</code> y <code>DOCUMENTO</code>).</li>
+<li><strong><code>var_name</code></strong>: Nombre de las columnas de preguntas (<code>PREGUNTA</code>).</li>
+<li><strong><code>value_name</code></strong>: Valores asociados a las preguntas (<code>CALIFICACION</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Adición de columnas constantes:</strong></p>
+<ul>
+<li>Agrega columnas adicionales:<ul>
+<li><strong><code>SERVICIO</code></strong>: Nombre del servicio.</li>
+<li><strong><code>TIPO_DOCUMENTO</code></strong>: Fijado como <code>'CC'</code>.</li>
+<li><strong><code>NPS</code></strong>: Inicializado como <code>'NO'</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Identificación de preguntas NPS:</strong></p>
+<ul>
+<li>Actualiza la columna <code>NPS</code> a <code>'SI'</code> para las preguntas que coinciden con el servicio especificado en el diccionario <code>nps</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Salida del DataFrame:</strong></p>
+<ul>
+<li>Registra el nombre del servicio y archivo procesado.</li>
+<li>Devuelve el DataFrame transformado.</li>
+</ul>
+</li>
+<li>
+<p><strong>Manejo de errores:</strong></p>
+<ul>
+<li>En caso de error, registra el servicio y archivo no procesado.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h4 id="salida_3"><strong>Salida</strong><a class="headerlink" href="#salida_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>DataFrame</code>:</strong> DataFrame transformado en formato largo con las siguientes columnas:</li>
+<li><strong><code>FECHA_ENCUESTA</code></strong></li>
+<li><strong><code>DOCUMENTO</code></strong></li>
+<li><strong><code>PREGUNTA</code></strong></li>
+<li><strong><code>CALIFICACION</code></strong></li>
+<li><strong><code>SERVICIO</code></strong></li>
+<li><strong><code>TIPO_DOCUMENTO</code></strong></li>
+<li><strong><code>NPS</code></strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Fix_Questions</span><span class="p">(</span> <span class="n">data</span> <span class="p">,</span> <span class="n">servicio</span> <span class="p">,</span> <span class="n">nps</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">data</span>  
+        <span class="c1">#Modificaciones a columnas</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;fecha&#39;</span><span class="p">:</span> <span class="s1">&#39;FECHA_ENCUESTA&#39;</span><span class="p">,</span>
+                                <span class="s1">&#39;identificacion&#39;</span><span class="p">:</span><span class="s1">&#39;DOCUMENTO&#39;</span>
+                            <span class="p">})</span>
+
+        <span class="c1">#Buscar preguntas con nota</span>
+        <span class="n">dfColumns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">columnsWithObs</span> <span class="o">=</span> <span class="p">[</span><span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">dfColumns</span> <span class="k">if</span> <span class="n">val</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;etapa3&quot;</span><span class="p">)</span> <span class="p">]</span>
+
+        <span class="c1">#Redefinir columna</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;FECHA_ENCUESTA&#39;</span><span class="p">,</span><span class="s1">&#39;DOCUMENTO&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">columnsWithObs</span><span class="p">]</span>
+
+        <span class="c1">#Modificaciones y transpocision </span>
+        <span class="n">df_unp</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span> <span class="n">id_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FECHA_ENCUESTA&#39;</span><span class="p">,</span><span class="s1">&#39;DOCUMENTO&#39;</span><span class="p">]</span> <span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;PREGUNTA&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;CALIFICACION&quot;</span><span class="p">)</span>
+        <span class="n">df_unp</span><span class="p">[</span><span class="s1">&#39;SERVICIO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">servicio</span>
+        <span class="n">df_unp</span><span class="p">[</span><span class="s1">&#39;TIPO_DOCUMENTO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;CC&#39;</span>
+        <span class="n">df_unp</span><span class="p">[</span><span class="s1">&#39;NPS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NO&#39;</span>
+
+
+        <span class="n">df_unp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_unp</span><span class="p">[</span><span class="s2">&quot;PREGUNTA&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">nps</span><span class="p">[</span><span class="n">servicio</span><span class="p">],</span> <span class="s2">&quot;NPS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SI&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Agregado: &#39;</span> <span class="o">+</span>  <span class="n">servicio</span> <span class="o">+</span> <span class="n">filename</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="n">df_unp</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sin formato: &#39;</span> <span class="o">+</span>  <span class="n">servicio</span> <span class="o">+</span> <span class="n">filename</span> <span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">zipfile</span><span class="w"> </span><span class="kn">import</span> <span class="n">ZipFile</span>
+</code></pre></div>
+<h2 id="funcion-charge_excel_fixed">Función <code>Charge_Excel_Fixed</code><a class="headerlink" href="#funcion-charge_excel_fixed" title="Permanent link">&para;</a></h2>
+<h4 id="proposito_4"><strong>Propósito</strong><a class="headerlink" href="#proposito_4" title="Permanent link">&para;</a></h4>
+<p>Carga un archivo Excel comprimido en formato ZIP, procesa los datos en un DataFrame de pandas, y lo limpia eliminando filas y columnas vacías antes de almacenarlo en un diccionario.</p>
+<hr />
+<h4 id="entradas_4"><strong>Entradas</strong><a class="headerlink" href="#entradas_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>ruta</code> (str):</strong> Ruta del archivo Excel, que puede estar comprimido en formato ZIP.</li>
+<li><strong><code>dfs</code> (dict):</strong> Diccionario donde se almacenará el DataFrame procesado, con el nombre del archivo como clave.</li>
+<li><strong><code>file</code> (str):</strong> Nombre del archivo para usarlo como clave en el diccionario <code>dfs</code>.</li>
+</ul>
+<hr />
+<h4 id="funcionamiento_4"><strong>Funcionamiento</strong><a class="headerlink" href="#funcionamiento_4" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Verificación del archivo ZIP:</strong></p>
+<ul>
+<li>Intenta abrir el archivo como un archivo ZIP utilizando <code>ZipFile</code>. Si es un archivo ZIP válido, continua con el procesamiento.</li>
+</ul>
+</li>
+<li>
+<p><strong>Carga del archivo Excel:</strong></p>
+<ul>
+<li>Intenta cargar el archivo Excel utilizando pandas (<code>pd.read_excel</code>) con el motor <code>openpyxl</code>.</li>
+<li>Si se encuentra algún error en la carga, se captura y se registra un mensaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Procesamiento y limpieza del DataFrame:</strong></p>
+<ul>
+<li>Se crea un DataFrame a partir de los datos cargados.</li>
+<li>Se eliminan filas y columnas vacías con <code>dropna(how='all')</code> y <code>dropna(axis=1, how='all')</code>.</li>
+<li>Se restablece el índice del DataFrame y se asigna la primera fila como nombres de columna.</li>
+<li>Se elimina la primera fila (que ahora se utiliza como encabezado).</li>
+<li>El DataFrame limpio se guarda en el diccionario <code>dfs</code> con la clave proporcionada por <code>file</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Manejo de errores:</strong></p>
+<ul>
+<li>Captura y registra cualquier error que ocurra durante la carga o el procesamiento del archivo.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h4 id="salida_4"><strong>Salida</strong><a class="headerlink" href="#salida_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>No retorna valores. El DataFrame procesado se almacena en el diccionario <code>dfs</code> bajo la clave <code>file</code>.</li>
+</ul>
+<h4 id="consideraciones"><strong>Consideraciones</strong><a class="headerlink" href="#consideraciones" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Se verifica si el archivo es un ZIP válido antes de intentar cargar el archivo Excel.</li>
+<li>El DataFrame es limpiado de cualquier fila o columna vacía antes de su procesamiento.</li>
+<li>Asegúrese de que el archivo Excel esté correctamente formateado para que las primeras filas contengan los encabezados.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Charge_Excel_Fixed</span><span class="p">(</span><span class="n">ruta</span><span class="p">,</span> <span class="n">dfs</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Verificar si es un archivo ZIP válido</span>
+        <span class="k">with</span> <span class="n">ZipFile</span><span class="p">(</span><span class="n">ruta</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El archivo es un ZIP válido.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Intentar cargar con pandas y openpyxl</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">ruta</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;openpyxl&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Archivo cargado exitosamente con pandas y openpyxl.&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error al cargar el archivo: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Procesar el DataFrame</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">dfs</span><span class="p">[</span><span class="n">file</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Archivo procesado exitosamente.&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error procesando el DataFrame: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../js/mkdocs_pagetree_plugin.js"></script>
+      
+        <script src="../../../js/init_mermaid.js"></script>
+      
+    
+  </body>
+</html>
