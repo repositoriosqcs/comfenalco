@@ -1,0 +1,300 @@
+/* --- Ajustes para la Distribución de la Pantalla --- */
+
+/* Aumenta el ancho del contenedor principal para aprovechar mejor el espacio */
+.md-content {
+    max-width: 100%; /* Ancho completo del contenido */
+    margin: auto;       /* Quita márgenes alrededor del contenido */
+    /* Espacio adicional pequeño en los lados */
+    /* padding: 15px;  */
+    /* padding-top: 60px; */
+}
+/* Reduce el ancho de las barras laterales izquierda y derecha */
+.md-sidebar {
+    width: 250px; /* Ajuste de ancho para la barra lateral izquierda */
+}
+
+.md-sidebar--secondary {
+    width: 180px; /* Ajuste de ancho para la barra lateral derecha */
+}
+
+/* Ajusta la barra de navegación superior para alinearse al nuevo ancho */
+.md-header {
+    padding-left: 180px;  /* Alineación basada en la barra lateral izquierda */
+    padding-right: 180px; /* Alineación basada en la barra lateral derecha */
+}
+
+/* Asegura que el contenedor general ocupe toda la pantalla */
+.md-main {
+    max-width: 100%; /* Ancho máximo del contenedor */
+    margin: auto;       /* Sin margen para aprovechar todo el espacio */
+    padding: 10px; /* Espacio adicional pequeño en los lados */
+}
+
+/* Ajuste para contenido Markdown (centrado en pantallas grandes) */
+.md-typeset {
+    max-width: 1200px; /* Limita el ancho de los textos para mejor legibilidad */
+    margin: auto;      /* Centra el texto dentro del contenedor principal */
+}
+
+/* --- Estilos de Títulos en Color Amarillo QCS --- */
+
+/* Estilos para Títulos de Secciones en color amarillo y en negrita */
+.section-title,
+h1, h2, h3 {
+    color: rgb(35, 171, 247); /* Amarillo QCS */
+    font-weight: bold;
+    text-transform: uppercase; /* Mayúsculas */
+}
+
+/* Aplica el estilo de título a encabezados específicos dentro de las secciones */
+h1.section-title,
+h2.section-title,
+h3.section-title {
+    color: rgb(35, 171, 247); /* Amarillo QCS */
+    font-weight: bold;
+}
+
+/* --- Estilos de la Barra Lateral Derecha --- */
+
+/* --- Ajustes de la Barra Lateral Derecha --- */
+
+/* Asegura que el título en la barra lateral derecha esté visible */
+.md-sidebar--secondary .md-nav__title {
+    color: #2A52BE; /* Azul medio */
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block; /* Asegura que el título se muestre */
+}
+
+/* Elimina el contenido duplicado de "Tabla de contenidos" */
+.md-sidebar--secondary .md-nav__title span {
+    display: none;
+}
+
+/* Color azul medio para los enlaces en la barra lateral derecha */
+.md-sidebar-secondary .md-nav__link,
+.md-sidebar .md-nav__link {
+    color: #2A52BE;
+}
+
+/* Color azul medio para los enlaces en la barra lateral derecha */
+.md-sidebar-secondary .md-nav__link,
+.md-sidebar .md-nav__link {
+    color: #2A52BE;
+}
+
+/* --- Ajustes para el Botón de Menú --- */
+
+.md-nav__icon {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: 23abf7;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/* --- Ajustes de Color de la Barra Superior --- */
+
+.md-header {
+    background-color: 23abf7;
+}
+
+.md-header .md-header-nav__title,
+.md-header .md-header-nav__button,
+.md-header .md-icon {
+    color: #ffffff;
+}
+
+/* --- Otros Ajustes de Estilo --- */
+
+/* Subsecciones en minúsculas, negrita y color azul medio */
+.toc .toc-subsection {
+    color: #2A52BE;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+/* Estilos para diagramas e imágenes */
+img.diagram {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Mejorar la presentación general del contenido */
+p, li {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Subtítulos en gris oscuro */
+.subsection-title {
+    color: #333;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+/* --- Estilos para Tablas --- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    text-align: left;
+    table-layout: fixed;
+    border: 1px solid #dcdcdc;
+    background-color: #fdfdfd;
+}
+
+th {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 10px;
+    text-align: center;
+    font-weight: normal;
+    border: 1px solid #dcdcdc;
+    font-family: Arial, sans-serif;
+}
+
+td {
+    padding: 8px 10px;
+    border: 1px solid #dcdcdc;
+    text-align: left;
+    font-family: Consolas, "Courier New", monospace;
+    color: #333;
+    background-color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+tr:hover {
+    background-color: #e8f4fc;
+}
+
+.md-typeset table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+/* Estilo de barra de desplazamiento en tablas */
+.md-typeset table::-webkit-scrollbar {
+    height: 10px;
+}
+
+.md-typeset table::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.md-typeset table::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* --- Ajustes para Diagramas Mermaid --- */
+
+.mermaid {
+    max-width: 100%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.mermaid svg {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mermaid .label,
+.mermaid .edgeLabel {
+    fill: #333333;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.mermaid .edgePath path {
+    stroke-width: 2px;
+    stroke: #b1740f;
+}
+
+/* Barra de desplazamiento horizontal en diagramas */
+.mermaid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.mermaid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.mermaid::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Reducir el tamaño de la fuente en la barra lateral izquierda */
+.md-sidebar .md-nav__link {
+    font-size: 0.85em; /* Ajusta este valor según el tamaño deseado */
+}
+
+/* Reducir el tamaño de la fuente en la barra lateral derecha (Tabla de contenido) */
+.md-sidebar--secondary .md-nav__link {
+    font-size: 0.8em; /* Ajusta este valor según el tamaño deseado */
+}
+
+/* Reducir el tamaño de la fuente en el título de las barras laterales */
+.md-sidebar .md-nav__title,
+.md-sidebar--secondary .md-nav__title {
+    font-size: 0.95em; /* Ajusta el tamaño del título */
+}
+
+/* Reducir el tamaño de la fuente en la barra de navegación superior */
+.md-header .md-header-nav__title,
+.md-header .md-header-nav__link {
+    font-size: 0.9em; /* Ajusta este valor según el tamaño deseado */
+}
+
+/* Mejora la apariencia de las listas */
+ul {
+    list-style-type: disc; /* Puntos para viñetas */
+    margin-left: 20px;     /* Margen izquierdo para alineación */
+    padding-left: 20px;    /* Espaciado interno */
+    line-height: 1.6;      /* Mejora el espaciado entre líneas */
+}
+
+/* Estilo para sublistas */
+ul ul {
+    list-style-type: circle; /* Sublistas con círculos */
+    margin-left: 20px;       /* Margen adicional para subniveles */
+}
+
+/* Espaciado adicional entre elementos de lista */
+ul li + li {
+    margin-top: 5px; /* Espacio entre elementos de la lista */
+}
+
+p, li {
+    line-height: 1.6; /* Mantén esta línea */
+    font-size: 1.02em; /* Mejora el tamaño del texto */
+    margin-bottom: 10px; /* Añade espacio entre párrafos y elementos de lista */
+}
+
