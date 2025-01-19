@@ -1,0 +1,3505 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../01.scripts/04.Colegio/">
+      
+      
+        <link rel="next" href="../estructura_archivos_actualizacion/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Estructura carpeta Sharepoint - COMFENALCO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="23abf7" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sharepoint-configuracion-y-estructura" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="COMFENALCO" class="md-header__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            COMFENALCO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Estructura carpeta Sharepoint
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="COMFENALCO" class="md-nav__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    COMFENALCO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00. INICIO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            00. INICIO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INTRODUCCIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INSTALACIÓN Y CONFIGURACIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Conexiones_BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CONEXIÓN A BASE DE DATOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buenaspracticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BUENAS PRÁCTICAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. SCRIPTS SQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. SCRIPTS SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/00.Inicio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/00.Eliminar_todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. Eliminar Todo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/01.Transversal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. Transversal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/02.Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. Cedesarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/03.Proteccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. Proteccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/04.Colegio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. Colegio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. ESTRUCTURA SHAREPOINT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. ESTRUCTURA SHAREPOINT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Estructura carpeta Sharepoint
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Estructura carpeta Sharepoint
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principales-caracteristicas-de-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principales Características de la Configuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia-para-configuracion-sharepoint-online-para-web-scrapping-y-ssis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodología para Configuración Sharepoint Online para Web Scrapping y SSIS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-la-carpeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de la Carpeta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de la Carpeta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comfenalco-educacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      COMFENALCO EDUCACION
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructura_archivos_actualizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura Archivos Actualizacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. BI COMFENALCO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. BI COMFENALCO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/00.params/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/00-SCRAPING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. WEB SCRAPING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/01.TRANSVERSAL_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. TRANSVERSAL_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/02-TRANSVERSAL_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TRANSVERSAL_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/03-COLEGIO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. COLEGIO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/04-COLEGIO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. COLEGIO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/05-CEDESARROLLO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05. CEDESARROLLO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/06-CEDESARROLLO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. CEDESARROLLO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/07-PROTECCION_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07. PROTECCION_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/08-PROTECCION_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08. PROTECCION_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/09-ETLS_CUBO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09. ETLS_CUBO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04. COMFENALCO EDUCACION
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            04. COMFENALCO EDUCACION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 SCRIPTS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 SCRIPTS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. Q10
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. Q10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_1" id="__nav_5_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.1. Educación Tecnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            0.1. Educación Tecnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/01.Docentes_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Cedesarrollo.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/02.Disenio_curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Diseño Curricular.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/03.Listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/04.Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Ingresos.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/05.Historico_notas_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Histórico notas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/06.Egresados_graduados_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/07.Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.7. Desertores.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_2" id="__nav_5_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.2. Educación Continua
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            0.2. Educación Continua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/01.Docentes_desarrollo_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Desarrollo Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/02.Preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Preinscritos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/03.Listado_matriculas_emp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/04.Consolidado_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/05.Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/06.Egresados_graduados_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados Graduados Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_3" id="__nav_5_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sharepoint
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sharepoint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_01_procesar_docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_01 procesar_docentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_02_procesar_Dise%C3%B1o_Curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_02 procesar_Diseño_Curricular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_03_procesar_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_03 procesar_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_04_procesar_cede_Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_04 procesar_Ingresos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_05_cede_Historico_Notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_05 cede_Historico_Notas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_06_cede_Egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_06 cede_Egresados_Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_07_Cancelados_Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_07 Cancelados Desertores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_01_Docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_01 Docentes Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_02_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_02 Listado Matrículas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_03_preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_03 Preinscritos Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_04_egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_04 Egresados Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_05_Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_05 Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_06_consolidado_Inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_06 Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_3" id="__nav_5_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. C4C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. C4C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/01.C4C_webscraping_v4_Actualizable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Webscraping Actualizable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/02.C4C_webscraping_v4_Historico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Webscraping Histórico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones_DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones_DM.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/c4c_from_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c4c_from_sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_Estudiantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_Estudiantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_periodo_academico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_periodo_academico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_facturacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_facturacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05. CUBO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            05. CUBO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/01.Origen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. ORIGEN Y MEDIDAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/02.Tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TABLAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06. POWER BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            06. POWER BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/01.Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. DASHBOARD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principales-caracteristicas-de-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principales Características de la Configuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia-para-configuracion-sharepoint-online-para-web-scrapping-y-ssis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodología para Configuración Sharepoint Online para Web Scrapping y SSIS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-la-carpeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de la Carpeta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de la Carpeta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comfenalco-educacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      COMFENALCO EDUCACION
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!-- markdownlint-disable -->
+<h1 id="sharepoint-configuracion-y-estructura">Sharepoint (Configuración y Estructura)<a class="headerlink" href="#sharepoint-configuracion-y-estructura" title="Permanent link">&para;</a></h1>
+<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
+<p>La integración de <strong>SharePoint</strong> con los procesos <strong>ETL (Extract, Transform, Load)</strong> garantiza una gestión centralizada, accesible y segura de los datos capturados mediante técnicas avanzadas de <strong>webscraping</strong>. Este enfoque permite organizar, almacenar y compartir información académica y administrativa de manera eficiente, asegurando que los equipos involucrados puedan acceder a datos actualizados y estructurados.</p>
+<p>En el ámbito de la <strong>Educación Técnica y Continua</strong>, SharePoint se convierte en una herramienta clave para el manejo de los datos procesados, facilitando la colaboración entre múltiples actores y plataformas. La implementación de una estructura bien definida de carpetas y permisos asegura que los flujos de trabajo sean consistentes y escalables.</p>
+<h3 id="principales-caracteristicas-de-la-configuracion">Principales Características de la Configuración<a class="headerlink" href="#principales-caracteristicas-de-la-configuracion" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Creación del Sitio del Proyecto</strong>:
+   El sitio <strong>COMFENALCO_EDUCACION</strong> actúa como el repositorio principal de los datos extraídos, procesados y consolidados.</li>
+<li>
+<p><strong>Estructuración de Carpetas</strong>:  </p>
+<ul>
+<li>Las carpetas están organizadas en niveles jerárquicos, categorizando los datos según su origen y propósito.</li>
+<li>Subcarpetas específicas almacenan datos procesados y sin procesar, lo que permite un control preciso de las versiones y una fácil recuperación de información.</li>
+</ul>
+</li>
+<li>
+<p><strong>Autenticación Segura mediante Azure</strong>:  </p>
+<ul>
+<li>Registro de una aplicación en Azure para la autenticación de SharePoint.</li>
+<li>Uso de un cliente secreto y certificados para garantizar un acceso seguro a los datos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gestión de Permisos</strong>:  </p>
+<ul>
+<li>Configuración de permisos específicos para aplicaciones como <code>Sites.FullControl.All</code> y <code>TermStore.Read.All</code>.</li>
+<li>Garantía de que solo usuarios autorizados puedan acceder y modificar la información almacenada.</li>
+</ul>
+</li>
+<li>
+<p><strong>Automatización con Python</strong>:  </p>
+<ul>
+<li>El código <strong><code>SharePoint_Connection.py</code></strong> permite interactuar directamente con las carpetas y archivos de SharePoint, automatizando procesos como la carga y extracción de datos.</li>
+</ul>
+</li>
+</ol>
+<h2 id="metodologia-para-configuracion-sharepoint-online-para-web-scrapping-y-ssis">Metodología para Configuración Sharepoint Online para Web Scrapping y SSIS<a class="headerlink" href="#metodologia-para-configuracion-sharepoint-online-para-web-scrapping-y-ssis" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Crear en SharePoint el sitio del proyecto (<code>COMFENALCO_EDUCACION</code>)</li>
+<li>
+<p>En la parte de documentos crear las carpetas necesarias</p>
+<p><img alt="sharepoint_config" src="../../images/sharepoint_config.png" /></p>
+</li>
+<li>
+<p>En <code>Azure</code> ir a <code>Registro de Aplicaciones</code></p>
+</li>
+<li>Crear una nueva aplicación.</li>
+<li>Asignarle un cliente secreto y copiar y guardar el <code>secret_client</code> que se genera. Solo se puede ver en este momento.</li>
+<li>
+<p>Subir un certificado. En la carpeta donde se vaya a crear la ETL de Web Scraping correr el siguiente comando y subir el archivo generado.
+    <img alt="certificado" src="../../images/sharepoint_certificado.png" /></p>
+<p><strong>Observaciones</strong></p>
+<ul>
+<li>Puede ser necesario instalar <code>OpenSSL</code> en Windows. Guía para instalar <code>https://www.youtube.com/watch?v=coaGBdUcKiw</code></li>
+<li>Se puede tomar como referencia el siguiente video
+<code>https://www.youtube.com/watch?v=KWKiwpK-L5o</code></li>
+</ul>
+</li>
+<li>
+<p>Luego ir a <code>Permisos de API</code> y agregar un nuevo permiso. Buscar la aplicación <code>SharePoint</code> y escoger permisos de aplicación <code>Sites.FullControl.All</code>, <code>Real.All</code>, <code>TermStore.Read.all</code>
+    <img alt="permisos" src="../../images/sharepoint_permisos.png" /></p>
+</li>
+<li>Conceder el permiso del paso anterior. Para este paso se requieren permisos de administrador en la consola de Azure. </li>
+<li>Con esto el código de <code>SharePoint_Connection.py</code> debe funcionar. Tener cuidado de la carpeta a la cual se está dirigiendo en la variable <code>folder_url</code></li>
+</ol>
+<h2 id="estructura-de-la-carpeta">Estructura de la Carpeta<a class="headerlink" href="#estructura-de-la-carpeta" title="Permanent link">&para;</a></h2>
+<h3 id="comfenalco-educacion">COMFENALCO EDUCACION<a class="headerlink" href="#comfenalco-educacion" title="Permanent link">&para;</a></h3>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estructura de Carpetas</title>
+        <style>
+            /* Limita los estilos al contenedor con clase 'carpetas-container' */
+            .carpetas-container {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .carpetas-container ul {
+                list-style: none; /* Quita los puntos predeterminados */
+                margin: 0;
+                padding-left: 20px; /* Sangría para las subcarpetas */
+            }
+            .carpetas-container ul li {
+                font-size: 14px; /* Tamaño de texto fijo */
+            }
+            .carpetas-container details summary {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                background: none; /* Elimina el fondo azul */
+                border: none; /* Elimina cualquier borde */
+                padding: 5px 0; /* Ajusta el espaciado */
+                font-size: 16px; /* Tamaño del texto en el resumen */
+            }
+            .carpetas-container details summary::before {
+                content: "📁"; /* Icono de carpeta cerrada */
+                margin-right: 8px;
+                font-size: 18px; /* Tamaño del icono */
+            }
+            .carpetas-container details[open] summary::before {
+                content: "📂"; /* Icono de carpeta abierta */
+            }
+            .carpetas-container ul li::before {
+                content: "📄"; /* Icono de archivo */
+                margin-right: 8px;
+                color: gray;
+            }
+            button {
+                margin-bottom: 16px;
+                padding: 8px 12px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            .nota-aclaratoria {
+                background-color: #f8f9fa;
+                border-left: 4px solid #007BFF;
+                padding: 8px 12px;
+                margin-bottom: 8px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+<body>
+    <button id="collapseAll">Contraer todo</button>
+    <div class="nota-aclaratoria"><strong>Contiene los archivos resultado del WebScraping de diferentes plataformas relacionadas con la educación y convenios de Comfenalco.</strong></div>
+    <div class="carpetas-container">
+        <details>
+            <summary><strong>01.Q10</strong></summary>
+            <ul>
+            <div class="nota-aclaratoria"><strong>Carpeta principal con los datos extraídos del sistema Q10, organizados en categorías específicas.</strong></div>
+            <details>
+                <summary>01.Educacion_Tecnica</summary>
+                <ul>
+                    <div class="nota-aclaratoria"><strong>Subcarpeta con información técnica sobre docentes, matrículas, ingresos y notas históricas.</strong></div>
+                    <details>
+                        <summary>01.Docentes</summary>
+                        <ul>
+                            <div class="nota-aclaratoria"><strong>Contiene archivos relacionados con los registros de los docentes procesados y sin procesar.</strong></div>
+                            <li>Docentes_08_12_2024.xlsx </li>
+                            <li>Docentes_09_12_2024.xlsx </li>
+                            <li>Docentes_20_11_2024.xlsx </li>
+                            <li>Docentes_21_11_2024.xlsx </li>
+                            <li>Docentes_23_11_2024.xlsx </li>
+                            <li>Docentes_23_12_2024.xlsx </li>
+                            <li>Docentes_27_12_2024.xlsx </li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>02.Disenio_Curricular</summary>
+                        <ul>
+                            <div class="nota-aclaratoria"><strong>Archivos relacionados con el plan de estudios (Pensum) de cada programa.</strong></div>
+                            <li>Diseño_Curricular_08_12_2024.xlsx </li>
+                            <li>Diseño_Curricular_17_12_2024.xlsx </li>
+                            <li>Diseño_Curricular_20_11_2024.xlsx </li>
+                            <li>Diseño_Curricular_21_11_2024.xlsx </li>
+                            <li>Diseño_Curricular_27_12_2024.xlsx </li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>03.Listado_Matriculas</summary>
+                        <ul>
+                            <div class="nota-aclaratoria"><strong>Listado de matrículas con el listado de los estudiantes que fueron matriculados en un programa específico en el rango de fechas o periodo seleccionado.</strong></div>
+                            <li>Listado_Matriculas_01_01_2016_31_12_2016_Act_23_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2016_31_12_2016_Act_24_11_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2017_31_12_2017_Act_23_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2017_31_12_2017_Act_24_11_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2017_31_12_2017_Act_24_11_20241.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2018_31_12_2018_Act_23_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2018_31_12_2018_Act_24_11_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2019_31_12_2019_Act_23_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2020_31_12_2020_Act_23_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2021_31_12_2021_Act_23_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2022_31_12_2022_Act_23_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2023_31_12_2023_Act_23_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2024_28_11_2024_Act_28_11_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2024_30_06_2024_Act_27_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2024_31_12_2024_Act_23_12_2024.xlsx </li>
+                            <li>Listado_Matriculas_01_01_2024_31_12_2024_Act_27_12_2024.xlsx </li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>04.Ingresos</summary>
+                        <ul>
+                        <div class="nota-aclaratoria"><strong>Listado de archivos contiene el dinero recibido por concepto de pagos registrados en las diferentes modalidades de recaudo.</strong></div>
+                            <li>Ingresos_01_01_2017_31_12_2017_23_12_2024.xlsx </li>
+                            <li>Ingresos_01_01_2018_31_12_2018_23_12_2024.xlsx </li>
+                            <li>Ingresos_01_01_2019_31_12_2019_23_12_2024.xlsx </li>
+                            <li>Ingresos_01_01_2020_31_12_2020_23_12_2024.xlsx </li>
+                            <li>Ingresos_01_01_2020_31_12_2020_27_12_2024.xlsx </li>
+                            <li>Ingresos_01_01_2021_31_12_2021_23_12_2024.xlsx </li>
+                            <li>Ingresos_01_01_2022_31_12_2022_23_12_2024.xlsx </li>
+                            <li>Ingresos_01_01_2023_31_12_2023_23_12_2024.xlsx </li>
+                            <li>Ingresos_01_01_2024_31_12_2024_23_12_2024.xlsx </li>
+                        </ul>
+                    </details>
+                    <details><summary>05.Historico_Notas</summary><ul>
+                        <div class="nota-aclaratoria"><strong>Historial detallado de los cursos que han sido archivados con sus respectivos estudiantes y notas.</strong></div>
+                        <li>- Historico_Notas_2023_2_0100c7e4_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_026fa7c8_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_02cbe285_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_0449a5e7_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_07dba647_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_092aac38_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_0cddad19_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_0dff50cb_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_0e7858c3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_10375576_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_109d6949_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_121fad89_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_12dc19a4_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_1735f955_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_185ac97e_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_1958d0f8_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_1a220917_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_2210ee55_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_2226d5a5_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_2380e5e7_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_24b41186_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_273540de_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_29769f40_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_2be84da8_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_2d29660f_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_2e068ad5_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_2ee8230e_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_306b3846_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_30cc8d74_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_32e309f0_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_33b9edfc_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_378b0fac_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_384c0f48_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_4215b767_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_46b79fc3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_4921f516_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_4bad2c64_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_4d3cc959_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_4dc601e8_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_541f1898_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_55a3bd93_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_55e6763f_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_58f870e4_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_5f5f368b_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_62908c57_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_6500f569_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_6540bc55_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_66b59284_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_68bb266b_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_6b58a8a9_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_6ef0249a_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_6f559dd2_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_73887911_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_7a4650f1_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_7a962879_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_7c26c9fe_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_7e5281f2_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_7eaa6bf3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_7ecf3546_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_81280bf5_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_812e8d89_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_85fd6ce5_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_885e0511_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_88851305_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_8a1dc0e8_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_8ead704b_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_8fd27aa1_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_91cb763c_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_956755ea_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_9776db00_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_9a88ca6d_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_a8543b8f_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_a895cfc3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_ab2d75de_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_ac6e1db1_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_ad933526_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_af9aa73c_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_b1d06454_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_b88458df_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_baec81f2_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_bb6bce34_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_bbb5dd53_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_bec15051_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_c155c17a_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_c3b000d2_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_c576f83c_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_c6407892_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_c9ac9d62_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_caa22d82_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_cae7be5c_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_cbf22cd4_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_ccb297f0_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_d413cda3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_d573164b_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_d888e4af_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_d9bd30a3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_dadd2624_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_db34b6b2_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_dea03ce6_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_df10e46e_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_df7dbde9_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_e1111635_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_e6f87f14_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_e7ec41ef_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_e964d7d0_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_ec138d23_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_eccbecbe_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_eea8e976_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_f02f4642_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_f0a906ec_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_f104cb7f_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_f18569e3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_f2835d58_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_f75fcc99_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_f8939331_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_f9c45ab6_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_f9d3b157_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_fa3190bf_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_fabd1fb4_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2023_2_fcd657ef_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_046ce457_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_0e466b26_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_0f91b4b0_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_1130b71a_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_12570c3e_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_1a458bff_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_1e01dc0c_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_1e36519c_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_1e949cc6_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_1f4264e3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_1f5150ed_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_248946e3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_28e1fc5a_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_2c7b3b56_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_316ee9d7_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_3255b38a_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_3283e4b3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_35394ea3_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_3588253c_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_3a428752_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_3b426767_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_3fa7f518_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_40fae1d1_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_4ec16e1f_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_50b5f8e0_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_535a9c53_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_5d9b1d37_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_5ee76ea0_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_62d748e5_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_64183122_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_68eb8641_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_6e7f7ac5_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_6f3268f9_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_6f48dd2f_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_700898eb_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_7044b236_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_741e9221_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_75f1b194_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_769e73ee_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_796685b9_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_7b2d09b2_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_7b8a67d1_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_7b8caefb_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_7cf1c303_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_7d9ff89c_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_7e2ece94_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_7f88a9c1_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_7fd4026f_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_82c2d334_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_86841d92_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_86fe6856_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_8870b866_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_898499c8_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_8a325911_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_8c233e77_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_9051cfba_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_91ca2296_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_95a35066_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_964ae673_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_978c7d05_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_98f3faec_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_9a46e7e4_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_9e635b41_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_a2182500_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_a4e412ce_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_a80338d1_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_a8d30ce5_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_a9862f6d_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_a9eb40a4_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_aa322057_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_ab514259_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_af9f6622_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_b06dc7df_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_b5c640c2_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_b5f21992_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_b8884db6_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_b95c9d2a_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_bb80a2a7_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_c5c6495d_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_c7133773_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_c7583eed_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_ca93eb94_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_cba65ff5_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_cc57a34b_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_d1ce1966_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_d34f5bf8_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_d68444b2_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_d812cccc_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_d9aa91e4_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_dc6f2109_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_dccac103_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_dcd84c6c_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_dcf2b57f_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_e3430d8b_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_e4ad961e_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_e546f874_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_e6a6da65_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_e9175c3b_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_e91bf7dc_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_ef1d746b_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_f541b731_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_f70675c0_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_f828cd1a_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_f9e953ce_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_fb4fd7a6_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_2024_2_fbb74184_24_12_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-Com. Org-JN-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-Compras-JN-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-Cont. Inv. Apli-JN-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-Gest. Doc-JN-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-Htas. Apoy. Tec-JN-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-Htas. Apoy. Tec-JN-G2-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-PROD.DOC-JM-S1-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-PROD.DOC-JN-S1-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-PROD.DOC-JN-S1-G2-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_AA-Sem. Tra. Emp-JN-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_MV-Est. Can. Dist-JM-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_MV-Estrat. Prec.-JM-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_MV-Inv. Merc.-JM-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_SO-IMP.SG-SST-JM-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_SO-Sem. Tra. Emp-JM-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_SO-Sem. Tra. V.S-JM-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_SO-STAR-2-JM-G1-(2023-2)_27_11_2024.xlsx </li>
+                        <li>- Historico_Notas_Técnico Laboral en Auxiliar Administrativo_27_11_2024.xlsx </li>
+                    </ul></details>
+                    <details><summary>06.Egresados_Graduados</summary><ul>
+                        <div class="nota-aclaratoria">
+                            <strong>Nota:</strong> Contiene archivos de Excel con la información de los egresados y graduados.
+                        </div>
+                        <li>- Graduados_2010 - 1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2010 - 2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2011 - 1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2011 - 2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2012 - 1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2012 - 2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2013 - 1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2013 - 2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2014 - 1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2014 - 2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2015 - 1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2015 - 2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2016 - 1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2016 - 1_24_12_2024.xlsx </li>
+                        <li>- Graduados_2016 - 2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2016 - 2_24_12_2024.xlsx </li>
+                        <li>- Graduados_2017 - 1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2017 - 1_24_12_2024.xlsx </li>
+                        <li>- Graduados_2017 - 2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2017 - 2_24_12_2024.xlsx </li>
+                        <li>- Graduados_2018-1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2018-1_24_12_2024.xlsx </li>
+                        <li>- Graduados_2018-2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2018-2_24_12_2024.xlsx </li>
+                        <li>- Graduados_2019-1 CONVENIO_21_11_2024.xlsx </li>
+                        <li>- Graduados_2019-1 CONVENIO_24_12_2024.xlsx </li>
+                        <li>- Graduados_2019-1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2019-1_24_12_2024.xlsx </li>
+                        <li>- Graduados_2019-2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2019-2_24_12_2024.xlsx </li>
+                        <li>- Graduados_2020-1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2020-1_24_12_2024.xlsx </li>
+                        <li>- Graduados_2020-2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2020-2_24_12_2024.xlsx </li>
+                        <li>- Graduados_2021-1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2021-1_24_12_2024.xlsx </li>
+                        <li>- Graduados_2021-2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2021-2_24_12_2024.xlsx </li>
+                        <li>- Graduados_2022-1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2022-1_24_12_2024.xlsx </li>
+                        <li>- Graduados_2022-2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2022-2_24_12_2024.xlsx </li>
+                        <li>- Graduados_2023-1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2023-1_24_12_2024.xlsx </li>
+                        <li>- Graduados_2023-2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2023-2_24_12_2024.xlsx </li>
+                        <li>- Graduados_2024-1_21_11_2024.xlsx </li>
+                        <li>- Graduados_2024-1_24_12_2024.xlsx </li>
+                        <li>- Graduados_2024-1_27_12_2024.xlsx </li>
+                        <li>- Graduados_2024-2_21_11_2024.xlsx </li>
+                        <li>- Graduados_2024-2_24_12_2024.xlsx </li>
+                        <li>- Graduados_2024-2_27_12_2024.xlsx </li>
+                        <li>- Graduados_23_12_2024.xlsx </li>
+                        <li>- Graduados_Agosto 2024_23_12_2024.xlsx </li>
+                        <li>- Graduados_Julio 2024_23_12_2024.xlsx </li>
+                        <li>- Graduados_Junio 2024_23_12_2024.xlsx </li>
+                        <li>- Graduados_Octubre 2024_23_12_2024.xlsx </li>
+                        <li>- Graduados_Septiembre 2024_23_12_2024.xlsx </li>
+                    </ul></details>
+                    <details><summary>07.Cancelados_Desertores</summary><ul>
+                        <div class="nota-aclaratoria">
+                            <strong>Nota:</strong> Contiene los registros de estudiantes que han cancelado su matrícula con su respectiva causa y descripción.
+                        </div>
+                        <li>- Cancelados_desertores_01_02_2024_04_10_2024.xlsx </li>
+                        <li>- Cancelados_desertores_01_02_2024_22_03_2024.xlsx </li>
+                        <li>- Cancelados_desertores_03_02_2020_12_12_2020.xlsx </li>
+                        <li>- Cancelados_desertores_10_02_2022_21_10_2022.xlsx </li>
+                        <li>- Cancelados_desertores_11_02_2023_09_10_2023.xlsx </li>
+                        <li>- Cancelados_desertores_11_03_2019_03_12_2019.xlsx </li>
+                        <li>- Cancelados_desertores_28_02_2021_23_12_2021.xlsx </li>
+                        <li>- Cancelados_desertores_31_08_2018_04_10_2018.xlsx </li>
+                    </ul></details>
+                    <details><summary>Procesados</summary><ul>
+                        <div class="nota-aclaratoria">
+                            <strong>Nota:</strong> Esta sección contiene los archivos procesados, organizados según la misma estructura jerárquica de carpetas original. Los datos han sido preparados y optimizados para su integración y consumo directo mediante SSIS, garantizando compatibilidad y eficiencia en los procesos ETL.
+                        </div>
+                        <details><summary>01.Docentes</summary><ul>
+                            <li>- procesado_cede_Docentes_08_12_2024_20_27.xlsx </li>
+                            <li>- procesado_cede_Docentes_23_12_2024_14_39.xlsx </li>
+                            <li>- procesado_cede_Docentes_27_12_2024_11_52.xlsx </li>
+                            <li>- procesado_cede_Docentes_27_12_2024_11_53.xlsx </li>
+                            <li>- procesado_cede_Docentes_27_12_2024_12_18.xlsx </li>
+                            <li>- procesado_cede_Docentes_27_12_2024_12_26.xlsx </li>
+                        </details>
+                        <details><summary>02.Disenio_Curricular</summary><ul>
+                            <li>- procesado_cede_Diseño_Curricular_08_12_2024_20_28.xlsx </li>
+                            <li>- procesado_cede_Diseño_Curricular_23_12_2024_14_41.xlsx </li>
+                            <li>- procesado_cede_Diseño_Curricular_27_12_2024_12_02.xlsx </li>
+                            <li>- procesado_cede_Diseño_Curricular_27_12_2024_12_03.xlsx </li>
+                            <li>- procesado_cede_Diseño_Curricular_27_12_2024_14_05.xlsx </li>
+                        </details>
+                        <details><summary>03.Listado_Matriculas</summary><ul>
+                            <li>- procesado_cede_Listado_Matriculas_08_12_2024_20_21.xlsx </li>
+                            <li>- procesado_cede_Listado_Matriculas_08_12_2024_20_26.xlsx </li>
+                            <li>- procesado_cede_Listado_Matriculas_17_12_2024_09_34.xlsx </li>
+                            <li>- procesado_cede_Listado_Matriculas_23_12_2024_14_45.xlsx </li>
+                            <li>- procesado_cede_Listado_Matriculas_27_12_2024_12_09.xlsx </li>
+                        </details>
+                        <details><summary>04.Ingresos</summary><ul>                            
+                            <li>- procesado_cede_Ingresos_08_12_2024_20_32.xlsx </li>
+                            <li>- procesado_cede_Ingresos_23_12_2024_14_56.xlsx </li>
+                            <li>- procesado_cede_Ingresos_27_12_2024_14_11.xlsx </li>
+                        </details>
+                        <details><summary>05.Historico_Notas</summary><ul>                            
+                            <li>- procesado_cede_Historico_Notas_08_12_2024_20_36.xlsx </li>
+                            <li>- procesado_cede_Historico_Notas_24_12_2024_08_44.xlsx </li>
+                            <li>- procesado_cede_Historico_Notas_24_12_2024_08_50.xlsx </li>
+                            <li>- procesado_cede_Historico_Notas_24_12_2024_09_04.xlsx </li>
+                            <li>- procesado_cede_Historico_Notas_24_12_2024_09_20.xlsx </li>
+                            <li>- procesado_cede_Historico_Notas_24_12_2024_09_23.xlsx </li>
+                            <li>- procesado_cede_Historico_Notas_24_12_2024_18_15.xlsx </li>
+                        </details>
+                        <details><summary>06.Egresados_Graduados</summary><ul>                            
+                            <li>- procesado_cede_Egresados_Graduados_08_12_2024_20_38.xlsx </li>
+                            <li>- procesado_cede_Egresados_Graduados_23_12_2024_21_28.xlsx </li>
+                            <li>- procesado_cede_Egresados_Graduados_24_12_2024_19_42.xlsx </li>
+                        </details>
+                        <details><summary>07.Cancelados_Desertores</summary><ul>                            
+                            <li>- procesado_cede_Cancelados_Desertores_08_12_2024_20_41.xlsx </li>
+                            <li>- procesado_cede_Cancelados_Desertores_24_12_2024_20_14.xlsx </li>
+                        </ul></details>
+                        </ul>
+                    </li>
+                    </details>
+                </ul>
+            </details></li>
+                <details><summary>02.Educacion_Continua</summary>
+                <div class="nota-aclaratoria">
+                    <strong>Nota:</strong> Contiene registros de docentes relacionados con programas de educación continua.
+                </div>
+                <ul>
+                    <details><summary>01.Docentes</summary><ul>
+                        <div class="nota-aclaratoria">
+                            <strong>Nota:</strong> Listado de preinscritos en programas de educación continua.
+                        </div>
+                        <li>- Docentes_08_12_2024.xlsx </li>
+                        <li>- Docentes_20_11_2024.xlsx </li>
+                        <li>- Docentes_21_11_2024.xlsx </li>
+                        <li>- Docentes_25_12_2024.xlsx </li>
+                        <li>- Docentes_28_12_2024.xlsx </li>
+                        <li>- Docentes_30_11_2024.xlsx </li>
+                    </ul></details>
+                    <details><summary>02.Preinscritos</summary><ul>
+                        <div class="nota-aclaratoria">
+                            <strong>Nota:</strong> Archivos detallados de preinscritos en programas de educación continua.
+                        </div>
+                        <li>- Preinscritos_20_11_2024.xlsx </li>
+                        <li>- Preinscritos_21_11_2024.xlsx </li>
+                        <li>- Preinscritos_25_12_2024.xlsx </li>
+                        <li>- Preinscritos_27_12_2024.xlsx </li>
+                        <li>- Preinscritos_30_11_2024.xlsx </li>
+                    </ul></details>
+                    <details><summary>03.Listado_Matriculas</summary><ul>
+                        <div class="nota-aclaratoria">
+                            <strong>Nota:</strong> Listado de los estudiantes que fueron matriculados en un programa específico en el rango de fechas o periodo seleccionado.
+                        </div>
+                        <li>- Listado_Matriculas_01_01_2018_31_12_2018_Act_30_11_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_01_2019_30_06_2019_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_01_2019_31_03_2019_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_01_2020_31_03_2020_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_01_2021_31_03_2021_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_01_2022_31_03_2022_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_01_2023_31_03_2023_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_01_2024_31_03_2024_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_01_2024_31_03_2024_Act_27_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_04_2019_30_06_2019_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_04_2020_30_06_2020_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_04_2021_30_06_2021_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_04_2022_30_06_2022_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_04_2023_30_06_2023_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_04_2024_30_06_2024_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_04_2024_30_06_2024_Act_27_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_07_2018_31_12_2018_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_07_2019_30_09_2019_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_07_2020_30_09_2020_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_07_2021_30_09_2021_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_07_2022_30_09_2022_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_07_2023_30_09_2023_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_10_2018_31_12_2018_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_10_2019_31_12_2019_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_10_2020_31_12_2020_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_10_2021_31_12_2021_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_10_2022_31_12_2022_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_10_2023_31_12_2023_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_10_2024_31_12_2024_Act_25_12_2024.xlsx </li>
+                        <li>- Listado_Matriculas_01_10_2024_31_12_2024_Act_27_12_2024.xlsx </li>
+                    </ul></details>
+                    <details><summary>04.Consolidado_inasistencias</summary><ul>
+                        <div class="nota-aclaratoria">
+                            <strong>Nota:</strong> 
+                        </div>
+                        <li>- Consolidado_Inasistencias_1020.xlsx </li>
+                        <li>- Consolidado_Inasistencias_Consolidado_de_Inasistencias (1).xlsx </li>
+                        <li>- Consolidado_Inasistencias_Desarrollo Empresarial - Mañana_AUTOCONFIANZA_Noviembre 2024.xlsx </li>
+                    </ul></details>
+                    <details><summary>05.Estudiantes_cancelados_por_inasistencias</summary><ul>
+                        <li>- emp_Estudiantes_inasistencias_Período Agosto 2023.xlsx </li>
+                            <li>- emp_Estudiantes_inasistencias_Período Agosto 2024.xlsx </li>
+                            <li>- emp_Estudiantes_inasistencias_Período Diciembre 2023.xlsx </li>
+                            <li>- emp_Estudiantes_inasistencias_Período Diciembre 2024.xlsx </li>
+                            <li>- emp_Estudiantes_inasistencias_Período Julio 2024.xlsx </li>
+                            <li>- emp_Estudiantes_inasistencias_Período Noviembre 2023.xlsx </li>
+                            <li>- emp_Estudiantes_inasistencias_Período Noviembre 2024.xlsx </li>
+                            <li>- emp_Estudiantes_inasistencias_Período Octubre 2023.xlsx </li>
+                            <li>- emp_Estudiantes_inasistencias_Período Octubre 2024.xlsx </li>
+                            <li>- emp_Estudiantes_inasistencias_Período Septiembre 2023.xlsx </li>
+                        </ul></details>
+                    <details><summary>06.Egresados_Graduados</summary><ul>
+                        <li>- Graduados_Abril 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Abril 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Abril 2024_21_11_2024.xlsx </li>
+                            <li>- Graduados_Agosto 2021_21_11_2024.xlsx </li>
+                            <li>- Graduados_Agosto 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Agosto 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Agosto 2024_21_11_2024.xlsx </li>
+                            <li>- Graduados_Diciembre 2021_21_11_2024.xlsx </li>
+                            <li>- Graduados_Diciembre 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Diciembre 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Enero 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Enero 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Enero 2024_21_11_2024.xlsx </li>
+                            <li>- Graduados_Febrero 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Febrero 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Febrero 2024_21_11_2024.xlsx </li>
+                            <li>- Graduados_Julio 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Julio 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Julio 2024_21_11_2024.xlsx </li>
+                            <li>- Graduados_Junio 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Junio 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Junio 2024_21_11_2024.xlsx </li>
+                            <li>- Graduados_Marzo 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Marzo 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Marzo 2024_21_11_2024.xlsx </li>
+                            <li>- Graduados_Mayo 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Mayo 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Mayo 2024_21_11_2024.xlsx </li>
+                            <li>- Graduados_Noviembre 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Noviembre 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Octubre 2019_21_11_2024.xlsx </li>
+                            <li>- Graduados_Octubre 2021_21_11_2024.xlsx </li>
+                            <li>- Graduados_Octubre 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Octubre 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Octubre 2024_21_11_2024.xlsx </li>
+                            <li>- Graduados_Septiembre 2021_21_11_2024.xlsx </li>
+                            <li>- Graduados_Septiembre 2022_21_11_2024.xlsx </li>
+                            <li>- Graduados_Septiembre 2023_21_11_2024.xlsx </li>
+                            <li>- Graduados_Septiembre 2024_21_11_2024.xlsx </li>
+                        </ul></details>
+                    <details><summary>Procesados</summary>
+                        <div class="nota-aclaratoria">
+                            <strong>Nota:</strong> Esta sección contiene los archivos procesados, organizados según la misma estructura jerárquica de carpetas original. Los datos han sido preparados y optimizados para su integración y consumo directo mediante SSIS, garantizando compatibilidad y eficiencia en los procesos ETL.
+                        </div>
+                        00<details><summary>01.Docentes</summary><ul>
+                            <li>- procesado_emp_Docentes_06_12_2024_19_05.xlsx </li>
+                            <li>- procesado_emp_Docentes_06_12_2024_19_06.xlsx </li>
+                            <li>- procesado_emp_Docentes_08_12_2024_20_45.xlsx </li>
+                            <li>- procesado_emp_Docentes_25_12_2024_06_53.xlsx </li>
+                            <li>- procesado_emp_Docentes_28_12_2024_06_58.xlsx </li>
+                        </ul></details>
+                        <details><summary>02.Preinscritos</summary><ul>
+                            <li>- procesado_emp_Preinscritos_06_12_2024_19_09.xlsx </li>
+                            <li>- procesado_emp_Preinscritos_08_12_2024_20_52.xlsx </li>
+                        </ul></details>
+                        <details><summary>03.Listado_Matriculas</summary><ul>
+                            <li>- procesado_emp_Listado_Matriculas_06_12_2024_19_08.xlsx </li>
+                            <li>- procesado_emp_Listado_Matriculas_08_12_2024_20_48.xlsx </li>
+                            <li>- procesado_emp_Listado_Matriculas_25_12_2024_11_37.xlsx </li>
+                            <li>- procesado_emp_Listado_Matriculas_25_12_2024_13_05.xlsx </li>
+                        </ul></details>
+                        <details><summary>04.Consolidado_inasistencias</summary><ul>
+                            <li>- procesado_emp_Consolidado_inasistencias_15_12_2024_10_03.xlsx </li>
+                            <li>- procesado_emp_Consolidado_inasistencias_15_12_2024_10_11.xlsx </li>
+                            <li>- procesado_emp_Consolidado_inasistencias_28_12_2024_07_25.xlsx </li>
+                        </ul></details>
+                        <details><summary>05.Estudiantes_cancelados_por_inasistencias</summary><ul>
+                            <li>- procesado_emp_Estudiantes_inasistencias_07_12_2024_04_36.xlsx </li>
+                            <li>- procesado_emp_Estudiantes_inasistencias_08_12_2024_20_56.xlsx </li>
+                            <li>- procesado_emp_Estudiantes_inasistencias_28_12_2024_07_36.xlsx </li>
+                        </ul></details>
+                        <details><summary>06.Egresados_Graduados</summary><ul>
+                            <li>- procesado_emp_Egresados_Graduados_06_12_2024_19_11.xlsx </li>
+                            <li>- procesado_emp_Egresados_Graduados_08_12_2024_20_55.xlsx </li>
+                            <li>- procesado_emp_Egresados_Graduados_08_12_2024_21_01.xlsx </li>
+                            <li>- procesado_emp_Egresados_Graduados_08_12_2024_21_03.xlsx </li>
+                        </ul></details>
+                    </ul></details>
+                </ul>
+            </ul>
+        </details>
+        <details>
+            <summary><strong>02.C4C</strong></summary>
+            <ul>
+                <div class="nota-aclaratoria"><strong>Datos relevantes de la plataforma C4C, divididos en categorías de educación y protección social.</strong></div>
+                <details><summary>01.Educacion</summary><ul>
+                    <li>-archivos_C4C_Educacion.xlsx</li>
+                </ul></details>
+                <details><summary>02.Proteccion</summary><ul>
+                    <li>-archivos_C4C_Proteccion.xlsx</li>
+                </ul></details>
+            </ul>
+        </details>
+        <details><summary><strong>03.Archivos_Manuales</strong></summary>
+                <ul>
+                <div class="nota-aclaratoria"><strong>Carpeta que agrupa archivos manuales organizados por temáticas y áreas específicas.</strong></div>
+                <details><summary><strong>01.Archivos_Seleccionados</strong></summary>
+                    <ul>
+                    <details><summary><strong>01.Transversal</strong></summary>
+                        <ul>
+                        <details><summary>01.Dim_Servicios</summary><ul>
+                            <li>- AM-TRA-08.xlsx</li>
+                            <li>- AM-TRA-08_2022.xlsx</li>
+                            <li>- AM-TRA-08_2023.xlsx</li>
+                            <li>- AM-TRA-08_2024.xlsx</li>
+                        </ul></details>
+                        </ul>
+                    </details>
+                    <details><summary><strong>02.Educacion_Formal</strong></summary>
+                        <ul>
+                        <details><summary>01.Dim_Libros</summary><ul>
+                            <li>- AM-EDF-153.xlsx</li>
+                        </ul></details>
+                        </ul>
+                    </detauls>
+                    <details><summary><strong>03.Educacion_Tecnica</strong></summary>
+                            <li>archivos_manuales.xlsx</li>
+                    </details>
+                    <details><summary><strong>04.Educacion_Continua</strong></summary>                    
+                            <li>archivos_manuales.xlsx</li>
+                    </details>
+                    <details><summary><strong>05.Proteccion_Social</strong></summary>
+                            <li>archivos_manuales.xlsx</li>
+                    </details>
+                    </ul>
+                </details>
+                </li>
+                <details><summary><strong>02.Estructuras_Propuestas</strong></summary>
+                    <ul>
+                    <details><summary><strong>01.Transversal</strong></summary>
+                        <ul>
+                        <details><summary>01.Dim_Servicios</summary><ul>
+                            <li>- EP-TRA-04.xlsx</li>
+                            <li>- EP-TRA-04_2023.xlsx</li>
+                            <li>- EP-TRA-04_2024.xlsx</li>
+                        </ul></details>
+                        <details><summary>02.Dim_Capacidad_Fisica</summary><ul>
+                            <li>- EP-TRA-12.xlsx</li>
+                        </ul></details>
+                        </ul>
+                    </details>
+                    <details><summary><strong>02.Educacion_Formal</strong></summary>
+                        <ul>
+                        <details><summary>01.DIM_PERSONAL</summary><ul>
+                            <li>- EP-TRA-05.xlsx</li>
+                            <li>- EP-TRA-05_2022.xlsx</li>
+                            <li>- EP-TRA-05_2023.xlsx</li>
+                            <li>- EP-TRA-05_2024.xlsx</li>
+                        </ul></details>
+                        <details><summary>02.FACT_AUSENTISMO_DOCENTE</summary><ul>
+                            <li>- EP-EDF-02.xlsx</li>
+                        </ul></details>
+                        <details><summary>03.FACT_BIBLIOTECA</summary><ul>
+                            <li>- EP-EDF-05.xlsx</li>
+                        </ul></details>
+                        <details><summary>04.FACT_BIBLIOTECA_VIRTUAL</summary><ul>
+                            <li>- EP-EDF-06.xlsx</li>
+                        </ul></details>
+                        <details><summary>05.FACT_DESEMPENHO_DOCENTE</summary><ul>
+                            <li>- EP-EDF-09.xlsx</li>
+                        </ul></details>
+                        <details><summary>06.FACT_ENFERMERIA</summary><ul>
+                            <li>- EP-EDF-01.xlsx</li>
+                        </ul></details>
+                        <details><summary>07.FACT_LEGALIZACION</summary><ul>
+                            <li>- EP-EDF-10.xlsx</li>
+                        </ul></details>
+                        <details><summary>08.FACT_PERMISO_ESTUDIANTE</summary><ul>
+                            <li>- EP-EDF-04.xlsx</li>
+                        </ul></details>
+                        <details><summary>09.FACT_PSIORIENTACION</summary><ul>
+                            <li>- EP-EDF-11.xlsx</li>
+                        </ul></details>
+                        <details><summary>10.FACT_REEMPLAZO_DOCENTE</summary><ul>
+                            <li>- EP-EDF-03.xlsx</li>
+                        </ul></details>
+                        <details><summary>11.FACT_RESERVA_ESPACIOS</summary><ul>
+                            <li>- EP-EDF-12.xlsx</li>
+                        </ul></details>
+                        <details><summary>12.FACT_SABER11_COLEGIOS</summary><ul>
+                            <li>- EP-EDF-08.xlsx</li>
+                        </ul></details>
+                        <details><summary>13.FACT_SABER11_INDIVIDUAL</summary><ul>
+                            <li>- EP-EDF-07.xlsx</li>
+                        </ul></details>
+                        <details><summary>14.FACT_SERVICIO_SOCIAL</summary><ul>
+                            <li>- EP-EDF-13.xlsx</li>
+                        </ul></details>
+                        <details><summary>15.DIM_PERSONAL</summary><ul>
+                            <li>- EP-TRA-05.xlsx</li>
+                            <li>- EP-TRA-05_2022.xlsx</li>
+                            <li>- EP-TRA-05_2023.xlsx</li>
+                            <li>- EP-TRA-05_2024.xlsx</li>
+                        </ul></details>
+                        <details><summary>16.DIM_TARIFAS_SERVICIOS</summary><ul>
+                            <li>- EP-TRA-04_2024.xlsx</li>
+                        </ul></details>
+                        </ul>
+                    </details>
+                    <details><summary><strong>03.Educacion_Tecnica</strong></summary>
+                        <ul>
+                        <details><summary>01.DIM_PERSONAL</summary><ul>
+                            <li>- EP-TRA-05.xlsx</li>
+                            <li>- EP-TRA-05_2024.xlsx</li>
+                        </ul></details>
+                        </ul>
+                    </details>
+                    <details><summary><strong>04.Educacion_Continua</strong></summary>
+                        <ul>
+                        <details><summary>01.DIM_PERSONAL</summary><ul>
+                            <li>- EP-TRA-05.xlsx</li>
+                            <li>- EP-TRA-05_2024.xlsx</li>
+                        </ul></details>
+                        </ul>
+                    </details>
+                    <details><summary><strong>05.Proteccion_Social</strong></summary>
+                        <ul>
+                        <details><summary><strong>01.Caracterizacion</strong></summary>
+                            <ul>
+                            <details><summary><strong>AM-PRS-03</strong></summary>
+                            <ul><li>- AM-PRS-03-2022.xlsx</li></ul>
+                            </details>
+                            <details><summary><strong>AM-PRS-10</strong></summary>
+                            <ul><li>- AM-PRS-10-202405.xlsx</li></ul>
+                            <ul><li>- AM-PRS-10.xlsx</ul></li>
+                            </details>
+                            <details><summary><strong>AM-PRS-102</strong></summary>
+                            <ul><li>- AM-PRS-102.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>AM-PRS-11</strong></summary>
+                            <ul>
+                                <li>- AM-PRS-11-202401.xlsx</li>
+                                <li>- AM-PRS-11-202402.xlsx</li>
+                                <li>- AM-PRS-11-202403.xlsx</li>
+                                <li>- AM-PRS-11-202404.xlsx</li>
+                                <li>- AM-PRS-11-202405.xlsx</li>
+                                <li>- AM-PRS-11.xlsx</li>
+                            </ul>
+                            </details>
+                            <details><summary><strong>AM-PRS-12</strong></summary>
+                            <ul>
+                                <li>- AM-PRS-12-2024.xlsx</li>
+                                <li>- AM-PRS-12.xlsx</li>
+                            </ul>
+                            </details>
+                            <details><summary><strong>AM-PRS-120</strong></summary>
+                            <ul>
+                                <li>- AM-PRS-120-202402.xlsx</li>
+                                <li>- AM-PRS-120-202403.xlsx</li>
+                                <li>- AM-PRS-120-202404.xlsx</li>
+                                <li>- AM-PRS-120-202405.xlsx</li>
+                                <li>- AM-PRS-120.xlsx</li>
+                            </ul>
+                            </details>
+                            <details><summary><strong>AM-PRS-13</strong></summary>
+                            <ul>
+                                <li>- AM-PRS-13-2023.xlsx</li>
+                                <li>- AM-PRS-13.xlsx</li>
+                            </ul>
+                            </details>
+                            <details><summary><strong>AM-PRS-145</strong></summary>
+                            <ul><li>- AM-PRS-145.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>AM-PRS-145_CATEGORICAS</strong></summary>
+                            <ul><li>- AM-PRS-145_CATEGORICAS.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>AM-PRS-23</strong></summary>
+                            <ul><li>- AM-PRS-23.xlsx</ul></li>
+                            </details>
+                            <details><summary><strong>AM-PRS-41</strong></summary>
+                            <ul><li>- AM-PRS-41.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>AM-PRS-81</strong></summary>
+                            <ul><li>- AM-PRS-81.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>AM-PRS-91</strong></summary>
+                            <ul><li>- AM-PRS-91.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>AM-PRS-91_CATEGORICAS</strong></summary>
+                            <ul><li>- AM-PRS-91_CATEGORICAS.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>AM-TRA-11</strong></summary>
+                            <ul><li>- AM-TRA-11.txt </ul></li>
+                            </details>
+                            <details><summary><strong>DIM_PROGRAMA</strong></summary>
+                            <ul><li>- ID_PROGRAMA.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>EP-PRS-02</strong></summary>
+                            <ul><li>- EP-PSR-02.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>EP-PRS-03</strong></summary>
+                            <ul><li>- EP-PSR-03.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>EP-PSR-01</strong></summary>
+                            <ul><li>- EP-PSR-01.xlsx </ul></li>
+                            </details>
+                            <details><summary><strong>EP-TRA-02</strong></summary>
+                            <ul><li>- EP-TRA-02.xlsx </ul></li>
+                            </details>                               
+                            <details><summary><strong>NSU</strong></summary>
+                                <details><summary><strong>CEC</strong></summary>
+                                <ul>
+                                    <li>CEC (2).txt </li>
+                                    <li>CEC.txt </li>
+                                    <li>comfenalcocec (2).txt </li>
+                                    <li>comfenalcocec (3).txt </li>
+                                    <li>comfenalcocec (4).txt </li>
+                                    <li>comfenalcocec (5).txt </li>
+                                    <li>comfenalcocec.txt </li>
+                                </ul>
+                                </details>
+                                <details><summary><strong>Cedesarrollo convenios</strong></summary>
+                                <ul>
+                                    <li>campanas comfenalcoconvenios (2).txt</li>
+                                    <li>campanas comfenalcoconvenios (3).txt</li>
+                                    <li>campanas comfenalcoconvenios (4).txt</li>
+                                    <li>campanas comfenalcoconvenios (5).txt</li>
+                                    <li>campanas comfenalcoconvenios.txt</li>
+                                    <li>Convenios (2).txt</li>
+                                    <li>Convenios.txt</li>
+                                </ul>
+                                </details>
+                                <details><summary><strong>Consultorias</strong></summary>
+                                <ul>
+                                    <li>campanas comfenalcoconsultorias (2).txt</li>
+                                    <li>campanas comfenalcoconsultorias (3).txt</li>
+                                    <li>campanas comfenalcoconsultorias (4).txt</li>
+                                    <li>campanas comfenalcoconsultorias (5).txt</li>
+                                    <li>campanas comfenalcoconsultorias.txt</li>
+                                    <li>Consultorias (2).txt</li>
+                                    <li>Consultorias.txt</li>
+                                </ul>
+                                </details>
+                                <details><summary><strong>Cursos y diplomados</strong></summary>
+                                <ul>
+                                    <li>campanas comfenalcodiplomados (2).txt</li>
+                                    <li>campanas comfenalcodiplomados (3).txt</li>
+                                    <li>campanas comfenalcodiplomados (4).txt</li>
+                                    <li>campanas comfenalcodiplomados (5).txt</li>
+                                    <li>campanas comfenalcodiplomados.txt</li>
+                                    <li>Cursos y diplomados (2).txt</li>
+                                    <li>Cursos y diplomados.txt</li>
+                                </ul>
+                                </details>
+                                <details><summary><strong>Egresados</strong></summary>
+                                <ul>
+                                    <li>comfenalcocedesarrolloegresados (2).txt</li>
+                                    <li>comfenalcocedesarrolloegresados (3).txt</li>
+                                    <li>comfenalcocedesarrolloegresados (4).txt</li>
+                                    <li>comfenalcocedesarrolloegresados (5).txt</li>
+                                    <li>comfenalcocedesarrolloegresados.txt</li>
+                                    <li>Egresado (2).txt</li>
+                                    <li>Egresado.txt</li>
+                                </ul>
+                                </details>
+                                <details><summary><strong>Estudiantes Activos</strong></summary>
+                                <ul>
+                                    <li>base1.txt</li>
+                                    <li>base1Activos1.txt</li>
+                                    <li>base2.txt</li>
+                                    <li>base2Activos0.txt</li>
+                                    <li>base3.txt</li>
+                                    <li>base4.txt</li>
+                                    <li>base5.txt</li>
+                                    <li>Estudiantes Activos (2).txt</li>
+                                    <li>Estudiantes Activos.txt</li>
+                                </ul>
+                                </details>
+                                <details><summary><strong>Proteccion social</strong></summary>
+                                <ul>
+                                    <li>campanas comfenalcoproteccion(2).txt</li>
+                                    <li>campanas comfenalcoproteccion(3).txt</li>
+                                    <li>campanas comfenalcoproteccion(4).txt</li>
+                                    <li>campanas comfenalcoproteccion(5).txt</li>
+                                    <li>Proteccion social (2).txt</li>
+                                    <li>Proteccion social.txt</li>
+                                </ul>                               
+                                </details>
+                            </ul>
+                            </details>
+                        <details><summary><strong>02.DIM_PERSONAL</strong></summary>
+                                    <ul><li>- EP-TRA-05.xlsx  </ul></li>
+                                    <ul><li>- EP-TRA-02.xlsx </ul></li>
+                        </details>
+                        </ul>
+                        </details>
+                        </ul>
+                    </details>
+                    </ul>
+                </details>
+                <details><summary><strong>03.Otros_Archivos</strong></summary>
+                <ul>
+                    <li>AM-DRE-05_08_12_2024.xlsx</li>
+                    <li>AM-DRE-05_25_12_2024.xlsx</li>
+                    <li>AM-DRE-16.xls</li>
+                    <li>AM-EPT-47.xlsx</li>
+                    <li>EP-EDF-02.xlsx</li>
+                    <li>EP-EDF-04.xlsx</li>
+                    <li>EP-EDF-09.xlsx</li>
+                    <li>EP-EPT-04.xlsx</li>
+                    <li>EP-EPT-06.xlsx</li>
+                    <li>EP-EPT-07.xlsx</li>
+                    <li>EP-EPT-08.xlsx</li>
+                    <li>EP-EPT-09.xlsx</li>
+                    <li>EP-EPT-10.xlsx</li>
+                    <li>EP-EPT-11.xlsx</li>
+                    <li>EP-EPT-12.xlsx</li>
+                </ul>   
+                </details>
+                </ul>
+            </li>
+            </ul>
+        </details>
+        <script>
+            document.getElementById('collapseAll').addEventListener('click', function() {
+                const detailsElements = document.querySelectorAll('details');
+                detailsElements.forEach(details => {
+                    details.removeAttribute('open');
+                });
+            });
+        </script>
+    </div>
+    </body>
+</html>
+
+<blockquote>
+<p><strong>Nota:</strong> Desplegar los items para ver su contenido</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../js/mkdocs_pagetree_plugin.js"></script>
+      
+        <script src="../../js/init_mermaid.js"></script>
+      
+    
+  </body>
+</html>
