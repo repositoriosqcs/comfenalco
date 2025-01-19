@@ -1,0 +1,3386 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../06-CEDESARROLLO_FACT/">
+      
+      
+        <link rel="next" href="../08-PROTECCION_FACT/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>07. PROTECCION_DIMENSIONES - COMFENALCO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="23abf7" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proteccion_dimensiones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="COMFENALCO" class="md-header__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            COMFENALCO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              07. PROTECCION_DIMENSIONES
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="COMFENALCO" class="md-nav__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    COMFENALCO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00. INICIO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            00. INICIO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INTRODUCCIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INSTALACIÓN Y CONFIGURACIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Conexiones_BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CONEXIÓN A BASE DE DATOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buenaspracticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BUENAS PRÁCTICAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. SCRIPTS SQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. SCRIPTS SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/00.Inicio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/00.Eliminar_todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. Eliminar Todo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/01.Transversal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. Transversal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/02.Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. Cedesarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/03.Proteccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. Proteccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/04.Colegio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. Colegio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. ESTRUCTURA SHAREPOINT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. ESTRUCTURA SHAREPOINT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.sharepoint/estructura_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura carpeta Sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.sharepoint/estructura_archivos_actualizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura Archivos Actualizacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. BI COMFENALCO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. BI COMFENALCO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00.params/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-SCRAPING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. WEB SCRAPING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01.TRANSVERSAL_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. TRANSVERSAL_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-TRANSVERSAL_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TRANSVERSAL_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-COLEGIO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. COLEGIO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-COLEGIO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. COLEGIO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-CEDESARROLLO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05. CEDESARROLLO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-CEDESARROLLO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. CEDESARROLLO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    07. PROTECCION_DIMENSIONES
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    07. PROTECCION_DIMENSIONES
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propósito del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas-y-columnas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas y Columnas Clave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componente-ejecucion-etls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Ejecución ETLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_campos_caract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_CAMPOS_CARACT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PROGRAMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_preguntas_ee_jec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PREGUNTAS_EE_JEC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_respuesta_ee_jec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_RESPUESTA_EE_JEC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_preguntas_aipi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PREGUNTAS_AIPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_respuesta_aipi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_RESPUESTA_AIPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_poblacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_POBLACION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-establecimiento_educativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data ESTABLECIMIENTO_EDUCATIVO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-PROTECCION_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08. PROTECCION_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ETLS_CUBO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09. ETLS_CUBO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04. COMFENALCO EDUCACION
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            04. COMFENALCO EDUCACION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 SCRIPTS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 SCRIPTS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. Q10
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. Q10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_1" id="__nav_5_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.1. Educación Tecnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            0.1. Educación Tecnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/01.Docentes_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Cedesarrollo.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/02.Disenio_curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Diseño Curricular.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/03.Listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/04.Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Ingresos.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/05.Historico_notas_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Histórico notas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/06.Egresados_graduados_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/07.Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.7. Desertores.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_2" id="__nav_5_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.2. Educación Continua
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            0.2. Educación Continua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/01.Docentes_desarrollo_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Desarrollo Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/02.Preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Preinscritos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/03.Listado_matriculas_emp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/04.Consolidado_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/05.Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/06.Egresados_graduados_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados Graduados Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_3" id="__nav_5_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sharepoint
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sharepoint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_01_procesar_docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_01 procesar_docentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_02_procesar_Dise%C3%B1o_Curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_02 procesar_Diseño_Curricular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_03_procesar_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_03 procesar_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_04_procesar_cede_Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_04 procesar_Ingresos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_05_cede_Historico_Notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_05 cede_Historico_Notas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_06_cede_Egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_06 cede_Egresados_Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_07_Cancelados_Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_07 Cancelados Desertores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_01_Docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_01 Docentes Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_02_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_02 Listado Matrículas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_03_preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_03 Preinscritos Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_04_egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_04 Egresados Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_05_Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_05 Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_06_consolidado_Inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_06 Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_3" id="__nav_5_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. C4C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. C4C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/01.C4C_webscraping_v4_Actualizable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Webscraping Actualizable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/02.C4C_webscraping_v4_Historico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Webscraping Histórico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones_DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones_DM.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/c4c_from_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c4c_from_sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_Estudiantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_Estudiantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_periodo_academico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_periodo_academico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_facturacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_facturacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05. CUBO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            05. CUBO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/01.Origen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. ORIGEN Y MEDIDAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/02.Tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TABLAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06. POWER BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            06. POWER BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/01.Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. DASHBOARD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propósito del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas-y-columnas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas y Columnas Clave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componente-ejecucion-etls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Ejecución ETLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_campos_caract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_CAMPOS_CARACT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PROGRAMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_preguntas_ee_jec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PREGUNTAS_EE_JEC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_respuesta_ee_jec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_RESPUESTA_EE_JEC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_preguntas_aipi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PREGUNTAS_AIPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_respuesta_aipi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_RESPUESTA_AIPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_poblacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_POBLACION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-establecimiento_educativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data ESTABLECIMIENTO_EDUCATIVO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!-- markdownlint-disable -->
+
+<h1 id="proteccion_dimensiones">PROTECCION_DIMENSIONES<a class="headerlink" href="#proteccion_dimensiones" title="Permanent link">&para;</a></h1>
+<p>El paquete SSIS <strong>"07-PROTECCION_DIMENSIONES"</strong> está diseñado para gestionar flujos ETL que procesan datos críticos relacionados con dimensiones de protección, como preguntas y respuestas educativas, características de campos y establecimientos educativos. Este paquete asegura un flujo de trabajo eficiente, consolidando datos desde múltiples fuentes y garantizando su integridad en el Data Warehouse <code>DWH_COMFENALCO</code>.</p>
+<hr />
+<h2 id="proposito-del-paquete">Propósito del Paquete<a class="headerlink" href="#proposito-del-paquete" title="Permanent link">&para;</a></h2>
+<p>El objetivo principal del paquete es transformar y cargar datos clave para dimensiones educativas y de protección social. Esto incluye validar información de campos, programas y encuestas, asegurando que los datos consolidados sean precisos, consistentes y preparados para análisis estratégicos.</p>
+<hr />
+<h2 id="descripcion-del-paquete">Descripción del Paquete<a class="headerlink" href="#descripcion-del-paquete" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Extracción de Datos</strong>:</p>
+<ul>
+<li>Fuentes utilizadas:<ul>
+<li><strong>Archivos Excel</strong>: Información sobre preguntas, respuestas, programas y características de campos.</li>
+<li><strong>Bases de Datos</strong>: Validación de registros en tablas maestras como <code>DIM_PROGRAMA</code>, <code>DIM_PREGUNTAS_EE_JEC</code> y <code>DIM_ESTABLECIMIENTO_EDUCATIVO</code>.</li>
+</ul>
+</li>
+<li>Conexiones configuradas:<ul>
+<li>Administradores OLE DB y ADO.NET.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación de Datos</strong>:</p>
+<ul>
+<li><strong>Conversión de Datos (<code>Data Conversion</code>)</strong>:<ul>
+<li>Asegura compatibilidad de tipos entre columnas de entrada y destino.</li>
+</ul>
+</li>
+<li><strong>Validaciones (<code>Lookup</code>)</strong>:<ul>
+<li>Garantiza consistencia mediante búsquedas en tablas maestras.</li>
+</ul>
+</li>
+<li><strong>Clasificación (<code>Conditional Split</code>)</strong>:<ul>
+<li>Filtra registros válidos y redirige no válidos.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Carga de Datos en el Data Warehouse</strong>:</p>
+<ul>
+<li>Tablas destino:<ul>
+<li><code>DIM_CAMPOS_CARACT</code></li>
+<li><code>DIM_PROGRAMA</code></li>
+<li><code>DIM_PREGUNTAS_EE_JEC</code></li>
+<li><code>DIM_RESPUESTAS_EE_JEC</code></li>
+<li><code>DIM_ESTABLECIMIENTO_EDUCATIVO</code></li>
+</ul>
+</li>
+<li>Configuración:<ul>
+<li>Inserciones masivas habilitadas para optimizar la carga.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Automatización y Scripts</strong>:</p>
+<ul>
+<li>Integración de scripts Python para automatizar descargas desde SharePoint y procesar datos.</li>
+</ul>
+</li>
+</ol>
+<h2 id="tablas-y-columnas-clave">Tablas y Columnas Clave<a class="headerlink" href="#tablas-y-columnas-clave" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>DIM_CAMPOS_CARACT</strong>:</p>
+<ul>
+<li><code>ID_CARACTERISTICA</code>: Identificador único.</li>
+<li><code>PREGUNTA</code>: Texto de la pregunta.</li>
+<li><code>OBSERVACIONES</code>: Información adicional.</li>
+</ul>
+</li>
+<li>
+<p><strong>DIM_PROGRAMA</strong>:</p>
+<ul>
+<li><code>ID_PROGRAMA</code>: Identificador del programa.</li>
+<li><code>NOMBRE_PROGRAMA</code>: Descripción del programa.</li>
+</ul>
+</li>
+<li>
+<p><strong>DIM_PREGUNTAS_EE_JEC</strong>:</p>
+<ul>
+<li><code>ID_PREGUNTA</code>: Identificador único.</li>
+<li><code>PREGUNTA</code>: Texto de la pregunta.</li>
+<li><code>ID_PROGRAMA</code>: Relación con el programa.</li>
+</ul>
+</li>
+<li>
+<p><strong>DIM_RESPUESTAS_EE_JEC</strong>:</p>
+<ul>
+<li><code>ID_RESPUESTA</code>: Identificador único.</li>
+<li><code>RESPUESTA</code>: Texto de la respuesta.</li>
+<li><code>ID_PREGUNTA</code>: Relación con la pregunta.</li>
+</ul>
+</li>
+<li>
+<p><strong>DIM_ESTABLECIMIENTO_EDUCATIVO</strong>:</p>
+<ul>
+<li><code>ID_ESTABLECIMIENTO</code>: Identificador único.</li>
+<li><code>NOMBRE_ESTABLECIMIENTO</code>: Nombre del establecimiento.</li>
+<li><code>REPRESENTANTE_LEGAL</code>: Persona responsable.</li>
+</ul>
+</li>
+</ol>
+<h2 id="diagramas">Diagramas<a class="headerlink" href="#diagramas" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Diagrama de Flujo de Datos (Data Flow Diagram - DFD)</strong></li>
+</ol>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as SSIS Package
+    participant Excel as Fuente de Excel
+    participant DB as Base de Datos
+    participant Python as Scripts Python
+    participant DWH as Data Warehouse
+
+    SSIS -&gt;&gt; Excel: Extraer datos de campos, programas y preguntas
+    SSIS -&gt;&gt; DB: Validar registros en tablas maestras
+    SSIS -&gt;&gt; Python: Ejecutar scripts para extracción desde SharePoint
+    SSIS -&gt;&gt; DWH: Cargar datos procesados en tablas destino</code></pre>
+<ol>
+<li><strong>Diagrama de Transformaciones y Validaciones</strong></li>
+</ol>
+<pre class="mermaid"><code>graph TD
+    A1[Datos de Campos y Programas] --&gt; T1[Conversión de Datos]
+    A2[Preguntas y Respuestas] --&gt; T2[Lookup: Validar Preguntas]
+    T1 --&gt; T3[Clasificación por Condicional Split]
+    T2 --&gt; L1[Lookup: Validar Respuestas]
+    T3 --&gt; C1[Cargar datos validados]</code></pre>
+<ol>
+<li><strong>Diagrama ER para Tablas de Dimensiones</strong></li>
+</ol>
+<pre class="mermaid"><code>erDiagram
+    DIM_CAMPOS_CARACT {
+        int ID_CARACTERISTICA
+        string PREGUNTA
+        string OBSERVACIONES
+    }
+    DIM_PROGRAMA {
+        int ID_PROGRAMA
+        string NOMBRE_PROGRAMA
+    }
+    DIM_PREGUNTAS_EE_JEC {
+        int ID_PREGUNTA
+        string PREGUNTA
+        int ID_PROGRAMA
+    }
+    DIM_RESPUESTAS_EE_JEC {
+        int ID_RESPUESTA
+        string RESPUESTA
+        int ID_PREGUNTA
+    }
+    DIM_ESTABLECIMIENTO_EDUCATIVO {
+        int ID_ESTABLECIMIENTO
+        string NOMBRE_ESTABLECIMIENTO
+        string REPRESENTANTE_LEGAL
+    }
+    DIM_PROGRAMA ||--|| DIM_PREGUNTAS_EE_JEC : "Asociado a programas"
+    DIM_PREGUNTAS_EE_JEC ||--|| DIM_RESPUESTAS_EE_JEC : "Relación Pregunta-Respuesta"
+    DIM_ESTABLECIMIENTO_EDUCATIVO ||--|| DIM_PROGRAMA : "Conexión con programas"</code></pre>
+<h2 id="componentes">Componentes<a class="headerlink" href="#componentes" title="Permanent link">&para;</a></h2>
+<h3 id="componente-ejecucion-etls">Componente <strong><code>Ejecución ETLs</code></strong><a class="headerlink" href="#componente-ejecucion-etls" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general">Descripción General<a class="headerlink" href="#descripcion-general" title="Permanent link">&para;</a></h4>
+<p>Este componente ejecuta un proceso Python encargado de la conexión y extracción de datos desde SharePoint para la carpeta específica <code>Protección</code>, ubicada dentro de la estructura de archivos del proyecto. Es parte del flujo de automatización de ETL en un paquete de SSIS.</p>
+<h4 id="componentes-del-flujo-de-datos">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Descripción</strong>: Este componente utiliza una tarea de tipo <code>Execute Process Task</code> en SSIS para invocar un script Python que se encuentra dentro del entorno virtual configurado para el proyecto.</p>
+</li>
+<li>
+<p><strong>Propiedades</strong>:</p>
+<ul>
+<li>
+<p><strong>Executable</strong>: 
+    <div class="highlight"><pre><span></span><code>@[$Project::Working_Directory]+ &quot;COMFENALCO_EDUCACION\\01.Scripts\\Utils\\env\\Scripts\\python.exe&quot;
+</code></pre></div>
+    Especifica la ruta al ejecutable de Python dentro del entorno virtual del proyecto.</p>
+</li>
+<li>
+<p><strong>WorkingDirectory</strong>:
+    <div class="highlight"><pre><span></span><code>@[$Project::Working_Directory] +&quot;COMFENALCO_EDUCACION\\01.Scripts\\03.Archivos_Manuales\\03.Proteccion&quot;
+</code></pre></div>
+    Define el directorio de trabajo donde se encuentra el script Python.</p>
+</li>
+<li>
+<p><strong>Arguments</strong>: 
+    <div class="highlight"><pre><span></span><code>SharePoint_Connection_Proteccion.py
+</code></pre></div>
+    Indica el script que será ejecutado para conectar y procesar los datos de SharePoint.</p>
+</li>
+<li>
+<p><strong>TimeOut</strong>:
+    <div class="highlight"><pre><span></span><code>@[$Project::Tiempo_Espera_Segundos]
+</code></pre></div>
+    Configura el tiempo máximo de espera en segundos para que el proceso se complete, definido en 600 segundos (10 minutos).</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="diagrama-de-flujo-del-proceso">Diagrama de Flujo del Proceso<a class="headerlink" href="#diagrama-de-flujo-del-proceso" title="Permanent link">&para;</a></h4>
+<p>El siguiente diagrama ilustra el flujo de ejecución para el componente <strong>Ejecución ETLs</strong>:</p>
+<pre class="mermaid"><code>graph TD
+    A[Inicio del proceso] --&gt; B[Obtener ruta del ejecutable Python]
+    B --&gt; C[Definir directorio de trabajo]
+    C --&gt; D[Ejecutar script SharePoint_Connection_Proteccion.py]
+    D --&gt; E[Esperar a la finalización del proceso Timeout: 600 seg]
+    E --&gt; F[¿Proceso completado exitosamente?]
+    F --&gt; G[Registrar éxito en logs]:::success
+    F --&gt; H[Registrar error y abortar]:::error
+    G --&gt; I[Fin del proceso]
+    H --&gt; I</code></pre>
+<h3 id="componente-data-dim_campos_caract">Componente <strong><code>Data DIM_CAMPOS_CARACT</code></strong><a class="headerlink" href="#componente-data-dim_campos_caract" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_1">Descripción General<a class="headerlink" href="#descripcion-general_1" title="Permanent link">&para;</a></h4>
+<p>El componente <strong>Data DIM_CAMPOS_CARACT</strong> forma parte de un flujo ETL desarrollado en SSIS para cargar y transformar datos relacionados con las características de campos en la tabla <code>DIM_CAMPOS_CARACT</code> dentro del esquema <code>Protección</code>. Este proceso incluye la lectura de datos desde un archivo Excel, conversión de datos, validación mediante un componente de tipo Lookup, y finalmente, la carga en la base de datos de destino.</p>
+<h4 id="componentes-del-flujo-de-datos_1">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Conecta y extrae datos desde una hoja llamada <code>Sheet1$</code> en un archivo Excel, con columnas <code>PREGUNTA</code> y <code>OBSERVACIONES</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>AccessMode</strong>: 0 (por tabla u objeto).</li>
+<li><strong>Hoja seleccionada</strong>: <code>Sheet1$</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conversión de Datos (Data Conversion)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Convierte los datos extraídos a un formato compatible con los siguientes componentes del flujo.</li>
+<li><strong>Columnas Convertidas</strong>:<ul>
+<li><code>PREGUNTA</code> → <code>Copy of PREGUNTA</code>.</li>
+<li><code>OBSERVACIONES</code> → <code>Copy of OBSERVACIONES</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación (Lookup)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Valida y enriquece los datos mediante la búsqueda de correspondencias en la tabla destino <code>DIM_CAMPOS_CARACT</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_CAMPOS_CARACT</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PREGUNTA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li><strong>Columnas Salida</strong>:<ul>
+<li><code>PREGUNTA_</code>.</li>
+<li><code>OBSERVACIONES_</code>.</li>
+<li><code>ID_PREGUNTA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Destino (ADO NET Destination)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Carga los datos procesados y validados en la tabla <code>DIM_CAMPOS_CARACT</code> dentro del esquema <code>Protección</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>BatchSize</strong>: 0 (tamaño predeterminado).</li>
+<li><strong>CommandTimeout</strong>: 30 segundos.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code> (usa inserción masiva si es posible).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-flujo">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo" title="Permanent link">&para;</a></h4>
+<p>El siguiente diagrama ilustra el flujo completo de datos del componente <strong>Data DIM_CAMPOS_CARACT</strong>:</p>
+<pre class="mermaid"><code>graph TD
+    A[Inicio] --&gt; B[Lectura desde Excel Source]
+    B --&gt; C[Conversión de datos]
+    C --&gt; D[Validación mediante Lookup]
+    D --&gt; E{¿Coincidencia encontrada?}
+    E -- Sí --&gt; F[Cargar datos en ADO NET Destination]
+    E -- No --&gt; G[Registrar datos no coincidentes]
+    F --&gt; H[Fin]
+    G --&gt; H</code></pre>
+<h3 id="componente-data-dim_programa">Componente <strong><code>Data DIM_PROGRAMA</code></strong><a class="headerlink" href="#componente-data-dim_programa" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_2">Descripción General<a class="headerlink" href="#descripcion-general_2" title="Permanent link">&para;</a></h4>
+<p>El componente <strong>Data DIM_PROGRAMA</strong> forma parte de un flujo ETL que carga y transforma datos relacionados con programas en la tabla <code>DIM_PROGRAMA</code> del esquema <code>Protección</code>. El flujo procesa datos desde un archivo Excel, realiza validaciones, y los carga en una base de datos de destino.</p>
+<h4 id="componentes-del-flujo-de-datos_2">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Extrae los datos de un archivo Excel, específicamente de una hoja llamada <code>Sheet1$</code>.</li>
+<li><strong>Columnas de entrada</strong>:<ul>
+<li><code>ID_PROGRAMA</code></li>
+<li><code>PROGRAMA</code></li>
+</ul>
+</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>AccessMode</strong>: 0 (lectura desde tabla u objeto definido).</li>
+<li><strong>Hoja seleccionada</strong>: <code>Sheet1$</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conversión de Datos (Data Conversion)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Convierte las columnas extraídas a formatos compatibles para la base de datos destino.</li>
+<li><strong>Columnas Convertidas</strong>:<ul>
+<li><code>PROGRAMA</code> → <code>Copy of PROGRAMA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación (Lookup)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Verifica si las filas coinciden con registros existentes en la tabla destino <code>DIM_PROGRAMA</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_PROGRAMA</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PROGRAMA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li><strong>Salida</strong>:<ul>
+<li>Coincidencia: Los datos se procesan.</li>
+<li>Sin coincidencia: Los datos se redirigen para manejo adicional.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Destino (ADO NET Destination)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Carga los datos procesados en la tabla <code>DIM_PROGRAMA</code> del esquema <code>Protección</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>BatchSize</strong>: 0 (por defecto).</li>
+<li><strong>CommandTimeout</strong>: 30 segundos.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code> (usa inserción masiva si es posible).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-flujo_1">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_1" title="Permanent link">&para;</a></h4>
+<p>El siguiente diagrama ilustra el flujo completo de datos del componente <strong>Data DIM_PROGRAMA</strong>:</p>
+<pre class="mermaid"><code>graph TD
+    A[Inicio] --&gt; B[Lectura desde Excel Source]
+    B --&gt; C[Conversión de Datos]
+    C --&gt; D[Validación mediante Lookup]
+    D --&gt; E{¿Coincidencia encontrada?}
+    E -- Sí --&gt; F[Cargar datos en ADO NET Destination]
+    E -- No --&gt; G[Manejo de filas no coincidentes]
+    F --&gt; H[Fin]
+    G --&gt; H</code></pre>
+<h3 id="componente-data-dim_preguntas_ee_jec">Componente <strong><code>Data DIM_PREGUNTAS_EE_JEC</code></strong><a class="headerlink" href="#componente-data-dim_preguntas_ee_jec" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_3">Descripción General<a class="headerlink" href="#descripcion-general_3" title="Permanent link">&para;</a></h4>
+<p>Este componente gestiona un flujo de datos ETL que extrae preguntas relacionadas con ejecución de eventos educativos desde un archivo Excel y las procesa para ser almacenadas en la tabla <code>DIM_PREGUNTAS_EE_JEC</code> del esquema <code>Protección</code>. Incluye validaciones, transformaciones, y manejo de datos no coincidentes.</p>
+<h4 id="componentes-del-flujo-de-datos_3">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_3" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Extrae los datos desde un archivo Excel (<code>Sheet1$</code>).</li>
+<li><strong>Columnas de Entrada</strong>:<ul>
+<li><code>PROGRAMA</code></li>
+<li><code>PREGUNTA</code></li>
+</ul>
+</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>AccessMode</strong>: 0 (lectura directa desde una hoja).</li>
+<li><strong>Conexión</strong>: Administrador de conexiones <code>Excel_Connection_Dim_Preguntas_JEC</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Programas (Lookup 1)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Valida los programas en los datos de entrada con los registros existentes en <code>DIM_PROGRAMA</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_PROGRAMA</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PROGRAMA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li><strong>Salida</strong>:<ul>
+<li>Coincidencia encontrada: Asocia el <code>ID_PROGRAMA</code>.</li>
+<li>Sin coincidencia: Redirige a la etapa de conversión de datos.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conversión de Datos (Data Conversion)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Transforma las columnas extraídas (<code>PREGUNTA</code>) a un formato compatible con la base de datos destino.</li>
+<li><strong>Columnas Convertidas</strong>:<ul>
+<li><code>PREGUNTA</code> → <code>Copy of PREGUNTA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Preguntas (Lookup)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Verifica si las preguntas existen en la tabla destino <code>DIM_PREGUNTAS_EE_JEC</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_PREGUNTAS_EE_JEC</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PREGUNTA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Destino de Datos (ADO NET Destination)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Carga los datos procesados en la tabla <code>DIM_PREGUNTAS_EE_JEC</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>BatchSize</strong>: 0 (valor predeterminado).</li>
+<li><strong>CommandTimeout</strong>: 30 segundos.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code> (usa inserción masiva).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-flujo_2">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_2" title="Permanent link">&para;</a></h4>
+<p>El siguiente diagrama ilustra el flujo completo del componente <strong>Data DIM_PREGUNTAS_EE_JEC</strong>:</p>
+<pre class="mermaid"><code>graph TD
+    A[Inicio] --&gt; B[Lectura desde Excel Source]
+    B --&gt; C[Validación de Programas Lookup 1]
+    C -- Coincidencia encontrada --&gt; D[Validación de Preguntas Lookup]
+    C -- Sin coincidencia --&gt; E[Conversión de Datos]
+    D -- Coincidencia encontrada --&gt; F[Cargar datos en ADO NET Destination]
+    D -- Sin coincidencia --&gt; G[Manejo de filas no coincidentes]
+    E --&gt; F
+    F --&gt; H[Fin]
+    G --&gt; H</code></pre>
+<h3 id="componente-data-dim_respuesta_ee_jec">Componente <strong><code>Data DIM_RESPUESTA_EE_JEC</code></strong><a class="headerlink" href="#componente-data-dim_respuesta_ee_jec" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_4">Descripción General<a class="headerlink" href="#descripcion-general_4" title="Permanent link">&para;</a></h4>
+<p>Este flujo de datos procesa respuestas asociadas a preguntas de encuestas educativas (<code>DIM_RESPUESTA_EE_JEC</code>). Las respuestas se extraen de un archivo Excel, se validan con las tablas existentes y se cargan en la base de datos destino.</p>
+<h4 id="componentes-del-flujo-de-datos_4">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_4" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Extrae datos desde un archivo Excel (<code>Sheet1$</code>).</li>
+<li><strong>Columnas de Entrada</strong>:<ul>
+<li><code>PREGUNTA</code></li>
+<li><code>RESPUESTA</code></li>
+</ul>
+</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>AccessMode</strong>: 0 (lectura directa desde la hoja).</li>
+<li><strong>Conexión</strong>: <code>Excel_Connection_Dim_Respuestas_JEC</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Preguntas (Lookup 1)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Valida que las preguntas existan en <code>DIM_PREGUNTAS_EE_JEC</code> y asigna el <code>ID_PREGUNTA</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_PREGUNTAS_EE_JEC</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PREGUNTA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li><strong>Salida</strong>:<ul>
+<li>Coincidencia encontrada: Asocia el <code>ID_PREGUNTA</code>.</li>
+<li>Sin coincidencia: Redirige al flujo de transformación.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conversión de Datos (Data Conversion)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Transforma las columnas de texto para compatibilidad con la base de datos destino.</li>
+<li><strong>Columnas Convertidas</strong>:<ul>
+<li><code>RESPUESTA</code> → <code>Copy of RESPUESTA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Respuestas (Lookup)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Valida que las respuestas no estén duplicadas en <code>DIM_RESPUESTAS_EE_JEC</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_RESPUESTAS_EE_JEC</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">RESPUESTA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="n">ID_PREGUNTA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Destino de Datos (ADO NET Destination)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Carga las respuestas validadas y procesadas en <code>DIM_RESPUESTAS_EE_JEC</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>BatchSize</strong>: 0 (valor predeterminado).</li>
+<li><strong>CommandTimeout</strong>: 30 segundos.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code> (usa inserción masiva).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-flujo_3">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_3" title="Permanent link">&para;</a></h4>
+<p>El siguiente diagrama muestra el proceso completo del flujo de datos:</p>
+<pre class="mermaid"><code>graph TD
+    A[Inicio] --&gt; B[Lectura desde Excel Source]
+    B --&gt; C[Validación de Preguntas Lookup 1]
+    C -- Coincidencia encontrada --&gt; D[Validación de Respuestas Lookup]
+    C -- Sin coincidencia --&gt; E[Conversión de Datos]
+    D -- Coincidencia encontrada --&gt; F[Cargar datos en ADO NET Destination]
+    D -- Sin coincidencia --&gt; G[Manejo de filas no coincidentes]
+    E --&gt; F
+    F --&gt; H[Fin]
+    G --&gt; H</code></pre>
+<h3 id="componente-data-dim_preguntas_aipi">Componente <strong><code>Data DIM_PREGUNTAS_AIPI</code></strong><a class="headerlink" href="#componente-data-dim_preguntas_aipi" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_5">Descripción General<a class="headerlink" href="#descripcion-general_5" title="Permanent link">&para;</a></h4>
+<p>Este flujo de datos carga preguntas relacionadas con el programa AIPI en la tabla <code>DIM_PREGUNTAS_EE_AIPI</code>. El proceso incluye validación, transformación de datos y carga en la base de datos.</p>
+<h4 id="componentes-del-flujo-de-datos_5">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_5" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Extrae datos desde un archivo Excel (<code>Sheet1$</code>).</li>
+<li><strong>Columnas de Entrada</strong>:<ul>
+<li><code>PROGRAMA</code></li>
+<li><code>PREGUNTA</code></li>
+</ul>
+</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>AccessMode</strong>: 0 (lectura directa desde la hoja).</li>
+<li><strong>Conexión</strong>: <code>Excel_Connection_Dim_Preguntas_AIPI</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación del Programa (Lookup 1)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Valida que el programa asociado a la pregunta exista en la tabla <code>DIM_PROGRAMA</code> y asigna el <code>ID_PROGRAMA</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_PROGRAMA</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PROGRAMA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li><strong>Salida</strong>:<ul>
+<li>Coincidencia encontrada: Asocia el <code>ID_PROGRAMA</code>.</li>
+<li>Sin coincidencia: Redirige al flujo de transformación.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conversión de Datos (Data Conversion)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Transforma las columnas para compatibilidad con la base de datos destino.</li>
+<li><strong>Columnas Convertidas</strong>:<ul>
+<li><code>PREGUNTA</code> → <code>Copy of PREGUNTA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Preguntas (Lookup)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Valida que las preguntas no estén duplicadas en la tabla <code>DIM_PREGUNTAS_EE_AIPI</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_PREGUNTAS_EE_AIPI</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PREGUNTA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Destino de Datos (ADO NET Destination)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Carga las preguntas validadas y procesadas en <code>DIM_PREGUNTAS_EE_AIPI</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>BatchSize</strong>: 0 (valor predeterminado).</li>
+<li><strong>CommandTimeout</strong>: 30 segundos.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code> (usa inserción masiva).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-flujo_4">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_4" title="Permanent link">&para;</a></h4>
+<p>El siguiente diagrama ilustra el proceso:</p>
+<pre class="mermaid"><code>graph TD
+    A[Inicio] --&gt; B[Lectura desde Excel Source]
+    B --&gt; C[Validación del Programa Lookup 1]
+    C -- Coincidencia encontrada --&gt; D[Validación de Preguntas Lookup]
+    C -- Sin coincidencia --&gt; E[Conversión de Datos]
+    D -- Coincidencia encontrada --&gt; F[Cargar datos en ADO NET Destination]
+    D -- Sin coincidencia --&gt; G[Manejo de filas no coincidentes]
+    E --&gt; F
+    F --&gt; H[Fin]
+    G --&gt; H</code></pre>
+<h3 id="componente-data-dim_respuesta_aipi">Componente <strong><code>Data DIM_RESPUESTA_AIPI</code></strong><a class="headerlink" href="#componente-data-dim_respuesta_aipi" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_6">Descripción General<a class="headerlink" href="#descripcion-general_6" title="Permanent link">&para;</a></h4>
+<p>Este flujo de datos realiza la carga de respuestas relacionadas con el programa AIPI en la tabla <code>DIM_RESPUESTAS_EE_AIPI</code>. El proceso incluye validación, conversión de datos y carga en la base de datos.</p>
+<h4 id="componentes-del-flujo-de-datos_6">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_6" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Extrae datos desde un archivo Excel (<code>Sheet1$</code>).</li>
+<li><strong>Columnas de Entrada</strong>:<ul>
+<li><code>PREGUNTA</code></li>
+<li><code>RESPUESTA</code></li>
+</ul>
+</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>AccessMode</strong>: 0 (lectura directa desde la hoja).</li>
+<li><strong>Conexión</strong>: <code>Excel_Connection_Respuesta_AIPI</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Preguntas (Lookup 1)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Valida que la pregunta asociada a la respuesta exista en la tabla <code>DIM_PREGUNTAS_EE_AIPI</code> y asigna el <code>ID_PREGUNTA</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_PREGUNTAS_EE_AIPI</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PREGUNTA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Conversión de Datos (Data Conversion)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Transforma las columnas para compatibilidad con la base de datos destino.</li>
+<li><strong>Columnas Convertidas</strong>:<ul>
+<li><code>RESPUESTA</code> → <code>Copy of RESPUESTA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Respuestas (Lookup)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Valida que las respuestas no estén duplicadas en la tabla <code>DIM_RESPUESTAS_EE_AIPI</code>.</li>
+<li><strong>SQL de Consulta</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_RESPUESTAS_EE_AIPI</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">RESPUESTA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="n">ID_PREGUNTA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Destino de Datos (ADO NET Destination)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Carga las respuestas validadas y procesadas en <code>DIM_RESPUESTAS_EE_AIPI</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>BatchSize</strong>: 0 (valor predeterminado).</li>
+<li><strong>CommandTimeout</strong>: 30 segundos.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code> (usa inserción masiva).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-flujo_5">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_5" title="Permanent link">&para;</a></h4>
+<p>El siguiente diagrama ilustra el proceso:</p>
+<pre class="mermaid"><code>graph TD
+    A[Inicio] --&gt; B[Lectura desde Excel Source]
+    B --&gt; C[Validación de Preguntas Lookup 1]
+    C -- Coincidencia encontrada --&gt; D[Validación de Respuestas Lookup]
+    C -- Sin coincidencia --&gt; E[Conversión de Datos]
+    D -- Coincidencia encontrada --&gt; F[Cargar datos en ADO NET Destination]
+    D -- Sin coincidencia --&gt; G[Manejo de filas no coincidentes]
+    E --&gt; F
+    F --&gt; H[Fin]
+    G --&gt; H</code></pre>
+<h3 id="componente-data-dim_poblacion">Componente <strong><code>Data DIM_POBLACION</code></strong><a class="headerlink" href="#componente-data-dim_poblacion" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_7">Descripción General<a class="headerlink" href="#descripcion-general_7" title="Permanent link">&para;</a></h4>
+<p>Este componente procesa y carga información sobre la población en la tabla <code>DIM_POBLACION</code>. El flujo incluye pasos de transformación de datos, validación de referencias con otras tablas, y la carga de datos procesados en un destino ADO.NET.</p>
+<h4 id="componentes-del-flujo-de-datos_7">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_7" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Lee los datos desde un archivo Excel (<code>Sheet1$</code>).</li>
+<li><strong>Columnas de Entrada</strong>:<ul>
+<li><code>TIPO_DOCUMENTO</code></li>
+<li><code>DOCUMENTO</code></li>
+</ul>
+</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>Conexión</strong>: <code>Excel_Connection_Dim_Poblacion</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conversión de Datos (Data Conversion)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Realiza la transformación de las columnas para ajustarse a los requisitos del destino.</li>
+<li><strong>Columnas Convertidas</strong>:<ul>
+<li><code>DOCUMENTO</code> → <code>Copy of DOCUMENTO</code></li>
+<li><code>TIPO_DOCUMENTO</code> → <code>Copy of TIPO_DOCUMENTO</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Empresas (Lookup 1)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Busca el <code>ID_EMPRESA</code> en la tabla <code>DIM_EMPRESAS</code> a partir de los datos <code>DOCUMENTO</code> y <code>TIPO_DOCUMENTO</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Afiliados (Lookup 2)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Busca el <code>ID_AFILIADO</code> en la tabla <code>DIM_AFILIADOS</code> a partir de los datos <code>DOCUMENTO</code> y <code>TIPO_DOCUMENTO</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Beneficiarios (Lookup 3)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Busca el <code>ID_BENEFICIARIO</code> en la tabla <code>DIM_BENEFICIARIOS</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Aportantes (Lookup 4)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Busca el <code>ID_APORTANTE</code> en la tabla <code>DIM_APORTANTE_NOAFILIADO</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Carga de Datos (ADO.NET Destination)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Inserta los datos procesados y validados en la tabla <code>DIM_POBLACION</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>BatchSize</strong>: 0 (por defecto).</li>
+<li><strong>CommandTimeout</strong>: 30 segundos.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-flujo_6">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_6" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A[Inicio] --&gt; B[Lectura desde Excel Source]
+    B --&gt; C[Conversión de Datos]
+    C --&gt; D[Validación de Empresas Lookup 1]
+    D --&gt; E[Validación de Afiliados Lookup 2]
+    E --&gt; F[Validación de Beneficiarios Lookup 3]
+    F --&gt; G[Validación de Aportantes Lookup 4]
+    G --&gt; H[Carga de Datos en ADO.NET Destination]
+    H --&gt; I[Fin]</code></pre>
+<h3 id="componente-data-establecimiento_educativo">Componente <strong><code>Data ESTABLECIMIENTO_EDUCATIVO</code></strong><a class="headerlink" href="#componente-data-establecimiento_educativo" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_8">Descripción General<a class="headerlink" href="#descripcion-general_8" title="Permanent link">&para;</a></h4>
+<p>Este componente procesa información relacionada con establecimientos educativos y la carga en la tabla <code>DIM_ESTABLECIMIENTO_EDUCATIVO</code>. El flujo asegura que los datos sean validados y transformados antes de insertarse en el destino.</p>
+<h4 id="componentes-del-flujo-de-datos_8">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_8" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Extrae los datos desde un archivo Excel (<code>Sheet1$</code>).</li>
+<li><strong>Columnas de Entrada</strong>:<ul>
+<li><code>NOMBRE_ESTABLECIMIENTO</code></li>
+<li><code>REPRESENTANTE_LEGAL</code></li>
+<li><code>DIRECCION</code></li>
+<li><code>MUNICIPIO</code></li>
+</ul>
+</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>Conexión</strong>: <code>Excel_Connection_Dim_EE</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Validación de Datos (Lookup)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Busca si los registros ya existen en la tabla <code>DIM_ESTABLECIMIENTO_EDUCATIVO</code> para evitar duplicados.</li>
+<li><strong>Condiciones de Búsqueda</strong>:<ul>
+<li><code>NOMBRE_ESTABLECIMIENTO</code></li>
+<li><code>REPRESENTANTE_LEGAL</code></li>
+<li><code>DIRECCION</code></li>
+<li><code>MUNICIPIO</code>.</li>
+</ul>
+</li>
+<li><strong>Salida</strong>:<ul>
+<li>Filas coincidentes se eliminan del flujo.</li>
+<li>Filas no coincidentes continúan hacia el destino.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Carga de Datos (ADO.NET Destination)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Inserta los datos validados y únicos en la tabla <code>DIM_ESTABLECIMIENTO_EDUCATIVO</code>.</li>
+<li><strong>Columnas de Entrada</strong>:<ul>
+<li><code>NOMBRE_ESTABLECIMIENTO</code></li>
+<li><code>REPRESENTANTE_LEGAL</code></li>
+<li><code>DIRECCION</code></li>
+<li><code>MUNICIPIO</code>.</li>
+</ul>
+</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>BatchSize</strong>: 0 (por defecto).</li>
+<li><strong>CommandTimeout</strong>: 30 segundos.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-flujo_7">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_7" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A[Inicio] --&gt; B[Lectura desde Excel Source]
+    B --&gt; C[Validación con Lookup]
+    C --&gt;|No Coincide| D[Carga en ADO.NET Destination]
+    C --&gt;|Coincide| E[Descartar Registros]
+    D --&gt; F[Fin]
+    E --&gt; F</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../js/mkdocs_pagetree_plugin.js"></script>
+      
+        <script src="../../js/init_mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3810 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>09.Index Transversal - COMFENALCO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="23abf7" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#indices-transversal" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="COMFENALCO" class="md-header__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            COMFENALCO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              09.Index Transversal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="COMFENALCO" class="md-nav__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    COMFENALCO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00. INICIO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            00. INICIO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INTRODUCCIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INSTALACIÓN Y CONFIGURACIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Conexiones_BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CONEXIÓN A BASE DE DATOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buenaspracticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BUENAS PRÁCTICAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. SCRIPTS SQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. SCRIPTS SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00.Inicio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00.Eliminar_todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. Eliminar Todo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01.Transversal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. Transversal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02.Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. Cedesarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03.Proteccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. Proteccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.Colegio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. Colegio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. ESTRUCTURA SHAREPOINT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. ESTRUCTURA SHAREPOINT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.sharepoint/estructura_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura carpeta Sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.sharepoint/estructura_archivos_actualizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura Archivos Actualizacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. BI COMFENALCO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. BI COMFENALCO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/00.params/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/00-SCRAPING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. WEB SCRAPING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/01.TRANSVERSAL_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. TRANSVERSAL_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/02-TRANSVERSAL_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TRANSVERSAL_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/03-COLEGIO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. COLEGIO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/04-COLEGIO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. COLEGIO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/05-CEDESARROLLO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05. CEDESARROLLO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/06-CEDESARROLLO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. CEDESARROLLO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/07-PROTECCION_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07. PROTECCION_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/08-PROTECCION_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08. PROTECCION_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02.Paquetes_SSIS/09-ETLS_CUBO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09. ETLS_CUBO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04. COMFENALCO EDUCACION
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            04. COMFENALCO EDUCACION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 SCRIPTS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 SCRIPTS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. Q10
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. Q10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_1" id="__nav_5_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.1. Educación Tecnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            0.1. Educación Tecnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/01.Docentes_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Cedesarrollo.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/02.Disenio_curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Diseño Curricular.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/03.Listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/04.Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Ingresos.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/05.Historico_notas_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Histórico notas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/06.Egresados_graduados_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/07.Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.7. Desertores.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_2" id="__nav_5_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.2. Educación Continua
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            0.2. Educación Continua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/01.Docentes_desarrollo_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Desarrollo Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/02.Preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Preinscritos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/03.Listado_matriculas_emp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/04.Consolidado_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/05.Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/06.Egresados_graduados_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados Graduados Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_3" id="__nav_5_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sharepoint
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sharepoint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_01_procesar_docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_01 procesar_docentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_02_procesar_Dise%C3%B1o_Curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_02 procesar_Diseño_Curricular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_03_procesar_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_03 procesar_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_04_procesar_cede_Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_04 procesar_Ingresos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_05_cede_Historico_Notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_05 cede_Historico_Notas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_06_cede_Egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_06 cede_Egresados_Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_07_Cancelados_Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_07 Cancelados Desertores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_01_Docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_01 Docentes Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_02_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_02 Listado Matrículas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_03_preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_03 Preinscritos Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_04_egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_04 Egresados Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_05_Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_05 Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_06_consolidado_Inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_06 Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_3" id="__nav_5_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. C4C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. C4C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/01.C4C_webscraping_v4_Actualizable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Webscraping Actualizable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/02.C4C_webscraping_v4_Historico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Webscraping Histórico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones_DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones_DM.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/c4c_from_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c4c_from_sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_Estudiantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_Estudiantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_periodo_academico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_periodo_academico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_facturacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_facturacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05. CUBO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            05. CUBO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/01.Origen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. ORIGEN Y MEDIDAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/02.Tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TABLAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06. POWER BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            06. POWER BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/01.Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. DASHBOARD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dim_afiliados" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_AFILIADOS]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_aportante_noafiliado" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_APORTANTE_NOAFILIADO]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_beneficiarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_BENEFICIARIOS]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_capacidad_fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_CAPACIDAD_FISICA]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_cuenta_contable" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_CUENTA_CONTABLE]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_empresas" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_EMPRESAS]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_PERSONAL]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_sedes" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_SEDES]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_SERVICIOS]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_UNIDAD]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dim_unidades_organizativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      [DIM_UNIDADES_ORGANIZATIVAS]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fact_aportes_shr_det" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FACT_APORTES_SHR_DET]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fact_convenios" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FACT_CONVENIOS]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fact_detalle_contable" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FACT_DETALLE_CONTABLE]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fact_encuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FACT_ENCUESTAS]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fact_encuestas_psr" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FACT_ENCUESTAS_PSR]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fact_iniciativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FACT_INICIATIVAS]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fact_pqrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FACT_PQRS]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fact_presupuesto" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FACT_PRESUPUESTO]
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!-- markdownlint-disable -->
+<h1 id="indices-transversal">Indices Transversal<a class="headerlink" href="#indices-transversal" title="Permanent link">&para;</a></h1>
+<h2 id="dim_afiliados"><strong>[DIM_AFILIADOS]</strong><a class="headerlink" href="#dim_afiliados" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_AFILIADO</code></strong></p>
+<ul>
+<li>La clave primaria garantiza un acceso eficiente y ordenado a los registros.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>NUMERO_DOCUMENTO</code></strong></p>
+<ul>
+<li>Este índice es esencial para las búsquedas frecuentes por el número de documento, ya que suele ser un identificador único en sistemas de afiliados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>TIPO_DOCUMENTO</code> y <code>NUMERO_DOCUMENTO</code></strong></p>
+<ul>
+<li>Optimiza las consultas que combinan tipo y número de documento para validar registros.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_EMPRESA</code></strong></p>
+<ul>
+<li>Facilita las búsquedas y uniones con la dimensión de empresas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>CORREO</code></strong></p>
+<ul>
+<li>Mejora las búsquedas por correo electrónico, a menudo usado como identificador único o para comunicación.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>PRIMER_APELLIDO</code> y <code>SEGUNDO_APELLIDO</code></strong></p>
+<ul>
+<li>Optimiza las consultas de búsqueda y agrupación por apellidos, comunes en análisis demográficos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>GENERO</code></strong></p>
+<ul>
+<li>Mejora el rendimiento en análisis de género, común en reportes de afiliados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>ESTADO_AFILIACION</code> y <code>FECHA_AFILIACION</code></strong></p>
+<ul>
+<li>Facilita el análisis y la segmentación por estado y fecha de afiliación.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>FEC_DESDE</code> y <code>FEC_HASTA</code></strong></p>
+<ul>
+<li>Optimiza consultas de rangos temporales, como la validez de afiliación.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ESTADOREGISTRO</code></strong></p>
+<ul>
+<li>Mejora el rendimiento de consultas que filtran registros activos o inactivos.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_AFILIADO</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo NUMERO_DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_AFILIADOS_NUMERO_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">NUMERO_DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos TIPO_DOCUMENTO y NUMERO_DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_AFILIADOS_TIPO_Y_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">TIPO_DOCUMENTO</span><span class="p">,</span><span class="w"> </span><span class="n">NUMERO_DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_EMPRESA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_AFILIADOS_ID_EMPRESA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_EMPRESA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo CORREO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_AFILIADOS_CORREO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CORREO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos PRIMER_APELLIDO y SEGUNDO_APELLIDO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_AFILIADOS_APELLIDOS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">PRIMER_APELLIDO</span><span class="p">,</span><span class="w"> </span><span class="n">SEGUNDO_APELLIDO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo GENERO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_AFILIADOS_GENERO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">GENERO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos ESTADO_AFILIACION y FECHA_AFILIACION</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_AFILIADOS_ESTADO_FECHA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ESTADO_AFILIACION</span><span class="p">,</span><span class="w"> </span><span class="n">FECHA_AFILIACION</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos FEC_DESDE y FEC_HASTA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_AFILIADOS_FECHAS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FEC_DESDE</span><span class="p">,</span><span class="w"> </span><span class="n">FEC_HASTA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ESTADOREGISTRO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_AFILIADOS_ESTADOREGISTRO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ESTADOREGISTRO</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_aportante_noafiliado"><strong>[DIM_APORTANTE_NOAFILIADO]</strong><a class="headerlink" href="#dim_aportante_noafiliado" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_APORTANTE</code></strong>  </p>
+<ul>
+<li>Clave primaria que garantiza un acceso rápido y ordenado.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>DOCUMENTO</code></strong>  </p>
+<ul>
+<li>Optimiza búsquedas frecuentes por el documento, clave común en registros de aportantes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>TIPO_DOCUMENTO</code> y <code>DOCUMENTO</code></strong>  </p>
+<ul>
+<li>Mejora el rendimiento en validaciones combinadas por tipo y documento, frecuentemente usadas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>RAZON_SOCIAL</code></strong>  </p>
+<ul>
+<li>Facilita búsquedas por la razón social, útil para identificar aportantes empresariales.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_ESTADO</code> y <code>ESTADO</code></strong>  </p>
+<ul>
+<li>Optimiza filtros por estado del aportante, comunes en análisis de activos/inactivos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>SECTOR</code> y <code>CLASE</code></strong>  </p>
+<ul>
+<li>Mejora la eficiencia de consultas relacionadas con características sectoriales y clasificaciones.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>FECHA_DESDE</code> y <code>FECHA_HASTA</code></strong>  </p>
+<ul>
+<li>Facilita análisis y consultas en rangos temporales sobre periodos de validez.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>CORREO</code></strong>  </p>
+<ul>
+<li>Mejora el rendimiento de búsquedas por correo electrónico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>PRIMER_APELLIDO</code> y <code>SEGUNDO_APELLIDO</code></strong>  </p>
+<ul>
+<li>Útil para búsquedas por nombres y apellidos en casos de aportantes individuales.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ESTADOREGISTRO</code></strong>  </p>
+<ul>
+<li>Filtra registros según su estado actual, útil para segmentaciones de datos.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_APORTANTE</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_APORTANTE_NOAFILIADO_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos TIPO_DOCUMENTO y DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_APORTANTE_NOAFILIADO_TIPO_Y_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">TIPO_DOCUMENTO</span><span class="p">,</span><span class="w"> </span><span class="n">DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo RAZON_SOCIAL</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_APORTANTE_NOAFILIADO_RAZON_SOCIAL</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">RAZON_SOCIAL</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos ID_ESTADO y ESTADO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_APORTANTE_NOAFILIADO_ESTADO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_ESTADO</span><span class="p">,</span><span class="w"> </span><span class="n">ESTADO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos SECTOR y CLASE</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_APORTANTE_NOAFILIADO_SECTOR_CLASE</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">SECTOR</span><span class="p">,</span><span class="w"> </span><span class="n">CLASE</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos FECHA_DESDE y FECHA_HASTA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_APORTANTE_NOAFILIADO_FECHAS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_DESDE</span><span class="p">,</span><span class="w"> </span><span class="n">FECHA_HASTA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo CORREO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_APORTANTE_NOAFILIADO_CORREO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CORREO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos PRIMER_APELLIDO y SEGUNDO_APELLIDO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_APORTANTE_NOAFILIADO_APELLIDOS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">PRIMER_APELLIDO</span><span class="p">,</span><span class="w"> </span><span class="n">SEGUNDO_APELLIDO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ESTADOREGISTRO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_APORTANTE_NOAFILIADO_ESTADOREGISTRO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ESTADOREGISTRO</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_beneficiarios"><strong>[DIM_BENEFICIARIOS]</strong><a class="headerlink" href="#dim_beneficiarios" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_BENEFICIARIO</code></strong>  </p>
+<ul>
+<li>Clave primaria que garantiza acceso rápido a registros únicos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>NUMERO_DOCUMENTO</code></strong>  </p>
+<ul>
+<li>Optimiza búsquedas frecuentes por el documento del beneficiario.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>TIPO_DOCUMENTO</code> y <code>NUMERO_DOCUMENTO</code></strong>  </p>
+<ul>
+<li>Mejora el rendimiento en consultas que combinan tipo y número de documento.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_AFILIADO</code></strong>  </p>
+<ul>
+<li>Facilita consultas relacionadas con afiliados vinculados a beneficiarios.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>PRIMER_NOMBRE</code> y <code>PRIMER_APELLIDO</code></strong>  </p>
+<ul>
+<li>Útil en búsquedas por nombres y apellidos, especialmente en beneficiarios individuales.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>FECHA_AFILIACION</code> y <code>FECHA_RETIRO</code></strong>  </p>
+<ul>
+<li>Mejora análisis temporales relacionados con la afiliación y retiro de beneficiarios.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>GENERO</code></strong>  </p>
+<ul>
+<li>Permite segmentar y filtrar beneficiarios por género.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ESTADOREGISTRO</code></strong>  </p>
+<ul>
+<li>Facilita la segmentación y análisis por estado del registro.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>FEC_DESDE</code> y <code>FEC_HASTA</code></strong>  </p>
+<ul>
+<li>Optimiza consultas en rangos temporales sobre la validez del beneficiario.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>DIRECCION</code></strong>  </p>
+<ul>
+<li>Mejora búsquedas relacionadas con la localización de beneficiarios.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_BENEFICIARIO</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo NUMERO_DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_BENEFICIARIOS_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">NUMERO_DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos TIPO_DOCUMENTO y NUMERO_DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_BENEFICIARIOS_TIPO_Y_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">TIPO_DOCUMENTO</span><span class="p">,</span><span class="w"> </span><span class="n">NUMERO_DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_AFILIADO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_BENEFICIARIOS_AFILIADO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_AFILIADO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos PRIMER_NOMBRE y PRIMER_APELLIDO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_BENEFICIARIOS_NOMBRES</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">PRIMER_NOMBRE</span><span class="p">,</span><span class="w"> </span><span class="n">PRIMER_APELLIDO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos FECHA_AFILIACION y FECHA_RETIRO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_BENEFICIARIOS_FECHAS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_AFILIACION</span><span class="p">,</span><span class="w"> </span><span class="n">FECHA_RETIRO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo GENERO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_BENEFICIARIOS_GENERO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">GENERO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ESTADOREGISTRO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_BENEFICIARIOS_ESTADOREGISTRO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ESTADOREGISTRO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos FEC_DESDE y FEC_HASTA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_BENEFICIARIOS_FECHAS_VALIDACION</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FEC_DESDE</span><span class="p">,</span><span class="w"> </span><span class="n">FEC_HASTA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo DIRECCION</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_BENEFICIARIOS_DIRECCION</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">DIRECCION</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_capacidad_fisica"><strong>[DIM_CAPACIDAD_FISICA]</strong><a class="headerlink" href="#dim_capacidad_fisica" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_SALON</code></strong>  </p>
+<ul>
+<li>Clave primaria que asegura el acceso único y rápido a los registros de la tabla.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>CAPACIDAD</code></strong>  </p>
+<ul>
+<li>Optimiza búsquedas y análisis basados en la capacidad física de los salones.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>JORNADA</code> y <code>BLOQUE_HORARIO</code></strong>  </p>
+<ul>
+<li>Facilita consultas relacionadas con horarios y turnos en una jornada específica.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>GRUPO</code></strong>  </p>
+<ul>
+<li>Mejora las consultas que filtran por el grupo asignado al salón.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_SEDE</code></strong>  </p>
+<ul>
+<li>Ayuda a optimizar las consultas relacionadas con sedes específicas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_UNIDAD</code></strong>  </p>
+<ul>
+<li>Mejora el rendimiento en consultas que relacionan las capacidades físicas con unidades específicas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>ID_SEDE</code> y <code>ID_UNIDAD</code></strong>  </p>
+<ul>
+<li>Permite consultas eficientes que cruzan datos de sedes y unidades.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_SALON</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo CAPACIDAD</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CAPACIDAD_FISICA_CAPACIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CAPACIDAD_FISICA</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CAPACIDAD</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos JORNADA y BLOQUE_HORARIO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CAPACIDAD_FISICA_JORNADA_BLOQUE</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CAPACIDAD_FISICA</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">JORNADA</span><span class="p">,</span><span class="w"> </span><span class="n">BLOQUE_HORARIO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo GRUPO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CAPACIDAD_FISICA_GRUPO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CAPACIDAD_FISICA</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">GRUPO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_SEDE</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CAPACIDAD_FISICA_ID_SEDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CAPACIDAD_FISICA</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_SEDE</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_UNIDAD</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CAPACIDAD_FISICA_ID_UNIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CAPACIDAD_FISICA</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_UNIDAD</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos ID_SEDE y ID_UNIDAD</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CAPACIDAD_FISICA_SEDE_UNIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CAPACIDAD_FISICA</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_SEDE</span><span class="p">,</span><span class="w"> </span><span class="n">ID_UNIDAD</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_cuenta_contable"><strong>[DIM_CUENTA_CONTABLE]</strong><a class="headerlink" href="#dim_cuenta_contable" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_CUENTA</code></strong></p>
+<ul>
+<li>Es la clave primaria y asegura el acceso único y eficiente a los registros.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>CUENTA_NUMERO</code></strong></p>
+<ul>
+<li>Optimiza consultas que filtran o agrupan por el número de cuenta.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>CUENTA</code> y <code>CUENTA_HOMOLOGA</code></strong></p>
+<ul>
+<li>Facilita búsquedas relacionadas con la cuenta y su homologación.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>TIPO_CUENTA</code></strong></p>
+<ul>
+<li>Mejora el rendimiento de consultas que analizan o filtran cuentas por tipo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>GRUPO_CUENTA</code> y <code>SUBGRUPO_CUENTA</code></strong></p>
+<ul>
+<li>Acelera consultas que cruzan datos entre grupos y subgrupos de cuentas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ESTADO_REGISTRO</code></strong></p>
+<ul>
+<li>Permite consultas rápidas relacionadas con el estado de registro de las cuentas.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_CUENTA</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo CUENTA_NUMERO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CUENTA_CONTABLE_CUENTA_NUMERO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CUENTA_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CUENTA_NUMERO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos CUENTA y CUENTA_HOMOLOGA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CUENTA_CONTABLE_CUENTA_HOMOLOGA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CUENTA_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CUENTA</span><span class="p">,</span><span class="w"> </span><span class="n">CUENTA_HOMOLOGA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo TIPO_CUENTA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CUENTA_CONTABLE_TIPO_CUENTA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CUENTA_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">TIPO_CUENTA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos GRUPO_CUENTA y SUBGRUPO_CUENTA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CUENTA_CONTABLE_GRUPO_SUBGRUPO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CUENTA_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">GRUPO_CUENTA</span><span class="p">,</span><span class="w"> </span><span class="n">SUBGRUPO_CUENTA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ESTADO_REGISTRO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_CUENTA_CONTABLE_ESTADO_REGISTRO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_CUENTA_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ESTADO_REGISTRO</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_empresas"><strong>[DIM_EMPRESAS]</strong><a class="headerlink" href="#dim_empresas" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_EMPRESA</code></strong></p>
+<ul>
+<li>Es la clave primaria y permite búsquedas rápidas por el identificador único de empresa.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>DOCUMENTO</code></strong></p>
+<ul>
+<li>Optimiza búsquedas y validaciones de empresas por número de documento.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>RAZON_SOCIAL</code> y <code>SECTOR</code></strong></p>
+<ul>
+<li>Facilita las búsquedas combinadas de empresas por razón social y sector.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>FECHA_AFILIACION</code></strong></p>
+<ul>
+<li>Mejora el rendimiento en consultas relacionadas con la fecha de afiliación.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>ESTADOREGISTRO</code> y <code>ESTADO</code></strong></p>
+<ul>
+<li>Acelera consultas que filtran por el estado del registro y el estado de la empresa.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_ACT_ECONOMICA</code></strong></p>
+<ul>
+<li>Permite búsquedas más eficientes al filtrar por actividad económica.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_EMPRESA</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_EMPRESAS_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_EMPRESAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos RAZON_SOCIAL y SECTOR</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_EMPRESAS_RAZON_SOCIAL_SECTOR</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_EMPRESAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">RAZON_SOCIAL</span><span class="p">,</span><span class="w"> </span><span class="n">SECTOR</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo FECHA_AFILIACION</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_EMPRESAS_FECHA_AFILIACION</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_EMPRESAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_AFILIACION</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos ESTADOREGISTRO y ESTADO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_EMPRESAS_ESTADO_REGISTRO_ESTADO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_EMPRESAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ESTADOREGISTRO</span><span class="p">,</span><span class="w"> </span><span class="n">ESTADO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_ACT_ECONOMICA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_EMPRESAS_ID_ACT_ECONOMICA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_EMPRESAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_ACT_ECONOMICA</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_personal"><strong>[DIM_PERSONAL]</strong><a class="headerlink" href="#dim_personal" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_PERSONAL</code></strong></p>
+<ul>
+<li>Es la clave primaria que permite búsquedas rápidas por el identificador único del personal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>DOCUMENTO</code></strong></p>
+<ul>
+<li>Facilita búsquedas frecuentes por número de documento, que es una consulta común en sistemas de personal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>ID_UNIDAD</code> y <code>ID_SERVICIO</code></strong></p>
+<ul>
+<li>Mejora la eficiencia de consultas relacionadas con la asignación de personal a unidades y servicios.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>FECHA_INICIO_CONTRATACION</code> y <code>FECHA_FIN_CONTRATACION</code></strong></p>
+<ul>
+<li>Optimiza consultas que filtran registros por periodos de contratación.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>CORREO</code></strong></p>
+<ul>
+<li>Permite búsquedas rápidas por correo electrónico, útil en sistemas de contacto.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>GENERO</code> y <code>NIVEL_INGLES</code></strong></p>
+<ul>
+<li>Acelera consultas relacionadas con la demografía del personal y sus habilidades lingüísticas.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_PERSONAL</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_PERSONAL_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_PERSONAL</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos ID_UNIDAD e ID_SERVICIO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_PERSONAL_ID_UNIDAD_ID_SERVICIO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_PERSONAL</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_UNIDAD</span><span class="p">,</span><span class="w"> </span><span class="n">ID_SERVICIO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos FECHA_INICIO_CONTRATACION y FECHA_FIN_CONTRATACION</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_PERSONAL_FECHA_CONTRATACION</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_PERSONAL</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_INICIO_CONTRATACION</span><span class="p">,</span><span class="w"> </span><span class="n">FECHA_FIN_CONTRATACION</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo CORREO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_PERSONAL_CORREO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_PERSONAL</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CORREO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos GENERO y NIVEL_INGLES</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_PERSONAL_GENERO_NIVEL_INGLES</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_PERSONAL</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">GENERO</span><span class="p">,</span><span class="w"> </span><span class="n">NIVEL_INGLES</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_sedes"><strong>[DIM_SEDES]</strong><a class="headerlink" href="#dim_sedes" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_SEDE</code></strong></p>
+<ul>
+<li>Es la clave primaria que asegura la unicidad de cada sede y permite búsquedas rápidas por su identificador.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>SEDE</code></strong></p>
+<ul>
+<li>Optimiza consultas que filtran o buscan registros por el nombre de la sede, lo cual es común en reportes o visualizaciones.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_SEDE</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo SEDE</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_SEDES_SEDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_SEDES</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">SEDE</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_servicios"><strong>[DIM_SERVICIOS]</strong><a class="headerlink" href="#dim_servicios" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_SERVICIO</code></strong></p>
+<ul>
+<li>Es la clave primaria que asegura la unicidad de cada servicio y permite búsquedas rápidas por este identificador.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>SERVICIO</code></strong></p>
+<ul>
+<li>Optimiza consultas que buscan información específica por el nombre del servicio, común en reportes y análisis.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>CATEGORIA</code> y <code>COD_CATEGORIA</code></strong></p>
+<ul>
+<li>Mejora el rendimiento de las consultas que agrupan o filtran servicios por categoría o código de categoría.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>ANIO_TARIFA</code> y <code>VAL_TARIFA</code></strong></p>
+<ul>
+<li>Facilita las consultas que analizan las tarifas anuales de los servicios.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_UNIDAD</code></strong></p>
+<ul>
+<li>Permite relacionar eficientemente los servicios con su unidad correspondiente.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>CIUDAD</code> y <code>NOMBRE_ESTABLECIMIENTO</code></strong></p>
+<ul>
+<li>Optimiza consultas relacionadas con la ubicación y establecimiento del servicio.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_SERVICIO</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo SERVICIO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_SERVICIOS_SERVICIO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_SERVICIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">SERVICIO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo CATEGORIA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_SERVICIOS_CATEGORIA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_SERVICIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CATEGORIA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo COD_CATEGORIA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_SERVICIOS_COD_CATEGORIA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_SERVICIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">COD_CATEGORIA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos ANIO_TARIFA y VAL_TARIFA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_SERVICIOS_ANIO_VAL_TARIFA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_SERVICIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ANIO_TARIFA</span><span class="p">,</span><span class="w"> </span><span class="n">VAL_TARIFA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_UNIDAD</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_SERVICIOS_ID_UNIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_SERVICIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_UNIDAD</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos CIUDAD y NOMBRE_ESTABLECIMIENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_SERVICIOS_CIUDAD_ESTABLECIMIENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_SERVICIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CIUDAD</span><span class="p">,</span><span class="w"> </span><span class="n">NOMBRE_ESTABLECIMIENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_unidad"><strong>[DIM_UNIDAD]</strong><a class="headerlink" href="#dim_unidad" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_UNIDAD</code></strong></p>
+<ul>
+<li>Es la clave primaria, garantiza la unicidad de cada unidad y optimiza las búsquedas por este identificador.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>UNIDAD</code></strong></p>
+<ul>
+<li>Facilita las consultas que filtran o buscan datos específicos por el nombre de la unidad, común en reportes y análisis.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_UNIDAD</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo UNIDAD</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_UNIDAD_UNIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_UNIDAD</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">UNIDAD</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="dim_unidades_organizativas"><strong>[DIM_UNIDADES_ORGANIZATIVAS]</strong><a class="headerlink" href="#dim_unidades_organizativas" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice clúster existente para <code>ID_CEBE</code></strong></p>
+<ul>
+<li>Es la clave primaria, asegura unicidad y optimiza búsquedas específicas por el identificador de unidad organizativa.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>CEBE</code></strong></p>
+<ul>
+<li>Facilita búsquedas rápidas y filtrados por el código de la unidad organizativa (<code>CEBE</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>DESCRIPCION_BREVE</code> y <code>DESCRIPCION_COMPLETA</code></strong></p>
+<ul>
+<li>Acelera las consultas que buscan por descripciones específicas o detalladas de la unidad.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>DEPARTAMENTO</code>, <code>AREA</code>, y <code>SUBAREA</code></strong></p>
+<ul>
+<li>Optimiza consultas relacionadas con la jerarquía organizativa (departamentos, áreas, subáreas).</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>SEGMENTO</code> y <code>DESCRIPCION_SEGMENTO</code></strong></p>
+<ul>
+<li>Mejora el rendimiento de consultas segmentadas por estos campos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>CODIGO_SSF</code> y <code>NOMBRE_SSF</code></strong></p>
+<ul>
+<li>Soporta búsquedas relacionadas con los códigos y nombres del sistema de soporte financiero.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice clúster ya existente para la clave primaria ID_CEBE</span>
+<span class="c1">-- (No requiere creación adicional)</span>
+
+<span class="c1">-- Índice no clúster para el campo CEBE</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_UNIDADES_ORGANIZATIVAS_CEBE</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_UNIDADES_ORGANIZATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CEBE</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para los campos DESCRIPCION_BREVE y DESCRIPCION_COMPLETA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_UNIDADES_ORGANIZATIVAS_DESCRIPCION</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_UNIDADES_ORGANIZATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">DESCRIPCION_BREVE</span><span class="p">,</span><span class="w"> </span><span class="n">DESCRIPCION_COMPLETA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos DEPARTAMENTO, AREA y SUBAREA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_UNIDADES_ORGANIZATIVAS_DEPARTAMENTO_AREA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_UNIDADES_ORGANIZATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">DEPARTAMENTO</span><span class="p">,</span><span class="w"> </span><span class="n">AREA</span><span class="p">,</span><span class="w"> </span><span class="n">SUBAREA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos SEGMENTO y DESCRIPCION_SEGMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_UNIDADES_ORGANIZATIVAS_SEGMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_UNIDADES_ORGANIZATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">SEGMENTO</span><span class="p">,</span><span class="w"> </span><span class="n">DESCRIPCION_SEGMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para los campos CODIGO_SSF y NOMBRE_SSF</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_DIM_UNIDADES_ORGANIZATIVAS_CODIGO_SSF</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_UNIDADES_ORGANIZATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CODIGO_SSF</span><span class="p">,</span><span class="w"> </span><span class="n">NOMBRE_SSF</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="fact_aportes_shr_det"><strong>[FACT_APORTES_SHR_DET]</strong><a class="headerlink" href="#fact_aportes_shr_det" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice no clúster para <code>ID_EMPRESA</code> y <code>ID_AFILIADO</code></strong></p>
+<ul>
+<li>Optimiza las búsquedas y relaciones con las tablas de dimensiones relacionadas como <strong>DIM_EMPRESAS</strong> y <strong>DIM_AFILIADOS</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>PERIODO</code></strong></p>
+<ul>
+<li>Mejora las consultas que filtran o agrupan por periodos específicos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_FECHA</code></strong></p>
+<ul>
+<li>Acelera las búsquedas y análisis de datos basados en fechas, que suelen ser comunes en tablas de hechos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>OPBEL</code>, <code>BELNR</code> y <code>MOVIMIENTO</code></strong></p>
+<ul>
+<li>Facilita la recuperación de datos relacionados con transacciones específicas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>FECHA_CONTABLE</code> y <code>NUM_CUENTA</code></strong></p>
+<ul>
+<li>Optimiza consultas basadas en las cuentas contables y fechas asociadas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>APORTE</code> y <code>INTERES</code></strong></p>
+<ul>
+<li>Acelera consultas que analizan montos de aportes e intereses.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>FECHA_ACTUALIZACION</code></strong></p>
+<ul>
+<li>Mejora el rendimiento en la detección de cambios recientes.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice no clúster para los campos ID_EMPRESA y ID_AFILIADO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_APORTES_SHR_DET_EMPRESA_AFILIADO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_APORTES_SHR_DET</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_EMPRESA</span><span class="p">,</span><span class="w"> </span><span class="n">ID_AFILIADO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo PERIODO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_APORTES_SHR_DET_PERIODO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_APORTES_SHR_DET</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">PERIODO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_FECHA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_APORTES_SHR_DET_FECHA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_APORTES_SHR_DET</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_FECHA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos OPBEL, BELNR y MOVIMIENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_APORTES_SHR_DET_TRANSACCION</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_APORTES_SHR_DET</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">OPBEL</span><span class="p">,</span><span class="w"> </span><span class="n">BELNR</span><span class="p">,</span><span class="w"> </span><span class="n">MOVIMIENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos FECHA_CONTABLE y NUM_CUENTA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_APORTES_SHR_DET_CONTABLE_CUENTA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_APORTES_SHR_DET</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_CONTABLE</span><span class="p">,</span><span class="w"> </span><span class="n">NUM_CUENTA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos APORTE y INTERES</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_APORTES_SHR_DET_APORTE_INTERES</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_APORTES_SHR_DET</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">APORTE</span><span class="p">,</span><span class="w"> </span><span class="n">INTERES</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo FECHA_ACTUALIZACION</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_APORTES_SHR_DET_FECHA_ACTUALIZACION</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_APORTES_SHR_DET</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_ACTUALIZACION</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="fact_convenios"><strong>[FACT_CONVENIOS]</strong><a class="headerlink" href="#fact_convenios" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice no clúster para <code>ID_FECHA</code></strong></p>
+<ul>
+<li>Acelera consultas basadas en fechas, especialmente aquellas relacionadas con la dimensión de tiempo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_UNIDAD</code></strong></p>
+<ul>
+<li>Optimiza consultas que filtran por unidad, en relación con la tabla de dimensión <strong>DIM_UNIDAD</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_PROGRAMA</code></strong></p>
+<ul>
+<li>Mejora la eficiencia de búsquedas relacionadas con programas específicos, permitiendo una mejor integración con las consultas de análisis.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>FECHA_INICIO</code> y <code>FECHA_FIN</code></strong></p>
+<ul>
+<li>Facilita consultas que involucren rangos de fechas, comunes en análisis de duración de convenios.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>VALOR_CONVENIO</code></strong></p>
+<ul>
+<li>Acelera consultas que analizan valores monetarios de los convenios.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>ESTADO_CONVENIO</code> y <code>MUNICIPIO</code></strong></p>
+<ul>
+<li>Permite consultas rápidas que filtran por estado y ubicación de los convenios.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice no clúster para el campo ID_FECHA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_CONVENIOS_FECHA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_CONVENIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_FECHA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_UNIDAD</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_CONVENIOS_UNIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_CONVENIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_UNIDAD</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_PROGRAMA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_CONVENIOS_PROGRAMA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_CONVENIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_PROGRAMA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos FECHA_INICIO y FECHA_FIN</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_CONVENIOS_FECHAS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_CONVENIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_INICIO</span><span class="p">,</span><span class="w"> </span><span class="n">FECHA_FIN</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo VALOR_CONVENIO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_CONVENIOS_VALOR</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_CONVENIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">VALOR_CONVENIO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos ESTADO_CONVENIO y MUNICIPIO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_CONVENIOS_ESTADO_MUNICIPIO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_CONVENIOS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ESTADO_CONVENIO</span><span class="p">,</span><span class="w"> </span><span class="n">MUNICIPIO</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="fact_detalle_contable"><strong>[FACT_DETALLE_CONTABLE]</strong><a class="headerlink" href="#fact_detalle_contable" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice no clúster para <code>ID_CUENTA</code></strong></p>
+<ul>
+<li>Facilita consultas y uniones relacionadas con cuentas contables en la dimensión <strong>DIM_CUENTA_CONTABLE</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_FECHA</code></strong></p>
+<ul>
+<li>Mejora la eficiencia de consultas relacionadas con la dimensión de tiempo para análisis contable por períodos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_CEBE</code></strong></p>
+<ul>
+<li>Optimiza las búsquedas relacionadas con unidades organizativas en la dimensión <strong>DIM_UNIDADES_ORGANIZATIVAS</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>FECHA_REGISTRO_SAP</code> y <code>FECHA_PROCESO</code></strong></p>
+<ul>
+<li>Acelera las consultas que analizan registros por rangos de fechas o estados de proceso.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>IMPORTE</code> y <code>RESULTADO_EJERCICIO</code></strong></p>
+<ul>
+<li>Mejora el rendimiento de análisis de resultados financieros y balances.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice no clúster para el campo ID_CUENTA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_DETALLE_CONTABLE_ID_CUENTA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_DETALLE_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_CUENTA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_FECHA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_DETALLE_CONTABLE_ID_FECHA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_DETALLE_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_FECHA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_CEBE</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_DETALLE_CONTABLE_ID_CEBE</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_DETALLE_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_CEBE</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos FECHA_REGISTRO_SAP y FECHA_PROCESO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_DETALLE_CONTABLE_FECHAS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_DETALLE_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_REGISTRO_SAP</span><span class="p">,</span><span class="w"> </span><span class="n">FECHA_PROCESO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos IMPORTE y RESULTADO_EJERCICIO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_DETALLE_CONTABLE_IMPORTE_RESULTADO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_DETALLE_CONTABLE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">IMPORTE</span><span class="p">,</span><span class="w"> </span><span class="n">RESULTADO_EJERCICIO</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="fact_encuestas"><strong>[FACT_ENCUESTAS]</strong><a class="headerlink" href="#fact_encuestas" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice no clúster para <code>ID_FECHA</code></strong></p>
+<ul>
+<li>Mejora el rendimiento en consultas relacionadas con análisis temporales y de periodos de encuestas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_UNIDAD</code></strong></p>
+<ul>
+<li>Optimiza las consultas relacionadas con unidades y servicios prestados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_AFILIADO</code>, <code>ID_EMPRESA</code>, <code>ID_BENEFICIARIO</code>, y <code>ID_APORTANTE</code></strong></p>
+<ul>
+<li>Cada uno mejora las búsquedas en las relaciones con las respectivas dimensiones.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>TIPO_DOCUMENTO</code> y <code>DOCUMENTO</code></strong></p>
+<ul>
+<li>Acelera consultas específicas por identificación de los encuestados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>SERVICIO</code> y <code>CALIFICACION</code></strong></p>
+<ul>
+<li>Mejora el rendimiento en consultas analíticas sobre el servicio y su evaluación.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice no clúster para el campo ID_FECHA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_ID_FECHA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_FECHA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_UNIDAD</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_ID_UNIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_UNIDAD</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_AFILIADO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_ID_AFILIADO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_AFILIADO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_EMPRESA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_ID_EMPRESA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_EMPRESA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_BENEFICIARIO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_ID_BENEFICIARIO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_BENEFICIARIO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_APORTANTE</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_ID_APORTANTE</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_APORTANTE</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos TIPO_DOCUMENTO y DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_TIPO_DOCUMENTO_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">TIPO_DOCUMENTO</span><span class="p">,</span><span class="w"> </span><span class="n">DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo SERVICIO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_SERVICIO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">SERVICIO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo CALIFICACION</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_CALIFICACION</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CALIFICACION</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="fact_encuestas_psr"><strong>[FACT_ENCUESTAS_PSR]</strong><a class="headerlink" href="#fact_encuestas_psr" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice no clúster para <code>ID_FECHA</code></strong></p>
+<ul>
+<li>Mejora el rendimiento de consultas por fechas y análisis temporales de encuestas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>PROGRAMA</code> y <code>ACTIVIDAD_PREGUNTA</code></strong></p>
+<ul>
+<li>Optimiza las búsquedas y análisis por tipo de programa y actividades asociadas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>TIPO_DOCUMENTO</code> y <code>DOCUMENTO</code></strong></p>
+<ul>
+<li>Acelera consultas específicas por identificación de los encuestados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>CALIFICACION</code></strong></p>
+<ul>
+<li>Mejora el rendimiento en consultas que analicen resultados por calificación.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índices no clúster para <code>ID_AFILIADO</code>, <code>ID_BENEFICIARIO</code>, <code>ID_APORTANTE</code>, y <code>ID_EMPRESA</code></strong></p>
+<ul>
+<li>Cada uno optimiza consultas que relacionen la tabla con sus dimensiones correspondientes.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice no clúster para el campo ID_FECHA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_PSR_ID_FECHA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS_PSR</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_FECHA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para los campos PROGRAMA y ACTIVIDAD_PREGUNTA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_PSR_PROGRAMA_ACTIVIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS_PSR</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">PROGRAMA</span><span class="p">,</span><span class="w"> </span><span class="n">ACTIVIDAD_PREGUNTA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos TIPO_DOCUMENTO y DOCUMENTO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_PSR_TIPO_DOCUMENTO_DOCUMENTO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS_PSR</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">TIPO_DOCUMENTO</span><span class="p">,</span><span class="w"> </span><span class="n">DOCUMENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo CALIFICACION</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_PSR_CALIFICACION</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS_PSR</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">CALIFICACION</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_AFILIADO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_PSR_ID_AFILIADO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS_PSR</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_AFILIADO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_BENEFICIARIO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_PSR_ID_BENEFICIARIO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS_PSR</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_BENEFICIARIO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_APORTANTE</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_PSR_ID_APORTANTE</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS_PSR</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_APORTANTE</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_EMPRESA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_ENCUESTAS_PSR_ID_EMPRESA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_ENCUESTAS_PSR</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_EMPRESA</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="fact_iniciativas"><strong>[FACT_INICIATIVAS]</strong><a class="headerlink" href="#fact_iniciativas" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice no clúster para <code>ID_FECHA</code></strong></p>
+<ul>
+<li>Mejora las consultas basadas en tiempo, como filtrados por fechas de inicio o fin de iniciativas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_UNIDAD</code></strong></p>
+<ul>
+<li>Optimiza las búsquedas y relaciones con la dimensión de unidades organizativas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>FECHA_INICIO</code> y <code>FECHA_FIN</code></strong></p>
+<ul>
+<li>Facilita las consultas basadas en rangos de fechas para iniciativas activas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>NOMBRE_INICIATIVA</code></strong></p>
+<ul>
+<li>Mejora el rendimiento de búsquedas basadas en el nombre de iniciativas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>OBSERVACIONES</code></strong></p>
+<ul>
+<li>Optimiza las búsquedas por notas o comentarios asociados a las iniciativas.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice no clúster para el campo ID_FECHA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_INICIATIVAS_ID_FECHA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_INICIATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_FECHA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_UNIDAD</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_INICIATIVAS_ID_UNIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_INICIATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_UNIDAD</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos FECHA_INICIO y FECHA_FIN</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_INICIATIVAS_FECHA_INICIO_FIN</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_INICIATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_INICIO</span><span class="p">,</span><span class="w"> </span><span class="n">FECHA_FIN</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo NOMBRE_INICIATIVA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_INICIATIVAS_NOMBRE_INICIATIVA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_INICIATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">NOMBRE_INICIATIVA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo OBSERVACIONES</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_INICIATIVAS_OBSERVACIONES</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_INICIATIVAS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">OBSERVACIONES</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="fact_pqrs"><strong>[FACT_PQRS]</strong><a class="headerlink" href="#fact_pqrs" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice no clúster para <code>ID_FECHA</code></strong></p>
+<ul>
+<li>Mejora las consultas basadas en tiempo, como filtros por fechas de creación, resolución o vencimiento.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_UNIDAD</code></strong></p>
+<ul>
+<li>Optimiza las búsquedas relacionadas con unidades específicas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>FECHA_CREACION</code>, <code>FECHA_RESOLUCION</code> y <code>FECHA_VENCIMIENTO</code></strong></p>
+<ul>
+<li>Acelera las consultas que involucran rangos de fechas para seguimiento de PQRS.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ESTADO</code></strong></p>
+<ul>
+<li>Incrementa la eficiencia en consultas relacionadas con el estado de las PQRS.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>TIPO_PQRS</code></strong></p>
+<ul>
+<li>Facilita la búsqueda y clasificación por tipo de PQRS.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_EMPRESA</code>, <code>ID_AFILIADO</code>, <code>ID_BENEFICIARIO</code>, <code>ID_APORTANTE</code></strong></p>
+<ul>
+<li>Optimiza las relaciones con dimensiones relacionadas para análisis detallados.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice no clúster para el campo ID_FECHA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PQRS_ID_FECHA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PQRS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_FECHA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_UNIDAD</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PQRS_ID_UNIDAD</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PQRS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_UNIDAD</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos de fechas</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PQRS_FECHAS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PQRS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">FECHA_CREACION</span><span class="p">,</span><span class="w"> </span><span class="n">FECHA_RESOLUCION</span><span class="p">,</span><span class="w"> </span><span class="n">FECHA_VENCIMIENTO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ESTADO</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PQRS_ESTADO</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PQRS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ESTADO</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo TIPO_PQRS</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PQRS_TIPO_PQRS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PQRS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">TIPO_PQRS</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para los campos de dimensiones relacionadas</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PQRS_RELACIONES</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PQRS</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_EMPRESA</span><span class="p">,</span><span class="w"> </span><span class="n">ID_AFILIADO</span><span class="p">,</span><span class="w"> </span><span class="n">ID_BENEFICIARIO</span><span class="p">,</span><span class="w"> </span><span class="n">ID_APORTANTE</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+<h2 id="fact_presupuesto"><strong>[FACT_PRESUPUESTO]</strong><a class="headerlink" href="#fact_presupuesto" title="Permanent link">&para;</a></h2>
+<p><strong>Justificación</strong></p>
+<ol>
+<li>
+<p><strong>Índice no clúster para <code>ID_FECHA</code></strong></p>
+<ul>
+<li>Mejora la eficiencia en consultas que analizan presupuestos basados en periodos de tiempo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_CUENTA</code></strong></p>
+<ul>
+<li>Optimiza la búsqueda y análisis de presupuestos asociados a cuentas contables específicas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para <code>ID_CEBE</code></strong></p>
+<ul>
+<li>Aumenta el rendimiento en consultas relacionadas con unidades organizativas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice compuesto no clúster para <code>ID_TIPO_PRESUPUESTO</code> y <code>SEGMENT</code></strong></p>
+<ul>
+<li>Facilita el análisis de presupuestos según el tipo y segmento.</li>
+</ul>
+</li>
+<li>
+<p><strong>Índice no clúster para campos relacionados con valores (<code>INGRESOS</code>, <code>GASTOS</code>, <code>COSTOS</code>)</strong></p>
+<ul>
+<li>Mejora el rendimiento de cálculos financieros basados en estos campos.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Código</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Índice no clúster para el campo ID_FECHA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PRESUPUESTO_ID_FECHA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PRESUPUESTO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_FECHA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_CUENTA</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PRESUPUESTO_ID_CUENTA</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PRESUPUESTO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_CUENTA</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice no clúster para el campo ID_CEBE</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PRESUPUESTO_ID_CEBE</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PRESUPUESTO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_CEBE</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índice compuesto no clúster para los campos ID_TIPO_PRESUPUESTO y SEGMENT</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PRESUPUESTO_TIPO_SEGMENT</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PRESUPUESTO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">ID_TIPO_PRESUPUESTO</span><span class="p">,</span><span class="w"> </span><span class="n">SEGMENT</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Índices no clúster para campos relacionados con valores</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PRESUPUESTO_INGRESOS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PRESUPUESTO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">INGRESOS</span><span class="p">,</span><span class="w"> </span><span class="n">INGRESOS_OPERACIONALES</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PRESUPUESTO_GASTOS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PRESUPUESTO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">GASTOS</span><span class="p">,</span><span class="w"> </span><span class="n">GASTOS_OPERACIONALES</span><span class="p">,</span><span class="w"> </span><span class="n">GASTOS_OPERACIONALES_ADMIN</span><span class="p">);</span>
+<span class="k">GO</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_FACT_PRESUPUESTO_COSTOS</span>
+<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_PRESUPUESTO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">COSTOS</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../js/mkdocs_pagetree_plugin.js"></script>
+      
+        <script src="../../js/init_mermaid.js"></script>
+      
+    
+  </body>
+</html>

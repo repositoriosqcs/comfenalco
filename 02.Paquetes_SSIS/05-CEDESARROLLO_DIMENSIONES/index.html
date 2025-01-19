@@ -1,0 +1,3663 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../04-COLEGIO_FACT/">
+      
+      
+        <link rel="next" href="../06-CEDESARROLLO_FACT/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>05. CEDESARROLLO_DIMENSIONES - COMFENALCO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="23abf7" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cedesarrollo_dimensiones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="COMFENALCO" class="md-header__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            COMFENALCO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              05. CEDESARROLLO_DIMENSIONES
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="COMFENALCO" class="md-nav__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    COMFENALCO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00. INICIO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            00. INICIO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INTRODUCCIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INSTALACIÓN Y CONFIGURACIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Conexiones_BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CONEXIÓN A BASE DE DATOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buenaspracticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BUENAS PRÁCTICAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. SCRIPTS SQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. SCRIPTS SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/00.Inicio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/00.Eliminar_todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. Eliminar Todo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/01.Transversal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. Transversal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/02.Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. Cedesarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/03.Proteccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. Proteccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/04.Colegio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. Colegio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. ESTRUCTURA SHAREPOINT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. ESTRUCTURA SHAREPOINT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.sharepoint/estructura_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura carpeta Sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.sharepoint/estructura_archivos_actualizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura Archivos Actualizacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. BI COMFENALCO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. BI COMFENALCO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00.params/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-SCRAPING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. WEB SCRAPING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01.TRANSVERSAL_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. TRANSVERSAL_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-TRANSVERSAL_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TRANSVERSAL_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-COLEGIO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. COLEGIO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-COLEGIO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. COLEGIO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    05. CEDESARROLLO_DIMENSIONES
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    05. CEDESARROLLO_DIMENSIONES
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propósito del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas-y-columnas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas y Columnas Clave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-clave-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Clave del Paquete
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes Clave del Paquete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-agregar-1-a-periodo_academico" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL: Agregar -1 a Periodo_Academico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-tarea-cede_listado_matriculas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Tarea cede_Listado_Matriculas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_jornada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente DIM_JORNADA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-tarea-emp_listado_matriculas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente: Tarea emp_Listado_Matriculas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_jornada-emp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente DIM_JORNADA emp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_periodo_academico-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente dim_periodo_academico py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_periodo_academico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente DIM_PERIODO_ACADEMICO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_estudiantespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente dim_Estudiantes.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_estudiantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente DIM_ESTUDIANTES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-tarea-cede_diseno_curricular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Tarea cede_Diseño_Curricular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PROGRAMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_plan_curricular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PLAN_CURRICULAR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-CEDESARROLLO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. CEDESARROLLO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-PROTECCION_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07. PROTECCION_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-PROTECCION_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08. PROTECCION_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ETLS_CUBO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09. ETLS_CUBO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04. COMFENALCO EDUCACION
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            04. COMFENALCO EDUCACION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 SCRIPTS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 SCRIPTS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. Q10
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. Q10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_1" id="__nav_5_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.1. Educación Tecnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            0.1. Educación Tecnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/01.Docentes_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Cedesarrollo.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/02.Disenio_curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Diseño Curricular.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/03.Listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/04.Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Ingresos.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/05.Historico_notas_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Histórico notas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/06.Egresados_graduados_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/07.Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.7. Desertores.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_2" id="__nav_5_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.2. Educación Continua
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            0.2. Educación Continua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/01.Docentes_desarrollo_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Desarrollo Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/02.Preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Preinscritos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/03.Listado_matriculas_emp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/04.Consolidado_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/05.Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/06.Egresados_graduados_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados Graduados Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_3" id="__nav_5_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sharepoint
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sharepoint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_01_procesar_docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_01 procesar_docentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_02_procesar_Dise%C3%B1o_Curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_02 procesar_Diseño_Curricular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_03_procesar_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_03 procesar_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_04_procesar_cede_Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_04 procesar_Ingresos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_05_cede_Historico_Notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_05 cede_Historico_Notas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_06_cede_Egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_06 cede_Egresados_Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_07_Cancelados_Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_07 Cancelados Desertores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_01_Docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_01 Docentes Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_02_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_02 Listado Matrículas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_03_preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_03 Preinscritos Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_04_egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_04 Egresados Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_05_Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_05 Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_06_consolidado_Inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_06 Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_3" id="__nav_5_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. C4C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. C4C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/01.C4C_webscraping_v4_Actualizable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Webscraping Actualizable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/02.C4C_webscraping_v4_Historico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Webscraping Histórico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones_DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones_DM.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/c4c_from_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c4c_from_sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_Estudiantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_Estudiantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_periodo_academico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_periodo_academico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_facturacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_facturacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05. CUBO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            05. CUBO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/01.Origen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. ORIGEN Y MEDIDAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/02.Tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TABLAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06. POWER BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            06. POWER BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/01.Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. DASHBOARD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propósito del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas-y-columnas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas y Columnas Clave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-clave-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Clave del Paquete
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes Clave del Paquete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-agregar-1-a-periodo_academico" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL: Agregar -1 a Periodo_Academico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-tarea-cede_listado_matriculas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Tarea cede_Listado_Matriculas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_jornada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente DIM_JORNADA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-tarea-emp_listado_matriculas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente: Tarea emp_Listado_Matriculas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_jornada-emp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente DIM_JORNADA emp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_periodo_academico-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente dim_periodo_academico py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_periodo_academico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente DIM_PERIODO_ACADEMICO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_estudiantespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente dim_Estudiantes.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-dim_estudiantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente DIM_ESTUDIANTES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-tarea-cede_diseno_curricular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Tarea cede_Diseño_Curricular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PROGRAMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_plan_curricular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_PLAN_CURRICULAR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!-- markdownlint-disable -->
+
+<h1 id="cedesarrollo_dimensiones">CEDESARROLLO_DIMENSIONES<a class="headerlink" href="#cedesarrollo_dimensiones" title="Permanent link">&para;</a></h1>
+<p>El paquete SSIS <strong>"05-CEDESARROLLO_DIMENSIONES"</strong> está diseñado para procesar, transformar y cargar datos esenciales relacionados con dimensiones clave como períodos académicos, programas educativos, jornadas, y población matriculada. Este paquete asegura la calidad e integridad de los datos consolidados en el Data Warehouse <code>DWH_COMFENALCO</code>, proporcionando una base sólida para análisis estratégicos y toma de decisiones.</p>
+<h2 id="proposito-del-paquete">Propósito del Paquete<a class="headerlink" href="#proposito-del-paquete" title="Permanent link">&para;</a></h2>
+<p>El propósito principal es gestionar, transformar y cargar datos relacionados con dimensiones transversales del ámbito educativo y administrativo, garantizando su consistencia y disponibilidad para análisis detallados en plataformas de inteligencia de negocios.</p>
+<h2 id="descripcion-del-paquete">Descripción del Paquete<a class="headerlink" href="#descripcion-del-paquete" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Extracción de Datos</strong>:</p>
+<ul>
+<li>Fuentes principales:<ul>
+<li><strong>Bases de Datos</strong>:</li>
+<li><code>DIM_PERIODO_ACADEMICO</code>, <code>DIM_PROGRAMA</code>, <code>DIM_JORNADA</code>, <code>DIM_POBLACION_MATRICULA</code>.</li>
+<li><strong>Archivos Excel</strong>:</li>
+<li>Información de jornadas y programas.</li>
+</ul>
+</li>
+<li>Herramientas utilizadas:<ul>
+<li>Conexiones ADO.NET y OLE DB.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación de Datos</strong>:</p>
+<ul>
+<li><strong>Validaciones (<code>Lookup</code>)</strong>:<ul>
+<li>Asegura consistencia mediante búsquedas en tablas maestras como <code>DIM_ESTUDIANTES</code> y <code>DIM_TIEMPO</code>.</li>
+</ul>
+</li>
+<li><strong>Conversión de Tipos (<code>Data Conversion</code>)</strong>:<ul>
+<li>Garantiza compatibilidad con las tablas destino.</li>
+</ul>
+</li>
+<li><strong>Columnas Derivadas (<code>Derived Column</code>)</strong>:<ul>
+<li>Genera identificadores y valores predeterminados.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Carga de Datos en el Data Warehouse</strong>:</p>
+<ul>
+<li>Tablas procesadas:<ul>
+<li><code>DIM_PERIODO_ACADEMICO</code></li>
+<li><code>DIM_PROGRAMA</code></li>
+<li><code>DIM_JORNADA</code></li>
+<li><code>DIM_POBLACION_MATRICULA</code></li>
+</ul>
+</li>
+<li>Configuración:<ul>
+<li>Inserciones masivas habilitadas para maximizar el rendimiento.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Automatización y Scripts</strong>:</p>
+<ul>
+<li>Scripts Python para automatizar tareas de descarga y validación.</li>
+</ul>
+</li>
+</ol>
+<h2 id="tablas-y-columnas-clave">Tablas y Columnas Clave<a class="headerlink" href="#tablas-y-columnas-clave" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>DIM_PERIODO_ACADEMICO</strong>:</p>
+<ul>
+<li><code>ID_PERIODO</code>, <code>ID_UNIDAD</code>, <code>PERIODO_ACADEMICO</code>, <code>FECHA_INICIO</code>, <code>FECHA_FIN</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>DIM_PROGRAMA</strong>:</p>
+<ul>
+<li><code>ID_PROGRAMA</code>, <code>NOMBRE_PROGRAMA</code>, <code>DESCRIPCION</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>DIM_JORNADA</strong>:</p>
+<ul>
+<li><code>ID_JORNADA</code>, <code>NOMBRE_JORNADA</code>, <code>HORARIO</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>DIM_POBLACION_MATRICULA</strong>:</p>
+<ul>
+<li><code>ID_POBLACION</code>, <code>NOMBRE</code>, <code>DOCUMENTO</code>, <code>GENERO</code>, <code>FECHA_NACIMIENTO</code>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="diagramas">Diagramas<a class="headerlink" href="#diagramas" title="Permanent link">&para;</a></h2>
+<p><strong>1. Diagrama de Flujo de Datos</strong></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as SSIS Package
+    participant DB as Base de Datos
+    participant Excel as Archivos Excel
+    participant Python as Scripts Python
+    participant DWH as Data Warehouse
+
+    SSIS -&gt;&gt; DB: Extraer datos de dimensiones
+    SSIS -&gt;&gt; Excel: Leer información adicional
+    SSIS -&gt;&gt; Python: Ejecutar scripts de validación
+    SSIS -&gt;&gt; DWH: Cargar datos procesados</code></pre>
+<p><strong>2. Diagrama ER para Tablas de Dimensiones</strong></p>
+<pre class="mermaid"><code>erDiagram
+    DIM_PERIODO_ACADEMICO {
+        int ID_PERIODO
+        int ID_UNIDAD
+        string PERIODO_ACADEMICO
+        date FECHA_INICIO
+        date FECHA_FIN
+    }
+    DIM_PROGRAMA {
+        int ID_PROGRAMA
+        string NOMBRE_PROGRAMA
+        string DESCRIPCION
+    }
+    DIM_JORNADA {
+        int ID_JORNADA
+        string NOMBRE_JORNADA
+        string HORARIO
+    }
+    DIM_POBLACION_MATRICULA {
+        int ID_POBLACION
+        string NOMBRE
+        string DOCUMENTO
+        string GENERO
+        date FECHA_NACIMIENTO
+    }
+    DIM_PERIODO_ACADEMICO ||--|| DIM_JORNADA : "Relación de Período con Jornadas"
+    DIM_JORNADA ||--|| DIM_PROGRAMA : "Asociación a Programas"
+    DIM_POBLACION_MATRICULA ||--|| DIM_PROGRAMA : "Estudiantes en Programas"</code></pre>
+<h2 id="componentes-clave-del-paquete">Componentes Clave del Paquete<a class="headerlink" href="#componentes-clave-del-paquete" title="Permanent link">&para;</a></h2>
+<h3 id="sql-agregar-1-a-periodo_academico">SQL: <strong><code>Agregar -1 a Periodo_Academico</code></strong><a class="headerlink" href="#sql-agregar-1-a-periodo_academico" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general">Descripción General<a class="headerlink" href="#descripcion-general" title="Permanent link">&para;</a></h4>
+<p>Esta tarea de tipo "Ejecutar SQL" realiza la limpieza y la inserción de un registro especial en la tabla <code>[DIM_PERIODO_ACADEMICO]</code> en la base de datos <code>[Cedesarrollo]</code>. Este registro representa un valor por defecto (<code>-1</code>) para períodos académicos sin datos.</p>
+<p><strong>Detalles de la Configuración</strong></p>
+<ul>
+<li><strong>Nombre del Componente</strong>: <code>Agregar -1 a Periodo_Academico</code></li>
+<li><strong>Descripción</strong>: <code>Tarea Ejecutar SQL</code></li>
+<li><strong>Conexión</strong>: <code>{C2A27DDB-56C2-4889-8A4B-7AA7124DFFD7}</code></li>
+<li><strong>Sentencia SQL</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">TRUNCATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Cedesarrollo</span><span class="p">].[</span><span class="n">DIM_PERIODO_ACADEMICO</span><span class="p">];</span>
+
+<span class="c1">-- Insertar un registro para el periodo sin datos</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">IDENTITY_INSERT</span><span class="w"> </span><span class="p">[</span><span class="n">Cedesarrollo</span><span class="p">].[</span><span class="n">DIM_PERIODO_ACADEMICO</span><span class="p">]</span><span class="w"> </span><span class="k">ON</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="p">[</span><span class="n">Cedesarrollo</span><span class="p">].[</span><span class="n">DIM_PERIODO_ACADEMICO</span><span class="p">]</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="p">[</span><span class="n">ID_PERIODO</span><span class="p">],</span><span class="w"> </span>
+<span class="w">    </span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">],</span><span class="w"> </span>
+<span class="w">    </span><span class="p">[</span><span class="n">PERIODO_ACADEMICO</span><span class="p">],</span><span class="w"> </span>
+<span class="w">    </span><span class="p">[</span><span class="n">FECHA_INICIO</span><span class="p">],</span><span class="w"> </span>
+<span class="w">    </span><span class="p">[</span><span class="n">FECHA_FIN</span><span class="p">]</span>
+<span class="p">)</span><span class="w"> </span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s1">&#39;Sin datos&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="k">NULL</span>
+<span class="p">);</span>
+
+<span class="k">SET</span><span class="w"> </span><span class="n">IDENTITY_INSERT</span><span class="w"> </span><span class="p">[</span><span class="n">Cedesarrollo</span><span class="p">].[</span><span class="n">DIM_PERIODO_ACADEMICO</span><span class="p">]</span><span class="w"> </span><span class="k">OFF</span><span class="p">;</span>
+<span class="k">GO</span>
+</code></pre></div>
+<p><strong>Propósito</strong></p>
+<ol>
+<li><strong>Limpieza</strong>: Se utiliza la instrucción <code>TRUNCATE TABLE</code> para vaciar la tabla <code>[DIM_PERIODO_ACADEMICO]</code> y garantizar que esté lista para nuevos datos.</li>
+<li><strong>Inserción de Registro Especial</strong>:<ul>
+<li><strong>ID_PERIODO</strong>: <code>-1</code>, para representar períodos sin datos.</li>
+<li><strong>ID_UNIDAD</strong>: <code>5</code>, asociado a la unidad correspondiente.</li>
+<li><strong>PERIODO_ACADEMICO</strong>: <code>'Sin datos'</code>, indicando ausencia de datos.</li>
+<li><strong>FECHA_INICIO</strong> y <strong>FECHA_FIN</strong>: <code>NULL</code>, ya que no son aplicables para este registro.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Notas Técnicas</strong></p>
+<ol>
+<li><strong><code>IDENTITY_INSERT</code></strong>: La opción se activa para permitir la inserción manual de un valor en la columna <code>ID_PERIODO</code>, que es de tipo <code>IDENTITY</code>.</li>
+<li><strong>Compatibilidad</strong>: Se asegura que la tabla esté vacía antes de insertar el nuevo registro.</li>
+<li><strong>Ejecución Segura</strong>:</li>
+<li>No se utiliza <code>DELETE</code> sino <code>TRUNCATE</code>, optimizando el rendimiento y liberando espacio utilizado.</li>
+</ol>
+<p><strong>Impacto</strong>
+Este registro asegura que cualquier operación dependiente de <code>[DIM_PERIODO_ACADEMICO]</code> pueda manejar escenarios donde no existan datos reales, evitando errores o inconsistencias en el modelo de datos.</p>
+<h4 id="diagrama">Diagrama<a class="headerlink" href="#diagrama" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SQLTask as Agregar -1 a Periodo_Academico
+    participant DB as Base de Datos [Cedesarrollo].[DIM_PERIODO_ACADEMICO]
+
+    SQLTask-&gt;&gt;DB: TRUNCATE TABLE [DIM_PERIODO_ACADEMICO]
+    SQLTask-&gt;&gt;DB: SET IDENTITY_INSERT [DIM_PERIODO_ACADEMICO] ON
+    SQLTask-&gt;&gt;DB: INSERT INTO [DIM_PERIODO_ACADEMICO] VALUES (-1, 5, 'Sin datos', NULL, NULL)
+    SQLTask-&gt;&gt;DB: SET IDENTITY_INSERT [DIM_PERIODO_ACADEMICO] OFF
+    DB--&gt;&gt;SQLTask: Confirmación de ejecución</code></pre>
+<h3 id="componente-tarea-cede_listado_matriculas">Componente <strong><code>Tarea cede_Listado_Matriculas</code></strong><a class="headerlink" href="#componente-tarea-cede_listado_matriculas" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_1">Descripción General<a class="headerlink" href="#descripcion-general_1" title="Permanent link">&para;</a></h4>
+<p>La tarea <strong>Tarea cede_Listado_Matriculas</strong> ejecuta un script de Python utilizando un entorno específico. Este script realiza la descarga de información relacionada con la matriculación bajo una clave identificadora proporcionada.</p>
+<h4 id="componentes-del-flujo-de-datos">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Descripción</strong>:</p>
+<ul>
+<li><strong>Nombre del Script:</strong> <code>download.py</code></li>
+<li><strong>Parámetros:</strong> <ul>
+<li><code>--key</code>: Define la clave del proceso, en este caso, <code>cede_Listado_Matriculas</code>.</li>
+</ul>
+</li>
+<li><strong>Propósito:</strong> Descargar datos relevantes desde una fuente configurada previamente.</li>
+<li><strong>Archivo Ejecutable:</strong> El script es ejecutado mediante el entorno virtual de Python especificado.</li>
+</ul>
+</li>
+<li>
+<p><strong>Propiedades</strong>:</p>
+<ul>
+<li><strong>Executable:</strong> <ul>
+<li><code>\COMFENALCO_EDUCACION\01.Scripts\Utils\env\Scripts\python.exe</code></li>
+</ul>
+</li>
+<li><strong>Working Directory:</strong><ul>
+<li><code>\COMFENALCO_EDUCACION\01.Scripts\Utils</code></li>
+</ul>
+</li>
+<li><strong>Argumentos del Script:</strong><ul>
+<li><code>download.py --key cede_Listado_Matriculas</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conexión a Variables del Proyecto</strong>:</p>
+<ul>
+<li><strong>Executable:</strong> Configurado dinámicamente usando <code>@[$Project::Python_Executable]</code>.</li>
+<li><strong>Directorio de Trabajo:</strong> Configurado como <code>@[$Project::Working_Directory] + "\\COMFENALCO_EDUCACION\\01.Scripts\\Utils"</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Comportamiento de Registro</strong>:</p>
+<ul>
+<li>Configurado mediante el filtro predeterminado del contenedor SSIS.</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as Tarea cede_Listado_Matriculas
+    participant OS as Sistema Operativo
+    participant PythonScript as Script download.py
+
+    SSIS-&gt;&gt;OS: Ejecuta python.exe
+    OS-&gt;&gt;PythonScript: Llama al script `download.py --key cede_Listado_Matriculas`
+    PythonScript--&gt;&gt;OS: Descarga completada o error
+    OS--&gt;&gt;SSIS: Resultado del proceso (éxito o error)</code></pre>
+<h3 id="componente-dim_jornada">Componente <strong><code>DIM_JORNADA</code></strong><a class="headerlink" href="#componente-dim_jornada" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_2">Descripción General<a class="headerlink" href="#descripcion-general_2" title="Permanent link">&para;</a></h4>
+<p>El componente <strong>DIM_JORNADA</strong> gestiona el flujo de datos necesario para procesar, limpiar y almacenar información relacionada con jornadas en la tabla <code>DIM_JORNADA</code> dentro de una base de datos. Este proceso incluye la lectura de datos desde un archivo Excel, la transformación de los campos, la validación de duplicados y la carga final en la base de datos destino.</p>
+<h4 id="componentes-del-flujo-de-datos_1">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Excel Source</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Lectura de datos desde una hoja de Excel llamada <code>Sheet1$</code>.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Modo de acceso:</strong> 0 (Abrir como tabla).</li>
+<li><strong>Timeout:</strong> 0 (sin límite de espera).</li>
+<li><strong>Conexión:</strong> Administrador de conexiones <code>OleDbConnection</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sort JORNADA</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Ordena los datos en el flujo según la columna <code>JORNADA</code>, eliminando duplicados.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Eliminar duplicados:</strong> <code>true</code>.</li>
+<li><strong>Número máximo de hilos:</strong> <code>-1</code> (utiliza el máximo disponible).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ELIMINAR VACIOS</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Filtra registros donde el campo <code>JORNADA</code> está vacío o nulo, enrutando solo los registros válidos.</li>
+<li><strong>Condición:</strong> 
+    <div class="highlight"><pre><span></span><code><span class="o">!</span><span class="k">ISNULL</span><span class="p">(</span><span class="n">JORNADA</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">LEN</span><span class="p">(</span><span class="n">JORNADA</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>AJUSTAR CAMPO JORNADA</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Transforma la columna <code>JORNADA</code> ajustando el formato de los datos a un tipo de dato compatible.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Tipo de salida:</strong> Cadena (<code>wstr</code>) de longitud máxima <code>40</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>CREAR ID_UNIDAD</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Asigna valores únicos al campo <code>ID_UNIDAD</code> en el flujo.</li>
+<li><strong>Código principal:</strong> (Simplificado en Visual Basic)
+    <div class="highlight"><pre><span></span><code>Public Overrides Sub Entrada0_ProcessInputRow(ByVal Row As Entrada0Buffer)
+        Row.IDUNIDAD = 2
+End Sub
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Busca registros existentes en la tabla <code>DIM_JORNADA</code> basados en las columnas <code>JORNADA</code> y <code>ID_UNIDAD</code>.</li>
+<li><strong>Comportamiento sin coincidencias:</strong> Enviar los registros sin coincidencia para ser almacenados en la tabla destino.</li>
+<li><strong>Cache:</strong> Completo (<code>CacheType = 0</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Guardar en DIM_JORNADA</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Inserta los datos procesados y transformados en la tabla <code>DIM_JORNADA</code>.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Nombre de la tabla:</strong> <code>"Cedesarrollo"."DIM_JORNADA"</code>.</li>
+<li><strong>Tamaño de lote:</strong> 0 (por defecto, igual al tamaño del buffer).</li>
+<li><strong>Tiempo de espera:</strong> 30 segundos.</li>
+<li><strong>Inserción masiva:</strong> <code>true</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_1">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_1" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+        participant ExcelSource as Excel Source
+        participant SortJornada as Sort JORNADA
+        participant EliminarVacios as ELIMINAR VACIOS
+        participant AjustarCampo as AJUSTAR CAMPO JORNADA
+        participant CrearIDUnidad as CREAR ID_UNIDAD
+        participant Lookup as Lookup
+        participant Guardar as Guardar en DIM_JORNADA
+
+        ExcelSource -&gt;&gt; SortJornada: Flujo inicial de datos
+        SortJornada -&gt;&gt; EliminarVacios: Datos ordenados y sin duplicados
+        EliminarVacios -&gt;&gt; AjustarCampo: Filtrar registros válidos
+        AjustarCampo -&gt;&gt; CrearIDUnidad: Transformar campo JORNADA
+        CrearIDUnidad -&gt;&gt; Lookup: Agregar ID_UNIDAD
+        Lookup -&gt;&gt; Guardar: Registros sin coincidencias</code></pre>
+<h3 id="componente-tarea-emp_listado_matriculas">Componente: <strong><code>Tarea emp_Listado_Matriculas</code></strong><a class="headerlink" href="#componente-tarea-emp_listado_matriculas" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_3">Descripción General<a class="headerlink" href="#descripcion-general_3" title="Permanent link">&para;</a></h4>
+<p>El componente <strong>Tarea emp_Listado_Matriculas</strong> es una tarea de proceso ejecutado en un paquete SSIS. Se utiliza para llamar un script de Python que ejecuta un proceso relacionado con la descarga o manipulación de datos en un entorno específico definido por los argumentos del script.</p>
+<h4 id="propiedades-del-componente">Propiedades del Componente<a class="headerlink" href="#propiedades-del-componente" title="Permanent link">&para;</a></h4>
+<p><strong>Configuración de Ejecución</strong>
+    - <strong>Tipo de tarea:</strong> Proceso externo.
+    - <strong>Descripción:</strong> Ejecuta un script de Python llamado <code>download.py</code> con el argumento <code>--key emp_Listado_Matriculas</code>.
+    - <strong>Propiedades principales:</strong>
+    - <strong>Ejecutable:</strong> Ruta completa del intérprete de Python utilizado para la ejecución.
+        <div class="highlight"><pre><span></span><code>\COMFENALCO_EDUCACION\01.Scripts\Utils\env\Scripts\python.exe
+</code></pre></div>
+    - <strong>Argumentos:</strong>
+        <div class="highlight"><pre><span></span><code>download.py --key emp_Listado_Matriculas
+</code></pre></div>
+    - <strong>Directorio de trabajo:</strong> Ruta al directorio donde se encuentra el script.
+        <div class="highlight"><pre><span></span><code>\COMFENALCO_EDUCACION\01.Scripts\Utils
+</code></pre></div></p>
+<p><strong>Propiedades Adicionales</strong>
+    - <strong>Expresiones dinámicas:</strong>
+    - <strong>Ejecutable:</strong>
+        <div class="highlight"><pre><span></span><code>@[$Project::Python_Executable]
+</code></pre></div>
+    - <strong>Directorio de trabajo:</strong>
+        <div class="highlight"><pre><span></span><code>@[$Project::Working_Directory] + &quot;\\COMFENALCO_EDUCACION\\01.Scripts\\Utils&quot;
+</code></pre></div>
+    - <strong>Tiempo de espera:</strong> No especificado, depende de la configuración predeterminada del sistema.
+    - <strong>Registro:</strong> Configurado para capturar eventos según los filtros definidos.</p>
+<h4 id="diagrama-de-secuencia_2">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_2" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as SSIS Package
+    participant PythonTask as Tarea emp_Listado_Matriculas
+    participant Script as download.py
+
+    SSIS -&gt;&gt; PythonTask: Llama al ejecutable
+    PythonTask -&gt;&gt; Script: Ejecuta download.py con argumentos (--key emp_Listado_Matriculas)
+    Script -&gt;&gt; PythonTask: Retorna resultado del proceso
+    PythonTask -&gt;&gt; SSIS: Finaliza ejecución</code></pre>
+<h3 id="componente-dim_jornada-emp">Componente <strong><code>DIM_JORNADA emp</code></strong><a class="headerlink" href="#componente-dim_jornada-emp" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_4">Descripción General<a class="headerlink" href="#descripcion-general_4" title="Permanent link">&para;</a></h4>
+<p>El paquete <strong>DIM_JORNADA emp</strong> realiza la extracción, transformación y carga de datos relacionados con las jornadas, utilizando diversas tareas y componentes. Este flujo procesa datos desde una fuente de Excel y realiza validaciones, conversiones y operaciones de búsqueda antes de cargar los datos en una tabla de destino ADO.NET.</p>
+<h4 id="componentes-del-flujo-de-datos_2">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Excel Source</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Extrae datos de una hoja de Excel (<code>Sheet1$</code>).</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>CommandTimeout</strong>: 0 (sin límite de tiempo).</li>
+<li><strong>OpenRowset</strong>: <code>Sheet1$</code>.</li>
+</ul>
+</li>
+<li><strong>Columnas de salida</strong>:<ul>
+<li>JORNADA (wstr, longitud 255)</li>
+<li>Sede - jornada - Programa (wstr, longitud 255)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sort</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Ordena los datos por la columna <code>JORNADA</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>EliminateDuplicates</strong>: true.</li>
+<li><strong>MaximumThreads</strong>: -1.</li>
+</ul>
+</li>
+<li><strong>Salida Ordenada</strong>: Datos ordenados por <code>JORNADA</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conditional Split</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Divide los datos en múltiples salidas según la condición especificada.</li>
+<li><strong>Condición Principal</strong>: Filtra filas donde <code>JORNADA</code> no es nulo y su longitud es mayor a 0.</li>
+<li><strong>Salida</strong>: Filas que cumplen con las condiciones.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Conversion (Verificar Tipos de Datos)</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Convierte el tipo de datos de <code>JORNADA</code> a longitud 40.</li>
+<li><strong>Columnas de salida</strong>: <ul>
+<li>JORNADA_Convertida (wstr, longitud 40).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Script Component</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Personaliza el procesamiento de datos, asignando valores incrementales y campos específicos.</li>
+<li><strong>Operaciones principales</strong>:<ul>
+<li>Asigna valores al campo <code>ID_UNIDAD</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Realiza una búsqueda en la tabla de <code>DIM_JORNADA</code> para obtener valores relacionados.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>SQLCommand</strong>: 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Cedesarrollo</span><span class="p">].[</span><span class="n">DIM_JORNADA</span><span class="p">]</span>
+</code></pre></div></li>
+<li><strong>NoMatchBehavior</strong>: Envía filas no coincidentes a la salida predeterminada.</li>
+</ul>
+</li>
+<li><strong>Columnas de búsqueda</strong>:<ul>
+<li><code>JORNADA</code>, <code>ID_UNIDAD</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ADO.NET Destination</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Carga los datos procesados en la tabla de destino <code>"Cedesarrollo"."DIM_JORNADA"</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>BatchSize</strong>: 0.</li>
+<li><strong>CommandTimeout</strong>: 30.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: true.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_3">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_3" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant ExcelSource as Excel Source
+    participant Sort as Sort
+    participant ConditionalSplit as Conditional Split
+    participant DataConversion as Data Conversion
+    participant ScriptComponent as Script Component
+    participant Lookup as Lookup
+    participant ADONETDestination as ADO.NET Destination
+
+    ExcelSource-&gt;&gt;Sort: Extrae datos de la hoja `Sheet1$`
+    Sort-&gt;&gt;ConditionalSplit: Ordena datos por `JORNADA`
+    ConditionalSplit-&gt;&gt;DataConversion: Filtra y verifica filas válidas
+    DataConversion-&gt;&gt;ScriptComponent: Realiza conversiones
+    ScriptComponent-&gt;&gt;Lookup: Busca valores en `DIM_JORNADA`
+    Lookup-&gt;&gt;ADONETDestination: Carga filas no coincidentes en la tabla `Cedesarrollo.DIM_JORNADA`</code></pre>
+<h3 id="componente-dim_periodo_academico-py">Componente <strong><code>dim_periodo_academico py</code></strong><a class="headerlink" href="#componente-dim_periodo_academico-py" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_5">Descripción General<a class="headerlink" href="#descripcion-general_5" title="Permanent link">&para;</a></h4>
+<p>La tarea <strong>dim_periodo_academico py</strong> ejecuta un script de Python para procesar la dimensión <code>PERIODO_ACADEMICO</code>. Este script realiza operaciones específicas relacionadas con la extracción, transformación y carga (ETL) para actualizar la tabla de dimensiones en la base de datos.</p>
+<h4 id="detalles-de-la-configuracion">Detalles de la Configuración<a class="headerlink" href="#detalles-de-la-configuracion" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Ejecutable</strong></p>
+<ul>
+<li><strong>Ruta del ejecutable</strong>: 
+    <div class="highlight"><pre><span></span><code>\COMFENALCO_EDUCACION\01.Scripts\Utils\env\Scripts\python.exe
+</code></pre></div></li>
+<li><strong>Script ejecutado</strong>: 
+    <div class="highlight"><pre><span></span><code>dim_periodo_academico.py
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Directorio de trabajo</strong></p>
+<ul>
+<li><strong>Ruta</strong>: 
+    <div class="highlight"><pre><span></span><code>\COMFENALCO_EDUCACION\01.Scripts\Utils
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Argumentos</strong></p>
+<ul>
+<li>Script llamado con el siguiente comando:
+    <div class="highlight"><pre><span></span><code>dim_periodo_academico.py
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Propiedades Avanzadas</strong></p>
+<ul>
+<li><strong>Variables utilizadas</strong>:<ul>
+<li><code>Python_Executable</code>: Variable del proyecto que define la ruta del ejecutable de Python.</li>
+<li><code>Working_Directory</code>: Variable que especifica el directorio base para los scripts.</li>
+</ul>
+</li>
+<li><strong>Propiedad de <code>Executable</code></strong>: 
+    <div class="highlight"><pre><span></span><code>@[$Project::Python_Executable]
+</code></pre></div></li>
+<li><strong>Propiedad de <code>WorkingDirectory</code></strong>: 
+    <div class="highlight"><pre><span></span><code>@[$Project::Working_Directory] + &quot;\\COMFENALCO_EDUCACION\\01.Scripts\\Utils&quot;
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_4">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_4" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSISPackage as Paquete SSIS
+    participant PythonScript as dim_periodo_academico.py
+
+    SSISPackage-&gt;&gt;PythonScript: Llama al ejecutable de Python
+    PythonScript-&gt;&gt;Database: Procesa datos de `PERIODO_ACADEMICO`
+    PythonScript-&gt;&gt;SSISPackage: Retorna el estado de la ejecución</code></pre>
+<h3 id="componente-dim_periodo_academico">Componente <strong><code>DIM_PERIODO_ACADEMICO</code></strong><a class="headerlink" href="#componente-dim_periodo_academico" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_6">Descripción General<a class="headerlink" href="#descripcion-general_6" title="Permanent link">&para;</a></h4>
+<p>Este flujo de datos en SSIS realiza la extracción, transformación y carga (ETL) para la dimensión <code>DIM_PERIODO_ACADEMICO</code>. Utiliza datos de una fuente de Excel, realiza conversiones de tipo y valida los registros con una tabla de referencia antes de cargarlos en la base de datos.</p>
+<hr />
+<h4 id="componentes-del-flujo-de-datos_3">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_3" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Excel Source</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Extrae los datos desde una hoja de Excel llamada <code>Sheet1$</code>.</li>
+<li><strong>Conexión</strong>: <code>Administrador de conexiones con Excel 8</code>.</li>
+<li><strong>Columnas Extraídas</strong>:<ul>
+<li><code>PERIODO</code> (Texto, longitud 255)</li>
+<li><code>ID_UNIDAD</code> (Real)</li>
+<li><code>FECHA_INICIO</code> (Fecha)</li>
+<li><code>FECHA_FIN</code> (Fecha)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Conversion</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Convierte los datos de entrada en tipos y formatos específicos.</li>
+<li><strong>Columnas Convertidas</strong>:</li>
+<li><code>_PERIODO</code> (Texto, longitud 40)</li>
+<li><code>_ID_UNIDAD</code> (Entero)</li>
+<li><code>_FECHA_INICIO</code> (Fecha)</li>
+<li><code>_FECHA_FIN</code> (Fecha)</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Compara los registros con la tabla <code>DIM_PERIODO_ACADEMICO</code> en la base de datos para identificar coincidencias.</li>
+<li><strong>Conexión</strong>: <code>DWH_COMFENALCO_Destino_OLEDB</code>.</li>
+<li><strong>Consulta de Validación</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Cedesarrollo</span><span class="p">].[</span><span class="n">DIM_PERIODO_ACADEMICO</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PERIODO_ACADEMICO</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span><span class="w"> </span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li><strong>Columnas Validadas</strong>:
+<code>PERIODO_ACADEMICO</code>, <code>ID_UNIDAD</code></li>
+<li><strong>Salidas</strong>:<ul>
+<li><strong><code>Match Output</code></strong>: Registros coincidentes.</li>
+<li><strong><code>No Match Output</code></strong>: Registros sin coincidencias, enviados para carga.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Guardar DIM_PERIODO_ACADEMICO</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Inserta los registros no coincidentes en la tabla de destino.</li>
+<li><strong>Tabla de Destino</strong>: <code>"Cedesarrollo"."DIM_PERIODO_ACADEMICO"</code>.</li>
+<li><strong>Propiedades</strong>:</li>
+<li><strong>Inserción Masiva</strong>: Activada.</li>
+<li><strong>Batch Size</strong>: 0 (Utiliza el tamaño predeterminado del búfer de SSIS).</li>
+<li><strong>Timeout de Comando</strong>: 30 segundos.</li>
+<li><strong>Columnas Insertadas</strong>:
+<code>PERIODO_ACADEMICO</code>, <code>ID_UNIDAD</code>, <code>FECHA_INICIO</code>, <code>FECHA_FIN</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_5">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_5" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Excel as Fuente de Excel
+    participant DataConversion as Conversión de Datos
+    participant Lookup as Validación de Datos
+    participant Destino as Base de Datos
+
+    Excel-&gt;&gt;DataConversion: Extraer datos
+    DataConversion-&gt;&gt;Lookup: Validar con tabla de referencia
+    Lookup-&gt;&gt;Destino: Insertar registros no coincidentes</code></pre>
+<h3 id="componente-dim_estudiantespy">Componente <strong><code>dim_Estudiantes.py</code></strong><a class="headerlink" href="#componente-dim_estudiantespy" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_7">Descripción General<a class="headerlink" href="#descripcion-general_7" title="Permanent link">&para;</a></h4>
+<p>La tarea <strong><code>dim_Estudiantes.py</code></strong> se ejecuta como parte del paquete SSIS para procesar y cargar datos relacionados con los estudiantes en el sistema. Utiliza un script de Python para realizar operaciones específicas de extracción, transformación y carga (ETL) sobre la dimensión <code>DIM_ESTUDIANTES</code>.</p>
+<hr />
+<h4 id="detalles-del-proceso">Detalles del Proceso<a class="headerlink" href="#detalles-del-proceso" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Script Ejecutado</strong>: <code>dim_Estudiantes.py</code></li>
+<li><strong>Ubicación del Script</strong>:<br />
+  <div class="highlight"><pre><span></span><code>\COMFENALCO_EDUCACION\01.Scripts\Utils
+</code></pre></div></li>
+<li><strong>Ejecutable de Python</strong>:<br />
+  <div class="highlight"><pre><span></span><code>\COMFENALCO_EDUCACION\01.Scripts\Utils\env\Scripts\python.exe
+</code></pre></div></li>
+<li><strong>Argumentos</strong>: <code>dim_Estudiantes.py</code></li>
+<li><strong>Directorio de Trabajo</strong>:<br />
+  <div class="highlight"><pre><span></span><code>\COMFENALCO_EDUCACION\01.Scripts\Utils
+</code></pre></div></li>
+</ul>
+<p><strong>Propiedades Configuradas</strong></p>
+<ul>
+<li>
+<p><strong><code>Executable</code></strong>:<br />
+  Configurado dinámicamente como una expresión: <code>@[$Project::Python_Executable]</code>.</p>
+</li>
+<li>
+<p><strong><code>WorkingDirectory</code></strong>:<br />
+  Configurado dinámicamente como una expresión:<br />
+<code>@[$Project::Working_Directory] + "\\COMFENALCO_EDUCACION\\01.Scripts\\Utils"</code></p>
+</li>
+</ul>
+<p><strong>Consideraciones Adicionales</strong></p>
+<ol>
+<li>
+<p><strong>Configuración de Variables del Proyecto</strong>:</p>
+<ul>
+<li><strong><code>Python_Executable</code></strong>: Asegúrese de que esta variable apunte al ejecutable de Python correcto en el entorno configurado.</li>
+<li><strong><code>Working_Directory</code></strong>: Verifique que el directorio definido sea accesible y tenga los permisos necesarios.</li>
+</ul>
+</li>
+<li>
+<p><strong>Errores Comunes</strong>:</p>
+<ul>
+<li><strong>Ruta Incorrecta</strong>: Confirme que el script <code>dim_Estudiantes.py</code> existe en la ruta especificada.</li>
+<li><strong>Dependencias de Python</strong>: Revise que el entorno virtual contenga todas las dependencias necesarias para ejecutar el script.</li>
+</ul>
+</li>
+<li>
+<p><strong>Registros de Ejecución</strong>:</p>
+<ul>
+<li>Habilite el registro detallado para rastrear errores o problemas durante la ejecución.</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_6">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_6" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as Tarea SSIS
+    participant Python as dim_Estudiantes.py
+    participant BaseDatos as Base de Datos
+
+    SSIS-&gt;&gt;Python: Ejecutar script `dim_Estudiantes.py`
+    Python-&gt;&gt;BaseDatos: Conectar y procesar datos
+    Python-&gt;&gt;SSIS: Confirmar finalización</code></pre>
+<h3 id="componente-dim_estudiantes">Componente <strong><code>DIM_ESTUDIANTES</code></strong><a class="headerlink" href="#componente-dim_estudiantes" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_8">Descripción General<a class="headerlink" href="#descripcion-general_8" title="Permanent link">&para;</a></h4>
+<p>El componente <strong><code>DIM_ESTUDIANTES</code></strong> es una tarea de flujo de datos en SSIS diseñada para procesar, transformar y cargar información sobre estudiantes en una tabla de destino denominada <code>DIM_ESTUDIANTES</code>. Incluye fuentes de datos Excel, conversiones de datos, transformaciones derivadas y múltiples búsquedas para enriquecer la información de los estudiantes con datos relacionados.</p>
+<h4 id="componentes-del-flujo-de-datos_4">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_4" title="Permanent link">&para;</a></h4>
+<p><strong>1. Fuente de Datos: Excel Source</strong> </p>
+<ul>
+<li><strong>Descripción:</strong> Obtiene datos desde una hoja de Excel, <code>Sheet1$</code>, utilizando un administrador de conexión OLE DB.</li>
+<li><strong>Propiedades:</strong></li>
+<li><strong>Timeout:</strong> 0 segundos (sin límite de espera).</li>
+<li><strong>Modo de Acceso:</strong> Directo a una tabla o vista.</li>
+</ul>
+<p><strong>2. Transformación: Data Conversion</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Convierte columnas clave (<code>TIPO_DOCUMENTO</code>, <code>DOCUMENTO_ESTUDIANTE</code>) en tipos de datos y longitudes compatibles con el destino.</li>
+<li><strong>Propiedades de Salida:</strong></li>
+<li><code>_TIPO_DOCUMENTO</code> → Tipo <code>wstr</code>, longitud 40.</li>
+<li><code>_DOCUMENTO</code> → Tipo <code>wstr</code>, longitud 20.</li>
+</ul>
+<p><strong>3. Transformación: Derived Column</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Genera nuevas columnas basadas en expresiones derivadas, como valores predeterminados si las columnas originales son nulas o están vacías.</li>
+<li><strong>Propiedades:</strong></li>
+<li><code>_DOCUMENTO</code> → <code>ISNULL(_DOCUMENTO) || TRIM(_DOCUMENTO) == "" ? "-1" : _DOCUMENTO</code>.</li>
+</ul>
+<p><strong>4. Transformación: Lookup</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Realiza búsquedas en tablas relacionadas para enriquecer datos:<ul>
+<li><strong><code>Lookup Documento</code>:</strong> Valida documentos en <code>DIM_ESTUDIANTES</code>.</li>
+<li><strong><code>Lookup 1 1</code>:</strong> Consulta <code>DIM_EMPRESAS</code> para obtener <code>ID_EMPRESA</code>.</li>
+<li><strong><code>Lookup 1 1 1</code>:</strong> Consulta <code>DIM_AFILIADOS</code> para obtener <code>ID_AFILIADO</code>.</li>
+<li><strong><code>Lookup 1 1 1 1</code>:</strong> Consulta <code>DIM_BENEFICIARIOS</code> para obtener <code>ID_BENEFICIARIO</code>.</li>
+<li><strong><code>Lookup 1 1 1 1 1</code>:</strong> Consulta <code>DIM_APORTANTE_NOAFILIADO</code> para obtener <code>ID_APORTANTE</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>5. Transformación: Aggregate</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Agrupa y realiza operaciones como conteo o consolidación de documentos y tipos de documentos.</li>
+</ul>
+<p><strong>6. Destino: Flat File Destination</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Registra errores de procesamiento en un archivo plano.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Sobrescribir archivo:</strong> Activado.</li>
+<li><strong>Conexión:</strong> <code>Flat File Connection Manager</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>7. Destino: ADO.NET Destination</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Carga los datos procesados en la tabla <code>DIM_ESTUDIANTES</code>.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Tabla o Vista Destino:</strong> <code>"Cedesarrollo"."DIM_ESTUDIANTES"</code>.</li>
+<li><strong>Inserción Masiva:</strong> Activado.</li>
+</ul>
+</li>
+</ul>
+<h4 id="diagrama-de-secuencia_7">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_7" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant ExcelSource as Excel Source
+    participant DataConversion as Data Conversion
+    participant DerivedColumn as Derived Column
+    participant LookupDoc as Lookup Documento
+    participant LookupEmpresa as Lookup 1 1 (DIM_EMPRESAS)
+    participant LookupAfiliado as Lookup 1 1 1 (DIM_AFILIADOS)
+    participant LookupBeneficiario as Lookup 1 1 1 1 (DIM_BENEFICIARIOS)
+    participant LookupAportante as Lookup 1 1 1 1 1 (DIM_APORTANTE_NOAFILIADO)
+    participant Aggregate as Aggregate
+    participant AdoNetDest as ADO.NET Destination
+    participant FlatFileDest as Flat File Destination
+
+    ExcelSource -&gt;&gt; DataConversion: Datos de Excel
+    DataConversion -&gt;&gt; DerivedColumn: Transformación derivada
+    DerivedColumn -&gt;&gt; LookupDoc: Validación en DIM_ESTUDIANTES
+    LookupDoc -&gt;&gt; Aggregate: Enriquecimiento y agregación
+    Aggregate -&gt;&gt; LookupEmpresa: Validación en DIM_EMPRESAS
+    LookupEmpresa -&gt;&gt; LookupAfiliado: Validación en DIM_AFILIADOS
+    LookupAfiliado -&gt;&gt; LookupBeneficiario: Validación en DIM_BENEFICIARIOS
+    LookupBeneficiario -&gt;&gt; LookupAportante: Validación en DIM_APORTANTE_NOAFILIADO
+    LookupAportante -&gt;&gt; AdoNetDest: Carga a tabla final
+    AdoNetDest -&gt;&gt; FlatFileDest: Registro de errores</code></pre>
+<p><strong>Notas</strong></p>
+<ul>
+<li><strong>Errores:</strong> Todos los errores de las transformaciones son redirigidos al componente <code>Flat File Destination</code>.</li>
+<li><strong>Rendimiento:</strong> Se utilizan conexiones OLE DB y ADO.NET para garantizar integridad y rapidez en la carga de datos.</li>
+<li><strong>Personalización:</strong> Puede expandirse con transformaciones adicionales según sea necesario.</li>
+</ul>
+<h3 id="componente-tarea-cede_diseno_curricular">Componente <strong><code>Tarea cede_Diseño_Curricular</code></strong><a class="headerlink" href="#componente-tarea-cede_diseno_curricular" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_9">Descripción General<a class="headerlink" href="#descripcion-general_9" title="Permanent link">&para;</a></h4>
+<p>La tarea <strong><code>Tarea cede_Diseño_Curricular</code></strong> es un componente de ejecución de procesos en SSIS que utiliza un script Python para procesar o descargar datos relacionados con el diseño curricular de una institución educativa. Este script es ejecutado en un entorno Python configurado previamente.</p>
+<h4 id="detalles-del-componente">Detalles del Componente<a class="headerlink" href="#detalles-del-componente" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tipo de Tarea:</strong> <code>Execute Process Task</code>.</li>
+<li><strong>Descripción:</strong> Ejecuta un script Python (<code>download.py</code>) con un argumento específico (<code>--key cede_Diseño_Curricular</code>) para realizar tareas como descargar o transformar datos asociados al diseño curricular.</li>
+<li><strong>Propiedades Clave:</strong><ul>
+<li><strong>Ejecutable:</strong> Ruta al ejecutable de Python configurado en la variable <code>Python_Executable</code> del proyecto.</li>
+<li><strong>Directorio de Trabajo:</strong> Ruta configurada en la variable <code>Working_Directory</code> del proyecto.</li>
+<li><strong>Argumentos:</strong> <code>download.py --key cede_Diseño_Curricular</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Propiedades Técnicas</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Propiedad</strong></th>
+<th><strong>Valor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Executable</strong></td>
+<td><code>\COMFENALCO_EDUCACION\01.Scripts\Utils\env\Scripts\python.exe</code></td>
+</tr>
+<tr>
+<td><strong>Working Directory</strong></td>
+<td><code>\COMFENALCO_EDUCACION\01.Scripts\Utils</code></td>
+</tr>
+<tr>
+<td><strong>Arguments</strong></td>
+<td><code>download.py --key cede_Diseño_Curricular</code></td>
+</tr>
+<tr>
+<td><strong>Tiempo de Ejecución</strong></td>
+<td>No especificado (timeout predeterminado del sistema).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Flujo de Trabajo</strong></p>
+<ol>
+<li>
+<p><strong>Inicio del Proceso:</strong> </p>
+<ul>
+<li>La tarea se inicia automáticamente al ejecutarse el paquete SSIS.</li>
+</ul>
+</li>
+<li>
+<p><strong>Definición del Contexto:</strong></p>
+<ul>
+<li>El entorno de ejecución y los argumentos se configuran dinámicamente utilizando expresiones vinculadas a las variables del proyecto:</li>
+<li><code>@[$Project::Python_Executable]</code> para el ejecutable.</li>
+<li><code>@[$Project::Working_Directory]</code> para el directorio de trabajo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejecución del Script:</strong></p>
+<ul>
+<li>El script Python (<code>download.py</code>) se ejecuta con el argumento <code>--key cede_Diseño_Curricular</code>.</li>
+<li>El script puede realizar operaciones como descarga de datos, validación, transformación, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Finalización:</strong></p>
+<ul>
+<li>El proceso concluye una vez que el script finaliza su ejecución. Los resultados del script pueden ser monitoreados mediante los logs configurados en el paquete.</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_8">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_8" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as Tarea SSIS
+    participant Python as Script Python
+    participant Sistema as Sistema Operativo
+
+    SSIS -&gt;&gt; Python: Ejecutar `download.py --key cede_Diseño_Curricular`
+    Python -&gt;&gt; Sistema: Leer datos del directorio configurado
+    Sistema -&gt;&gt; Python: Proveer acceso a los archivos
+    Python -&gt;&gt; Python: Procesar o transformar datos
+    Python -&gt;&gt; SSIS: Retornar estado de finalización</code></pre>
+<h3 id="componente-data-dim_programa">Componente <strong><code>Data DIM_PROGRAMA</code></strong><a class="headerlink" href="#componente-data-dim_programa" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_10">Descripción General<a class="headerlink" href="#descripcion-general_10" title="Permanent link">&para;</a></h4>
+<p>El componente <strong><code>Data DIM_PROGRAMA</code></strong> implementa un flujo de datos para extraer información de un archivo Excel, procesarla mediante operaciones de clasificación, agregación y búsquedas, y finalmente cargar los datos en la tabla <code>DIM_PROGRAMA</code> de la base de datos. Este proceso se utiliza para estructurar y consolidar datos relacionados con programas académicos.</p>
+<h4 id="componentes-del-flujo-de-datos_5">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_5" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos: <code>Excel Source</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Leer datos desde un archivo Excel ubicado en la ruta configurada en el administrador de conexiones <code>OleDbConnection</code>.</li>
+<li><strong>Columnas Procesadas:</strong><ul>
+<li><code>PROGRAMA</code></li>
+<li><code>COD_MODULO</code></li>
+<li><code>MODULO</code></li>
+<li><code>SEMESTRE</code>, entre otras.</li>
+</ul>
+</li>
+<li><strong>Propiedades Principales:</strong><ul>
+<li><strong>Tabla de Origen:</strong> <code>Sheet1$</code></li>
+<li><strong>Acceso:</strong> Modo directo (<code>AccessMode = 0</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación: <code>Sort PROGRAMA</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Ordenar los datos por la columna <code>PROGRAMA</code> y eliminar duplicados.</li>
+<li><strong>Propiedades Principales:</strong><ul>
+<li><strong>Columna de Ordenación:</strong> <code>PROGRAMA</code>.</li>
+<li><strong>Eliminación de Duplicados:</strong> Activada.</li>
+</ul>
+</li>
+<li><strong>Salida:</strong><ul>
+<li>Datos ordenados para el componente de búsqueda.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación: <code>Lookup PROGRAMA</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Realizar una búsqueda en la tabla <code>DIM_PROGRAMA</code> para identificar programas existentes.</li>
+<li><strong>Propiedades Principales:</strong><ul>
+<li><strong>SQL:</strong> 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Cedesarrollo</span><span class="p">].[</span><span class="n">DIM_PROGRAMA</span><span class="p">]</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PROGRAMA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li><strong>Comportamiento de No Coincidencia:</strong> Las filas sin coincidencias se envían al componente de agregación.</li>
+</ul>
+</li>
+<li><strong>Salida:</strong><ul>
+<li><strong>Coincidencias:</strong> Filas que ya existen en la tabla <code>DIM_PROGRAMA</code>.</li>
+<li><strong>No Coincidencias:</strong> Filas nuevas que requieren agregación.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación: <code>Aggregate 1</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Consolidar datos agrupados por la columna <code>PROGRAMA</code>.</li>
+<li><strong>Propiedades Principales:</strong><ul>
+<li><strong>Columna de Agrupación:</strong> <code>PROGRAMA</code>.</li>
+<li><strong>Escala de Claves:</strong> Baja (500,000 valores aproximados).</li>
+</ul>
+</li>
+<li><strong>Salida:</strong><ul>
+<li>Datos agrupados enviados al destino.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Destino: <code>Guardar DIM_PROGRAMA</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Cargar los datos procesados en la tabla <code>DIM_PROGRAMA</code> de la base de datos.</li>
+<li><strong>Propiedades Principales:</strong><ul>
+<li><strong>Tabla de Destino:</strong> <code>"Cedesarrollo"."DIM_PROGRAMA"</code>.</li>
+<li><strong>Inserción Masiva:</strong> Activada.</li>
+</ul>
+</li>
+<li><strong>Columnas Procesadas:</strong><ul>
+<li><code>PROGRAMA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_9">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_9" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Excel as Excel Source
+    participant Sort as Sort PROGRAMA
+    participant Lookup as Lookup PROGRAMA
+    participant Aggregate as Aggregate 1
+    participant Destino as Guardar DIM_PROGRAMA
+
+    Excel -&gt;&gt; Sort: Leer datos
+    Sort -&gt;&gt; Lookup: Ordenar datos
+    Lookup -&gt;&gt; Aggregate: Enviar no coincidencias
+    Aggregate -&gt;&gt; Destino: Enviar datos agregados
+    Destino -&gt;&gt; Destino: Cargar en `DIM_PROGRAMA`</code></pre>
+<h3 id="componente-data-dim_plan_curricular">Componente <strong><code>Data DIM_PLAN_CURRICULAR</code></strong><a class="headerlink" href="#componente-data-dim_plan_curricular" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_11">Descripción General<a class="headerlink" href="#descripcion-general_11" title="Permanent link">&para;</a></h4>
+<p>El componente <strong><code>Data DIM_PLAN_CURRICULAR</code></strong> es un flujo de datos que extrae información desde una fuente Excel, realiza transformaciones derivadas y operaciones de búsqueda, y finalmente inserta los datos procesados en la tabla <code>DIM_PLAN_CURRICULAR</code> de la base de datos. Este flujo asegura la consolidación y estructuración de la información del plan curricular.</p>
+<h4 id="componentes-del-flujo-de-datos_6">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_6" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos: <code>PLAN_CURRICULAR</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Leer datos desde un archivo Excel utilizando el administrador de conexiones <code>OleDbConnection</code>.</li>
+<li><strong>Columnas Procesadas:</strong><ul>
+<li><code>PROGRAMA</code>, <code>COD_MODULO</code>, <code>MODULO</code>, <code>SEMESTRE</code>, <code>INTENSIDAD_HORARIA</code>, entre otras.</li>
+</ul>
+</li>
+<li><strong>Propiedades Principales:</strong><ul>
+<li><strong>Tabla de Origen:</strong> <code>Sheet1$</code></li>
+<li><strong>Modo de Acceso:</strong> Directo (<code>AccessMode = 0</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación: <code>Tranformar Columnas</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Crear nuevas columnas derivadas a partir de columnas existentes.</li>
+<li><strong>Columnas Derivadas:</strong><ul>
+<li><code>_SEMESTRE</code>: Convertido de <code>SEMESTRE</code> a formato <code>DT_WSTR, 40</code>.</li>
+<li><code>_MODULO</code>: Convertido de <code>MODULO</code> a formato <code>DT_WSTR, 200</code>.</li>
+<li><code>_INTENSIDAD_HORARIA</code>, <code>_INTENSIDAD_HORARIA_SEMANAL</code>, <code>_NO_CREDITOS</code>: Convertidas a formato <code>DT_WSTR, 40</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación: <code>Lookup ID_PROGRAMA</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Verificar y asociar la clave primaria <code>ID_PROGRAMA</code> de la tabla <code>DIM_PROGRAMA</code> con las filas procesadas.</li>
+<li><strong>Propiedades Principales:</strong><ul>
+<li><strong>SQL:</strong> 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Cedesarrollo</span><span class="p">].[</span><span class="n">DIM_PROGRAMA</span><span class="p">]</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PROGRAMA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li><strong>Comportamiento de No Coincidencia:</strong> Ignorar fallas (<code>IgnoreFailure</code>).</li>
+</ul>
+</li>
+<li><strong>Salida:</strong><ul>
+<li><strong>Coincidencias:</strong> Filas existentes en <code>DIM_PROGRAMA</code>.</li>
+<li><strong>No Coincidencias:</strong> Se procesan en el siguiente paso.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación: <code>Lookup DIM_PLAN_CURRICULAR</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Identificar filas ya existentes en la tabla <code>DIM_PLAN_CURRICULAR</code>.</li>
+<li><strong>Propiedades Principales:</strong><ul>
+<li><strong>SQL:</strong> 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Cedesarrollo</span><span class="p">].[</span><span class="n">DIM_PLAN_CURRICULAR</span><span class="p">]</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">MODULO</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li><strong>Comportamiento de No Coincidencia:</strong> Filas nuevas se envían al destino.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Destino: <code>Guardar DIM_PLAN_CURRICULAR</code></strong></p>
+<ul>
+<li><strong>Propósito:</strong> Insertar los datos procesados en la tabla <code>DIM_PLAN_CURRICULAR</code> de la base de datos.</li>
+<li><strong>Propiedades Principales:</strong><ul>
+<li><strong>Tabla de Destino:</strong> <code>"Cedesarrollo"."DIM_PLAN_CURRICULAR"</code>.</li>
+<li><strong>Inserción Masiva:</strong> Activada (<code>UseBulkInsertWhenPossible = true</code>).</li>
+</ul>
+</li>
+<li><strong>Columnas Procesadas:</strong>
+    <code>_MODULO</code>, <code>_INTENSIDAD_HORARIA</code>, <code>_INTENSIDAD_HORARIA_SEMANAL</code>, <code>_NO_CREDITOS</code>, <code>_SEMESTRE</code>, <code>ID_PROGRAMA</code>.</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_10">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_10" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Excel as PLAN_CURRICULAR
+    participant Transform as Tranformar Columnas
+    participant LookupID as Lookup ID_PROGRAMA
+    participant LookupPlan as Lookup DIM_PLAN_CURRICULAR
+    participant Destino as Guardar DIM_PLAN_CURRICULAR
+
+    Excel -&gt;&gt; Transform: Leer datos
+    Transform -&gt;&gt; LookupID: Generar columnas derivadas
+    LookupID -&gt;&gt; LookupPlan: Enviar registros coincidentes
+    LookupPlan -&gt;&gt; Destino: Enviar filas nuevas
+    Destino -&gt;&gt; Destino: Insertar en DIM_PLAN_CURRICULAR</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../js/mkdocs_pagetree_plugin.js"></script>
+      
+        <script src="../../js/init_mermaid.js"></script>
+      
+    
+  </body>
+</html>

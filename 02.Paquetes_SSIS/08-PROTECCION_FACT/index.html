@@ -1,0 +1,3560 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../07-PROTECCION_DIMENSIONES/">
+      
+      
+        <link rel="next" href="../09-ETLS_CUBO/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>08. PROTECCION_FACT - COMFENALCO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="23abf7" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proteccion_fact" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="COMFENALCO" class="md-header__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            COMFENALCO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              08. PROTECCION_FACT
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="COMFENALCO" class="md-nav__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    COMFENALCO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00. INICIO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            00. INICIO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INTRODUCCIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INSTALACIÓN Y CONFIGURACIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Conexiones_BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CONEXIÓN A BASE DE DATOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buenaspracticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BUENAS PRÁCTICAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. SCRIPTS SQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. SCRIPTS SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/00.Inicio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/00.Eliminar_todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. Eliminar Todo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/01.Transversal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. Transversal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/02.Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. Cedesarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/03.Proteccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. Proteccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01.scripts/04.Colegio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. Colegio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. ESTRUCTURA SHAREPOINT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. ESTRUCTURA SHAREPOINT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.sharepoint/estructura_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura carpeta Sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04.sharepoint/estructura_archivos_actualizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura Archivos Actualizacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. BI COMFENALCO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. BI COMFENALCO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00.params/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-SCRAPING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. WEB SCRAPING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01.TRANSVERSAL_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. TRANSVERSAL_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-TRANSVERSAL_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TRANSVERSAL_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-COLEGIO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. COLEGIO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-COLEGIO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. COLEGIO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-CEDESARROLLO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05. CEDESARROLLO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-CEDESARROLLO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. CEDESARROLLO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-PROTECCION_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07. PROTECCION_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    08. PROTECCION_FACT
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    08. PROTECCION_FACT
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propósito del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas-y-columnas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas y Columnas Clave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagramas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-diagrama-de-flujo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Diagrama de Flujo de Datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-diagrama-er-para-tablas-de-hechos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Diagrama ER para Tablas de Hechos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_caracterizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_CARACTERIZACION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_diagnosticos_ee_jec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_DIAGNOSTICOS_EE_JEC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_diagnosticos_ee_aipi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_DIAGNOSTICOS_EE_AIPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_venta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_VENTA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_entrega_material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_ENTREGA_MATERIAL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_visitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_VISITAS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_desercion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_DESERCION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_plan_cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_PLAN_COBERTURA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurar-llaves-foraneas-esquema-proteccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restaurar llaves foráneas esquema Proteccion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ETLS_CUBO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09. ETLS_CUBO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04. COMFENALCO EDUCACION
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            04. COMFENALCO EDUCACION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 SCRIPTS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 SCRIPTS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. Q10
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. Q10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_1" id="__nav_5_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.1. Educación Tecnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            0.1. Educación Tecnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/01.Docentes_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Cedesarrollo.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/02.Disenio_curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Diseño Curricular.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/03.Listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/04.Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Ingresos.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/05.Historico_notas_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Histórico notas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/06.Egresados_graduados_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_01.educaciontecnica/07.Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.7. Desertores.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_2" id="__nav_5_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.2. Educación Continua
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            0.2. Educación Continua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/01.Docentes_desarrollo_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Desarrollo Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/02.Preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Preinscritos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/03.Listado_matriculas_emp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/04.Consolidado_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/05.Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.educacioncontinua/06.Egresados_graduados_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados Graduados Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_3" id="__nav_5_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sharepoint
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sharepoint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_01_procesar_docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_01 procesar_docentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_02_procesar_Dise%C3%B1o_Curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_02 procesar_Diseño_Curricular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_03_procesar_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_03 procesar_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_04_procesar_cede_Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_04 procesar_Ingresos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_05_cede_Historico_Notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_05 cede_Historico_Notas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_06_cede_Egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_06 cede_Egresados_Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/cede_07_Cancelados_Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_07 Cancelados Desertores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_01_Docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_01 Docentes Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_02_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_02 Listado Matrículas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_03_preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_03 Preinscritos Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_04_egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_04 Egresados Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_05_Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_05 Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_01.q10_02.Sharepoint/emp_06_consolidado_Inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_06 Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_3" id="__nav_5_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. C4C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. C4C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/01.C4C_webscraping_v4_Actualizable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Webscraping Actualizable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/00.etl_02.C4C/02.C4C_webscraping_v4_Historico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Webscraping Histórico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/Funciones_DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones_DM.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/c4c_from_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c4c_from_sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_Estudiantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_Estudiantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/dim_periodo_academico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_periodo_academico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_facturacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_facturacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05. CUBO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            05. CUBO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/01.Origen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. ORIGEN Y MEDIDAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.Cubo/02.Tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TABLAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06. POWER BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            06. POWER BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05.Power_BI/01.Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. DASHBOARD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propósito del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-paquete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Paquete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas-y-columnas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas y Columnas Clave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagramas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-diagrama-de-flujo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Diagrama de Flujo de Datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-diagrama-er-para-tablas-de-hechos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Diagrama ER para Tablas de Hechos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_caracterizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_CARACTERIZACION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_diagnosticos_ee_jec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_DIAGNOSTICOS_EE_JEC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_diagnosticos_ee_aipi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_DIAGNOSTICOS_EE_AIPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_venta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_VENTA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_entrega_material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_ENTREGA_MATERIAL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_visitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_VISITAS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_desercion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_DESERCION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-procesar-fact_plan_cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Procesar FACT_PLAN_COBERTURA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurar-llaves-foraneas-esquema-proteccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restaurar llaves foráneas esquema Proteccion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!-- markdownlint-disable -->
+
+<h1 id="proteccion_fact">PROTECCION_FACT<a class="headerlink" href="#proteccion_fact" title="Permanent link">&para;</a></h1>
+<p>El paquete SSIS <strong>"08-PROTECCION_FACT"</strong> está diseñado para procesar, transformar y cargar información crítica relacionada con operaciones de protección social, como caracterización de beneficiarios, diagnósticos, entregas de materiales, y visitas de seguimiento. Este paquete consolida datos de múltiples fuentes en el Data Warehouse <code>DWH_COMFENALCO</code>, asegurando su calidad, consistencia y disponibilidad para análisis y reportes estratégicos.</p>
+<hr />
+<h2 id="proposito-del-paquete">Propósito del Paquete<a class="headerlink" href="#proposito-del-paquete" title="Permanent link">&para;</a></h2>
+<p>El objetivo principal es integrar datos operativos de protección, asegurando su integridad y estructuración para apoyar análisis avanzados y toma de decisiones en el ámbito social y educativo.</p>
+<hr />
+<h2 id="descripcion-del-paquete">Descripción del Paquete<a class="headerlink" href="#descripcion-del-paquete" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Extracción de Datos</strong>:</p>
+<ul>
+<li>Fuentes principales:<ul>
+<li><strong>Archivos Planos</strong>:</li>
+<li><code>FACT_CARACTERIZACION</code>, <code>FACT_DIAGNOSTICOS_EE_JEC</code>, <code>FACT_ENTREGA_MATERIAL</code>.</li>
+<li><strong>Bases de Datos Relacionales</strong>:</li>
+<li><code>DIM_TIEMPO</code>, <code>DIM_POBLACION</code>, <code>DIM_PROGRAMA</code>, entre otros.</li>
+</ul>
+</li>
+<li>Herramientas utilizadas:<ul>
+<li>Conexiones OLE DB y ADO.NET para integración.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transformación de Datos</strong>:</p>
+<ul>
+<li><strong>Validaciones (<code>Lookup</code>)</strong>:<ul>
+<li>Comparación de datos con tablas maestras para enriquecer información, como <code>DIM_ESTABLECIMIENTO_EDUCATIVO</code> y <code>DIM_PREGUNTAS_EE_JEC</code>.</li>
+</ul>
+</li>
+<li><strong>Conversión de Tipos (<code>Data Conversion</code>)</strong>:<ul>
+<li>Garantiza compatibilidad de datos con tablas destino.</li>
+</ul>
+</li>
+<li><strong>Columnas Derivadas (<code>Derived Column</code>)</strong>:<ul>
+<li>Generación de claves únicas y valores predefinidos.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Carga de Datos en el Data Warehouse</strong>:</p>
+<ul>
+<li>Tablas procesadas:<ul>
+<li><code>FACT_CARACTERIZACION</code></li>
+<li><code>FACT_DIAGNOSTICOS_EE_JEC</code></li>
+<li><code>FACT_ENTREGA_MATERIAL</code></li>
+<li><code>FACT_VISITAS</code></li>
+<li><code>FACT_DESERCION</code></li>
+</ul>
+</li>
+<li>Configuración:<ul>
+<li>Inserciones masivas habilitadas para mejorar el rendimiento.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Automatización y Scripts</strong>:</p>
+<ul>
+<li>Uso de scripts SQL dinámicos para restaurar claves foráneas y garantizar integridad referencial.</li>
+</ul>
+</li>
+</ol>
+<h2 id="tablas-y-columnas-clave">Tablas y Columnas Clave<a class="headerlink" href="#tablas-y-columnas-clave" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>FACT_CARACTERIZACION</strong>:</p>
+<ul>
+<li><code>ID_POBLACION</code>, <code>ID_PROGRAMA</code>, <code>ID_FECHA</code>, <code>TIPO_DOCUMENTO</code>, <code>DOCUMENTO</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>FACT_DIAGNOSTICOS_EE_JEC</strong>:</p>
+<ul>
+<li><code>ID_FECHA</code>, <code>ID_PREGUNTA</code>, <code>ID_RESPUESTA</code>, <code>ID_REGISTRO</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>FACT_ENTREGA_MATERIAL</strong>:</p>
+<ul>
+<li><code>ID_FECHA_ENTREGA</code>, <code>ID_MATERIAL</code>, <code>ID_PERSONAL</code>, <code>CANTIDAD_MATERIAL</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>FACT_VISITAS</strong>:</p>
+<ul>
+<li><code>ID_FECHA</code>, <code>ID_PROGRAMA</code>, <code>MUNICIPIO</code>, <code>FECHA_PLANEADA</code>, <code>FECHA_EJECUTADA</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>FACT_DESERCION</strong>:</p>
+<ul>
+<li><code>ID_ESTABLECIMIENTO_EDUCATIVO</code>, <code>ID_POBLACION</code>, <code>ID_FECHA_REGISTRO</code>, <code>PROGRAMA</code>, <code>CAUSA</code>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="diagramas">Diagramas<a class="headerlink" href="#diagramas" title="Permanent link">&para;</a></h2>
+<h3 id="1-diagrama-de-flujo-de-datos">1. <strong>Diagrama de Flujo de Datos</strong><a class="headerlink" href="#1-diagrama-de-flujo-de-datos" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as SSIS Package
+    participant DB as Base de Datos
+    participant Excel as Archivos Planos
+    participant Python as Scripts Python
+    participant DWH as Data Warehouse
+
+    SSIS -&gt;&gt; DB: Extraer datos de dimensiones clave
+    SSIS -&gt;&gt; Excel: Leer datos desde archivos planos
+    SSIS -&gt;&gt; Python: Restaurar claves foráneas
+    SSIS -&gt;&gt; DWH: Cargar datos procesados</code></pre>
+<h3 id="2-diagrama-er-para-tablas-de-hechos">2. <strong>Diagrama ER para Tablas de Hechos</strong><a class="headerlink" href="#2-diagrama-er-para-tablas-de-hechos" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>erDiagram
+    FACT_CARACTERIZACION {
+        int ID_POBLACION
+        int ID_PROGRAMA
+        int ID_FECHA
+        string TIPO_DOCUMENTO
+        string DOCUMENTO
+    }
+    FACT_DIAGNOSTICOS_EE_JEC {
+        int ID_FECHA
+        int ID_PREGUNTA
+        int ID_RESPUESTA
+        int ID_REGISTRO
+    }
+    FACT_ENTREGA_MATERIAL {
+        int ID_FECHA_ENTREGA
+        int ID_MATERIAL
+        int ID_PERSONAL
+        float CANTIDAD_MATERIAL
+    }
+    FACT_VISITAS {
+        int ID_FECHA
+        int ID_PROGRAMA
+        string MUNICIPIO
+        date FECHA_PLANEADA
+        date FECHA_EJECUTADA
+    }
+    FACT_DESERCION {
+        int ID_ESTABLECIMIENTO_EDUCATIVO
+        int ID_POBLACION
+        int ID_FECHA_REGISTRO
+        string PROGRAMA
+        string CAUSA
+    }
+    FACT_CARACTERIZACION ||--|| FACT_DIAGNOSTICOS_EE_JEC : "Relación por población"
+    FACT_ENTREGA_MATERIAL ||--|| FACT_VISITAS : "Asociación por programa"
+    FACT_DESERCION ||--|| FACT_VISITAS : "Conexión por registro"</code></pre>
+<h2 id="componentes">Componentes<a class="headerlink" href="#componentes" title="Permanent link">&para;</a></h2>
+<h3 id="componente-procesar-fact_caracterizacion">Componente <strong><code>Procesar FACT_CARACTERIZACION</code></strong><a class="headerlink" href="#componente-procesar-fact_caracterizacion" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general">Descripción General<a class="headerlink" href="#descripcion-general" title="Permanent link">&para;</a></h4>
+<p>El componente <strong>FACT_CARACTERIZACION</strong> realiza un flujo de procesamiento ETL que carga datos desde un archivo plano, realiza conversiones, aplica transformaciones <code>Lookup</code> para enriquecer los datos con información adicional desde tablas externas y finalmente almacena los resultados en una base de datos relacional. Este proceso asegura la integración de múltiples fuentes y formatos de datos en una estructura unificada.</p>
+<h4 id="componentes-del-flujo-de-datos">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Flat File Source</strong><br />
+<strong>Descripción:</strong><br />
+    Carga datos desde un archivo plano con columnas como <code>FECHA</code>, <code>TIPO_DOCUMENTO</code>, <code>DOCUMENTO</code>, entre otros.</p>
+<p><strong>Propiedades:</strong><br />
+- <strong>RetainNulls:</strong> <code>false</code>
+- <strong>FileNameColumnName:</strong> No especificado.</p>
+</li>
+<li>
+<p><strong>Data Conversion</strong><br />
+<strong>Descripción:</strong><br />
+    Convierte los datos de entrada a tipos requeridos para el procesamiento posterior.</p>
+<p><strong>Propiedades:</strong><br />
+- Conversión de columnas como <code>FECHA</code> (a <code>dbTimeStamp</code>) y otras cadenas (<code>wstr</code>) con especificación de longitud.</p>
+</li>
+<li>
+<p><strong>Lookup (DIM_TIEMPO)</strong><br />
+<strong>Descripción:</strong><br />
+    Realiza un cruce con la dimensión de tiempo para obtener <code>ID_FECHA</code>.</p>
+<p><strong>Propiedades:</strong><br />
+- SQL Command: <code>select * from [Dwh].[DIM_TIEMPO]</code>.</p>
+</li>
+<li>
+<p><strong>Lookup (DIM_POBLACION)</strong><br />
+<strong>Descripción:</strong><br />
+    Asocia <code>TIPO_DOCUMENTO</code> y <code>DOCUMENTO</code> con el <code>ID_POBLACION</code>.</p>
+<p><strong>Propiedades:</strong><br />
+- SQL Command: <code>select * from [Proteccion].[DIM_POBLACION]</code>.</p>
+</li>
+<li>
+<p><strong>Lookup (DIM_PROGRAMA)</strong><br />
+<strong>Descripción:</strong><br />
+    Relaciona los datos de <code>PROGRAMA</code> con <code>ID_PROGRAMA</code>.</p>
+<p><strong>Propiedades:</strong><br />
+- SQL Command: <code>select * from [Proteccion].[DIM_PROGRAMA]</code>.</p>
+</li>
+<li>
+<p><strong>Destino ADO.NET</strong><br />
+<strong>Descripción:</strong><br />
+    Inserta los datos finales en la tabla <code>FACT_CARACTERIZACION</code> de la base de datos de destino.</p>
+<p><strong>Propiedades:</strong><br />
+- Tabla: <code>"Proteccion"."FACT_CARACTERIZACION"</code>.</p>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant FlatFileSource as Flat File Source
+    participant DataConversion as Data Conversion
+    participant LookupTime as Lookup (DIM_TIEMPO)
+    participant LookupPopulation as Lookup (DIM_POBLACION)
+    participant AdoNetDestination as Destino ADO.NET
+
+    FlatFileSource -&gt;&gt; DataConversion: Procesar datos del archivo
+    DataConversion -&gt;&gt; LookupTime: Cruzar con DIM_TIEMPO
+    LookupTime -&gt;&gt; LookupPopulation: Cruzar con DIM_POBLACION
+    LookupPopulation -&gt;&gt; AdoNetDestination: Cargar datos transformados</code></pre>
+<h3 id="componente-procesar-fact_diagnosticos_ee_jec">Componente <strong><code>Procesar FACT_DIAGNOSTICOS_EE_JEC</code></strong><a class="headerlink" href="#componente-procesar-fact_diagnosticos_ee_jec" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_1">Descripción General<a class="headerlink" href="#descripcion-general_1" title="Permanent link">&para;</a></h4>
+<p>El componente <strong>FACT_DIAGNOSTICOS_EE_JEC</strong> es una tarea de flujo de datos en SSIS diseñada para cargar datos desde un archivo plano en la tabla de hechos <code>FACT_DIAGNOSTICOS_EE_JEC</code>. Incluye conversiones de datos, transformaciones de búsqueda y validaciones previas al almacenamiento en el destino final.</p>
+<h4 id="componentes-del-flujo-de-datos_1">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Flat File Source</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Lee datos de un archivo plano configurado con el administrador de conexiones <code>Csv_Connection_Fact_Diagnosticos_EE_JEC</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li>RetainNulls: <code>false</code></li>
+<li>FileNameColumnName: No especificado.</li>
+</ul>
+</li>
+<li><strong>Columnas de salida</strong>:<ul>
+<li><code>FECHA</code>, <code>PROGRAMA</code>, <code>PREGUNTA</code>, <code>RESPUESTA</code>, <code>ID_REGISTRO</code>, entre otros.</li>
+</ul>
+</li>
+<li><strong>Errores</strong>:<ul>
+<li>Columnas de error incluyen <code>ErrorCode</code> y <code>ErrorColumn</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Conversion</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Convierte los datos de entrada a los formatos requeridos para el procesamiento y almacenamiento.</li>
+<li><strong>Columnas convertidas</strong>:<ul>
+<li><code>Copy of ID_REGISTRO</code>, <code>Copy of FECHA_HORA_INICIO</code>, <code>Copy of FECHA_HORA_FIN</code>, entre otras.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup (DIM_TIEMPO)</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Realiza búsquedas en la dimensión <code>DIM_TIEMPO</code> para recuperar el <code>ID_FECHA</code> basado en la columna <code>FECHA</code>.</li>
+<li><strong>SQL de referencia</strong>: <code>SELECT * FROM [Dwh].[DIM_TIEMPO]</code></li>
+<li><strong>Propiedades</strong>:<ul>
+<li>CacheType: Completo.</li>
+<li>NoMatchBehavior: Fallar en ausencia de coincidencias.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup (DIM_PREGUNTAS_EE_JEC)</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Asocia cada pregunta con su identificador único en la tabla <code>DIM_PREGUNTAS_EE_JEC</code>.</li>
+<li><strong>SQL de referencia</strong>: <code>SELECT * FROM [Proteccion].[DIM_PREGUNTAS_EE_JEC]</code></li>
+<li><strong>Columnas clave</strong>:<ul>
+<li><code>Copy of PREGUNTA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup (DIM_RESPUESTAS_EE_JEC)</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Identifica las respuestas mediante las columnas <code>RESPUESTA</code> y <code>ID_PREGUNTA</code>.</li>
+<li><strong>SQL de referencia</strong>: <code>SELECT * FROM [Proteccion].[DIM_RESPUESTAS_EE_JEC]</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Destino de ADO NET</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Carga los datos transformados y validados en la tabla <code>FACT_DIAGNOSTICOS_EE_JEC</code> en el servidor de base de datos.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li>TableOrViewName: <code>"Proteccion"."FACT_DIAGNOSTICOS_EE_JEC"</code></li>
+<li>UseBulkInsertWhenPossible: <code>true</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_1">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_1" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A[Flat File Source] --&gt; B[Data Conversion]
+    B --&gt; C[Lookup DIM_TIEMPO]
+    C --&gt; D[Lookup DIM_PREGUNTAS_EE_JEC]
+    D --&gt; E[Lookup DIM_RESPUESTAS_EE_JEC]
+    E --&gt; F[ADO NET Destination]</code></pre>
+<h3 id="componente-procesar-fact_diagnosticos_ee_aipi">Componente <strong><code>Procesar FACT_DIAGNOSTICOS_EE_AIPI</code></strong><a class="headerlink" href="#componente-procesar-fact_diagnosticos_ee_aipi" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_2">Descripción General<a class="headerlink" href="#descripcion-general_2" title="Permanent link">&para;</a></h4>
+<p>Este flujo de datos extrae información desde un archivo plano, realiza transformaciones para cumplir con los requerimientos de integridad y formato, realiza búsquedas en tablas de referencia para enriquecer los datos y finalmente los carga en una tabla destino en SQL Server.</p>
+<h4 id="componentes-del-flujo-de-datos_2">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Flat File Source</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Este componente carga datos desde un archivo plano (texto) y los envía al flujo de datos para transformarlos y procesarlos.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>RetainNulls</strong>: <code>False</code> (No retiene valores nulos de origen).</li>
+<li><strong>Columns</strong>: Define las columnas a extraer, incluyendo:<ul>
+<li>"ESTABLECIMIENTO EDUCATIVO" (wstr, 255)</li>
+<li>"NOMBRE_SEDE" (wstr, 255)</li>
+<li>"MUNICIPIO" (wstr, 255)</li>
+<li>"ENTIDAD_ADMINISTRADORA" (wstr, 255)</li>
+<li>"DIRECCION" (wstr, 300)</li>
+<li>"FECHA" (dbTimestamp).</li>
+</ul>
+</li>
+<li><strong>Formato de archivo</strong>: Delimitado por comas o tabulaciones (dependiendo de la configuración específica del archivo).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Conversion</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Realiza conversiones de datos para asegurar que las columnas tengan el tipo y formato adecuado.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li>Convierte las siguientes columnas:<ul>
+<li>"ESTABLECIMIENTO EDUCATIVO" a "Copy of ESTABLECIMIENTO EDUCATIVO" (wstr, 255).</li>
+<li>"NOMBRE_SEDE" a "Copy of NOMBRE_SEDE" (wstr, 255).</li>
+<li>"MUNICIPIO" a "Copy of MUNICIPIO" (wstr, 255).</li>
+<li>"ENTIDAD_ADMINISTRADORA" a "Copy of ENTIDAD_ADMINISTRADORA" (wstr, 255).</li>
+<li>"DIRECCION" a "Copy of DIRECCION" (wstr, 300).</li>
+<li>"FECHA" a "Copy of FECHA" (dbTimestamp).</li>
+</ul>
+</li>
+<li><strong>Error Row Disposition</strong>: <code>Fail Component</code> (El proceso falla si hay un error en la conversión).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup Transformations</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Realiza búsquedas en tablas de referencia para enriquecer los datos o identificar duplicados.</li>
+<li><strong>Componentes</strong>:<ul>
+<li>Lookup DIM_ESTABLECIMIENTO_EDUCATIVO:<ul>
+<li>Tabla de referencia: <code>DIM_ESTABLECIMIENTO_EDUCATIVO</code>.</li>
+<li>Columnas para unir:<ul>
+<li>"Copy of ESTABLECIMIENTO EDUCATIVO" con "NOMBRE_ESTABLECIMIENTO".</li>
+<li>"Copy of MUNICIPIO" con "MUNICIPIO".</li>
+</ul>
+</li>
+<li>Columnas devueltas: "ID_ESTABLECIMIENTO_EDUCATIVO".</li>
+<li>No Match Behavior: <code>Redirect rows to No Match Output</code>.</li>
+</ul>
+</li>
+<li>Lookup DIM_PREGUNTAS_EE_AIPI:<ul>
+<li>Tabla de referencia: <code>DIM_PREGUNTAS_EE_AIPI</code>.</li>
+<li>Columnas para unir:<ul>
+<li>"Copy of PREGUNTA" con "PREGUNTA".</li>
+</ul>
+</li>
+<li>Columnas devueltas: "ID_PREGUNTA".</li>
+<li>No Match Behavior: <code>Redirect rows to No Match Output</code>.</li>
+</ul>
+</li>
+<li>Lookup DIM_RESPUESTAS_EE_AIPI:<ul>
+<li>Tabla de referencia: <code>DIM_RESPUESTAS_EE_AIPI</code>.</li>
+<li>Columnas para unir:<ul>
+<li>"Copy of RESPUESTA" con "RESPUESTA".</li>
+</ul>
+</li>
+<li>Columnas devueltas: "ID_RESPUESTA".</li>
+<li>No Match Behavior: <code>Redirect rows to No Match Output</code>.</li>
+</ul>
+</li>
+<li>Lookup FACT_DIAGNOSTICOS_EE_AIPI:<ul>
+<li>Tabla de referencia: <code>FACT_DIAGNOSTICOS_EE_AIPI</code>.</li>
+<li>Columnas para unir: Todas las columnas clave para verificar duplicados.</li>
+<li>No Match Behavior: <code>Redirect rows to No Match Output</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ADO.NET Destination</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Inserta los datos procesados en la tabla destino <code>FACT_DIAGNOSTICOS_EE_AIPI</code>.</li>
+<li><strong>Propiedades</strong>:
+        - <strong>Tabla o vista</strong>: <code>"Proteccion"."FACT_DIAGNOSTICOS_EE_AIPI"</code>.
+        - <strong>Batch Size</strong>: <code>0</code> (usa el tamaño predeterminado del búfer).
+        - <strong>Command Timeout</strong>: <code>30</code> segundos.
+        - <strong>UseBulkInsertWhenPossible</strong>: <code>True</code> (habilita el uso de inserciones masivas para mejorar el rendimiento).</li>
+<li><strong>Columnas cargadas</strong>:
+        - "ID_ESTABLECIMIENTO_EDUCATIVO".
+        - "ID_PREGUNTA".
+        - "ID_RESPUESTA".
+        - "Copy of FECHA".</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_2">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_2" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A(Flat File Source) --&gt; B(Data Conversion)
+    B --&gt; C(Lookup DIM_ESTABLECIMIENTO_EDUCATIVO)
+    C --&gt; D(Lookup DIM_PREGUNTAS_EE_AIPI)
+    D --&gt; E(Lookup DIM_RESPUESTAS_EE_AIPI)
+    E --&gt; F(ADO.NET Destination)</code></pre>
+<h3 id="componente-procesar-fact_venta">Componente <strong><code>Procesar FACT_VENTA</code></strong><a class="headerlink" href="#componente-procesar-fact_venta" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_3">Descripción General<a class="headerlink" href="#descripcion-general_3" title="Permanent link">&para;</a></h4>
+<p>Este flujo de datos se encarga de procesar información sobre ventas a través de varias transformaciones, búsquedas en tablas de referencia y la inserción final en una tabla destino <code>FACT_VENTA</code>. El objetivo principal es enriquecer los datos, realizar validaciones y optimizar el almacenamiento en la base de datos.</p>
+<h4 id="componentes-del-flujo-de-datos_3">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_3" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Flat File Source</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Lee datos desde un archivo plano delimitado. </li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>Formato</strong>: Delimitado (ejemplo: por comas).</li>
+<li><strong>Columnas cargadas</strong>:</li>
+<li><code>FECHA</code></li>
+<li><code>DOCUMENTO</code></li>
+<li><code>NOMBRE_USUARIO</code></li>
+<li><code>CATEGORIA_VENTA</code></li>
+<li><code>SERVICIO</code></li>
+<li><code>TIPO_DOCUMENTO</code></li>
+<li>Otros campos como <code>VALOR_PAGADO_SIN_IMP</code>, <code>COSTO</code>, <code>SUBSIDIO</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Conversion</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Convierte tipos de datos de entrada para cumplir con los requerimientos del flujo.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li>Convierte las columnas:</li>
+<li><code>FECHA</code> a tipo <code>dbTimeStamp</code>.</li>
+<li><code>DOCUMENTO</code>, <code>NOMBRE_USUARIO</code>, <code>CATEGORIA_VENTA</code>, <code>SERVICIO</code>, y <code>TIPO_DOCUMENTO</code> a tipo <code>wstr</code> con longitudes específicas.</li>
+<li><strong>Error Row Disposition</strong>: <code>FailComponent</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup Transformations</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Realiza búsquedas en tablas de referencia para enriquecer los datos con identificadores clave.</li>
+<li><strong>Componentes</strong>:<ul>
+<li><strong>Lookup DIM_TIEMPO</strong>:</li>
+<li>Tabla: <code>DIM_TIEMPO</code>.</li>
+<li>Uniones:<ul>
+<li><code>Copy of FECHA</code> -&gt; <code>FECHA</code>.</li>
+</ul>
+</li>
+<li>Resultado: <code>ID_FECHA</code>.</li>
+<li><strong>No Match Behavior</strong>: Redirigir filas sin coincidencias.</li>
+<li><strong>Lookup DIM_POBLACION</strong>:</li>
+<li>Tabla: <code>DIM_POBLACION</code>.</li>
+<li>Uniones:<ul>
+<li><code>Copy of TIPO_DOCUMENTO</code> -&gt; <code>TIPO_DOCUMENTO</code>.</li>
+<li><code>Copy of DOCUMENTO</code> -&gt; <code>DOCUMENTO</code>.</li>
+</ul>
+</li>
+<li>Resultado: <code>ID_POBLACION</code>.</li>
+<li><strong>No Match Behavior</strong>: Redirigir filas sin coincidencias.</li>
+<li><strong>Lookup DIM_TARIFAS_SERVICIOS</strong>:</li>
+<li>Tabla: <code>DIM_TARIFAS_SERVICIOS</code>.</li>
+<li>Unión:<ul>
+<li><code>Copy of SERVICIO</code> -&gt; <code>CON_OBJETO_TARIFA</code>.</li>
+</ul>
+</li>
+<li>Resultado: Información relacionada con tarifas.</li>
+<li><strong>Lookup FACT_VENTA</strong>:</li>
+<li>Tabla: <code>FACT_VENTA</code>.</li>
+<li>Uniones:<ul>
+<li>Clave compuesta: <code>FECHA</code>, <code>DOCUMENTO</code>, <code>CATEGORIA_VENTA</code>, <code>SERVICIO</code>, entre otros.</li>
+</ul>
+</li>
+<li><strong>No Match Behavior</strong>: Redirigir filas sin coincidencias.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ADO.NET Destination</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Inserta datos en la tabla destino <code>FACT_VENTA</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>Tabla destino</strong>: <code>"Proteccion"."FACT_VENTA"</code>.</li>
+<li><strong>Batch Size</strong>: <code>0</code> (tamaño predeterminado).</li>
+<li><strong>Timeout</strong>: <code>30</code> segundos.</li>
+</ul>
+</li>
+<li><strong>Columnas cargadas</strong>:<ul>
+<li><code>ID_FECHA</code>, <code>ID_POBLACION</code>, <code>VALOR_PAGADO_SIN_IMP</code>, <code>COSTO</code>, <code>SUBSIDIO</code>, entre otros.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_3">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_3" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A(Flat File Source) --&gt; B(Data Conversion)
+    B --&gt; C(Lookup DIM_TIEMPO)
+    C --&gt; D(Lookup DIM_POBLACION)
+    D --&gt; E(Lookup DIM_TARIFAS_SERVICIOS)
+    E --&gt; F(Lookup FACT_VENTA)
+    F --&gt; G(ADO.NET Destination)</code></pre>
+<h3 id="componente-procesar-fact_entrega_material">Componente <strong><code>Procesar FACT_ENTREGA_MATERIAL</code></strong><a class="headerlink" href="#componente-procesar-fact_entrega_material" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_4">Descripción General<a class="headerlink" href="#descripcion-general_4" title="Permanent link">&para;</a></h4>
+<p>Este flujo de datos procesa la información de entregas de material, realiza transformaciones y enriquecimientos de datos, y carga los datos finales en la tabla <code>FACT_ENTREGA_MATERIAL</code>. Utiliza varias transformaciones para realizar búsquedas en tablas de referencia y asegurar la integridad de los datos antes de su almacenamiento.</p>
+<h4 id="componentes-del-flujo-de-datos_4">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_4" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Flat File Source</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Extrae datos desde un archivo plano delimitado.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>Formato</strong>: Delimitado.</li>
+<li><strong>Columnas cargadas</strong>:</li>
+<li><code>FECHA_ENTREGA</code></li>
+<li><code>TIPO_DOCUMENTO</code></li>
+<li><code>DOCUMENTO</code></li>
+<li><code>NOMBRE_MATERIAL</code></li>
+<li><code>TIPO_MATERIAL</code></li>
+<li><code>CANTIDAD_MATERIAL</code></li>
+<li><code>VALOR_MATERIAL</code></li>
+<li><code>PROGRAMA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Conversion</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Convierte los datos para asegurar que cumplan con los requisitos de las transformaciones posteriores.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li>Convierte:</li>
+<li><code>FECHA_ENTREGA</code> a <code>dbTimeStamp</code>.</li>
+<li><code>TIPO_DOCUMENTO</code>, <code>DOCUMENTO</code>, <code>NOMBRE_MATERIAL</code>, <code>TIPO_MATERIAL</code>, y <code>PROGRAMA</code> a <code>wstr</code>.</li>
+<li><code>ID_PERSONAL</code> y <code>ID_MATERIAL</code> a <code>numeric</code>.</li>
+<li><strong>Error Row Disposition</strong>: <code>FailComponent</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup Transformations</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Realiza búsquedas en tablas de referencia para enriquecer los datos con identificadores clave.</li>
+<li><strong>Componentes</strong>:<ul>
+<li><strong>Lookup DIM_TIEMPO</strong>:</li>
+<li>Tabla: <code>DIM_TIEMPO</code>.</li>
+<li>Unión:<ul>
+<li><code>Copy of FECHA_ENTREGA</code> -&gt; <code>FECHA</code>.</li>
+</ul>
+</li>
+<li>Resultado: <code>ID_FECHA</code>.</li>
+<li><strong>No Match Behavior</strong>: Ignorar filas sin coincidencias.</li>
+<li><strong>Lookup DIM_PROGRAMA</strong>:</li>
+<li>Tabla: <code>DIM_PROGRAMA</code>.</li>
+<li>Unión:<ul>
+<li><code>Copy of PROGRAMA</code> -&gt; <code>PROGRAMA</code>.</li>
+</ul>
+</li>
+<li>Resultado: <code>ID_PROGRAMA</code>.</li>
+<li><strong>No Match Behavior</strong>: Ignorar filas sin coincidencias.</li>
+<li><strong>Lookup DIM_POBLACION</strong>:</li>
+<li>Tabla: <code>DIM_POBLACION</code>.</li>
+<li>Unión:<ul>
+<li><code>Copy of TIPO_DOCUMENTO</code> -&gt; <code>TIPO_DOCUMENTO</code>.</li>
+<li><code>Copy of DOCUMENTO</code> -&gt; <code>DOCUMENTO</code>.</li>
+</ul>
+</li>
+<li>Resultado: <code>ID_POBLACION</code>.</li>
+<li><strong>No Match Behavior</strong>: Ignorar filas sin coincidencias.</li>
+<li><strong>Lookup FACT_ENTREGA_MATERIAL</strong>:</li>
+<li>Tabla: <code>FACT_ENTREGA_MATERIAL</code>.</li>
+<li>Uniones:<ul>
+<li>Clave compuesta: <code>FECHA_ENTREGA</code>, <code>NOMBRE_MATERIAL</code>, <code>TIPO_MATERIAL</code>, <code>ID_FECHA</code>, <code>ID_PROGRAMA</code>, <code>ID_POBLACION</code>.</li>
+</ul>
+</li>
+<li><strong>No Match Behavior</strong>: Redirigir filas sin coincidencias.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ADO.NET Destination</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Carga los datos en la tabla destino <code>FACT_ENTREGA_MATERIAL</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>Tabla destino</strong>: <code>"Proteccion"."FACT_ENTREGA_MATERIAL"</code>.</li>
+<li><strong>Batch Size</strong>: <code>0</code> (tamaño predeterminado).</li>
+<li><strong>Timeout</strong>: <code>30</code> segundos.</li>
+</ul>
+</li>
+<li><strong>Columnas cargadas</strong>:<ul>
+<li><code>ID_FECHA</code>, <code>ID_PROGRAMA</code>, <code>ID_POBLACION</code>, <code>CANTIDAD_MATERIAL</code>, <code>VALOR_MATERIAL</code>, entre otros.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_4">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_4" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A(Flat File Source) --&gt; B(Data Conversion)
+    B --&gt; C(Lookup DIM_TIEMPO)
+    C --&gt; D(Lookup DIM_PROGRAMA)
+    D --&gt; E(Lookup DIM_POBLACION)
+    E --&gt; F(Lookup FACT_ENTREGA_MATERIAL)
+    F --&gt; G(ADO.NET Destination)</code></pre>
+<h3 id="componente-procesar-fact_visitas">Componente <strong><code>Procesar FACT_VISITAS</code></strong><a class="headerlink" href="#componente-procesar-fact_visitas" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_5">Descripción General<a class="headerlink" href="#descripcion-general_5" title="Permanent link">&para;</a></h4>
+<p>El flujo de datos procesa información de visitas, incluyendo planificación, ejecución, y metadatos relacionados. Se enfoca en transformar los datos y realizar búsquedas en tablas de referencia antes de cargarlos en la tabla <code>FACT_VISITAS</code>.</p>
+<h4 id="componentes-del-flujo-de-datos_5">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_5" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Flat File Source</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Extrae datos desde un archivo plano delimitado.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>Formato</strong>: Delimitado.</li>
+<li><strong>Columnas cargadas</strong>:</li>
+<li><code>MUNICIPIO</code></li>
+<li><code>FECHA_PLANEADA</code></li>
+<li><code>ID_PERSONAL</code></li>
+<li><code>PERSONAL</code></li>
+<li><code>ACTIVIDAD</code></li>
+<li><code>LUGAR</code></li>
+<li><code>FECHA_EJECUTADA</code></li>
+<li><code>PROGRAMA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Conversion</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Convierte los datos al formato requerido para las transformaciones posteriores.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li>Convierte:</li>
+<li><code>FECHA_PLANEADA</code>, <code>FECHA_EJECUTADA</code> a <code>dbTimeStamp</code>.</li>
+<li><code>MUNICIPIO</code>, <code>ACTIVIDAD</code>, <code>LUGAR</code>, <code>PROGRAMA</code> a <code>wstr</code>.</li>
+<li><code>PERSONAL</code> a <code>str</code>.</li>
+<li><strong>Error Row Disposition</strong>: <code>FailComponent</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup Transformations</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Realiza búsquedas en tablas de referencia para enriquecer los datos con identificadores clave.</li>
+<li><strong>Componentes</strong>:<ul>
+<li><strong>Lookup DIM_TIEMPO</strong>:</li>
+<li>Tabla: <code>DIM_TIEMPO</code>.</li>
+<li>Unión:<ul>
+<li><code>Copy of FECHA_PLANEADA</code> -&gt; <code>FECHA</code>.</li>
+</ul>
+</li>
+<li>Resultado: <code>ID_FECHA</code>.</li>
+<li><strong>No Match Behavior</strong>: Ignorar filas sin coincidencias.</li>
+<li><strong>Lookup DIM_PROGRAMA</strong>:</li>
+<li>Tabla: <code>DIM_PROGRAMA</code>.</li>
+<li>Unión:<ul>
+<li><code>Copy of PROGRAMA</code> -&gt; <code>PROGRAMA</code>.</li>
+</ul>
+</li>
+<li>Resultado: <code>ID_PROGRAMA</code>.</li>
+<li><strong>No Match Behavior</strong>: Ignorar filas sin coincidencias.</li>
+<li><strong>Lookup FACT_VISITAS</strong>:</li>
+<li>Tabla: <code>FACT_VISITAS</code>.</li>
+<li>Uniones:<ul>
+<li>Clave compuesta: <code>MUNICIPIO</code>, <code>FECHA_PLANEADA</code>, <code>ACTIVIDAD</code>, <code>LUGAR</code>, <code>FECHA_EJECUTADA</code>, <code>ID_FECHA</code>, <code>ID_PROGRAMA</code>.</li>
+</ul>
+</li>
+<li><strong>No Match Behavior</strong>: Redirigir filas sin coincidencias.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ADO.NET Destination</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Carga los datos en la tabla destino <code>FACT_VISITAS</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>Tabla destino</strong>: <code>"Proteccion"."FACT_VISITAS"</code>.</li>
+<li><strong>Batch Size</strong>: <code>0</code> (tamaño predeterminado).</li>
+<li><strong>Timeout</strong>: <code>30</code> segundos.</li>
+</ul>
+</li>
+<li><strong>Columnas cargadas</strong>:<ul>
+<li><code>ID_FECHA</code>, <code>ID_PROGRAMA</code>, <code>MUNICIPIO</code>, <code>FECHA_PLANEADA</code>, <code>PERSONAL</code>, <code>ACTIVIDAD</code>, <code>LUGAR</code>, <code>FECHA_EJECUTADA</code>, entre otros.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_5">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_5" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A(Flat File Source) --&gt; B(Data Conversion)
+    B --&gt; C(Lookup DIM_TIEMPO)
+    C --&gt; D(Lookup DIM_PROGRAMA)
+    D --&gt; E(Lookup FACT_VISITAS)
+    E --&gt; F(ADO.NET Destination)</code></pre>
+<h3 id="componente-procesar-fact_desercion">Componente <strong><code>Procesar FACT_DESERCION</code></strong><a class="headerlink" href="#componente-procesar-fact_desercion" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_6">Descripción General<a class="headerlink" href="#descripcion-general_6" title="Permanent link">&para;</a></h4>
+<p>Este componente procesa datos de deserción académica para cargar información transformada y enriquecida en una base de datos de destino. El flujo incluye pasos de conversión, enriquecimiento mediante consultas <code>Lookup</code>, y carga final en la tabla <code>FACT_DESERCION</code>.</p>
+<h4 id="componentes-del-flujo-de-datos_6">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_6" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Flat File Source:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Origen de datos que extrae información de un archivo CSV.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Archivo Conexión:</strong> <code>Csv_Connection_Fact_Desercion</code>.</li>
+<li><strong>Columnas:</strong> ID_REGISTRO, COD_ESTABLECIMIENTO_EDUCATIVO, NOMBRE_EE, TIPO_DOCUMENTO, DOCUMENTO, ANIO_ACADEMICO, FECHA_REGISTRO, PROGRAMA, CAUSA.</li>
+<li><strong>Configuración de errores:</strong> Disposición ante error: <code>FailComponent</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Conversion:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Conversión de datos para estandarizar tipos y formatos.</li>
+<li><strong>Propiedades:</strong><ul>
+<li>Convierte columnas como <code>FECHA_REGISTRO</code> a <code>dbTimeStamp</code> y texto a formato ancho (wstr).</li>
+<li><strong>Columnas Convertidas:</strong> <ul>
+<li>FECHA_REGISTRO → dbTimeStamp.</li>
+<li>CAUSA → wstr (longitud 40).</li>
+<li>ANIO_ACADEMICO → wstr (longitud 40).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup - DIM_TIEMPO:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Enriquecimiento de datos con claves temporales.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Consulta SQL:</strong> <code>SELECT * FROM [Dwh].[DIM_TIEMPO] WHERE FECHA = ?</code>.</li>
+<li>Une <code>FECHA_REGISTRO</code> con <code>DIM_TIEMPO.FECHA</code> para obtener <code>ID_FECHA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup - DIM_PROGRAMA:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Obtención de ID del programa.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Consulta SQL:</strong> <code>SELECT * FROM [Proteccion].[DIM_PROGRAMA] WHERE PROGRAMA = ?</code>.</li>
+<li>Une <code>PROGRAMA</code> con <code>DIM_PROGRAMA.PROGRAMA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup - DIM_ESTABLECIMIENTO_EDUCATIVO:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Identificación del establecimiento educativo.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Consulta SQL:</strong> <code>SELECT * FROM [Proteccion].[DIM_ESTABLECIMIENTO_EDUCATIVO] WHERE NOMBRE_ESTABLECIMIENTO = ?</code>.</li>
+<li>Une <code>NOMBRE_EE</code> con <code>DIM_ESTABLECIMIENTO_EDUCATIVO.NOMBRE_ESTABLECIMIENTO</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup - DIM_POBLACION:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Enriquecimiento de datos de población.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Consulta SQL:</strong> <code>SELECT * FROM [Proteccion].[DIM_POBLACION] WHERE DOCUMENTO = ? AND TIPO_DOCUMENTO = ?</code>.</li>
+<li>Une <code>DOCUMENTO</code> y <code>TIPO_DOCUMENTO</code> con <code>DIM_POBLACION</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Destino de ADO NET:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Carga de datos procesados a la tabla <code>FACT_DESERCION</code>.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Tabla de destino:</strong> <code>"Proteccion"."FACT_DESERCION"</code>.</li>
+<li><strong>Tiempo de espera:</strong> 30 segundos.</li>
+<li><strong>Inserción masiva:</strong> Activada.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_6">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_6" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A(Flat File Source: Csv_Connection_Fact_Desercion) --&gt; B(Data Conversion: Convertir tipos y longitudes)
+    B --&gt; C(Lookup: Enriquecer con DIM_TIEMPO)
+    C --&gt; D(Lookup: Enriquecer con DIM_PROGRAMA)
+    D --&gt; E(Lookup: Enriquecer con DIM_ESTABLECIMIENTO_EDUCATIVO)
+    E --&gt; F(Lookup: Enriquecer con DIM_POBLACION)
+    F --&gt; G(ADO NET: Cargar en FACT_DESERCION)</code></pre>
+<h3 id="componente-procesar-fact_plan_cobertura">Componente <strong><code>Procesar FACT_PLAN_COBERTURA</code></strong><a class="headerlink" href="#componente-procesar-fact_plan_cobertura" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_7">Descripción General<a class="headerlink" href="#descripcion-general_7" title="Permanent link">&para;</a></h4>
+<p>Este componente gestiona la extracción, transformación y carga (ETL) de datos relacionados con el plan de cobertura. Incluye pasos de conversión de datos, enriquecimiento mediante <code>Lookup</code>, y almacenamiento en la tabla <code>FACT_PLAN_COBERTURA</code>.</p>
+<h4 id="componentes-del-flujo-de-datos_7">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_7" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Excel Source:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Obtiene datos desde un archivo Excel que contiene información del plan de cobertura.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Hoja:</strong> <code>Sheet1$</code>.</li>
+<li><strong>Conexión:</strong> <code>Excel_Connection_Fact_Plan_Cobertura</code>.</li>
+<li><strong>Columnas:</strong> ZODES, MUNICIPIO, COBERTURA PROYECTADA, LINEA DE INTERVENCION, ANIO, INSTTITUCIONES EDUCATIVAS, PROGRAMA.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Conversion:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Convierte tipos de datos para estandarizarlos según los requisitos del destino.</li>
+<li><strong>Propiedades:</strong><ul>
+<li>Convierte columnas como <code>COBERTURA PROYECTADA</code>, <code>LINEA DE INTERVENCION</code> y <code>ANIO</code> a formato de texto ancho (wstr).</li>
+<li><strong>Columnas Convertidas:</strong><ul>
+<li><code>COBERTURA PROYECTADA</code>, <code>LINEA DE INTERVENCION</code>, <code>ANIO</code>, y <code>MUNICIPIO</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup - DIM_ESTABLECIMIENTO_EDUCATIVO:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Relaciona los datos de la institución educativa con su ID en la tabla de dimensiones.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Consulta SQL:</strong> <code>SELECT * FROM [Proteccion].[DIM_ESTABLECIMIENTO_EDUCATIVO] WHERE NOMBRE_ESTABLECIMIENTO = ?</code>.</li>
+<li>Une <code>INSTTITUCIONES EDUCATIVAS</code> con <code>DIM_ESTABLECIMIENTO_EDUCATIVO.NOMBRE_ESTABLECIMIENTO</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup - DIM_PROGRAMA:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Obtiene el ID del programa asociado.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Consulta SQL:</strong> 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_PROGRAMA</span><span class="p">]</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">PROGRAMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+<li>Une <code>PROGRAMA</code> con <code>DIM_PROGRAMA.PROGRAMA</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lookup - FACT_PLAN_COBERTURA:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Verifica la existencia previa de los datos para evitar duplicados.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Consulta SQL:</strong> 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">FACT_PLAN_COBERTURA</span><span class="p">]</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">MUNICIPIO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">LINEA_INTERVENCION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span><span class="w"> </span>
+<span class="k">AND</span><span class="w"> </span><span class="n">COBERTURA_PROYECTADA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ANIO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span><span class="w"> </span>
+<span class="k">AND</span><span class="w"> </span><span class="n">ID_ESTABLECIMIENTO_EDUCATIVO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ID_PROGRAMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Destino de ADO NET:</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Carga los datos procesados en la tabla <code>FACT_PLAN_COBERTURA</code>.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Tabla de destino:</strong> <code>"Proteccion"."FACT_PLAN_COBERTURA"</code>.</li>
+<li><strong>Inserción masiva:</strong> Activada.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-secuencia_7">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_7" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A(Excel Source: Excel_Connection_Fact_Plan_Cobertura) --&gt; B(Data Conversion: Convertir tipos y longitudes)
+    B --&gt; C(Lookup: DIM_ESTABLECIMIENTO_EDUCATIVO)
+    C --&gt; D(Lookup: DIM_PROGRAMA)
+    D --&gt; E(Lookup: FACT_PLAN_COBERTURA)
+    E --&gt; F(ADO NET: Cargar en FACT_PLAN_COBERTURA)</code></pre>
+<h3 id="restaurar-llaves-foraneas-esquema-proteccion"><strong>Restaurar llaves foráneas esquema Proteccion</strong><a class="headerlink" href="#restaurar-llaves-foraneas-esquema-proteccion" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_8">Descripción General<a class="headerlink" href="#descripcion-general_8" title="Permanent link">&para;</a></h4>
+<p>Este componente ejecuta un script SQL para restaurar las claves foráneas en el esquema <code>Proteccion</code>. Se asegura de que todas las restricciones de clave foránea estén definidas y actualizadas en las tablas correspondientes. También limpia la tabla persistente <code>ForeignKeys_Proteccion</code> al finalizar.</p>
+<h4 id="detalles-del-componente">Detalles del Componente<a class="headerlink" href="#detalles-del-componente" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Tarea Ejecutar SQL (Execute SQL Task):</strong><ul>
+<li><strong>Descripción:</strong> Restaura las claves foráneas y limpia la tabla temporal utilizada para su almacenamiento.</li>
+<li><strong>Propiedades:</strong><ul>
+<li><strong>Conexión:</strong> Conexión <code>DWH_COMFENALCO_Destino_OLEDB</code>.</li>
+<li><strong>Consulta SQL:</strong>
+    <div class="highlight"><pre><span></span><code><span class="c1">-- Restaurar restricciones de clave foránea para el esquema Proteccion</span>
+<span class="k">DECLARE</span><span class="w"> </span><span class="o">@</span><span class="n">restoreSql_Proteccion</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="k">MAX</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="o">@</span><span class="n">restoreSql_Proteccion</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;ALTER TABLE &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="s1">&#39;Proteccion&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">TableName</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; ADD CONSTRAINT &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">ConstraintName</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; FOREIGN KEY (&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">ColumnName</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;) REFERENCES &#39;</span><span class="w"> </span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span>
+<span class="w">        </span><span class="k">CASE</span><span class="w"> </span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">fk</span><span class="p">.</span><span class="n">ReferencedTableName</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;DIM_AFILIADOS&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_APORTANTE_NOAFILIADO&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_BENEFICIARIOS&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_CAPACIDAD_FISICA&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_CATEGORIA&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_CUENTA_CONTABLE&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_EMPRESAS&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_INFRAESTRUCTURA_CCF&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_PERSONAL&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_SEDES&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_TARIFAS_SERVICIOS&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_UNIDAD&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_UNIDADES_ORGANIZATIVAS&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Transversal&#39;</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">fk</span><span class="p">.</span><span class="n">ReferencedTableName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;DIM_TIEMPO&#39;</span><span class="w"> </span>
+<span class="w">            </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Dwh&#39;</span><span class="w"> </span>
+<span class="w">            </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;Proteccion&#39;</span>
+<span class="w">        </span><span class="k">END</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">ReferencedTableName</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">ReferencedColumnName</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;); &#39;</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">ForeignKeys_Proteccion</span><span class="w"> </span><span class="n">fk</span><span class="p">;</span>
+
+<span class="c1">-- Ejecutamos el SQL para restaurar las llaves foráneas del esquema Proteccion</span>
+<span class="k">EXEC</span><span class="w"> </span><span class="n">sp_executesql</span><span class="w"> </span><span class="o">@</span><span class="n">restoreSql_Proteccion</span><span class="p">;</span>
+
+<span class="c1">-- Limpiar la tabla persistente</span>
+<span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">ForeignKeys_Proteccion</span><span class="p">;</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="secuencia-de-operaciones">Secuencia de Operaciones<a class="headerlink" href="#secuencia-de-operaciones" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Construye dinámicamente los comandos <code>ALTER TABLE</code> para cada clave foránea registrada en la tabla <code>ForeignKeys_Proteccion</code>.</li>
+<li>Define las claves foráneas asegurándose de que las tablas referenciadas pertenezcan al esquema correcto (<code>Proteccion</code>, <code>Transversal</code> o <code>Dwh</code>).</li>
+<li>Ejecuta el script generado con <code>sp_executesql</code>.</li>
+<li>Elimina la tabla temporal <code>ForeignKeys_Proteccion</code>.</li>
+</ol>
+<h4 id="diagrama-de-secuencia_8">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_8" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as SSIS Task
+    participant SQL as SQL Server
+
+    SSIS -&gt;&gt; SQL: Construir consulta @restoreSql_Proteccion
+    SQL -&gt;&gt; SQL: Generar comandos ALTER TABLE
+    SQL -&gt;&gt; SQL: Ejecutar sp_executesql
+    SQL -&gt;&gt; SQL: DROP TABLE dbo.ForeignKeys_Proteccion</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../js/mkdocs_pagetree_plugin.js"></script>
+      
+        <script src="../../js/init_mermaid.js"></script>
+      
+    
+  </body>
+</html>
