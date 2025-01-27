@@ -2420,20 +2420,24 @@
 <hr />
 <h2 id="proposito-del-script">Propósito del Script<a class="headerlink" href="#proposito-del-script" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Eliminación de estructuras previas</strong>:</li>
 <li>
-<p>Limpia el esquema <code>Colegio</code> eliminando tablas y claves foráneas existentes si ya están definidas.</p>
+<p><strong>Eliminación de estructuras previas</strong>:</p>
+<ul>
+<li>Limpia el esquema <code>Colegio</code> eliminando tablas y claves foráneas existentes si ya están definidas.</li>
+</ul>
 </li>
 <li>
 <p><strong>Creación del esquema <code>Colegio</code></strong>:</p>
-</li>
-<li>
-<p>Construcción de un modelo dimensional con tablas de hechos (<code>FACT</code>) y dimensiones (<code>DIM</code>) para representar datos educativos.</p>
+<ul>
+<li>Construcción de un modelo dimensional con tablas de hechos (<code>FACT</code>) y dimensiones (<code>DIM</code>) para representar datos educativos.</li>
+</ul>
 </li>
 <li>
 <p><strong>Establecimiento de relaciones</strong>:</p>
-</li>
+<ul>
 <li>Configuración de claves foráneas para garantizar la integridad referencial y las conexiones lógicas entre entidades.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h2 id="estructura-del-modelo">Estructura del Modelo<a class="headerlink" href="#estructura-del-modelo" title="Permanent link">&para;</a></h2>
@@ -2549,7 +2553,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h4 id="2-fact_transporte">2. <strong>FACT_TRANSPORTE</strong><a class="headerlink" href="#2-fact_transporte" title="Permanent link">&para;</a></h4>
 <p>Gestión del uso del transporte escolar.</p>
 <table>
@@ -2578,7 +2581,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h4 id="3-fact_notas">3. <strong>FACT_NOTAS</strong><a class="headerlink" href="#3-fact_notas" title="Permanent link">&para;</a></h4>
 <p>Registra las calificaciones de los estudiantes.</p>
 <table>
@@ -2607,7 +2609,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h4 id="4-fact_biblioteca">4. <strong>FACT_BIBLIOTECA</strong><a class="headerlink" href="#4-fact_biblioteca" title="Permanent link">&para;</a></h4>
 <p>Registra préstamos de libros en la biblioteca.</p>
 <table>
@@ -2636,7 +2637,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="relaciones-entre-tablas">Relaciones entre Tablas<a class="headerlink" href="#relaciones-entre-tablas" title="Permanent link">&para;</a></h3>
 <h4 id="diagrama-relacional">Diagrama Relacional<a class="headerlink" href="#diagrama-relacional" title="Permanent link">&para;</a></h4>
 <pre class="mermaid"><code>erDiagram
@@ -2677,31 +2677,33 @@
     DIM_ANIO_ACADEMICO ||--o{ DIM_PLAN_CURRICULAR : AnioAcademico
     DIM_PLAN_CURRICULAR ||--o{ FACT_NOTAS : Asignatura
     DIM_LIBROS ||--o{ FACT_BIBLIOTECA : Libro</code></pre>
-<hr />
 <h2 id="consideraciones-tecnicas">Consideraciones Técnicas<a class="headerlink" href="#consideraciones-tecnicas" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Integridad Referencial</strong>:</li>
 <li>
-<p>Uso de claves foráneas para relacionar hechos con dimensiones.</p>
+<p><strong>Integridad Referencial</strong>:</p>
+<ul>
+<li>Uso de claves foráneas para relacionar hechos con dimensiones.</li>
+</ul>
 </li>
 <li>
 <p><strong>Eficiencia</strong>:</p>
-</li>
-<li>
-<p>Índices primarios en todas las tablas para optimizar consultas.</p>
+<ul>
+<li>Índices primarios en todas las tablas para optimizar consultas.</li>
+</ul>
 </li>
 <li>
 <p><strong>Escalabilidad</strong>:</p>
-</li>
-<li>
-<p>Modelo adaptable para incluir nuevas dimensiones y hechos.</p>
+<ul>
+<li>Modelo adaptable para incluir nuevas dimensiones y hechos.</li>
+</ul>
 </li>
 <li>
 <p><strong>Separación Lógica</strong>:</p>
-</li>
+<ul>
 <li>Diferenciación clara entre tablas de hechos y dimensiones para análisis OLAP.</li>
+</ul>
+</li>
 </ol>
-<hr />
 <h2 id="conclusion">Conclusión<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
 <p>El esquema <code>Colegio</code> proporciona una estructura robusta para almacenar y analizar datos relacionados con la gestión escolar, facilitando la generación de reportes y análisis avanzados de rendimiento académico, recursos educativos y actividades administrativas.</p>
 
