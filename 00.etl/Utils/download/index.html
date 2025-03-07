@@ -1,0 +1,3306 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Funciones/">
+      
+      
+        <link rel="next" href="../Funciones_DM/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Download.py - COMFENALCO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="23abf7" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manual-de-usuario-y-documentacion-del-script-etl" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="COMFENALCO" class="md-header__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            COMFENALCO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Download.py
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="COMFENALCO" class="md-nav__button md-logo" aria-label="COMFENALCO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    COMFENALCO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00. INICIO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            00. INICIO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INTRODUCCIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    INSTALACIÓN Y CONFIGURACIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Conexiones_BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CONEXIÓN A BASE DE DATOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../buenaspracticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BUENAS PRÁCTICAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. SCRIPTS SQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. SCRIPTS SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/00.Inicio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/00.Eliminar_todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. Eliminar Todo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/01.Transversal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. Transversal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/02.Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. Cedesarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/03.Proteccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. Proteccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01.scripts/04.Colegio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. Colegio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. ESTRUCTURA SHAREPOINT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. ESTRUCTURA SHAREPOINT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04.sharepoint/estructura_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura carpeta Sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04.sharepoint/estructura_archivos_actualizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura Archivos Actualizacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. BI COMFENALCO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. BI COMFENALCO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/00.params/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/00-SCRAPING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00. WEB SCRAPING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/01.TRANSVERSAL_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. TRANSVERSAL_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/02-TRANSVERSAL_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TRANSVERSAL_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/03-COLEGIO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. COLEGIO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/04-COLEGIO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04. COLEGIO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/05-CEDESARROLLO_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05. CEDESARROLLO_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/06-CEDESARROLLO_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. CEDESARROLLO_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/07-PROTECCION_DIMENSIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07. PROTECCION_DIMENSIONES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/08-PROTECCION_FACT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08. PROTECCION_FACT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02.Paquetes_SSIS/09-ETLS_CUBO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09. ETLS_CUBO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04. COMFENALCO EDUCACION
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            04. COMFENALCO EDUCACION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 SCRIPTS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 SCRIPTS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. Q10
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. Q10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_1" id="__nav_5_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.1. Educación Tecnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            0.1. Educación Tecnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/01.Docentes_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Cedesarrollo.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/02.Disenio_curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Diseño Curricular.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/03.Listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/04.Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Ingresos.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/05.Historico_notas_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Histórico notas.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/06.Egresados_graduados_Cedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_01.educaciontecnica/07.Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.7. Desertores.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_2" id="__nav_5_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0.2. Educación Continua
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            0.2. Educación Continua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/01.Docentes_desarrollo_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1. Docentes Desarrollo Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/02.Preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2. Preinscritos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/03.Listado_matriculas_emp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3. Listado Matrículas Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/04.Consolidado_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4. Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/05.Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5. Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.educacioncontinua/06.Egresados_graduados_empresarial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6. Egresados Graduados Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_2_3" id="__nav_5_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sharepoint
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sharepoint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_01_procesar_docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_01 procesar_docentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_02_procesar_Dise%C3%B1o_Curricular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_02 procesar_Diseño_Curricular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_03_procesar_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_03 procesar_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_04_procesar_cede_Ingresos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_04 procesar_Ingresos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_05_cede_Historico_Notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_05 cede_Historico_Notas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_06_cede_Egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_06 cede_Egresados_Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/cede_07_Cancelados_Desertores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cede_07 Cancelados Desertores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_01_Docentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_01 Docentes Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_02_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_02 Listado Matrículas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_03_preinscritos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_03 Preinscritos Empresarial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_04_egresados_Graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_04 Egresados Graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_05_Estudiantes_inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_05 Estudiantes Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_01.q10_02.Sharepoint/emp_06_consolidado_Inasistencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emp_06 Consolidado Inasistencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_3" id="__nav_5_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. C4C
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. C4C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_02.C4C/01.C4C_webscraping_v4_Actualizable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Webscraping Actualizable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl_02.C4C/02.C4C_webscraping_v4_Historico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Webscraping Histórico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Download.py
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Download.py
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción General
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalle-de-funciones-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalle de funciones principales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrucciones-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrucciones de uso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-directorio-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración del Directorio de Trabajo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-directorio-de-trabajo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración del Directorio de Trabajo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-de-credenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura de Credenciales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-de-clave-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura de Clave Privada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove_datetime_from_filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_datetime_from_filename
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download_file_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_file_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-de-manejo-de-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones de Manejo de Archivo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones de Manejo de Archivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract_datetime_from_filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      extract_datetime_from_filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_most_recent_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_most_recent_file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos Sharepoint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos Sharepoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download_content_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_content_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download_all_files_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_all_files_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diccionarios-y-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diccionarios y Main()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diccionarios y Main()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Funciones_DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones_DM.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c4c_from_sharepoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c4c_from_sharepoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dim_Estudiantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_Estudiantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dim_periodo_academico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dim_periodo_academico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fact_facturacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_facturacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fact_graduados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fact_cotizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_cotizacion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fact_listado_matriculas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_listado_matriculas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05. CUBO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            05. CUBO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.Cubo/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.Cubo/01.Origen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. ORIGEN Y MEDIDAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.Cubo/02.Tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. TABLAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03.Cubo/03.ETL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03. ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06. POWER BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            06. POWER BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05.Power_BI/00.Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05.Power_BI/01.Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01. DASHBOARD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción General
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalle-de-funciones-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalle de funciones principales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrucciones-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrucciones de uso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-directorio-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración del Directorio de Trabajo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-directorio-de-trabajo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración del Directorio de Trabajo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-de-credenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura de Credenciales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-de-clave-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura de Clave Privada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove_datetime_from_filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_datetime_from_filename
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download_file_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_file_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-de-manejo-de-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones de Manejo de Archivo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones de Manejo de Archivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract_datetime_from_filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      extract_datetime_from_filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_most_recent_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_most_recent_file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos Sharepoint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos Sharepoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download_content_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_content_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download_all_files_from_sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_all_files_from_sharepoint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diccionarios-y-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diccionarios y Main()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diccionarios y Main()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!-- markdownlint-disable -->
+
+<h1 id="manual-de-usuario-y-documentacion-del-script-etl">Manual de Usuario y Documentación del Script ETL<a class="headerlink" href="#manual-de-usuario-y-documentacion-del-script-etl" title="Permanent link">&para;</a></h1>
+<p>Esta documentación explica el funcionamiento del script que descarga y procesa archivos desde SharePoint.</p>
+<h2 id="descripcion-general">Descripción General<a class="headerlink" href="#descripcion-general" title="Permanent link">&para;</a></h2>
+<p>El script realiza las siguientes acciones:</p>
+<ul>
+<li>Configura el entorno y cambia el directorio de trabajo.</li>
+<li>Lee las credenciales de autenticación y configura MSAL para obtener un token.</li>
+<li>Define los headers para las solicitudes a SharePoint.</li>
+<li>Configura el logging para el registro de eventos.</li>
+<li>Define funciones para:<ul>
+<li>Eliminar marcas de fecha de los nombres de archivo.</li>
+<li>Descargar archivos desde SharePoint.</li>
+<li>Extraer la fecha de modificación de los nombres de archivo.</li>
+<li>Filtrar archivos recientes (últimos 6 meses).</li>
+<li>Concatenar y procesar los datos descargados (CSV y Excel).</li>
+</ul>
+</li>
+<li>Define diccionarios que mapean claves a rutas y nombres de archivo.</li>
+<li>Orquesta el proceso ETL a través del bloque principal, que configura argumentos y ejecuta la descarga y procesamiento.</li>
+</ul>
+<h2 id="detalle-de-funciones-principales">Detalle de funciones principales<a class="headerlink" href="#detalle-de-funciones-principales" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>remove_datetime_from_filename(file_name):</strong><br />
+  Elimina la marca de fecha y hora del nombre del archivo mediante una expresión regular.</p>
+</li>
+<li>
+<p><strong>download_file_from_sharepoint(file_name, folder_url, download_path):</strong><br />
+  Descarga el archivo indicado desde SharePoint, creando directorios y renombrando el archivo sin la marca de fecha.</p>
+</li>
+<li>
+<p><strong>extract_datetime_from_filename(filename):</strong><br />
+  Extrae la fecha y hora del nombre del archivo para identificar la versión más reciente.</p>
+</li>
+<li>
+<p><strong>find_most_recent_file(files, key):</strong><br />
+  Filtra la lista de archivos para retornar aquellos modificados en los últimos 6 meses.</p>
+</li>
+<li>
+<p><strong>download_content_from_sharepoint(file_name, folder_url):</strong><br />
+  Descarga y retorna el contenido de un archivo desde SharePoint, validando la respuesta.</p>
+</li>
+<li>
+<p><strong>download_all_files_from_sharepoint(folder_url, download_directory, key):</strong><br />
+  Coordinación del proceso ETL:</p>
+<ul>
+<li>Consulta la API de SharePoint para obtener archivos.</li>
+<li>Filtra archivos relevantes usando el modelo de nombre.</li>
+<li>Descarga y procesa el contenido (CSV o Excel).</li>
+<li>Realiza la concatenación y eliminación de duplicados en el DataFrame.</li>
+<li>Guarda el DataFrame consolidado en el directorio destino.</li>
+</ul>
+</li>
+</ul>
+<h2 id="instrucciones-de-uso">Instrucciones de uso<a class="headerlink" href="#instrucciones-de-uso" title="Permanent link">&para;</a></h2>
+<p>Para ejecutar el script desde la línea de comandos:
+<div class="highlight"><pre><span></span><code>python download.py --key &lt;clave&gt; --pausa &lt;True/False&gt;
+</code></pre></div>
+- Utiliza la opción --key para indicar la clave del diccionario correspondiente a la carpeta de SharePoint.
+- La opción --pausa indica si se debe pausar la ejecución al finalizar.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">json</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">msal</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConfidentialClientApplication</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">Funciones</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">log_step_decorator</span><span class="p">,</span> <span class="n">csv_files</span>
+<span class="p">)</span>
+</code></pre></div>
+<h2 id="configuracion-del-directorio-de-trabajo">Configuración del Directorio de Trabajo<a class="headerlink" href="#configuracion-del-directorio-de-trabajo" title="Permanent link">&para;</a></h2>
+<p>El siguiente código establece el directorio de trabajo al directorio donde se encuentra el script actual. Esto es importante para asegurar que todas las rutas relativas utilizadas en el script funcionen correctamente, independientemente de desde dónde se ejecute el script.</p>
+<p>La función <code>os.path.abspath(__file__)</code> devuelve la ruta completa al archivo actual, y <code>os.path.dirname()</code> extrae el directorio que contiene ese archivo. Luego, <code>os.chdir()</code> cambia el directorio de trabajo actual a esa ubicación.</p>
+<div class="highlight"><pre><span></span><code><span class="n">script_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">script_dir</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="configuracion-del-directorio-de-trabajo_1">Configuración del Directorio de Trabajo<a class="headerlink" href="#configuracion-del-directorio-de-trabajo_1" title="Permanent link">&para;</a></h2>
+<p>El siguiente código establece el directorio de trabajo al directorio donde se encuentra el script actual. Esto es importante para asegurar que todas las rutas relativas utilizadas en el script funcionen correctamente, independientemente de desde dónde se ejecute el script.</p>
+<p>La función <code>os.path.abspath(__file__)</code> devuelve la ruta completa al archivo actual, y <code>os.path.dirname()</code> extrae el directorio que contiene ese archivo. Luego, <code>os.chdir()</code> cambia el directorio de trabajo actual a esa ubicación.</p>
+<h2 id="lectura-de-credenciales">Lectura de Credenciales<a class="headerlink" href="#lectura-de-credenciales" title="Permanent link">&para;</a></h2>
+<p>El siguiente código lee las credenciales necesarias para la autenticación con Microsoft SharePoint. Estas credenciales se almacenan en un archivo de texto llamado 'credenciales.env' para mantener la seguridad y facilitar la gestión de configuración.</p>
+<p>El archivo de credenciales contiene información importante como:</p>
+<ul>
+<li>Client ID: Identificador único de la aplicación registrada en Azure AD</li>
+<li>Certificate Thumbprint: Huella digital del certificado utilizado para autenticar</li>
+<li>Tenant ID: Identificador único del directorio de Azure AD</li>
+<li>Otros parámetros de configuración como URLs y scopes</li>
+</ul>
+<p>Este enfoque permite separar la configuración sensible del código, mejorando la seguridad y facilitando los despliegues en diferentes entornos sin necesidad de modificar el código fuente.</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;credenciales.env&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">key_file</span><span class="p">:</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">key_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+    <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; = &quot;</span><span class="p">)</span>
+    <span class="n">keys</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span>
+<span class="n">client_id</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;client_id&quot;</span><span class="p">)</span>
+<span class="n">cert_thumbprint</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cert_thumbprint&quot;</span><span class="p">)</span>
+<span class="n">tenant_id</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;tenant_id&quot;</span><span class="p">)</span>
+<span class="n">authority</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://login.microsoftonline.com/</span><span class="si">{</span><span class="n">tenant_id</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+<h2 id="lectura-de-clave-privada">Lectura de Clave Privada<a class="headerlink" href="#lectura-de-clave-privada" title="Permanent link">&para;</a></h2>
+<p>El siguiente código lee la clave privada almacenada en el archivo 'key.pem'. Esta clave es parte esencial del proceso de autenticación basado en certificados con Microsoft SharePoint.</p>
+<p>La clave privada, junto con el thumbprint del certificado previamente cargado, se utiliza para crear las credenciales necesarias para que la aplicación MSAL (Microsoft Authentication Library) obtenga un token de acceso. Este enfoque de autenticación con certificado es más seguro que usar contraseñas y es recomendado para aplicaciones en entornos de producción.</p>
+<p>Una vez que se carga la clave privada, se configura la aplicación MSAL y se solicita un token de acceso que será utilizado en las cabeceras (headers) de todas las solicitudes HTTP posteriores a SharePoint.</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;key.pem&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">key_file</span><span class="p">:</span>
+    <span class="n">private_key</span> <span class="o">=</span> <span class="n">key_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">cert</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;private_key&quot;</span><span class="p">:</span> <span class="n">private_key</span><span class="p">,</span>
+    <span class="s2">&quot;thumbprint&quot;</span><span class="p">:</span> <span class="n">cert_thumbprint</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">msal_app</span> <span class="o">=</span> <span class="n">ConfidentialClientApplication</span><span class="p">(</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span>
+    <span class="n">authority</span><span class="o">=</span><span class="n">authority</span><span class="p">,</span>
+    <span class="n">client_credential</span><span class="o">=</span><span class="n">cert</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">scopes_sharepoint_online</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;scopes_sharepoint_online&quot;</span><span class="p">)]</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">msal_app</span><span class="o">.</span><span class="n">acquire_token_for_client</span><span class="p">(</span><span class="n">scopes_sharepoint_online</span><span class="p">)</span>
+<span class="k">if</span> <span class="s2">&quot;access_token&quot;</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="n">access_token</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;access_token&quot;</span><span class="p">)</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">access_token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Accept&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json;odata=verbose&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">sharepoint_base_url</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sharepoint_base_url&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="configuracion-de-logging">Configuración de Logging<a class="headerlink" href="#configuracion-de-logging" title="Permanent link">&para;</a></h2>
+<p>El siguiente código configura el sistema de logging para registrar información durante la ejecución del script. El logging es esencial para monitorear el proceso ETL, identificar problemas y depurar errores.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Configuración del logger principal</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>  <span class="c1"># Usa un logger con nombre</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">logger</span><span class="o">.</span><span class="n">hasHandlers</span><span class="p">():</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">handlers</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+<span class="c1"># Configuración del formato de los mensajes de log</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(levelname)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Configuración para guardar logs en archivo</span>
+<span class="n">file_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="s2">&quot;scraper_SSIS.log&quot;</span><span class="p">)</span>
+<span class="n">file_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">file_handler</span><span class="p">)</span>
+
+<span class="c1"># Configuración para mostrar logs en consola</span>
+<span class="n">console_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+<span class="n">console_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">console_handler</span><span class="p">)</span>
+
+<span class="c1"># Suprimir advertencias que puedan distraer durante la ejecución</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>El sistema de logging está configurado para:</p>
+<ul>
+<li><strong>Guardar registros en archivo</strong>: Los registros se almacenan en "scraper_SSIS.log"</li>
+<li><strong>Mostrar mensajes en consola</strong>: Proporciona retroalimentación en tiempo real</li>
+<li><strong>Formato de tiempo</strong>: Cada mensaje incluye fecha/hora, nivel de severidad y contenido</li>
+<li><strong>Niveles de detalle</strong>: Configurado en INFO para capturar información operativa importante</li>
+</ul>
+<p>Adicionalmente, se ajustan los niveles de registro para otros loggers que pudieran estar activos:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ajustar nivel de logging para otros loggers</span>
+<span class="k">for</span> <span class="n">logger_name</span> <span class="ow">in</span> <span class="n">logging</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">loggerDict</span><span class="p">:</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">logger_name</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+</code></pre></div>
+<p>Este enfoque de logging proporciona visibilidad completa del proceso ETL, facilitando la identificación de posibles problemas o errores durante la ejecución del script.</p>
+<h2 id="remove_datetime_from_filename">remove_datetime_from_filename<a class="headerlink" href="#remove_datetime_from_filename" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">remove_datetime_from_filename</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Elimina la marca de fecha y hora del nombre del archivo.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Usa una expresión regular para eliminar la fecha y hora en formato DD_MM_YYYY_HH_MM</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;_\d</span><span class="si">{2}</span><span class="s1">_\d</span><span class="si">{2}</span><span class="s1">_\d</span><span class="si">{4}</span><span class="s1">_\d</span><span class="si">{2}</span><span class="s1">_\d</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+</code></pre></div>
+<p>La función <code>remove_datetime_from_filename()</code> elimina las marcas de fecha y hora de los nombres de archivo. Utiliza una expresión regular para identificar y remover patrones con formato <code>DD_MM_YYYY_HH_MM</code> (día_mes_año_hora_minuto) que suelen añadirse a los nombres de archivos para versionar documentos.</p>
+<p>Esta función es especialmente útil durante el proceso ETL para normalizar los nombres de los archivos descargados, permitiendo una identificación y procesamiento consistente independientemente de cuándo fueron generados los archivos.</p>
+<h2 id="download_file_from_sharepoint">download_file_from_sharepoint<a class="headerlink" href="#download_file_from_sharepoint" title="Permanent link">&para;</a></h2>
+<p>La función <code>download_file_from_sharepoint()</code> descarga archivos individuales desde SharePoint y los guarda en el sistema de archivos local. Esta función:</p>
+<ol>
+<li><strong>Crea directorios necesarios</strong>: Verifica si la ruta de destino existe y la crea si es necesaria</li>
+<li><strong>Construye la URL de descarga</strong>: Genera la URL completa para acceder al archivo en SharePoint</li>
+<li><strong>Realiza la petición</strong>: Obtiene el contenido del archivo mediante una solicitud HTTP</li>
+<li><strong>Normaliza el nombre</strong>: Elimina las marcas de fecha/hora del nombre del archivo usando <code>remove_datetime_from_filename()</code></li>
+<li><strong>Guarda el archivo</strong>: Escribe el contenido descargado en el sistema de archivos local</li>
+</ol>
+<p>Esta función es esencial para el proceso ETL, permitiendo obtener datos actualizados desde SharePoint para su posterior procesamiento. Maneja tanto la autenticación como la gestión de errores para garantizar descargas confiables.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@log_step_decorator</span><span class="p">(</span><span class="s2">&quot;Descargar archivo de SharePoint&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">download_file_from_sharepoint</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">folder_url</span><span class="p">,</span> <span class="n">download_path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Descarga un archivo específico desde SharePoint y lo guarda localmente.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_name: Nombre del archivo en SharePoint</span>
+<span class="sd">        folder_url: URL relativa de la carpeta en SharePoint</span>
+<span class="sd">        download_path: Ruta local donde se guardará el archivo</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Crear las carpetas si no existen</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">download_path</span><span class="p">)):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">download_path</span><span class="p">))</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Carpeta creada: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">download_path</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Ruta completa del archivo en SharePoint</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ruta completa del archivo a descargar: </span><span class="si">{</span><span class="n">download_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">download_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sharepoint_base_url</span><span class="si">}</span><span class="s2">/_api/web/GetFolderByServerRelativeUrl(&#39;</span><span class="si">{</span><span class="n">folder_url</span><span class="si">}</span><span class="s2">&#39;)/Files(&#39;</span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">&#39;)/$value&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">download_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="c1"># Eliminar la marca de fecha y hora del nombre del archivo</span>
+        <span class="n">clean_file_name</span> <span class="o">=</span> <span class="n">remove_datetime_from_filename</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+        <span class="n">clean_download_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">download_path</span><span class="p">),</span> <span class="n">clean_file_name</span><span class="p">)</span>
+
+        <span class="c1"># Guardar el archivo descargado con el nuevo nombre</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">clean_download_path</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Archivo descargado exitosamente como: </span><span class="si">{</span><span class="n">clean_file_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error al descargar el archivo. Código de estado: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="funciones-de-manejo-de-archivo">Funciones de Manejo de Archivo<a class="headerlink" href="#funciones-de-manejo-de-archivo" title="Permanent link">&para;</a></h2>
+<h3 id="extract_datetime_from_filename">extract_datetime_from_filename<a class="headerlink" href="#extract_datetime_from_filename" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extract_datetime_from_filename</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extrae la fecha y hora del nombre del archivo en formato DD_MM_YYYY_HH_MM.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{2}</span><span class="s1">_\d</span><span class="si">{2}</span><span class="s1">_\d</span><span class="si">{4}</span><span class="s1">_\d</span><span class="si">{2}</span><span class="s1">_\d</span><span class="si">{2}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">_%m_%Y_%H_%M&#39;</span><span class="p">)</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{2}</span><span class="s1">_\d</span><span class="si">{2}</span><span class="s1">_\d</span><span class="si">{4}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">_%m_%Y&#39;</span><span class="p">)</span>    
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+<p>La función <code>extract_datetime_from_filename()</code> extrae información de fecha y hora de los nombres de archivo. Esta función:</p>
+<ol>
+<li>Busca patrones de fecha/hora usando expresiones regulares</li>
+<li>Primero intenta encontrar el formato completo DD_MM_YYYY_HH_MM (día_mes_año_hora_minuto)</li>
+<li>Si no encuentra ese formato, busca un formato más simple DD_MM_YYYY (día_mes_año)</li>
+<li>Convierte la cadena encontrada en un objeto datetime para facilitar operaciones de comparación</li>
+<li>Si no encuentra ningún formato de fecha válido, retorna None</li>
+</ol>
+<p>Esta función es crucial para identificar la versión más reciente de archivos que incluyen marcas de tiempo en sus nombres, permitiendo al proceso ETL trabajar siempre con los datos más actualizados.</p>
+<h3 id="find_most_recent_file">find_most_recent_file<a class="headerlink" href="#find_most_recent_file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nd">@log_step_decorator</span><span class="p">(</span><span class="s2">&quot;Filtrar archivos recientes&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_most_recent_file</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Encuentra el archivo más reciente en la lista de archivos basándose en la fecha y hora en el nombre.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">most_recent_file</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">most_recent_datetime</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># Itera sobre la lista de archivos</span>
+    <span class="n">archivos_validos</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="c1"># Obtiene el nombre del archivo</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Archivo: </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Extrae la fecha y hora del nombre del archivo</span>
+        <span class="n">file_datetime</span> <span class="o">=</span> <span class="n">extract_datetime_from_filename</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+        <span class="c1"># Si se pudo extraer la fecha y hora del nombre del archivo</span>
+        <span class="k">if</span> <span class="n">file_datetime</span><span class="p">:</span>
+            <span class="c1"># Si no hay una fecha y hora más reciente almacenada o si la fecha y hora actual es más reciente</span>
+            <span class="k">if</span> <span class="n">most_recent_datetime</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">file_datetime</span> <span class="o">&gt;</span> <span class="n">most_recent_datetime</span><span class="p">:</span>
+                <span class="c1"># Verifica si la fecha y hora está dentro de los últimos 6 meses</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">file_datetime</span><span class="p">)</span><span class="o">.</span><span class="n">days</span> <span class="o">&lt;=</span> <span class="mi">180</span><span class="p">:</span>
+                    <span class="c1"># Agrega el archivo a la lista de archivos válidos</span>
+                    <span class="n">archivos_validos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">archivos_validos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+    <span class="c1"># Registra los archivos válidos encontrados</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Archivos válidos: </span><span class="si">{</span><span class="n">archivos_validos</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">archivos_validos</span>
+</code></pre></div>
+<p>La función <code>find_most_recent_file()</code> filtra una lista de archivos de SharePoint para identificar aquellos que son relevantes para el proceso ETL. Esta función:</p>
+<ol>
+<li>Itera a través de una lista de archivos obtenidos de SharePoint</li>
+<li>Para cada archivo, intenta extraer la información de fecha/hora del nombre utilizando <code>extract_datetime_from_filename()</code></li>
+<li>Si el archivo tiene una marca de tiempo válida:</li>
+<li>Verifica que la fecha esté dentro de los últimos 6 meses</li>
+<li>Si cumple con este criterio, lo agrega a la lista de archivos válidos</li>
+<li>Si el archivo no tiene una marca de tiempo reconocible, lo incluye directamente en la lista de archivos válidos</li>
+<li>Retorna la lista completa de archivos válidos para su posterior procesamiento</li>
+</ol>
+<p>Esta función implementa una política de retención de datos, asegurando que solo los archivos suficientemente recientes (menos de 6 meses de antigüedad) sean considerados para el proceso ETL, evitando así el procesamiento de datos obsoletos.</p>
+<h2 id="archivos-sharepoint">Archivos Sharepoint<a class="headerlink" href="#archivos-sharepoint" title="Permanent link">&para;</a></h2>
+<h3 id="download_content_from_sharepoint"><code>download_content_from_sharepoint</code><a class="headerlink" href="#download_content_from_sharepoint" title="Permanent link">&para;</a></h3>
+<p>Esta función  es responsable de recuperar archivos almacenados en SharePoint utilizando la API REST de Microsoft. La función está decorada con <code>log_step_decorator</code>, lo que proporciona capacidades automáticas de registro para monitorear el proceso de descarga.</p>
+<p>El código construye una URL específica de la API combinando una URL base de SharePoint con la ruta de la carpeta y el nombre del archivo solicitado. Esta construcción sigue el patrón estándar de la API REST de SharePoint para obtener el contenido de un archivo (<code>/$value</code>). La función realiza una solicitud HTTP GET a esta URL, incluyendo los encabezados de autenticación necesarios.</p>
+<p>El manejo de respuestas implementa verificaciones básicas de errores: cuando la descarga es exitosa (código de estado 200), la función devuelve el contenido binario del archivo. En caso de error, registra tanto el código de estado como el mensaje de error completo para facilitar la depuración, y devuelve <code>None</code> para que el código que la invoca pueda implementar lógica de manejo de errores adecuada.</p>
+<p>Este enfoque es particularmente útil para integraciones automatizadas que necesitan acceder a documentos almacenados en SharePoint como parte de flujos de trabajo o procesos ETL.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@log_step_decorator</span><span class="p">(</span><span class="s2">&quot;Descargar contenido de SharePoint&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">download_content_from_sharepoint</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">folder_url</span><span class="p">):</span>
+    <span class="n">download_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sharepoint_base_url</span><span class="si">}</span><span class="s2">/_api/web/GetFolderByServerRelativeUrl(&#39;</span><span class="si">{</span><span class="n">folder_url</span><span class="si">}</span><span class="s2">&#39;)/Files(&#39;</span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">&#39;)/$value&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">download_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Archivo </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2"> descargado exitosamente.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error al descargar el archivo. CÃ³digo de estado: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+<h3 id="download_all_files_from_sharepoint"><code>download_all_files_from_sharepoint</code><a class="headerlink" href="#download_all_files_from_sharepoint" title="Permanent link">&para;</a></h3>
+<p>Este código automatiza la descarga de archivos desde SharePoint, los procesa y los combina en un único archivo de salida. </p>
+<p>La función primero construye una URL para acceder a los archivos de una carpeta específica en SharePoint utilizando la API REST. Realiza una solicitud HTTP GET para obtener la lista de archivos disponibles, registrando el proceso mediante logging. Si la solicitud es exitosa (código 200), extrae la información de los archivos del JSON de respuesta.</p>
+<p>Dependiendo del parámetro <code>key</code> proporcionado, la función determina si debe trabajar con archivos CSV o Excel. Luego busca en un diccionario el nombre del archivo modelo correspondiente a esa clave, y filtra la lista de archivos para incluir solo aquellos que coincidan con ese modelo.</p>
+<p>La función <code>find_most_recent_file</code> (que no se muestra en el código proporcionado) se utiliza para identificar los archivos más recientes. Para cada archivo seleccionado, descarga su contenido, lo convierte en un DataFrame de pandas según su formato (Excel o CSV), y concatena todos los DataFrames en uno solo, eliminando duplicados.</p>
+<p>El código incluye también un procesamiento específico para las columnas "DOCUMENTO_ESTUDIANTE" y "DOCUMENTO", convirtiéndolas a formato numérico entero cuando están presentes.</p>
+<p>Finalmente, la función crea el directorio de destino si no existe y guarda el DataFrame combinado como un archivo CSV o Excel en la ubicación especificada. Si ocurre algún error durante el proceso, registra los detalles para facilitar la depuración.</p>
+<p>Esta utilidad es especialmente valiosa para automatizar la recopilación y consolidación de datos distribuidos en múltiples archivos en SharePoint, manteniendo un registro detallado de cada paso del proceso.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_all_files_from_sharepoint</span><span class="p">(</span><span class="n">folder_url</span><span class="p">,</span> <span class="n">download_directory</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="c1"># Construye la URL para acceder a los archivos de una carpeta específica en SharePoint</span>
+    <span class="n">folder_api_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sharepoint_base_url</span><span class="si">}</span><span class="s2">/_api/web/GetFolderByServerRelativeUrl(&#39;</span><span class="si">{</span><span class="n">folder_url</span><span class="si">}</span><span class="s2">&#39;)/Files&quot;</span>
+
+    <span class="c1"># Realiza una solicitud GET a la URL de la API de SharePoint para obtener los archivos de la carpeta</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">folder_api_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="c1"># Imprime la URL a la que se está conectando</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Conectando a </span><span class="si">{</span><span class="n">folder_api_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="c1"># Imprime el estado de la respuesta de la solicitud</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Estado de la respuesta: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="c1"># Extrae la lista de archivos de la respuesta JSON de la solicitud GET</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;results&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Se encontraron </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">}</span><span class="s2"> archivos en la carpeta especificada.&quot;</span><span class="p">)</span>        
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No se encontraron archivos en la carpeta especificada.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">csv_files</span><span class="p">:</span>
+            <span class="n">extension</span> <span class="o">=</span> <span class="s2">&quot;csv&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">extension</span> <span class="o">=</span> <span class="s2">&quot;xlsx&quot;</span>
+
+        <span class="c1"># Obtiene el nombre del archivo sin la extensión</span>
+        <span class="n">archivo</span> <span class="o">=</span> <span class="n">diccionarios</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">archivo</span><span class="p">:</span>
+            <span class="n">archivo_modelo</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">archivo</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1"># filtra todos los archivos que inicien con archivo_modelo sin extencion y los guarda en una lista </span>
+            <span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">archivo_modelo</span><span class="p">)]</span>    
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Se encontraron </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">}</span><span class="s2"> archivos que coinciden con el modelo de archivo: </span><span class="si">{</span><span class="n">archivo_modelo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Se encontraron </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">}</span><span class="s2"> archivos&quot;</span><span class="p">)</span>
+            <span class="n">archivo</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;procesado_</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">extension</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+        <span class="n">most_recent_files</span> <span class="o">=</span> <span class="n">find_most_recent_file</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">most_recent_files</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No se encontró ningún archivo válido.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="n">all_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">most_recent_file</span> <span class="ow">in</span> <span class="n">most_recent_files</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">most_recent_file</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">file_name</span> <span class="o">=</span> <span class="n">most_recent_file</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">file_name</span> <span class="o">=</span> <span class="n">most_recent_file</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
+
+            <span class="n">file_content</span> <span class="o">=</span> <span class="n">download_content_from_sharepoint</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">folder_url</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Descargando archivo: </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">file_content</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">file_name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.xlsx&#39;</span><span class="p">):</span>
+                    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">file_content</span><span class="p">))</span>
+                <span class="k">elif</span> <span class="n">file_name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">):</span>
+                    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">file_content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Formato de archivo no soportado: </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">continue</span>
+                <span class="n">all_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">all_df</span><span class="p">,</span> <span class="n">df</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Concatena el DataFrame descargado al DataFrame existente</span>
+                <span class="n">all_df</span> <span class="o">=</span> <span class="n">all_df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span> <span class="c1"># Eliminar duplicados</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">all_df</span><span class="p">)</span>
+
+        <span class="c1">#Si all_df contiene una columna DOCUMENTO_ESTUDIANTE hay que pasarla a entero</span>
+        <span class="k">if</span> <span class="s2">&quot;DOCUMENTO_ESTUDIANTE&quot;</span> <span class="ow">in</span> <span class="n">all_df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">all_df</span><span class="p">[</span><span class="s1">&#39;DOCUMENTO_ESTUDIANTE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span>
+                <span class="n">all_df</span><span class="p">[</span><span class="s1">&#39;DOCUMENTO_ESTUDIANTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[^0-9]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;Int64&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;DOCUMENTO&quot;</span> <span class="ow">in</span> <span class="n">all_df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">all_df</span><span class="p">[</span><span class="s1">&#39;DOCUMENTO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span>
+                <span class="n">all_df</span><span class="p">[</span><span class="s1">&#39;DOCUMENTO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[^0-9]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;Int64&#39;</span><span class="p">)</span>
+
+
+
+        <span class="c1"># Verifica si el directorio de descarga existe, si no, lo crea</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">download_directory</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">download_directory</span><span class="p">)</span>
+
+        <span class="c1">#guarda all_df en un archivo excel</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Guardando archivo en </span><span class="si">{</span><span class="n">download_directory</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">extension</span> <span class="o">==</span> <span class="s2">&quot;csv&quot;</span><span class="p">:</span>
+            <span class="n">all_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">download_directory</span><span class="p">,</span> <span class="n">archivo</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8-sig&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">all_df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">download_directory</span><span class="p">,</span> <span class="n">archivo</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error al obtener la lista de archivos. Código de estado: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Contenido del error: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="diccionarios-y-main">Diccionarios y Main()<a class="headerlink" href="#diccionarios-y-main" title="Permanent link">&para;</a></h2>
+<p>Este código implementa un sistema para la descarga automatizada de archivos desde SharePoint hacia ubicaciones locales específicas. La estructura principal se basa en diccionarios que mapean identificadores a rutas y archivos.</p>
+<h3 id="estructura-de-datos">Estructura de datos<a class="headerlink" href="#estructura-de-datos" title="Permanent link">&para;</a></h3>
+<p>El código define varios diccionarios clave:
+- <code>manuales</code> y <code>sin_fecha</code>: Mapean códigos (como "EPEPT06") a nombres de archivos Excel específicos
+- <code>etl_to_folder_url</code>: Contiene las rutas de origen en SharePoint para cada tipo de archivo
+- <code>etl_destino</code>: Especifica las rutas de destino local donde se guardarán los archivos</p>
+<p>Los diccionarios auxiliares como <code>archivos_manuales_etl_destino</code> y <code>archivos_manuales_etl_to_folder_url</code> generan mapeos adicionales que luego se integran a los diccionarios principales.</p>
+<h3 id="funcionamiento">Funcionamiento<a class="headerlink" href="#funcionamiento" title="Permanent link">&para;</a></h3>
+<p>El script utiliza <code>argparse</code> para procesar dos parámetros principales desde la línea de comandos:
+- <code>--key</code>: Especifica qué conjunto de archivos descargar (usando un identificador de los diccionarios)
+- <code>--pausa</code>: Determina si el script debe hacer una pausa al finalizar</p>
+<p>Cuando se ejecuta, el programa:
+1. Determina la clave a utilizar (usa "EPEPT04" por defecto si no se proporciona)
+2. Configura el directorio de destino basándose en la clave
+3. Obtiene la URL de SharePoint correspondiente
+4. Ejecuta la descarga de archivos mediante la función <code>download_all_files_from_sharepoint</code>
+5. Registra el proceso utilizando un sistema de logging</p>
+<p>El código está diseñado para facilitar la automatización de descargas desde diferentes secciones de SharePoint, como datos de educación técnica, educación continua y archivos de estructuras propuestas, organizándolos automáticamente en carpetas locales predefinidas.</p>
+<div class="highlight"><pre><span></span><code><span class="n">manuales</span>  <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;EPEPT06&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EPT-06.xlsx&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;EPEPT04&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EPT-04.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEDF02&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EDF-02.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEDF04&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EDF-04.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;AMDRE05&quot;</span><span class="p">:</span><span class="s2">&quot;AM-DRE-05.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEPT07&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EPT-07.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEPT08&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EPT-08.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEDF09&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EDF-09.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEPT11&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EPT-11.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEPT09&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EPT-09.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEPT10&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EPT-10.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEPT12&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EPT-12.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EPEPT05&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EPT-05.xlsx&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="n">sin_fecha</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;EP-EDF-05&quot;</span><span class="p">:</span><span class="s2">&quot;EP-EDF-05.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-02&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-02.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-06&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-06.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-09&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-09.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-01&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-01.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-10&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-10.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-04&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-04.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-11&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-11.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-03&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-03.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-12&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-12.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-08&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-08.xlsx&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-07&quot;</span><span class="p">:</span><span class="s1">&#39;EP-EDF-07.xlsx&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="c1">#une los diccionarios</span>
+<span class="n">diccionarios</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">manuales</span><span class="p">,</span> <span class="o">**</span><span class="n">sin_fecha</span><span class="p">}</span>
+
+<span class="c1"># Generar el nuevo diccionario</span>
+<span class="n">archivos_manuales_etl_destino</span> <span class="o">=</span> <span class="p">{</span><span class="n">clave</span><span class="p">:</span> <span class="s1">&#39;02.Archivos/02.Cedesarrollo/&#39;</span> <span class="k">for</span> <span class="n">clave</span> <span class="ow">in</span> <span class="n">manuales</span><span class="o">.</span><span class="n">keys</span><span class="p">()}</span>
+<span class="n">archivos_manuales_etl_to_folder_url</span> <span class="o">=</span> <span class="p">{</span><span class="n">clave</span><span class="p">:</span> <span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/03.Otros_Archivos&#39;</span> <span class="k">for</span> <span class="n">clave</span> <span class="ow">in</span> <span class="n">manuales</span><span class="o">.</span><span class="n">keys</span><span class="p">()}</span>
+
+
+
+
+<span class="n">etl_to_folder_url</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;cede_Docentes&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/01.Educacion_Tecnica/Procesados/01.Docentes&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Diseño_Curricular&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/01.Educacion_Tecnica/Procesados/02.Disenio_Curricular&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Listado_Matriculas&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/01.Educacion_Tecnica/Procesados/03.Listado_Matriculas&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Ingresos&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/01.Educacion_Tecnica/Procesados/04.Ingresos&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Historico_Notas&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/01.Educacion_Tecnica/Procesados/05.Historico_Notas&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Egresados_Graduados&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/01.Educacion_Tecnica/Procesados/06.Egresados_Graduados&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Cancelados_Desertores&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/01.Educacion_Tecnica/Procesados/07.Cancelados_Desertores&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Docentes&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/02.Educacion_Continua/Procesados/01.Docentes&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Preinscritos&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/02.Educacion_Continua/Procesados/02.Preinscritos&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Listado_Matriculas&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/02.Educacion_Continua/Procesados/03.Listado_Matriculas&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Consolidado_inasistencias&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/02.Educacion_Continua/Procesados/04.Consolidado_inasistencias&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Estudiantes_inasistencias&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/02.Educacion_Continua/Procesados/05.Estudiantes_cancelados_por_inasistencias&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Egresados_Graduados&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/01.Q10/02.Educacion_Continua/Procesados/06.Egresados_Graduados&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-01&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/06.FACT_ENFERMERIA&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-02&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/02.FACT_AUSENTISMO_DOCENTE&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-03&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/10.FACT_REEMPLAZO_DOCENTE&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-04&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/08.FACT_PERMISO_ESTUDIANTE&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-05&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/03.FACT_BIBLIOTECA&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-06&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/04.FACT_BIBLIOTECA_VIRTUAL&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-07&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/13.FACT_SABER11_INDIVIDUAL&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-08&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/12.FACT_SABER11_COLEGIOS&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-09&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/05.FACT_DESEMPENHO_DOCENTE&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-10&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/07.FACT_LEGALIZACION&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-11&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/09.FACT_PSIORIENTACION&#39;</span><span class="p">,</span> 
+    <span class="s2">&quot;EP-EDF-12&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/11.FACT_RESERVA_ESPACIOS&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-13&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/03.Archivos_Manuales/02.Estructuras_Propuestas/02.Educacion_Formal/14.FACT_SERVICIO_SOCIAL&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;C4C&quot;</span><span class="p">:</span><span class="s1">&#39;Documentos compartidos/02.C4C&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">etl_destino</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;cede_Docentes&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/01/01.Docentes&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Diseño_Curricular&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/01/02.Disenio_Curricular&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Listado_Matriculas&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/01/03.Listado_Matriculas&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Ingresos&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/01/04.Ingresos&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Historico_Notas&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/01/05.Historico_Notas&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Egresados_Graduados&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/01/06.Egresados_Graduados&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;cede_Cancelados_Desertores&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/01/07.Cancelados_Desertores&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Docentes&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/02/01.Docentes&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Preinscritos&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/02/02.Preinscritos&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Listado_Matriculas&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/02/03.Listado_Matriculas&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Consolidado_inasistencias&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/02/04.Consolidado_inasistencias&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Estudiantes_inasistencias&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/02/05.Estudiantes_cancelados_por_inasistencias&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;emp_Egresados_Graduados&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/02.Cedesarrollo/02/06.Egresados_Graduados&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-01&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-02&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-03&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-04&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-05&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-06&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-07&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-08&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-09&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-10&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-11&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-12&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;EP-EDF-13&quot;</span><span class="p">:</span><span class="s1">&#39;02.Archivos/04.Colegio&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;C4C&quot;</span>      <span class="p">:</span><span class="s1">&#39;02.Archivos/01.Transversal/PQRs&#39;</span><span class="p">,</span>
+
+    <span class="p">}</span>
+
+<span class="n">etl_to_folder_url</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">archivos_manuales_etl_to_folder_url</span><span class="p">)</span>
+<span class="n">etl_destino</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">archivos_manuales_etl_destino</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Descargar archivos desde SharePoint usando una clave de carpeta.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--key&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Clave del diccionario etl_to_folder_url para seleccionar la carpeta en SharePoint.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--pausa&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">bool</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Segunda clave con valores posibles True o False.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Parsear argumentos</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="c1"># Verificar si se pasa un argumento o usar un valor por defecto</span>
+    <span class="n">__key</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">key</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">key</span> <span class="k">else</span> <span class="s2">&quot;EPEPT04&quot;</span>  <span class="c1"># Valor predeterminado</span>
+    <span class="n">_pausa</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">pausa</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">pausa</span> <span class="k">else</span> <span class="kc">False</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Procesando download.py con la clave: </span><span class="si">{</span><span class="n">__key</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="c1"># Actualizar root_directory para que etl_destino lo asigne</span>
+    <span class="n">root_directory1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">)</span>
+    <span class="n">root_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root_directory1</span><span class="p">,</span> <span class="n">etl_destino</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">__key</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)))</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">root_directory</span> <span class="o">+</span> <span class="s2">&quot; </span><span class="se">\n</span><span class="s2"> &quot;</span> <span class="o">+</span> <span class="n">etl_destino</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">__key</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+
+    <span class="c1"># Obtener la carpeta desde la clave proporcionada</span>
+    <span class="n">folder_url</span> <span class="o">=</span> <span class="n">etl_to_folder_url</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">__key</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">folder_url</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: La clave &#39;</span><span class="si">{</span><span class="n">__key</span><span class="si">}</span><span class="s2">&#39; no existe en etl_to_folder_url.&quot;</span><span class="p">)</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Descargar archivos</span>
+    <span class="nd">@log_step_decorator</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ETL </span><span class="si">{</span><span class="n">__key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run_etl</span><span class="p">():</span>
+        <span class="n">download_all_files_from_sharepoint</span><span class="p">(</span><span class="n">folder_url</span><span class="p">,</span> <span class="n">root_directory</span><span class="p">,</span> <span class="n">__key</span><span class="p">)</span>
+
+    <span class="n">run_etl</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">_pausa</span><span class="p">:</span>
+        <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Presione Enter para continuar...&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../js/mkdocs_pagetree_plugin.js"></script>
+      
+        <script src="../../../js/init_mermaid.js"></script>
+      
+    
+  </body>
+</html>

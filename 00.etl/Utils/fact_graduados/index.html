@@ -12,7 +12,7 @@
         <link rel="prev" href="../fact_facturacion/">
       
       
-        <link rel="next" href="../fact_listado_matriculas/">
+        <link rel="next" href="../fact_cotizacion/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -70,6 +70,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#fact-graduados" class="md-skip">
+          Saltar a contenido
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -1803,6 +1808,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Funciones_DM/" class="md-nav__link">
         
   
@@ -1914,6 +1940,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    fact_graduados
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1925,6 +1964,82 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función Principal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procesamiento-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procesamiento de Archivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinacion-y-limpieza-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combinación y Limpieza de Datos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exportacion-de-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exportación de Resultados
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fact_cotizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_cotizacion
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2201,6 +2316,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función Principal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procesamiento-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procesamiento de Archivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinacion-y-limpieza-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combinación y Limpieza de Datos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exportacion-de-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exportación de Resultados
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2215,101 +2376,40 @@
                   
 
 
-  <h1>fact_graduados</h1>
-
 <!-- markdownlint-disable -->
-
-<p>Este script procesa y combina dos archivos Excel relacionados con egresados/graduados, les agrega una columna con un identificador de unidad, limpia columnas vacías, y guarda el resultado en un nuevo archivo Excel <code>fact_egresados.xlsx</code>. </p>
-<hr />
-<h4 id="funcionamiento"><strong>Funcionamiento</strong><a class="headerlink" href="#funcionamiento" title="Permanent link">&para;</a></h4>
-<ol>
-<li>
-<p><strong>Definición de la función <code>genera</code>:</strong></p>
-<ul>
-<li>
-<p><strong>Entradas:</strong></p>
-<ul>
-<li><strong><code>root_directory</code> (str):</strong> Directorio base donde se encuentra el archivo.</li>
-<li><strong><code>archivo</code> (str):</strong> Nombre del archivo Excel a procesar.</li>
-<li><strong><code>value</code> (int):</strong> Valor que se asignará a la nueva columna <code>ID_UNIDAD</code> en el DataFrame.</li>
-</ul>
-</li>
-<li>
-<p><strong>Acciones:</strong></p>
-<ul>
-<li>Verifica si el archivo existe en la ruta especificada.</li>
-<li>Lee el archivo Excel utilizando <code>pd.read_excel</code>.</li>
-<li>Agrega una nueva columna <code>ID_UNIDAD</code> con el valor proporcionado.</li>
-<li>Elimina las columnas vacías con <code>dropna(axis=1, how='all')</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Salida:</strong></p>
-<ul>
-<li>Devuelve el DataFrame con la columna adicional y las columnas vacías eliminadas.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Lectura de archivos:</strong></p>
-<ul>
-<li>
-<p>Se leen dos archivos Excel:</p>
-<ul>
-<li><code>procesado_cede_Egresados_Graduados.xlsx</code> desde el directorio <code>02.Archivos/02.Cedesarrollo/01/06.Egresados_Graduados</code>.</li>
-<li><code>procesado_emp_Egresados_Graduados.xlsx</code> desde el directorio <code>02.Archivos/02.Cedesarrollo/02/06.Egresados_Graduados</code>.</li>
-</ul>
-</li>
-<li>
-<p>Se aplica la función <code>genera</code> a ambos archivos, agregando los valores de <code>ID_UNIDAD</code> como 2 y 3 respectivamente.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Modificación de DataFrame:</strong></p>
-<ul>
-<li>Se agrega una columna <code>DIPLOMA_GRADUADO</code> vacía al DataFrame <code>df_cede</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Concatenación de DataFrames:</strong></p>
-<ul>
-<li>Se concatenan los DataFrames <code>df_cede</code> y <code>df_emp</code> en un único DataFrame.</li>
-</ul>
-</li>
-<li>
-<p><strong>Exportación a Excel:</strong></p>
-<ul>
-<li>El DataFrame combinado se guarda en un archivo Excel llamado <code>fact_egresados.xlsx</code> en el directorio de destino <code>02.Archivos/02.Cedesarrollo</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Creación del directorio de destino (si no existe):</strong></p>
-<ul>
-<li>Si el directorio de destino no existe, se crea utilizando <code>os.makedirs()</code>.</li>
-</ul>
-</li>
-</ol>
-<hr />
-<h4 id="entradas"><strong>Entradas</strong><a class="headerlink" href="#entradas" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong><code>root_directory</code></strong>: Directorio base donde se encuentran los archivos a procesar.</li>
-<li><strong><code>archivo</code></strong>: Nombre del archivo Excel a procesar.</li>
-<li><strong><code>value</code></strong>: Valor para la columna <code>ID_UNIDAD</code>.</li>
-</ul>
-<hr />
-<h4 id="salida"><strong>Salida</strong><a class="headerlink" href="#salida" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong><code>df</code></strong>: DataFrame combinado y procesado de los dos archivos.</li>
-<li><strong>Archivo Excel exportado</strong>: El DataFrame combinado se guarda como <code>fact_egresados.xlsx</code> en el directorio de destino.</li>
-</ul>
-<hr />
+<h1 id="fact-graduados">FACT GRADUADOS<a class="headerlink" href="#fact-graduados" title="Permanent link">&para;</a></h1>
+<p>Este script en Python procesa información de graduados o egresados de dos fuentes distintas, las combina y guarda el resultado en un nuevo archivo Excel. A continuación se detalla su funcionamiento:</p>
+<h2 id="funcion-principal">Función Principal<a class="headerlink" href="#funcion-principal" title="Permanent link">&para;</a></h2>
+<p>El código define una función <code>genera()</code> que:
+- Recibe la ruta base, nombre de archivo y un valor identificador
+- Verifica la existencia del archivo especificado
+- Lee datos desde un archivo Excel utilizando pandas
+- Asigna un identificador de unidad académica (ID_UNIDAD)
+- Limpia columnas vacías
+- Devuelve un DataFrame procesado</p>
+<h2 id="procesamiento-de-archivos">Procesamiento de Archivos<a class="headerlink" href="#procesamiento-de-archivos" title="Permanent link">&para;</a></h2>
+<p>El script procesa dos archivos Excel diferentes:
+1. Un archivo relacionado con "CEDE" (ID_UNIDAD=2)
+2. Un archivo relacionado con "EMP" (ID_UNIDAD=3)</p>
+<p>Ambos archivos se encuentran en rutas específicas dentro de una estructura de directorios predefinida.</p>
+<h2 id="combinacion-y-limpieza-de-datos">Combinación y Limpieza de Datos<a class="headerlink" href="#combinacion-y-limpieza-de-datos" title="Permanent link">&para;</a></h2>
+<p>Después de leer los archivos:
+- Añade una columna vacía llamada 'DIPLOMA_GRADUADO' al DataFrame de CEDE
+- Concatena ambos DataFrames en uno solo
+- Realiza un tratamiento especial sobre la columna 'DOCUMENTO', convirtiéndola a un formato numérico entero si existe</p>
+<h2 id="exportacion-de-resultados">Exportación de Resultados<a class="headerlink" href="#exportacion-de-resultados" title="Permanent link">&para;</a></h2>
+<p>Finalmente, el código:
+- Establece una ruta de destino para el archivo final
+- Crea el directorio destino si no existe
+- Guarda el DataFrame combinado como 'fact_egresados.xlsx'
+- Confirma la exportación exitosa mediante un mensaje en consola</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="c1"># pylint: disable=all</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">genera</span><span class="p">(</span><span class="n">root_directory</span><span class="p">,</span> <span class="n">archivo</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">genera</span><span class="p">(</span><span class="n">root_directory</span><span class="p">,</span> <span class="n">archivo</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="c1"># Definir el directorio raíz</span>
     <span class="c1"># Construir la ruta completa</span>
     <span class="n">ruta_archivo</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root_directory</span><span class="p">,</span> <span class="n">archivo</span><span class="p">)</span>
@@ -2326,8 +2426,8 @@
     <span class="c1">#elimina las columnas vacias</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">df</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">root_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span>
+
+<span class="n">root_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span>
     <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
         <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span>
         <span class="s2">&quot;..&quot;</span><span class="p">,</span>
@@ -2338,13 +2438,13 @@
         <span class="s2">&quot;06.Egresados_Graduados&quot;</span>
     <span class="p">)</span>
 <span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Nombre del archivo</span>
+
+<span class="c1"># Nombre del archivo</span>
 <span class="n">archivo_cede</span> <span class="o">=</span> <span class="s1">&#39;procesado_cede_Egresados_Graduados.xlsx&#39;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">df_cede</span> <span class="o">=</span> <span class="n">genera</span><span class="p">(</span><span class="n">root_directory</span><span class="p">,</span> <span class="n">archivo_cede</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">root_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span>
+
+<span class="n">df_cede</span> <span class="o">=</span> <span class="n">genera</span><span class="p">(</span><span class="n">root_directory</span><span class="p">,</span> <span class="n">archivo_cede</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">root_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span>
     <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
         <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span>
         <span class="s2">&quot;..&quot;</span><span class="p">,</span>
@@ -2355,26 +2455,38 @@
         <span class="s2">&quot;06.Egresados_Graduados&quot;</span>
     <span class="p">)</span>
 <span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Nombre del archivo</span>
+
+
+<span class="c1"># Nombre del archivo</span>
 <span class="n">archivo_emp</span> <span class="o">=</span> <span class="s1">&#39;procesado_emp_Egresados_Graduados.xlsx&#39;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">df_emp</span> <span class="o">=</span> <span class="n">genera</span><span class="p">(</span><span class="n">root_directory</span><span class="p">,</span> <span class="n">archivo_emp</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">df_cede</span><span class="p">[</span><span class="s1">&#39;DIPLOMA_GRADUADO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="n">df_emp</span> <span class="o">=</span> <span class="n">genera</span><span class="p">(</span><span class="n">root_directory</span><span class="p">,</span> <span class="n">archivo_emp</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">df_cede</span><span class="p">[</span><span class="s1">&#39;DIPLOMA_GRADUADO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="c1">#concatenar los df</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_cede</span><span class="p">,</span> <span class="n">df_emp</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">root_directory1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">)</span>
+
+
+<span class="c1">#Si all_df contiene una columna DOCUMENTO_ESTUDIANTE hay que pasarla a entero</span>
+<span class="k">if</span> <span class="s2">&quot;DOCUMENTO&quot;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;DOCUMENTO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span>
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;DOCUMENTO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[^0-9]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+        <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;Int64&#39;</span><span class="p">)</span>
+
+
+<span class="n">root_directory1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">)</span>
 <span class="c1"># Actualizar root_directory para que etl_destino lo asigne</span>
 <span class="n">destino</span> <span class="o">=</span> <span class="s1">&#39;02.Archivos/02.Cedesarrollo&#39;</span>
 <span class="n">root_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root_directory1</span><span class="p">,</span> <span class="n">destino</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)))</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Crear el directorio si no existe</span>
+
+<span class="c1"># Crear el directorio si no existe</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">root_directory</span><span class="p">):</span>
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">root_directory</span><span class="p">)</span>
 <span class="c1">#guarda en excel </span>
 <span class="n">df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root_directory</span><span class="p">,</span> <span class="s1">&#39;fact_egresados.xlsx&#39;</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1">#abrir el excel</span>
+<span class="c1">#os.system(&#39;start excel.exe &quot;%s&quot;&#39; % os.path.join(root_directory, &#39;fact_egresados.xlsx&#39;))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exportación exitosa&quot;</span><span class="p">)</span>
 </code></pre></div>
 
