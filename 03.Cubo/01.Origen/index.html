@@ -1802,6 +1802,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../00.etl/Utils/download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../00.etl/Utils/Funciones_DM/" class="md-nav__link">
         
   
@@ -1912,6 +1933,27 @@
   
   <span class="md-ellipsis">
     fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_cotizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_cotizacion
   </span>
   
 
@@ -2094,78 +2136,6 @@
   <a href="#estructura" class="md-nav__link">
     <span class="md-ellipsis">
       Estructura
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#particiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Particiones
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-unidades" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Unidades:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-empresas-afiliadas-caja" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Empresas Afiliadas Caja:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-afiliados-caja" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Afiliados Caja:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-beneficiarios-caja" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Beneficiarios Caja:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-aportes-totales" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Aportes Totales:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-valor-aportes-totales" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Valor Aportes Totales:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-valores-estaticos" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Valores Estáticos
     </span>
   </a>
   
@@ -2380,78 +2350,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#particiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Particiones
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-unidades" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Unidades:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-empresas-afiliadas-caja" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Empresas Afiliadas Caja:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-afiliados-caja" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Afiliados Caja:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-beneficiarios-caja" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Beneficiarios Caja:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-aportes-totales" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Aportes Totales:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-valor-aportes-totales" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Valor Aportes Totales:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-valores-estaticos" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Valores Estáticos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#proposito_1" class="md-nav__link">
     <span class="md-ellipsis">
       Propósito
@@ -2523,509 +2421,1039 @@
 <p>La tabla <strong>Medidas</strong> contiene columnas calculadas y una serie de medidas configuradas para realizar análisis y cálculos dentro del cubo. Estas medidas se utilizan para analizar datos clave y generar métricas significativas para la toma de decisiones.</p>
 <hr />
 <h3 id="estructura">Estructura<a class="headerlink" href="#estructura" title="Permanent link">&para;</a></h3>
-<p><strong>1. Nombre de la Tabla</strong>: <code>Medidas</code>.</p>
-<p><strong>2. Columnas</strong>:</p>
+<p>Cada medida calculada se describe brevemente, indicando su objetivo, la lógica DAX utilizada y (donde aplica) el formato de salida.</p>
+<ol>
+<li>
+<p><strong># Unidades</strong>  </p>
 <ul>
-<li><strong>Column1</strong>:<ul>
-<li><strong>Tipo de Columna</strong>: Columna Calculada (<code>calculatedTableColumn</code>).</li>
-<li><strong>Nombre</strong>: <code>Column1</code>.</li>
-<li><strong>Tipo de Datos</strong>: <code>int64</code>.</li>
-<li><strong>Nombre Inferido</strong>: <code>true</code>.</li>
-<li><strong>Tipo de Datos Inferido</strong>: <code>true</code>.</li>
-<li><strong>Columna Fuente</strong>: <code>[Column1]</code>.</li>
+<li><strong>Objetivo:</strong> Retorna el conteo distinto de unidades (ID_UNIDAD) de la dimensión “Transversal DIM_UNIDAD”, excluyendo la unidad 5.  </li>
+<li><strong>Expresión DAX:</strong><br />
+    <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; 5
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="w"> </span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Valor numérico (sin formato adicional).</li>
 </ul>
 </li>
-</ul>
-<h3 id="particiones">Particiones<a class="headerlink" href="#particiones" title="Permanent link">&para;</a></h3>
-<p><strong>1. Nombre de la Partición</strong>: <code>CalculatedTable 1</code>.</p>
-<p><strong>2. Fuente</strong>:</p>
-<ul>
-<li><strong>Tipo</strong>: <code>calculated</code>.</li>
-<li><strong>Expresión</strong>:
-   <div class="highlight"><pre><span></span><code><span class="n">DATATABLE</span><span class="p">(</span><span class="ss">&quot;Column1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"> </span><span class="err">{{</span><span class="mi">1</span><span class="err">}}</span><span class="p">)</span>
-</code></pre></div></li>
-</ul>
-<h3 id="1-unidades">1. <strong>Unidades</strong>:<a class="headerlink" href="#1-unidades" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Expresión</strong>:
-     <div class="highlight"><pre><span></span><code><span class="n">DISTINCTCOUNT</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">])</span>
-</code></pre></div></li>
-<li><strong>Descripción</strong>: Cuenta el número distinto de unidades en la dimensión <code>DIM_UNIDAD</code>.</li>
-</ul>
-<hr />
-<h3 id="2-empresas-afiliadas-caja">2. <strong>Empresas Afiliadas Caja</strong>:<a class="headerlink" href="#2-empresas-afiliadas-caja" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Expresión</strong>:
-     <div class="highlight"><pre><span></span><code><span class="n">VAR</span><span class="w"> </span><span class="n">EmpresasCalculo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
-<span class="w">    </span><span class="n">CALCULATE</span><span class="p">(</span>
-<span class="w">        </span><span class="n">DISTINCTCOUNT</span><span class="p">(</span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">PARTNER</span><span class="p">]),</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">TIPO_POBLACION</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;EMPRESA&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">ACTIVIDAD</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;AFILIACION&quot;</span>
-<span class="w">    </span><span class="p">)</span>
-<span class="k">RETURN</span><span class="w"> </span><span class="n">SWITCH</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">TRUE</span><span class="p">(),</span>
-<span class="w">    </span><span class="n">SELECTEDVALUE</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">])</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="err">}</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<span class="w">    </span><span class="n">SELECTEDVALUE</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">])</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">REMOVEFILTERS</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">),</span>
-<span class="w">    </span><span class="n">EmpresasCalculo</span>
-<span class="p">)</span>
-</code></pre></div></li>
-<li><strong>Descripción</strong>: Calcula el número de empresas afiliadas, con reglas específicas basadas en las actividades filtradas en <code>FACT_ACTIVIDADES</code>.</li>
-</ul>
-<hr />
-<h3 id="3-afiliados-caja">3. <strong>Afiliados Caja</strong>:<a class="headerlink" href="#3-afiliados-caja" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Expresión</strong>:
-     <div class="highlight"><pre><span></span><code><span class="n">VAR</span><span class="w"> </span><span class="n">AfiliadosCalculo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
-<span class="w">    </span><span class="n">CALCULATE</span><span class="p">(</span>
-<span class="w">        </span><span class="n">DISTINCTCOUNT</span><span class="p">(</span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">PARTNER</span><span class="p">]),</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">TIPO_POBLACION</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;AFILIADO&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">ACTIVIDAD</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;AFILIACION&quot;</span>
-<span class="w">    </span><span class="p">)</span>
-<span class="k">RETURN</span><span class="w"> </span><span class="n">SWITCH</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">TRUE</span><span class="p">(),</span>
-<span class="w">    </span><span class="n">SELECTEDVALUE</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">])</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="err">}</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">AfiliadosCalculo</span><span class="p">,</span>
-<span class="w">    </span><span class="n">REMOVEFILTERS</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">)</span>
-<span class="p">)</span>
-</code></pre></div></li>
-<li><strong>Descripción</strong>: Calcula el número de afiliados registrados en actividades de afiliación, con base en filtros de la dimensión <code>DIM_UNIDAD</code>.</li>
-</ul>
-<hr />
-<h3 id="4-beneficiarios-caja">4. <strong>Beneficiarios Caja</strong>:<a class="headerlink" href="#4-beneficiarios-caja" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Expresión</strong>:
-     <div class="highlight"><pre><span></span><code><span class="n">VAR</span><span class="w"> </span><span class="n">BeneficiariosCalculo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
-<span class="w">    </span><span class="n">CALCULATE</span><span class="p">(</span>
-<span class="w">        </span><span class="n">DISTINCTCOUNT</span><span class="p">(</span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">PARTNER</span><span class="p">]),</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">TIPO_POBLACION</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;BENEFICIARIO&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">ACTIVIDAD</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;AFILIACION&quot;</span>
-<span class="w">    </span><span class="p">)</span>
-<span class="k">RETURN</span><span class="w"> </span><span class="n">SWITCH</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">TRUE</span><span class="p">(),</span>
-<span class="w">    </span><span class="n">SELECTEDVALUE</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">])</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="err">}</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">REMOVEFILTERS</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">),</span>
-<span class="w">    </span><span class="n">BeneficiariosCalculo</span>
-<span class="p">)</span>
-</code></pre></div></li>
-<li><strong>Descripción</strong>: Calcula el total de beneficiarios registrados en actividades de afiliación, aplicando filtros específicos en <code>DIM_UNIDAD</code>.</li>
-</ul>
-<hr />
-<h3 id="5-aportes-totales">5. <strong>Aportes Totales</strong>:<a class="headerlink" href="#5-aportes-totales" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Expresión</strong>:
-     <div class="highlight"><pre><span></span><code><span class="n">VAR</span><span class="w"> </span><span class="n">AportesCalculo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
-<span class="w">    </span><span class="n">CALCULATE</span><span class="p">(</span>
-<span class="w">        </span><span class="k">SUM</span><span class="p">(</span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">NUMERO_APORTES</span><span class="p">]),</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">ACTIVIDAD</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;APORTES&quot;</span>
-<span class="w">    </span><span class="p">)</span>
-<span class="k">RETURN</span><span class="w"> </span><span class="n">SWITCH</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">TRUE</span><span class="p">(),</span>
-<span class="w">    </span><span class="n">SELECTEDVALUE</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">])</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="err">}</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">REMOVEFILTERS</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">),</span>
-<span class="w">    </span><span class="n">AportesCalculo</span>
-<span class="p">)</span>
-</code></pre></div></li>
-<li><strong>Descripción</strong>: Suma el número total de aportes asociados a actividades específicas de la dimensión <code>FACT_ACTIVIDADES</code>.</li>
-</ul>
-<h3 id="6-valor-aportes-totales">6. <strong>Valor Aportes Totales</strong>:<a class="headerlink" href="#6-valor-aportes-totales" title="Permanent link">&para;</a></h3>
-<ul>
 <li>
-<p><strong>Expresión</strong>:</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">VAR</span><span class="w"> </span><span class="n">AportesCalculo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
-<span class="w">    </span><span class="n">CALCULATE</span><span class="p">(</span>
-<span class="w">        </span><span class="k">SUM</span><span class="p">(</span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">TOTAL_APORTES</span><span class="p">]),</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">ACTIVIDAD</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;APORTES&quot;</span>
-<span class="w">    </span><span class="p">)</span>
-
-<span class="n">VAR</span><span class="w"> </span><span class="n">AportesCalculoSinFiltros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
-<span class="w">    </span><span class="n">CALCULATE</span><span class="p">(</span>
-<span class="w">        </span><span class="k">SUM</span><span class="p">(</span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">TOTAL_APORTES</span><span class="p">]),</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">[</span><span class="n">ACTIVIDAD</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;APORTES&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="n">REMOVEFILTERS</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">)</span>
-
-<span class="k">RETURN</span><span class="w"> </span><span class="n">SWITCH</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">TRUE</span><span class="p">(),</span>
-<span class="w">    </span><span class="n">SELECTEDVALUE</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">])</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="err">}</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">AportesCalculoSinFiltros</span><span class="p">,</span>
-<span class="w">    </span><span class="n">SELECTEDVALUE</span><span class="p">(</span><span class="s1">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">[</span><span class="n">ID_UNIDAD</span><span class="p">])</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">AportesCalculo</span><span class="p">,</span>
-<span class="w">    </span><span class="n">AportesCalculo</span><span class="w"> </span><span class="c1">-- Valor por defecto si no cumple ninguna condición anterior</span>
+<p><strong># Empresas Afiliadas Caja</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el número de empresas afiliadas (con TIPO_POBLACION = "EMPRESA" y ACTIVIDAD = "AFILIACION") según la unidad seleccionada; devuelve 0 para algunas unidades y aplica filtros para otras.  </li>
+<li><strong>Expresión DAX (resumida):</strong><br />
+    <div class="highlight"><pre><span></span><code><span class="nb">VAR</span><span class="w"> </span>EmpresasCalculo = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[TIPO_POBLACION]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;EMPRESA&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span>
 <span class="p">)</span>
+<span class="nb">VAR</span><span class="w"> </span>EmpresasCalculoSinFiltros = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[TIPO_POBLACION]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;EMPRESA&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nb">var</span><span class="w"> </span>dev = SWITCH(
+<span class="w">    </span><span class="nf">TRUE</span><span class="p">(),</span>
+<span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="p">)</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">4</span><span class="p">},</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span>EmpresasCalculoSinFiltros,
+<span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span>EmpresasCalculo,
+<span class="w">    </span>EmpresasCalculo
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="w"> </span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># Afiliados Caja</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Retorna el conteo de afiliados (TIPO_POBLACION = "AFILIADO") con actividad "AFILIACION", usando variantes con y sin filtros según la unidad seleccionada.  </li>
+<li><strong>Expresión DAX:</strong> Similar a la medida anterior, usando SWITCH y dos variables (AfiliadosCalculo y AfiliadosCalculoSinFiltros).  </li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># Beneficiarios Caja</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el número de beneficiarios (TIPO_POBLACION = "BENEFICIARIO") en actividad "AFILIACION", aplicando lógica similar a las medidas de afiliados y empresas.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza dos variables para el cálculo con o sin filtros y SWITCH para determinar el valor final.  </li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># Aportes Totales</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma el campo NUMERO_APORTES para registros cuya actividad es "APORTES", considerando dos variantes (con y sin filtros de unidad).  </li>
+<li><strong>Expresión DAX:</strong><br />
+    <div class="highlight"><pre><span></span><code><span class="nb">VAR</span><span class="w"> </span>AportesCalculo = CALCULATE(
+<span class="w">    </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[NUMERO_APORTES]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;APORTES&quot;</span>
+<span class="p">)</span>
+<span class="nb">VAR</span><span class="w"> </span>AportesCalculoSinFiltros = CALCULATE(
+<span class="w">    </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[NUMERO_APORTES]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;APORTES&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nb">var</span><span class="w"> </span>dev = SWITCH(
+<span class="w">    </span><span class="nf">TRUE</span><span class="p">(),</span>
+<span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="p">)</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">},</span><span class="w"> </span>AportesCalculoSinFiltros,
+<span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span>AportesCalculo,
+<span class="w">    </span>AportesCalculo
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="w"> </span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico (con formato de moneda: \$ #,0.00).</li>
+</ul>
+</li>
+<li>
+<p><strong>Valor Aportes Totales</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma el campo TOTAL_APORTES para actividad "APORTES", aplicando la misma lógica condicional que en # Aportes Totales.  </li>
+<li><strong>Expresión DAX:</strong> Similar a la medida anterior pero usando SUM('...'[TOTAL_APORTES]).  </li>
+<li><strong>Formato:</strong> Moneda (formateada).</li>
+</ul>
+</li>
+<li>
+<p><strong>#Empresas_Atendidas</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta las empresas atendidas, es decir, el número de registros únicos de ID_EMPRESA en FACT_ACTIVIDADES (excluyendo -1 y unidad 5).  </li>
+<li><strong>Expresión DAX:</strong><br />
+    <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_EMPRESA]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_EMPRESA]</span><span class="w"> </span>&lt;&gt; -1,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; 5,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; BLANK()
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="w"> </span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>#Afiliados_Atendidos</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Similar a la medida anterior, pero para ID_AFILIADO.  </li>
+<li><strong>Expresión DAX:</strong> Usa DISTINCTCOUNTNOBLANK sobre ID_AFILIADO con condiciones similares.  </li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>#Beneficiarios_Atendidos</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la cantidad de beneficiarios atendidos mediante DISTINCTCOUNTNOBLANK de ID_BENEFICIARIO.  </li>
+<li><strong>Expresión DAX:</strong><br />
+    <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_BENEFICIARIO]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_BENEFICIARIO]</span><span class="w"> </span>&lt;&gt; -1,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; 5,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; BLANK()
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="w"> </span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cumplimiento_Cobertura</strong><br />
+        - <strong>Objetivo:</strong> Mide el cumplimiento de la cobertura comparando la cobertura ejecutada con la proyectada.<br />
+        - <strong>Expresión DAX:</strong><br />
+          <div class="highlight"><pre><span></span><code><span class="nf">IF</span><span class="p">(</span><span class="na">[Cobertura proyectada]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="na">[Cobertura ejecutada]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="na">[Cobertura proyectada]</span><span class="p">)</span>
 </code></pre></div>
-   - <strong>Descripción</strong>: Calcula el valor total de aportes asociados a las actividades de la dimensión <code>FACT_ACTIVIDADES</code>, eliminando restricciones de filtros según la configuración de la dimensión <code>DIM_UNIDAD</code>.</p>
+        - <strong>Formato:</strong> Porcentaje (0.00 %).</p>
 </li>
 <li>
-<p><strong>Formato</strong>:</p>
+<p><strong>Cantidad_Usos</strong><br />
+        - <strong>Objetivo:</strong> Cuenta el número total de usos de la actividad en FACT_ACTIVIDADES, excluyendo registros de unidad 5 o en blanco.<br />
+        - <strong>Expresión DAX:</strong><br />
+          <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">count</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; 5,
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; BLANK()
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="w"> </span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div>
+        - <strong>Formato:</strong> Numérico.</p>
+</li>
+<li>
+<p><strong>Cantidad_Aportes_Totales</strong><br />
+        - <strong>Objetivo:</strong> Devuelve el valor de la medida “# Aportes Totales”.<br />
+        - <strong>Expresión DAX:</strong><br />
+          <div class="highlight"><pre><span></span><code><span class="p">[</span># Aportes Totales]
+</code></pre></div>
+        - <strong>Formato:</strong> Hereda el formato de “# Aportes Totales”.</p>
+</li>
+<li>
+<p><strong>Valor_Aportes_Totales</strong><br />
+        - <strong>Objetivo:</strong> Devuelve el valor de la medida “Valor Aportes Totales”.<br />
+        - <strong>Expresión DAX:</strong><br />
+          <div class="highlight"><pre><span></span><code><span class="na">[Valor Aportes Totales]</span>
+</code></pre></div>
+        - <strong>Formato:</strong> Moneda.</p>
+</li>
+<li>
+<p><strong>Cantidad de aportes empresas atendidas Educacion</strong>  </p>
 <ul>
-<li><strong>formatString</strong>: <code>\$ #,0;-\\$ #,0;\\$ #,0</code></li>
-<li><strong>Descripción</strong>: Define el formato como moneda en pesos colombianos, mostrando valores positivos, negativos y ceros con el símbolo <code>$</code>.</li>
+<li><strong>Objetivo:</strong> Calcula el total de aportes (en número) para los registros donde [POBLACION_EDUCACION] es "SI".  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE([# Aportes Totales], &#39;Transversal FACT_ACTIVIDADES&#39;[POBLACION_EDUCACION] = &quot;SI&quot;)
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="w"> </span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
 </ul>
 </li>
 <li>
-<p><strong>Anotaciones</strong>:
-     <div class="highlight"><pre><span></span><code><span class="nt">&lt;Format</span><span class="w"> </span><span class="na">Format=</span><span class="s">&quot;Currency&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;Currency</span><span class="w"> </span>
-<span class="w">        </span><span class="na">LCID=</span><span class="s">&quot;9226&quot;</span><span class="w"> </span>
-<span class="w">        </span><span class="na">DisplayName=</span><span class="s">&quot;$ Español (Colombia)&quot;</span><span class="w"> </span>
-<span class="w">        </span><span class="na">Symbol=</span><span class="s">&quot;$&quot;</span><span class="w"> </span>
-<span class="w">        </span><span class="na">PositivePattern=</span><span class="s">&quot;2&quot;</span><span class="w"> </span>
-<span class="w">        </span><span class="na">NegativePattern=</span><span class="s">&quot;9&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/Format&gt;</span>
-</code></pre></div></p>
+<p><strong>Valor de aportes empresas atendidas Educacion</strong>  </p>
 <ul>
-<li><strong>LCID</strong>: <code>9226</code> - Localización para español (Colombia).</li>
-<li><strong>DisplayName</strong>: <code>$ Español (Colombia)</code>.</li>
-<li><strong>Symbol</strong>: <code>$</code>.</li>
-<li><strong>PositivePattern</strong>: <code>2</code> - El formato para valores positivos (e.g., <code>$ 1,000</code>).</li>
-<li><strong>NegativePattern</strong>: <code>9</code> - El formato para valores negativos (e.g., <code>$ -1,000</code>).</li>
+<li><strong>Objetivo:</strong> Calcula el valor total de aportes para empresas atendidas en educación (filtrados por POBLACION_EDUCACION = "SI").  </li>
+<li><strong>Expresión DAX:</strong> Similar a la medida anterior pero sobre [Valor Aportes Totales].  </li>
+<li><strong>Formato:</strong> Moneda.</li>
 </ul>
 </li>
+<li>
+<p><strong>Cantidad de subsidio a la demand</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta la cantidad de registros en que el SUBSIDIO es mayor a 0, para registros con partner distinto de "0000000000" y unidad diferente a 5.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">count</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[SUBSIDIO]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="w"> </span>&lt;&gt; &quot;0000000000&quot;,
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; 5,
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; BLANK(),
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[SUBSIDIO]</span><span class="w"> </span>&gt; 0
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">if</span><span class="p">(</span><span class="w"> </span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
 </ul>
-<h3 id="7-valores-estaticos">7. <strong>Valores Estáticos</strong><a class="headerlink" href="#7-valores-estaticos" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th><strong>Medida</strong></th>
-<th><strong>Expresión</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>#Empresas_Atendidas</td>
-<td>8000</td>
-</tr>
-<tr>
-<td>#Afiliados_Atendidos</td>
-<td>90000</td>
-</tr>
-<tr>
-<td>#Beneficiarios_Atendidos</td>
-<td>100000</td>
-</tr>
-<tr>
-<td>Cumplimiento_Cobertura</td>
-<td>0.95</td>
-</tr>
-<tr>
-<td>Cantidad_Usos</td>
-<td>138.968</td>
-</tr>
-<tr>
-<td>Numero_PQRS</td>
-<td>10.987</td>
-</tr>
-<tr>
-<td>Numero_Usos_PQRS</td>
-<td>90.998</td>
-</tr>
-<tr>
-<td>Cantidad_Aportes_Totales</td>
-<td>386.792</td>
-</tr>
-<tr>
-<td>Valor_Aportes_Totales</td>
-<td>900000000</td>
-</tr>
-<tr>
-<td>Cantidad de aportes empresas atendidas Educación</td>
-<td>386.792</td>
-</tr>
-<tr>
-<td>Valor de aportes empresas atendidas Educación</td>
-<td>900000000</td>
-</tr>
-<tr>
-<td>Valor de aportes empresas atendidas Educación</td>
-<td>900000000</td>
-</tr>
-<tr>
-<td>Cantidad de subsidio a la demanda</td>
-<td>86.976</td>
-</tr>
-<tr>
-<td>Valor de subsidio a la demanda</td>
-<td>138968000</td>
-</tr>
-<tr>
-<td>% Población Atendida por Educación</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Cobertura ejecutada</td>
-<td>100.000</td>
-</tr>
-<tr>
-<td>Cantidad de Graduados</td>
-<td>3983</td>
-</tr>
-<tr>
-<td>Porcentaje de promoción</td>
-<td>0.85</td>
-</tr>
-<tr>
-<td>Porcentaje de deserción</td>
-<td>0.08</td>
-</tr>
-<tr>
-<td>Variación deserción respecto vigencia anterior</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Porcentaje de empresas que repiten la compra de los servicios de fomento empresarial</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Porcentaje de usuarios que repiten la compra de servicios de protección social</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td># Espacios físicos (Salones)</td>
-<td>10</td>
-</tr>
-<tr>
-<td># Servicios ofertados</td>
-<td>20</td>
-</tr>
-<tr>
-<td># Servicios vendidos</td>
-<td>15</td>
-</tr>
-<tr>
-<td># Estudiantes activos</td>
-<td>0</td>
-</tr>
-<tr>
-<td># Estudiantes por salón</td>
-<td>0</td>
-</tr>
-<tr>
-<td># Docentes y profesionales</td>
-<td>0</td>
-</tr>
-<tr>
-<td># PQRS</td>
-<td>90.998</td>
-</tr>
-<tr>
-<td>Número de usos por PQRS</td>
-<td>90.998</td>
-</tr>
-<tr>
-<td>Porcentaje Promotores</td>
-<td>0.98</td>
-</tr>
-<tr>
-<td>Porcentaje de detractores</td>
-<td>0.02</td>
-</tr>
-<tr>
-<td>Calificaciones de docentes</td>
-<td>0</td>
-</tr>
-<tr>
-<td>% de estudiantes con resultado superior al 50% de valor total de la Prueba</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Resultado de la Categoría de las pruebas Saber 11 para la CEC</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Porcentaje de efectividad en las cotizaciones Fomento empresarial-I7404</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Ingresos ejecutados / Ingresos presupuestados</td>
-<td>0</td>
-</tr>
-<tr>
-<td># Empresas que compran servicios de fomento empresarial</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Índice de resultados para el plantel educativo</td>
-<td>0</td>
-</tr>
-<tr>
-<td># Afiliados atendidos por Protección Social</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Cobertura para Empleados de la Caja de Compensación en programas de educación</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Porcentaje de afiliados atendidos respecto al total atendido (Protección Social)</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Porcentaje de población FOSFEC respecto al total atendido (Desarrollo Empresarial)</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Cobertura proyectada</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Movilidad académica</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Nivel de satisfacción a partir de la NSU promedio</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Promotores promedio del proceso a partir de la NSU</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Cantidad de matrículas</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Detractores promedio del proceso a partir de la NSU</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Valor del subsidio a la demanda a partir de las transacciones realizadas por los afiliados</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Número de transacciones de afiliados con categoría A y B</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Resultado del ejercicio / Resultado presupuestado</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Valor de los ingresos percibidos por la prestación de servicios (Ingresos ejecutados)</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Porcentaje de estudiantes de la JEC que desertan de la Institución Educativa</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Porcentaje de estudiantes de AIPI que desertan de la Institución Educativa</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Deserción temprana de FOSFEC</td>
-<td>0</td>
-</tr>
-<tr>
-<td># horas contratadas</td>
-<td>8000</td>
-</tr>
-<tr>
-<td>Reductores de capacidad contratada</td>
-<td>90</td>
-</tr>
-<tr>
-<td>% real de tiempo administrativo</td>
-<td>40.45</td>
-</tr>
-<tr>
-<td># Horas empleadas en cubrir ausencias</td>
-<td>10200</td>
-</tr>
-<tr>
-<td>% Utilización de las bibliotecas virtuales</td>
-<td>0.8</td>
-</tr>
-<tr>
-<td>Inversiones en la infraestructura física</td>
-<td>1000000</td>
-</tr>
-<tr>
-<td>Inversión en infraestructura tecnológica</td>
-<td>0</td>
-</tr>
-<tr>
-<td>% Rotación de la planta Total</td>
-<td>0.15</td>
-</tr>
-<tr>
-<td>% de Estudiantes matriculados con documentos completos del total de matriculados</td>
-<td>1</td>
-</tr>
-<tr>
-<td>% de afiliados beneficiados desde PS respecto a la población impactada de PS</td>
-<td>0.9</td>
-</tr>
-<tr>
-<td>% Empresas Atendidas</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>% afiliados por educación</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>% Beneficiarios Atendidos</td>
-<td>0.66</td>
-</tr>
-<tr>
-<td>Número de iniciativas</td>
-<td>0</td>
-</tr>
-<tr>
-<td>% evaluaciones por debajo del promedio</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Incremento del % de rentabilidad del servicio sin fomento al empleo</td>
-<td>0.8</td>
-</tr>
-<tr>
-<td>Nivel de ejecución del fondo JEC</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Nivel de ejecución del fondo PAIPI</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Atención usuarios de los programas de protección social</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Evaluación de la Pertinencia del Diseño Curricular por el Sector Productivo</td>
-<td>0</td>
-</tr>
-<tr>
-<td>% efectividad en las cotizaciones Fomento empresarial</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>Productividad del portafolio de desarrollo empresarial</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Cantidad de población FOSFEC atendida por Desarrollo Empresarial</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Número de aportes de empresas atendidas por Educación</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Atención población vulnerable</td>
-<td>977</td>
-</tr>
-<tr>
-<td>% accidentalidad de la población estudiantil</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>% Estudiantes matriculados con documentos completos del total de matriculados</td>
-<td>0.77</td>
-</tr>
-</tbody>
-</table>
+</li>
+<li>
+<p><strong>Valor de subsidio  a la demanda</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma el campo SUBSIDIO para registros que cumplen condiciones similares a la medida anterior.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">sum</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[SUBSIDIO]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="w"> </span>&lt;&gt; &quot;0000000000&quot;,
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; 5,
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; BLANK()
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Moneda.</li>
+</ul>
+</li>
+<li>
+<p><strong>% Población Atendida por Educación</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de población atendida por educación dividiendo el conteo de registros atendidos por el total de afiliados en "AFILIACION".  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">VAR</span><span class="w"> </span>PoblacionAtendida = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="w"> </span>&lt;&gt; &quot;0000000000&quot;,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; 5,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span>&lt;&gt; BLANK()
+<span class="p">)</span>
+<span class="nb">VAR</span><span class="w"> </span>Poblacion = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="w"> </span>&lt;&gt; &quot;0000000000&quot;,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span>
+<span class="p">)</span>
+<span class="nb">var</span><span class="w"> </span>dev = PoblacionAtendida / Poblacion
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cobertura ejecutada</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta la cantidad de registros (usando DISTINCTCOUNTNOBLANK) para calcular la cobertura ejecutada, filtrando registros con partner distinto de "0000000000" y unidad ≠ 5.  </li>
+<li><strong>Expresión DAX:</strong> Similar a las medidas de conteo de empresas/afiliados/beneficiarios.  </li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cantidad de Graduados</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta el número de graduados mediante DISTINCTCOUNT de PARTNER para registros con ACTIVIDAD "GRADUADOS".  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;GRADUADOS&quot;</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de promocion</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Valor fijo de 0 (indicando que no se calcula promoción).  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="m">0</span>
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de desercion</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el ratio de deserciones respecto al total (sumando RETIROS y ESTADO_MATRICULAS).  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">VAR</span><span class="w"> </span>Total = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;ESTADO_MATRICULAS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;RETIROS&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="nb">VAR</span><span class="w"> </span>Deserciones = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;RETIROS&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="nb">var</span><span class="w"> </span>dev = Deserciones / Total
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de empresas que repiten la compra de los servicios de fomento empresarial</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la proporción de empresas que han realizado compras repetidas en servicios de fomento, basándose en condiciones específicas definidas en un SWITCH.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza variables para contar empresas que repiten y el total de empresas, luego DIVIDE.  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de usuarios que repiten la compra de servicios de protección social</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Determina el porcentaje de usuarios (afiliados) que han repetido la compra de servicios de protección social.  </li>
+<li><strong>Expresión DAX:</strong> Usa variables para calcular Usuarios_repiten y Usuarios_Totales, luego su división.  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong># Espacios físicos (Salones)</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Retorna el número de salones activos (según DIM_CAPACIDAD_FISICA).  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal DIM_CAPACIDAD_FISICA&#39;[ID_SALON]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal DIM_CAPACIDAD_FISICA&#39;[ESTADO]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ACTIVO&quot;</span>
+<span class="p">)</span>
+<span class="nb">RETURN</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># Servicios ofertados</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el número de servicios ofertados (basado en DIM_TARIFAS_SERVICIOS) considerando la unidad seleccionada y otros filtros.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza SELECTEDVALUE y SWITCH para aplicar condiciones según la unidad.  </li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># Servicios vendidos</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta los servicios vendidos mediante DISTINCTCOUNT de CON_OBJETO_TARIFA de DIM_TARIFAS_SERVICIOS, relacionándolo con FACT_ACTIVIDADES.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal DIM_TARIFAS_SERVICIOS&#39;[CON_OBJETO_TARIFA]</span><span class="p">),</span>
+<span class="w">   </span><span class="nf">RELATEDTABLE</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># Estudiantes activos</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el número de estudiantes activos restando retiros y graduados de las matriculaciones aprobadas.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">VAR</span><span class="w"> </span>colegio_matriculas = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ESTADO_MATRICULAS&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ESTADO]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;APROBADA&quot;</span>
+<span class="p">)</span>
+<span class="nb">VAR</span><span class="w"> </span>colegio_retiros = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;RETIROS&quot;</span>
+<span class="p">)</span>
+<span class="nb">VAR</span><span class="w"> </span>colegio_graduados = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;GRADUADOS&quot;</span>
+<span class="p">)</span>
+<span class="nb">var</span><span class="w"> </span>dev = colegio_matriculas - colegio_retiros - colegio_graduados
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># Estudiantes por salon</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el promedio de estudiantes activos por salón.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nf">IF</span><span class="p">([</span># Espacios físicos (Salones)] = 0, 0, [# Estudiantes activos] / [# Espacios físicos (Salones)])
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># Docentes y profesionales</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta el número de docentes/profesionales activos según FACT_PERSONAL.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_PERSONAL&#39;[ID_PERSONAL]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_PERSONAL&#39;[ID_PERSONAL]</span><span class="w"> </span>&lt;&gt; -1
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># PQRS</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la cantidad de registros de PQR.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nf">IF</span><span class="p">(</span>
+<span class="w">   </span><span class="nf">ISBLANK</span><span class="p">(</span>
+<span class="w">      </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">         </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_PQR]</span><span class="p">),</span>
+<span class="w">         </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PQR&quot;</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">   </span><span class="p">),</span>
+<span class="w">   </span><span class="o">-</span><span class="m">1</span><span class="p">,</span>
+<span class="w">   </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">      </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_PQR]</span><span class="p">),</span>
+<span class="w">      </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PQR&quot;</span>
+<span class="w">   </span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Numero de usos por PQRS</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el promedio de usos por cada PQR.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = if([# PQRS] = 0, 0, [Cantidad_Usos] / [# PQRS])
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de Promotores</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de promotores (usuarios NSU con calificación ≥ 7) sobre el total de NSU.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza variables para contar total y promotores, luego divide.  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de detractores</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de detractores (usuarios NSU con calificación &lt; 7) sobre el total de NSU.  </li>
+<li><strong>Expresión DAX:</strong> Similar a la medida anterior pero para detractores.  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Calificaciones de docentes</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el promedio de las calificaciones definitivas de los docentes a partir de FACT_EVALUACION_DOCENTE.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = AVERAGEX(
+<span class="w">   </span><span class="na">&#39;Transversal FACT_EVALUACION_DOCENTE&#39;</span><span class="p">,</span>
+<span class="w">   </span><span class="nf">IFERROR</span><span class="p">(</span><span class="nf">VALUE</span><span class="p">(</span><span class="na">&#39;Transversal FACT_EVALUACION_DOCENTE&#39;[CALIFICACION_DEFINITIVA]</span><span class="p">),</span><span class="w"> </span><span class="nf">BLANK</span><span class="p">())</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>% de estudiantes con resultado superior al 50% de valor total de la Prueba</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la proporción de estudiantes que superan el 50% del valor total en la prueba Saber 11 (a partir de FACT_UNIDADES).  </li>
+<li><strong>Expresión DAX:</strong> Divide la suma de estudiantes con puntaje mayor a 250 por el total de estudiantes.  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Resultado de la Categoría de las pruebas Saber 11 para la CEC</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Devuelve la categoría seleccionada (o “Sin Dato” si está en blanco) a partir de FACT_UNIDADES.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(SELECTEDVALUE(&#39;Transversal FACT_UNIDADES&#39;[CATEGORIA_SABER11]))
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), &quot;Sin Dato&quot;, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Texto.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de efectividad en las cotizaciones Fomento empresarial-I7404</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Retorna el valor de la medida [% efectividad en las cotizaciones Fomento empresarial] (definida externamente).  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span>% efectividad en las cotizaciones Fomento empresarial]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ingresos ejecutados / Ingresos presupuestados</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la relación entre los ingresos ejecutados (por prestación de servicios) y los ingresos presupuestados.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = DIVIDE(
+<span class="w">   </span><span class="p">[</span>Valor de los ingresos percibidos por la prestación de servicios (Ingresos ejecutados)],
+<span class="w">   </span><span class="nf">CALCULATE</span><span class="p">(</span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[INGRESOS]</span><span class="p">),</span><span class="w"> </span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PRESUPUESTO_CONTABLE&quot;</span><span class="p">),</span>
+<span class="w">   </span><span class="m">0</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico (relación).</li>
+</ul>
+</li>
+<li>
+<p><strong>#Empresas que compran servicios de fomento empresarial</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta el número de empresas (ID_EMPRESA) que compran servicios de fomento empresarial, filtrando según condiciones específicas (unidad 3, actividad "FACTURACION").  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_EMPRESA]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_EMPRESA]</span><span class="w"> </span>&lt;&gt; -1,
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;FACTURACION&quot;</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>índice de resultados para el plantel educativo</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Valor fijo; en este caso se establece en 0.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="m">0</span>
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>#Afiliados atendidos por Proteccion Social</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta los afiliados atendidos en programas de protección social (para la unidad 4).  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="w"> </span>&lt;&gt; -1,
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_UNIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cobertura para Empleados de la Caja de Compensacion en programas de educacion</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la cobertura ejecutada para empleados de la Caja (filtrando por PARTNER_EMPRESA = "0060007786").  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE([Cobertura ejecutada], &#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER_EMPRESA] = &quot;0060007786&quot;)
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de afiliados atendidos respecto al total atendido (Protección Social)</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de afiliados atendidos en protección social en relación al total de afiliados (medida [#Afiliados atendidos por Proteccion Social] / [# Afiliados Caja]).  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span>#Afiliados atendidos por Proteccion Social] / [# Afiliados Caja]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de población FOSFEC respecto al total atendido (Desarrollo Empresarial)</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de la población FOSFEC atendida en Desarrollo Empresarial, utilizando filtros sobre la actividad "FACTURACION" y categorías específicas.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza variables para contar población FOSFEC y total, y luego DIVIDE.  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cobertura proyectada</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma la población proyectada de la unidad educativa (a partir de FACT_UNIDADES, para ORIGEN "FACT_SABER11_INDIVIDUAL").  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_UNIDADES&#39;[POBLACION_PROYECTADA]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_UNIDADES&#39;[ORIGEN]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;FACT_SABER11_INDIVIDUAL&quot;</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Movilidad academica</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Devuelve el valor de [# Estudiantes activos] (mismo valor).  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span># Estudiantes activos]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Nivel se satisfacción a partir de la NSU promedio</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el promedio de la NSU (calificaciones de satisfacción) a partir de FACT_EVALUACION_DOCENTE.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza AVERAGEX con manejo de errores.  </li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Promotores promedio del proceso  a partir de la NSU</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la proporción de usuarios con NSU ≥ 9 sobre el total de NSU, midiendo el promedio de promotores.  </li>
+<li><strong>Expresión DAX:</strong> Usa variables Total y Promotores y realiza la división.  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cantidad de matriculas</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta las matriculaciones aprobadas (ACTIVIDAD "ESTADO_MATRICULAS" con ESTADO "APROBADA").  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">COUNTROWS</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ESTADO_MATRICULAS&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ESTADO]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;APROBADA&quot;</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Valor del subsidio a la demanda a partir de las transacciones realizadas por los afiliados</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Devuelve el valor de subsidio a la demanda; es una referencia a la medida “Valor de subsidio  a la demanda”.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="na">[Valor de subsidio  a la demanda]</span>
+</code></pre></div></li>
+<li><strong>Formato:</strong> Moneda.</li>
+</ul>
+</li>
+<li>
+<p><strong>Numero de transacciones de afiliados con categoria A y B</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta el número de transacciones de afiliados que cumplen con categorías A y B, según la lógica definida en la consulta (usando COUNTROWS).  </li>
+<li><strong>Expresión DAX:</strong> Utiliza COUNTROWS y filtros en CATEGORIA_VENTA.</li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Resultado del ejercicio / Resultado presupuestado</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la relación entre el resultado del ejercicio y el resultado presupuestado a partir de FACT_FINANCIERA.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[RESULTADO_EJERCICIO]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;EJECUCION_CONTABLE&quot;</span>
+<span class="p">)</span><span class="w"> </span><span class="o">/</span>
+<span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">   </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[RESULTADO_EJERCICIO]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PRESUPUESTO_CONTABLE&quot;</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Relación numérica.</li>
+</ul>
+</li>
+<li>
+<p><strong>Valor de los ingresos percibidos por la prestación de servicios (Ingresos ejecutados)</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma los ingresos ejecutados a partir de FACT_FINANCIERA para la actividad "EJECUCION_CONTABLE".  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[INGRESOS]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;EJECUCION_CONTABLE&quot;</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Moneda.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de estudiantes de la JEC que desertan de la Institución Educativa</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de estudiantes que desertan (retirados) en la JEC, basado en actividades específicas.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza variables para contar deserciones y total de alumnos, y luego divide.</li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Porcentaje de estudiantes de AIPI que desertan de la Institucion Educativa</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Similar a la medida anterior pero para AIPI.</li>
+<li><strong>Expresión DAX:</strong> Uso de variables y división.</li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Desercion temprana de FOSFEC</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Cuenta el número de deserciones tempranas según la actividad "INASISTENCIA_FOSFEC".  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = CALCULATE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">   </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INASISTENCIA_FOSFEC&quot;</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong># horas contratadas</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma las horas contratadas mensualmente (para el concepto "CONTRATACION") en FACT_PERSONAL.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza SUM sobre HORAS_CONTRATADAS_MENSUAL con filtro.</li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Reductores de capacidad contratada</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma las horas correspondientes a ausentismo o reemplazos (que reducen la capacidad contratada).  </li>
+<li><strong>Expresión DAX:</strong> Suma de HORAS_CONTRATADAS_MENSUAL para conceptos "AUSENTISMO" o "REEMPLAZO".</li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>% real de tiempo administrativo</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje real de tiempo administrativo utilizando la fórmula:<br />
+  (0.3 * [# horas contratadas] - [# Horas empleadas en cubrir ausencias]) / [# horas contratadas].  </li>
+<li><strong>Expresión DAX:</strong> Basada en la división de esa diferencia.</li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong># Horas empleadas en cubrir ausencias</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma las horas empleadas en cubrir ausencias (para el concepto "REEMPLAZO").  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nf">IF</span><span class="p">(</span>
+<span class="w">   </span><span class="nf">ISBLANK</span><span class="p">(</span>
+<span class="w">      </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">         </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_PERSONAL&#39;[HORAS_CONTRATADAS_MENSUAL]</span><span class="p">),</span>
+<span class="w">         </span><span class="na">&#39;Transversal FACT_PERSONAL&#39;[CONCEPTO]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;REEMPLAZO&quot;</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">   </span><span class="p">),</span>
+<span class="w">   </span><span class="o">-</span><span class="m">1</span><span class="p">,</span>
+<span class="w">   </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">      </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_PERSONAL&#39;[HORAS_CONTRATADAS_MENSUAL]</span><span class="p">),</span>
+<span class="w">      </span><span class="na">&#39;Transversal FACT_PERSONAL&#39;[CONCEPTO]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;REEMPLAZO&quot;</span>
+<span class="w">   </span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>% Utilización de las bibliotecas virtuales</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de uso de bibliotecas virtuales comparando el conteo de usuarios de "BIBLIOTECA_VIRTUAL" con el de "ESTADO_MATRICULAS" (para la unidad 1).  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>personas_biblioteca = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNTNOBLANK</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;BIBLIOTECA_VIRTUAL&quot;</span>
+<span class="p">)</span>
+<span class="nb">var</span><span class="w"> </span>personas_total = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ESTADO_MATRICULAS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="na">&#39;Transversal DIM_CAPACIDAD_FISICA&#39;[ID_UNIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+<span class="p">)</span>
+<span class="nb">var</span><span class="w"> </span>dev = personas_biblioteca / personas_total
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inversiones en la infraestructura física</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma los ingresos correspondientes a inversiones en infraestructura física (filtrando por cuentas que comienzan con "1516").  </li>
+<li><strong>Expresión DAX:</strong> Utiliza SUM con filtro sobre FACT_FINANCIERA.</li>
+<li><strong>Formato:</strong> Moneda.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inversion en infraestructura tecnologica</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma los ingresos correspondientes a inversiones en infraestructura tecnológica (cuentas que comienzan con "1528").  </li>
+<li><strong>Expresión DAX:</strong> Similar a la medida anterior.</li>
+<li><strong>Formato:</strong> Moneda.</li>
+</ul>
+</li>
+<li>
+<p><strong>% Rotación de la planta Total</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la rotación de personal mediante la diferencia entre contrataciones e ingresos y retiros, sobre el total de contrataciones.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>Ingresos = CALCULATE(count(&#39;Transversal FACT_PERSONAL&#39;[ID_PERSONAL]), &#39;Transversal FACT_PERSONAL&#39;[CONCEPTO] = &quot;CONTRATACION&quot;)
+<span class="nb">var</span><span class="w"> </span>Retiros = CALCULATE(count(&#39;Transversal FACT_PERSONAL&#39;[ID_PERSONAL]), &#39;Transversal FACT_PERSONAL&#39;[CONCEPTO] = &quot;FIN_CONTRATACION&quot;)
+<span class="nb">var</span><span class="w"> </span>dev = (Ingresos - Retiros) / Ingresos
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>% de Estudiantes matriculados con documentos completos del total de matriculados</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de estudiantes que cuentan con documentos completos (según FACT_UNIDADES).  </li>
+<li><strong>Expresión DAX:</strong> Divide el número de estudiantes con documentos completos entre el total de estudiantes.</li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>% de afiliados beneficiados desde PS respecto a la población impactada de PS</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la proporción de afiliados beneficiados en protección social en relación al total atendido en PS.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span>#Afiliados atendidos por Proteccion Social] / [# Afiliados Caja]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>% Empresas Atendidas</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de empresas atendidas comparando el número de empresas atendidas con el total de empresas afiliadas.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza DIVIDE sobre el conteo de empresas atendidas y el total.</li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>% afiliados por educacion</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Relaciona el número de afiliados atendidos con el total de afiliados en caja.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span>#Afiliados_Atendidos] / [# Afiliados Caja]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>% Beneficiarios Atendidos</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de beneficiarios atendidos respecto al total de beneficiarios en caja; devuelve -1 si el denominador es cero.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span>#Beneficiarios_Atendidos] / [# Beneficiarios Caja]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Número de iniciativas</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Suma el resultado de las iniciativas (desde FACT_UNIDADES para ACTIVIDAD "INICIATIVAS").  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = SUMX(
+<span class="w">    </span><span class="nf">FILTER</span><span class="p">(</span><span class="na">&#39;Transversal FACT_UNIDADES&#39;</span><span class="p">,</span><span class="w"> </span><span class="na">&#39;Transversal FACT_UNIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INICIATIVAS&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">VALUE</span><span class="p">(</span><span class="na">&#39;Transversal FACT_UNIDADES&#39;[RESULTADO]</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>% evaluaciones por debajo del promedio</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de evaluaciones de docentes por debajo del promedio.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = COUNTROWS(&#39;Transversal FACT_EVALUACION_DOCENTE&#39;) 
+<span class="w">   </span><span class="o">/</span><span class="w"> </span><span class="nf">COUNTROWS</span><span class="p">(</span><span class="na">&#39;Transversal FACT_EVALUACION_DOCENTE&#39;</span><span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div>
+  <em>(La lógica completa incluye un COUNTROWS filtrado por calificaciones menores al promedio.)</em>  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Incremento del % de rentabilidad del servicio sin fomento al empleo</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Valor fijo de 0.8.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="m">0.8</span>
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Nivel de ejecución del fondo JEC</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el nivel de ejecución del fondo JEC usando resultados de FACT_FINANCIERA para cuentas específicas (ID_CUENTA en {941, 953} y AREA "JORNADA ESCOLAR COMPLEMENTARIA").  </li>
+<li><strong>Expresión DAX:</strong> Utiliza CALCULATE sobre el resultado dividido por el presupuestado.  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Nivel de ejecución del fondo PAIPI</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Similar a la medida anterior pero para AREA "ATENCION INTEGRAL A LA NINEZ".  </li>
+<li><strong>Expresión DAX:</strong> Análoga a la medida para JEC.  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Atencion usuarios de los programas de proteccion social</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Devuelve el valor de la medida [#Afiliados atendidos por Proteccion Social].  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span>#Afiliados atendidos por Proteccion Social]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Evaluación de la Pertinencia del Diseño Curricular por el Sector Productivo</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el promedio de evaluaciones para el diseño curricular (desde FACT_UNIDADES para ACTIVIDAD "EVALUACION DISENO CURRICULAR").  </li>
+<li><strong>Expresión DAX:</strong> Utiliza AVERAGEX.  </li>
+<li><strong>Formato:</strong> Numérico o Texto (según resultado).</li>
+</ul>
+</li>
+<li>
+<p><strong>% efectividad en las cotizaciones Fomento empresarial</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Retorna la efectividad en las cotizaciones para fomento empresarial.  </li>
+<li><strong>Expresión DAX:</strong> Referencia a la medida externa [% efectividad en las cotizaciones Fomento empresarial].  </li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Productividad del portafolio de desarrollo empresarial</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la productividad dividiendo [# Servicios vendidos] entre [# Servicios ofertados] para la unidad 3.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = [# Servicios vendidos] / [# Servicios ofertados]
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cantidad de población FOSFEC atendida por Desarrollo Empresarial</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Valor fijo de 0 (sin datos asignados).  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="m">0</span>
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Numero de aportes de empresas atendidas por Educación</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Devuelve el valor de la medida [# Aportes Totales].  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span># Aportes Totales]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Atención población vulnerable</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la atención a la población vulnerable aplicando filtros en FACT_ACTIVIDADES según criterios de vulnerabilidad.  </li>
+<li><strong>Expresión DAX:</strong> Utiliza CALCULATE con REMOVEFILTERS y condiciones específicas.</li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>% accidentalidad de la población estudiantil</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la proporción de accidentalidad (casos de ENFERMERIA) sobre la cantidad total de estudiantes matriculados en la unidad 1.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = DIVIDE(
+<span class="w">   </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">)</span><span class="w"> </span>where ACTIVIDAD=&quot;ENFERMERIA&quot;,
+<span class="w">   </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">)</span><span class="w"> </span>where ACTIVIDAD=&quot;ESTADO_MATRICULAS&quot; and unit=1,
+<span class="w">   </span><span class="m">0</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>% Estudiantes matriculados con documentos completos del total de matriculados</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Retorna la medida ya definida para el porcentaje de estudiantes con documentos completos.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span>% de Estudiantes matriculados con documentos completos del total de matriculados]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Detractores promedio del proceso a partir de la NSU</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la proporción de detractores (usuarios NSU con calificación &lt; 7) respecto al total, para medir la insatisfacción.  </li>
+<li><strong>Expresión DAX:</strong> Usa variables para detractores y total NSU.</li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>%Afiliados Atendidos</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el porcentaje de afiliados atendidos respecto al total de afiliados en caja.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="p">[</span>#Afiliados_Atendidos] / [# Afiliados Caja]
+</code></pre></div></li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+<li>
+<p><strong>Resuldato NPS</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula el promedio de las calificaciones NSU, representando el Net Promoter Score.  </li>
+<li><strong>Expresión DAX:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>dev = AVERAGEX(
+<span class="w">   </span><span class="nf">FILTER</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">,</span><span class="w"> </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[CALIFICACION]</span><span class="w"> </span>&lt;&gt; BLANK()),
+<span class="w">   </span><span class="nf">IFERROR</span><span class="p">(</span><span class="nf">VALUE</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[CALIFICACION]</span><span class="p">),</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), -1, dev)
+</code></pre></div></li>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Variacion desercion respecto vigencia anterior</strong>  </p>
+<ul>
+<li><strong>Objetivo:</strong> Calcula la variación porcentual de deserciones entre el período actual y el anterior, utilizando fechas y conteos de RETIROS.  </li>
+<li><strong>Expresión DAX:</strong> Usa variables para obtener fechas mínimas y máximas, calcular retiros y luego la variación.</li>
+<li><strong>Formato:</strong> Porcentaje.</li>
+</ul>
+</li>
+</ol>
 <h3 id="proposito_1">Propósito<a class="headerlink" href="#proposito_1" title="Permanent link">&para;</a></h3>
 <p><strong>1.</strong> Proveer cálculos específicos como conteos, sumas y agregaciones sobre datos transversales.</p>
 <p><strong>2.</strong> Facilitar métricas clave como número de unidades, afiliados, beneficiarios y aportes.</p>

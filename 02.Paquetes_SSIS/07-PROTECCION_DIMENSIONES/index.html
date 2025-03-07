@@ -894,15 +894,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#componente-data-dim_programa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Componente Data DIM_PROGRAMA
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#componente-data-dim_preguntas_ee_jec" class="md-nav__link">
     <span class="md-ellipsis">
       Componente Data DIM_PREGUNTAS_EE_JEC
@@ -933,6 +924,24 @@
   <a href="#componente-data-dim_respuesta_aipi" class="md-nav__link">
     <span class="md-ellipsis">
       Componente Data DIM_RESPUESTA_AIPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-cargar_dim_sedes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Cargar_DIM_SEDES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_poblacion-to_stage_area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_POBLACION TO_STAGE_AREA
     </span>
   </a>
   
@@ -1976,6 +1985,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../00.etl/Utils/download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../00.etl/Utils/Funciones_DM/" class="md-nav__link">
         
   
@@ -2086,6 +2116,27 @@
   
   <span class="md-ellipsis">
     fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_cotizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_cotizacion
   </span>
   
 
@@ -2440,15 +2491,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#componente-data-dim_programa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Componente Data DIM_PROGRAMA
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#componente-data-dim_preguntas_ee_jec" class="md-nav__link">
     <span class="md-ellipsis">
       Componente Data DIM_PREGUNTAS_EE_JEC
@@ -2479,6 +2521,24 @@
   <a href="#componente-data-dim_respuesta_aipi" class="md-nav__link">
     <span class="md-ellipsis">
       Componente Data DIM_RESPUESTA_AIPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-cargar_dim_sedes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Cargar_DIM_SEDES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-data-dim_poblacion-to_stage_area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Data DIM_POBLACION TO_STAGE_AREA
     </span>
   </a>
   
@@ -2803,81 +2863,10 @@
     E -- No --&gt; G[Registrar datos no coincidentes]
     F --&gt; H[Fin]
     G --&gt; H</code></pre>
-<h3 id="componente-data-dim_programa">Componente <strong><code>Data DIM_PROGRAMA</code></strong><a class="headerlink" href="#componente-data-dim_programa" title="Permanent link">&para;</a></h3>
-<h4 id="descripcion-general_2">Descripción General<a class="headerlink" href="#descripcion-general_2" title="Permanent link">&para;</a></h4>
-<p>El componente <strong>Data DIM_PROGRAMA</strong> forma parte de un flujo ETL que carga y transforma datos relacionados con programas en la tabla <code>DIM_PROGRAMA</code> del esquema <code>Protección</code>. El flujo procesa datos desde un archivo Excel, realiza validaciones, y los carga en una base de datos de destino.</p>
-<h4 id="componentes-del-flujo-de-datos_2">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_2" title="Permanent link">&para;</a></h4>
-<ol>
-<li>
-<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
-<ul>
-<li><strong>Descripción</strong>: Extrae los datos de un archivo Excel, específicamente de una hoja llamada <code>Sheet1$</code>.</li>
-<li><strong>Columnas de entrada</strong>:<ul>
-<li><code>ID_PROGRAMA</code></li>
-<li><code>PROGRAMA</code></li>
-</ul>
-</li>
-<li><strong>Propiedades</strong>:<ul>
-<li><strong>AccessMode</strong>: 0 (lectura desde tabla u objeto definido).</li>
-<li><strong>Hoja seleccionada</strong>: <code>Sheet1$</code>.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Conversión de Datos (Data Conversion)</strong>:</p>
-<ul>
-<li><strong>Descripción</strong>: Convierte las columnas extraídas a formatos compatibles para la base de datos destino.</li>
-<li><strong>Columnas Convertidas</strong>:<ul>
-<li><code>PROGRAMA</code> → <code>Copy of PROGRAMA</code>.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Validación (Lookup)</strong>:</p>
-<ul>
-<li><strong>Descripción</strong>: Verifica si las filas coinciden con registros existentes en la tabla destino <code>DIM_PROGRAMA</code>.</li>
-<li><strong>SQL de Consulta</strong>:
-    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_PROGRAMA</span><span class="p">]</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">PROGRAMA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
-</code></pre></div></li>
-<li><strong>Salida</strong>:<ul>
-<li>Coincidencia: Los datos se procesan.</li>
-<li>Sin coincidencia: Los datos se redirigen para manejo adicional.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Destino (ADO NET Destination)</strong>:</p>
-<ul>
-<li><strong>Descripción</strong>: Carga los datos procesados en la tabla <code>DIM_PROGRAMA</code> del esquema <code>Protección</code>.</li>
-<li><strong>Propiedades</strong>:<ul>
-<li><strong>BatchSize</strong>: 0 (por defecto).</li>
-<li><strong>CommandTimeout</strong>: 30 segundos.</li>
-<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code> (usa inserción masiva si es posible).</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="diagrama-de-flujo_1">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_1" title="Permanent link">&para;</a></h4>
-<p>El siguiente diagrama ilustra el flujo completo de datos del componente <strong>Data DIM_PROGRAMA</strong>:</p>
-<pre class="mermaid"><code>graph TD
-    A[Inicio] --&gt; B[Lectura desde Excel Source]
-    B --&gt; C[Conversión de Datos]
-    C --&gt; D[Validación mediante Lookup]
-    D --&gt; E{¿Coincidencia encontrada?}
-    E -- Sí --&gt; F[Cargar datos en ADO NET Destination]
-    E -- No --&gt; G[Manejo de filas no coincidentes]
-    F --&gt; H[Fin]
-    G --&gt; H</code></pre>
 <h3 id="componente-data-dim_preguntas_ee_jec">Componente <strong><code>Data DIM_PREGUNTAS_EE_JEC</code></strong><a class="headerlink" href="#componente-data-dim_preguntas_ee_jec" title="Permanent link">&para;</a></h3>
-<h4 id="descripcion-general_3">Descripción General<a class="headerlink" href="#descripcion-general_3" title="Permanent link">&para;</a></h4>
+<h4 id="descripcion-general_2">Descripción General<a class="headerlink" href="#descripcion-general_2" title="Permanent link">&para;</a></h4>
 <p>Este componente gestiona un flujo de datos ETL que extrae preguntas relacionadas con ejecución de eventos educativos desde un archivo Excel y las procesa para ser almacenadas en la tabla <code>DIM_PREGUNTAS_EE_JEC</code> del esquema <code>Protección</code>. Incluye validaciones, transformaciones, y manejo de datos no coincidentes.</p>
-<h4 id="componentes-del-flujo-de-datos_3">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_3" title="Permanent link">&para;</a></h4>
+<h4 id="componentes-del-flujo-de-datos_2">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_2" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Fuente de Datos (Excel Source)</strong>:</p>
@@ -2945,7 +2934,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="diagrama-de-flujo_2">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_2" title="Permanent link">&para;</a></h4>
+<h4 id="diagrama-de-flujo_1">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_1" title="Permanent link">&para;</a></h4>
 <p>El siguiente diagrama ilustra el flujo completo del componente <strong>Data DIM_PREGUNTAS_EE_JEC</strong>:</p>
 <pre class="mermaid"><code>graph TD
     A[Inicio] --&gt; B[Lectura desde Excel Source]
@@ -2958,9 +2947,9 @@
     F --&gt; H[Fin]
     G --&gt; H</code></pre>
 <h3 id="componente-data-dim_respuesta_ee_jec">Componente <strong><code>Data DIM_RESPUESTA_EE_JEC</code></strong><a class="headerlink" href="#componente-data-dim_respuesta_ee_jec" title="Permanent link">&para;</a></h3>
-<h4 id="descripcion-general_4">Descripción General<a class="headerlink" href="#descripcion-general_4" title="Permanent link">&para;</a></h4>
+<h4 id="descripcion-general_3">Descripción General<a class="headerlink" href="#descripcion-general_3" title="Permanent link">&para;</a></h4>
 <p>Este flujo de datos procesa respuestas asociadas a preguntas de encuestas educativas (<code>DIM_RESPUESTA_EE_JEC</code>). Las respuestas se extraen de un archivo Excel, se validan con las tablas existentes y se cargan en la base de datos destino.</p>
-<h4 id="componentes-del-flujo-de-datos_4">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_4" title="Permanent link">&para;</a></h4>
+<h4 id="componentes-del-flujo-de-datos_3">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_3" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Fuente de Datos (Excel Source)</strong>:</p>
@@ -3028,7 +3017,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="diagrama-de-flujo_3">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_3" title="Permanent link">&para;</a></h4>
+<h4 id="diagrama-de-flujo_2">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_2" title="Permanent link">&para;</a></h4>
 <p>El siguiente diagrama muestra el proceso completo del flujo de datos:</p>
 <pre class="mermaid"><code>graph TD
     A[Inicio] --&gt; B[Lectura desde Excel Source]
@@ -3041,9 +3030,9 @@
     F --&gt; H[Fin]
     G --&gt; H</code></pre>
 <h3 id="componente-data-dim_preguntas_aipi">Componente <strong><code>Data DIM_PREGUNTAS_AIPI</code></strong><a class="headerlink" href="#componente-data-dim_preguntas_aipi" title="Permanent link">&para;</a></h3>
-<h4 id="descripcion-general_5">Descripción General<a class="headerlink" href="#descripcion-general_5" title="Permanent link">&para;</a></h4>
+<h4 id="descripcion-general_4">Descripción General<a class="headerlink" href="#descripcion-general_4" title="Permanent link">&para;</a></h4>
 <p>Este flujo de datos carga preguntas relacionadas con el programa AIPI en la tabla <code>DIM_PREGUNTAS_EE_AIPI</code>. El proceso incluye validación, transformación de datos y carga en la base de datos.</p>
-<h4 id="componentes-del-flujo-de-datos_5">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_5" title="Permanent link">&para;</a></h4>
+<h4 id="componentes-del-flujo-de-datos_4">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_4" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Fuente de Datos (Excel Source)</strong>:</p>
@@ -3111,7 +3100,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="diagrama-de-flujo_4">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_4" title="Permanent link">&para;</a></h4>
+<h4 id="diagrama-de-flujo_3">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_3" title="Permanent link">&para;</a></h4>
 <p>El siguiente diagrama ilustra el proceso:</p>
 <pre class="mermaid"><code>graph TD
     A[Inicio] --&gt; B[Lectura desde Excel Source]
@@ -3124,9 +3113,9 @@
     F --&gt; H[Fin]
     G --&gt; H</code></pre>
 <h3 id="componente-data-dim_respuesta_aipi">Componente <strong><code>Data DIM_RESPUESTA_AIPI</code></strong><a class="headerlink" href="#componente-data-dim_respuesta_aipi" title="Permanent link">&para;</a></h3>
-<h4 id="descripcion-general_6">Descripción General<a class="headerlink" href="#descripcion-general_6" title="Permanent link">&para;</a></h4>
+<h4 id="descripcion-general_5">Descripción General<a class="headerlink" href="#descripcion-general_5" title="Permanent link">&para;</a></h4>
 <p>Este flujo de datos realiza la carga de respuestas relacionadas con el programa AIPI en la tabla <code>DIM_RESPUESTAS_EE_AIPI</code>. El proceso incluye validación, conversión de datos y carga en la base de datos.</p>
-<h4 id="componentes-del-flujo-de-datos_6">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_6" title="Permanent link">&para;</a></h4>
+<h4 id="componentes-del-flujo-de-datos_5">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_5" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Fuente de Datos (Excel Source)</strong>:</p>
@@ -3189,7 +3178,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="diagrama-de-flujo_5">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_5" title="Permanent link">&para;</a></h4>
+<h4 id="diagrama-de-flujo_4">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_4" title="Permanent link">&para;</a></h4>
 <p>El siguiente diagrama ilustra el proceso:</p>
 <pre class="mermaid"><code>graph TD
     A[Inicio] --&gt; B[Lectura desde Excel Source]
@@ -3201,86 +3190,181 @@
     E --&gt; F
     F --&gt; H[Fin]
     G --&gt; H</code></pre>
-<h3 id="componente-data-dim_poblacion">Componente <strong><code>Data DIM_POBLACION</code></strong><a class="headerlink" href="#componente-data-dim_poblacion" title="Permanent link">&para;</a></h3>
+<h3 id="componente-cargar_dim_sedes">Componente <strong><code>Cargar_DIM_SEDES</code></strong><a class="headerlink" href="#componente-cargar_dim_sedes" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_6">Descripción General<a class="headerlink" href="#descripcion-general_6" title="Permanent link">&para;</a></h4>
+<p>El componente <strong>Cargar_DIM_SEDES</strong> es una tarea de tipo <strong>Execute SQL Task</strong> en SSIS. Su función principal es limpiar (truncar) la tabla de staging que contiene información de población de protección antes de realizar nuevas cargas de datos. Esto asegura que la tabla esté vacía y preparada para la inserción de datos actualizados.</p>
+<h4 id="detalles-tecnicos">Detalles Técnicos<a class="headerlink" href="#detalles-tecnicos" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tipo de Tarea</strong>: Execute SQL Task</li>
+<li><strong>Nombre del Componente</strong>: <code>Cargar_DIM_SEDES</code></li>
+<li><strong>Descripción</strong>: Ejecuta una sentencia SQL para truncar la tabla <code>[STAGE_AREA].[Transversal].[DIM_POBLACION_PROTECCION]</code>.</li>
+</ul>
+<h4 id="propiedades-principales">Propiedades Principales<a class="headerlink" href="#propiedades-principales" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Connection</strong>: Utiliza la conexión referenciada por el ID <code>{57F24C4D-9B0A-4EBB-AE46-43F9B341582B}</code>.</li>
+<li>
+<p><strong>SQL Statement</strong>:
+  <div class="highlight"><pre><span></span><code><span class="k">truncate</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="p">[</span><span class="n">STAGE_AREA</span><span class="p">].[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_POBLACION_PROTECCION</span><span class="p">]</span>
+</code></pre></div>
+  Esta sentencia limpia completamente la tabla para permitir la inserción de nuevos datos sin residuos de cargas anteriores.</p>
+</li>
+<li>
+<p><strong>Task Contact</strong>:<br />
+<code>Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support/default.asp;1</code></p>
+</li>
+<li>
+<p><strong>ThreadHint</strong>: 0 (Sin sugerencia de hilos).</p>
+</li>
+</ul>
+<h4 id="diagrama-de-flujo-del-proceso_1">Diagrama de Flujo del Proceso<a class="headerlink" href="#diagrama-de-flujo-del-proceso_1" title="Permanent link">&para;</a></h4>
+<p>El siguiente diagrama ilustra el flujo de ejecución para el componente <strong>Cargar_DIM_SEDES</strong>:</p>
+<pre class="mermaid"><code>graph TD
+    A[Inicio del Proceso] --&gt; B[Conectar a la base de datos]
+    B --&gt; C[Ejecutar sentencia SQL]
+    C --&gt; D[Truncar la tabla DIM_POBLACION_PROTECCION]
+    D --&gt; E[Registrar resultado de la operación]
+    E --&gt; F[Fin del Proceso]</code></pre>
+<h3 id="componente-data-dim_poblacion-to_stage_area">Componente <strong><code>Data DIM_POBLACION TO_STAGE_AREA</code></strong><a class="headerlink" href="#componente-data-dim_poblacion-to_stage_area" title="Permanent link">&para;</a></h3>
 <h4 id="descripcion-general_7">Descripción General<a class="headerlink" href="#descripcion-general_7" title="Permanent link">&para;</a></h4>
-<p>Este componente procesa y carga información sobre la población en la tabla <code>DIM_POBLACION</code>. El flujo incluye pasos de transformación de datos, validación de referencias con otras tablas, y la carga de datos procesados en un destino ADO.NET.</p>
-<h4 id="componentes-del-flujo-de-datos_7">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_7" title="Permanent link">&para;</a></h4>
+<p>El componente <strong>Data DIM_POBLACION TO_STAGE_AREA</strong> es un flujo de datos (Data Flow Task) dentro de un paquete SSIS que se encarga de extraer información de población desde un archivo Excel, convertir el formato de algunas columnas y posteriormente cargar los datos transformados en una tabla de staging ubicada en el esquema <em>Transversal</em>. En este caso, la tabla destino es <code>[STAGE_AREA].[Transversal].[DIM_POBLACION_PROTECCION]</code>. Este proceso forma parte de la preparación de los datos antes de su integración final en el Data Warehouse.</p>
+<h4 id="componentes-del-flujo-de-datos_6">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_6" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p><strong>Fuente de Datos (Excel Source)</strong>:</p>
+<p><strong>Fuente de Datos (Excel Source 1)</strong>  </p>
 <ul>
-<li><strong>Descripción</strong>: Lee los datos desde un archivo Excel (<code>Sheet1$</code>).</li>
-<li><strong>Columnas de Entrada</strong>:<ul>
-<li><code>TIPO_DOCUMENTO</code></li>
-<li><code>DOCUMENTO</code></li>
-</ul>
-</li>
+<li><strong>Descripción</strong>: Conecta y extrae datos desde un archivo Excel.  </li>
 <li><strong>Propiedades</strong>:<ul>
-<li><strong>Conexión</strong>: <code>Excel_Connection_Dim_Poblacion</code>.</li>
+<li><strong>Hoja seleccionada</strong>: <code>Sheet1$</code></li>
+<li>Se extraen las columnas: <code>TIPO_DOCUMENTO</code> y <code>DOCUMENTO</code>.</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>Conversión de Datos (Data Conversion)</strong>:</p>
+<p><strong>Conversión de Datos (Data Conversion 1)</strong>  </p>
 <ul>
-<li><strong>Descripción</strong>: Realiza la transformación de las columnas para ajustarse a los requisitos del destino.</li>
+<li><strong>Descripción</strong>: Transforma los datos extraídos para ajustarse a los requerimientos del destino.  </li>
 <li><strong>Columnas Convertidas</strong>:<ul>
-<li><code>DOCUMENTO</code> → <code>Copy of DOCUMENTO</code></li>
-<li><code>TIPO_DOCUMENTO</code> → <code>Copy of TIPO_DOCUMENTO</code>.</li>
+<li>La columna <code>DOCUMENTO</code> se convierte a un nuevo campo denominado <code>Copy of DOCUMENTO</code> con un tamaño de 40 caracteres.</li>
+<li>La columna <code>TIPO_DOCUMENTO</code> se convierte a <code>Copy of TIPO_DOCUMENTO</code> con un tamaño de 20 caracteres.</li>
+</ul>
+</li>
+<li><strong>Propiedades adicionales</strong>:<ul>
+<li>Se activa la opción de conversión sin uso de FastParse (FastParse = false) para asegurar la correcta transformación de los datos.</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>Validación de Empresas (Lookup 1)</strong>:</p>
+<p><strong>Destino de Datos (ADO NET Destination: Destino de ADO NET 1)</strong>  </p>
 <ul>
-<li><strong>Descripción</strong>: Busca el <code>ID_EMPRESA</code> en la tabla <code>DIM_EMPRESAS</code> a partir de los datos <code>DOCUMENTO</code> y <code>TIPO_DOCUMENTO</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Validación de Afiliados (Lookup 2)</strong>:</p>
-<ul>
-<li><strong>Descripción</strong>: Busca el <code>ID_AFILIADO</code> en la tabla <code>DIM_AFILIADOS</code> a partir de los datos <code>DOCUMENTO</code> y <code>TIPO_DOCUMENTO</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Validación de Beneficiarios (Lookup 3)</strong>:</p>
-<ul>
-<li><strong>Descripción</strong>: Busca el <code>ID_BENEFICIARIO</code> en la tabla <code>DIM_BENEFICIARIOS</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Validación de Aportantes (Lookup 4)</strong>:</p>
-<ul>
-<li><strong>Descripción</strong>: Busca el <code>ID_APORTANTE</code> en la tabla <code>DIM_APORTANTE_NOAFILIADO</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Carga de Datos (ADO.NET Destination)</strong>:</p>
-<ul>
-<li><strong>Descripción</strong>: Inserta los datos procesados y validados en la tabla <code>DIM_POBLACION</code>.</li>
+<li><strong>Descripción</strong>: Carga los datos procesados en la tabla de staging <code>[STAGE_AREA].[Transversal].[DIM_POBLACION_PROTECCION]</code>.  </li>
 <li><strong>Propiedades</strong>:<ul>
-<li><strong>BatchSize</strong>: 0 (por defecto).</li>
+<li><strong>TableOrViewName</strong>: <code>"Transversal"."DIM_POBLACION_PROTECCION"</code></li>
+<li><strong>BatchSize</strong>: 0 (usa el tamaño predeterminado del búfer interno de SSIS).</li>
 <li><strong>CommandTimeout</strong>: 30 segundos.</li>
-<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code>.</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code> para mejorar el rendimiento mediante inserciones masivas.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
-<h4 id="diagrama-de-flujo_6">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_6" title="Permanent link">&para;</a></h4>
+<h4 id="diagrama-de-flujo-del-proceso_2">Diagrama de Flujo del Proceso<a class="headerlink" href="#diagrama-de-flujo-del-proceso_2" title="Permanent link">&para;</a></h4>
+<p>El siguiente diagrama ilustra el flujo completo de datos para el componente <strong>Data DIM_POBLACION TO_STAGE_AREA</strong>:</p>
 <pre class="mermaid"><code>graph TD
-    A[Inicio] --&gt; B[Lectura desde Excel Source]
-    B --&gt; C[Conversión de Datos]
-    C --&gt; D[Validación de Empresas Lookup 1]
-    D --&gt; E[Validación de Afiliados Lookup 2]
-    E --&gt; F[Validación de Beneficiarios Lookup 3]
-    F --&gt; G[Validación de Aportantes Lookup 4]
-    G --&gt; H[Carga de Datos en ADO.NET Destination]
-    H --&gt; I[Fin]</code></pre>
-<h3 id="componente-data-establecimiento_educativo">Componente <strong><code>Data ESTABLECIMIENTO_EDUCATIVO</code></strong><a class="headerlink" href="#componente-data-establecimiento_educativo" title="Permanent link">&para;</a></h3>
+    A[Inicio del Proceso] --&gt; B[Extracción de datos desde Excel Source]
+    B --&gt; C[Conversión de datos Data Conversion]
+    C --&gt; D[Carga en destino ADO NET]
+    D --&gt; E[Fin del Proceso]</code></pre>
+<h3 id="componente-data-dim_poblacion">Componente <strong><code>Data DIM_POBLACION</code></strong><a class="headerlink" href="#componente-data-dim_poblacion" title="Permanent link">&para;</a></h3>
 <h4 id="descripcion-general_8">Descripción General<a class="headerlink" href="#descripcion-general_8" title="Permanent link">&para;</a></h4>
+<p>Este componente procesa y carga información sobre la población en la tabla <code>DIM_POBLACION</code> del esquema <code>Proteccion</code>. El flujo de datos extrae registros desde un archivo Excel, realiza conversiones de datos y luego inserta la información en el destino mediante un ADO NET Destination. Además, se incorpora un componente que obtiene datos desde la fuente mediante una consulta SQL que utiliza una expresión CTE (Common Table Expression) para transformar y validar los datos de población provenientes de la etapa (<code>STAGE_AREA</code>).</p>
+<h4 id="componentes-del-flujo-de-datos_7">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_7" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Fuente de Datos (Excel Source 1)</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Extrae datos desde un archivo Excel, leyendo la hoja <code>Sheet1$</code> y capturando las columnas <code>TIPO_DOCUMENTO</code> y <code>DOCUMENTO</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>OpenRowset</strong>: <code>Sheet1$</code></li>
+<li><strong>AccessMode</strong>: 0 (lectura directa desde la hoja)</li>
+<li><strong>Conexión</strong>: <code>Excel_Connection_Dim_Poblacion</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conversión de Datos (Data Conversion 1)</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Convierte las columnas extraídas para ajustarlas a los requerimientos del destino.</li>
+<li><strong>Columnas Convertidas</strong>:<ul>
+<li><code>DOCUMENTO</code> → <code>Copy of DOCUMENTO</code> (convertido a <code>wstr</code> con longitud 40)</li>
+<li><code>TIPO_DOCUMENTO</code> → <code>Copy of TIPO_DOCUMENTO</code> (convertido a <code>wstr</code> con longitud 20)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Fuente de Datos SQL (poblacion)</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Utiliza una consulta SQL que define la CTE <code>DIM_POBLACION_PROTECCION</code> para transformar y validar los registros provenientes de la etapa <code>STAGE_AREA</code>. Se aplican múltiples LEFT JOIN a tablas de referencia (DIM_EMPRESAS, DIM_AFILIADOS, DIM_BENEFICIARIOS y DIM_APORTANTE_NOAFILIADO) para obtener los identificadores correspondientes. Luego, se filtran los registros que aún no han sido cargados en la tabla destino <code>DIM_POBLACION</code> (de modo que los registros duplicados se descarten).</li>
+<li><strong>SQL</strong>:
+    <div class="highlight"><pre><span></span><code><span class="k">WITH</span><span class="w"> </span><span class="n">DIM_POBLACION_PROTECCION</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span>
+<span class="w">        </span><span class="n">pp</span><span class="p">.</span><span class="n">TIPO_DOCUMENTO</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">pp</span><span class="p">.</span><span class="n">DOCUMENTO</span><span class="p">,</span>
+<span class="w">        </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ID_EMPRESA</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ID_EMPRESA</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ID_EMPRESA</span><span class="p">,</span>
+<span class="w">        </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">ID_AFILIADO</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">ID_AFILIADO</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ID_AFILIADO</span><span class="p">,</span>
+<span class="w">        </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">ID_BENEFICIARIO</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">ID_BENEFICIARIO</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ID_BENEFICIARIO</span><span class="p">,</span>
+<span class="w">        </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">an</span><span class="p">.</span><span class="n">ID_APORTANTE</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="n">an</span><span class="p">.</span><span class="n">ID_APORTANTE</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ID_APORTANTE</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">STAGE_AREA</span><span class="p">].[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_POBLACION_PROTECCION</span><span class="p">]</span><span class="w"> </span><span class="n">pp</span>
+<span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_EMPRESAS</span><span class="p">]</span><span class="w"> </span><span class="n">e</span>
+<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">TIPO_DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">COD_TIPO_DOCUMENTO</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DOCUMENTO</span>
+<span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_AFILIADOS</span><span class="p">]</span><span class="w"> </span><span class="n">a</span>
+<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">TIPO_DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">COD_TIPO_DOCUMENTO</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">NUMERO_DOCUMENTO</span>
+<span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_BENEFICIARIOS</span><span class="p">]</span><span class="w"> </span><span class="n">b</span>
+<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">TIPO_DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">COD_TIPO_DOCUMENTO</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">NUMERO_DOCUMENTO</span>
+<span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">DIM_APORTANTE_NOAFILIADO</span><span class="p">]</span><span class="w"> </span><span class="n">an</span>
+<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">TIPO_DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">an</span><span class="p">.</span><span class="n">COD_TIPO_DOCUMENTO</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">an</span><span class="p">.</span><span class="n">DOCUMENTO</span>
+<span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">DIM_POBLACION_PROTECCION</span><span class="w"> </span><span class="n">pp</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Proteccion</span><span class="p">].[</span><span class="n">DIM_POBLACION</span><span class="p">]</span><span class="w"> </span><span class="n">ppp</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">TIPO_DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ppp</span><span class="p">.</span><span class="n">TIPO_DOCUMENTO</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">DOCUMENTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ppp</span><span class="p">.</span><span class="n">DOCUMENTO</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">ID_EMPRESA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ppp</span><span class="p">.</span><span class="n">ID_EMPRESA</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">ID_AFILIADO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ppp</span><span class="p">.</span><span class="n">ID_AFILIADO</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">ID_BENEFICIARIO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ppp</span><span class="p">.</span><span class="n">ID_BENEFICIARIO</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">ID_APORTANTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ppp</span><span class="p">.</span><span class="n">ID_APORTANTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ppp</span><span class="p">.</span><span class="n">TIPO_DOCUMENTO</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
+</code></pre></div></li>
+<li><strong>Conexión</strong>: Utiliza el administrador de conexiones <code>DWH_COMFENALCO</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Destino de Datos (ADO NET Destination)</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Inserta los datos transformados y validados en la tabla <code>DIM_POBLACION</code> del esquema <code>Proteccion</code>.</li>
+<li><strong>Propiedades</strong>:<ul>
+<li><strong>TableOrViewName</strong>: <code>"Proteccion"."DIM_POBLACION"</code></li>
+<li><strong>BatchSize</strong>: 0</li>
+<li><strong>CommandTimeout</strong>: 30 segundos</li>
+<li><strong>UseBulkInsertWhenPossible</strong>: <code>true</code></li>
+</ul>
+</li>
+<li><strong>Conexión</strong>: <code>DWH_COMFENALCO_Destino</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="diagrama-de-flujo-del-proceso_3">Diagrama de Flujo del Proceso<a class="headerlink" href="#diagrama-de-flujo-del-proceso_3" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    A[Inicio] --&gt; B[Extracción de datos desde Excel Source 1]
+    B --&gt; C[Conversión de Datos Data Conversion 1]
+    C --&gt; D[Obtención de datos mediante SQL poblacion]
+    D --&gt; E[Carga en ADO NET Destination Proteccion.DIM_POBLACION]
+    E --&gt; F[Fin]</code></pre>
+<h3 id="componente-data-establecimiento_educativo">Componente <strong><code>Data ESTABLECIMIENTO_EDUCATIVO</code></strong><a class="headerlink" href="#componente-data-establecimiento_educativo" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_9">Descripción General<a class="headerlink" href="#descripcion-general_9" title="Permanent link">&para;</a></h4>
 <p>Este componente procesa información relacionada con establecimientos educativos y la carga en la tabla <code>DIM_ESTABLECIMIENTO_EDUCATIVO</code>. El flujo asegura que los datos sean validados y transformados antes de insertarse en el destino.</p>
 <h4 id="componentes-del-flujo-de-datos_8">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_8" title="Permanent link">&para;</a></h4>
 <ol>
@@ -3339,7 +3423,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="diagrama-de-flujo_7">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_7" title="Permanent link">&para;</a></h4>
+<h4 id="diagrama-de-flujo_5">Diagrama de Flujo<a class="headerlink" href="#diagrama-de-flujo_5" title="Permanent link">&para;</a></h4>
 <pre class="mermaid"><code>graph TD
     A[Inicio] --&gt; B[Lectura desde Excel Source]
     B --&gt; C[Validación con Lookup]

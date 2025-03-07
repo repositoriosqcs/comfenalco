@@ -16,7 +16,7 @@
     
     
       
-        <title>Documentación SQL para el Esquema Cedesarrollo - COMFENALCO</title>
+        <title>02.Tablas copy - COMFENALCO</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentacion-sql-para-el-esquema-cedesarrollo" class="md-skip">
+        <a href="#tablas" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Documentación SQL para el Esquema Cedesarrollo
+              02.Tablas copy
             
           </span>
         </div>
@@ -358,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00.Inicio/" class="md-nav__link">
+      <a href="../../01.scripts/00.Inicio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -379,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00.Eliminar_todo/" class="md-nav__link">
+      <a href="../../01.scripts/00.Eliminar_todo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -400,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01.Transversal/" class="md-nav__link">
+      <a href="../../01.scripts/01.Transversal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02.Cedesarrollo/" class="md-nav__link">
+      <a href="../../01.scripts/02.Cedesarrollo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -442,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03.Proteccion/" class="md-nav__link">
+      <a href="../../01.scripts/03.Proteccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -463,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04.Colegio/" class="md-nav__link">
+      <a href="../../01.scripts/04.Colegio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2045,7 +2045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.Cubo/00.Introduccion/" class="md-nav__link">
+      <a href="../00.Introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2066,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.Cubo/01.Origen/" class="md-nav__link">
+      <a href="../01.Origen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2087,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.Cubo/02.Tablas/" class="md-nav__link">
+      <a href="../02.Tablas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2108,7 +2108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03.Cubo/03.ETL/" class="md-nav__link">
+      <a href="../03.ETL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2230,8 +2230,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2240,64 +2238,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#tablas" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción
+      Tablas
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proposito-del-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Propósito del Script
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#estructura-del-modelo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Estructura del Modelo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Estructura del Modelo">
+    <nav class="md-nav" aria-label="Tablas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tablas-dimensionales" class="md-nav__link">
+  <a href="#tabla-transversal-dim_unidad" class="md-nav__link">
     <span class="md-ellipsis">
-      Tablas Dimensionales
+      Tabla: Transversal DIM_UNIDAD
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tablas-de-hechos" class="md-nav__link">
+  <a href="#tabla-transversal-dim_tiempo_mensual" class="md-nav__link">
     <span class="md-ellipsis">
-      Tablas de Hechos
+      Tabla: Transversal DIM_TIEMPO_MENSUAL
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#relaciones-dimensionales-y-tablas-de-hechos" class="md-nav__link">
+  <a href="#tabla-transversal-dim_categoria" class="md-nav__link">
     <span class="md-ellipsis">
-      Relaciones Dimensionales y Tablas de Hechos
+      Tabla: Transversal DIM_CATEGORIA
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#buenas-practicas-implementadas" class="md-nav__link">
+  <a href="#tabla-transversal-fact_actividades" class="md-nav__link">
     <span class="md-ellipsis">
-      Buenas Prácticas Implementadas
+      Tabla: Transversal FACT_ACTIVIDADES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-transversal-fact_personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla: Transversal FACT_PERSONAL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-transversal-fact_financiera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla: Transversal FACT_FINANCIERA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-transversal-fact_evaluacion_docente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla: Transversal FACT_EVALUACION_DOCENTE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-calculatedtableindicadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla: CalculatedTableIndicadores
     </span>
   </a>
   
@@ -2309,11 +2325,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#relaciones-del-modelo" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusión
+      Relaciones del Modelo
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Relaciones del Modelo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-general_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-relaciones-y-tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama de Relaciones y Tablas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2332,300 +2372,998 @@
                   
 
 
-<h1 id="documentacion-sql-para-el-esquema-cedesarrollo">Documentación SQL para el Esquema <code>Cedesarrollo</code><a class="headerlink" href="#documentacion-sql-para-el-esquema-cedesarrollo" title="Permanent link">&para;</a></h1>
-<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
-<p>Este script SQL implementa el esquema <code>Cedesarrollo</code> dentro del Data Warehouse <code>DWH_COMFENALCO</code>. El modelo sigue las mejores prácticas de modelado dimensional, con tablas de dimensiones (<code>DIM</code>) y hechos (<code>FACT</code>) que permiten un análisis integral de datos relacionados con estudiantes, personal, programas académicos, y evaluaciones.</p>
+  <h1>02.Tablas copy</h1>
+
+<!-- markdownlint-disable -->
+<h2 id="tablas">Tablas<a class="headerlink" href="#tablas" title="Permanent link">&para;</a></h2>
+<h3 id="tabla-transversal-dim_unidad">Tabla: Transversal DIM_UNIDAD<a class="headerlink" href="#tabla-transversal-dim_unidad" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general">Descripción General<a class="headerlink" href="#descripcion-general" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>Transversal DIM_UNIDAD</strong> es una dimensión que define las unidades organizacionales o funcionales del sistema. Esta tabla es fundamental para categorizar y segmentar datos relacionados con las actividades y procesos empresariales.</p>
+<p><img alt="alt text" src="../../images/Transversal%20DIM_UNIDAD.png" /></p>
+<h4 id="estructura-de-la-tabla">Estructura de la Tabla<a class="headerlink" href="#estructura-de-la-tabla" title="Permanent link">&para;</a></h4>
+<p><strong>1. Nombre de la Tabla</strong>: <code>Transversal DIM_UNIDAD</code>.</p>
+<p><strong>2. Columnas</strong>:</p>
+<ul>
+<li><strong>ID_UNIDAD</strong>:<ul>
+<li><strong>Tipo de Datos</strong>: <code>int64</code>.</li>
+<li><strong>Descripción</strong>: Identificador único de cada unidad.</li>
+<li><strong>Columna Fuente</strong>: <code>ID_UNIDAD</code>.</li>
+</ul>
+</li>
+<li><strong>UNIDAD</strong>:<ul>
+<li><strong>Tipo de Datos</strong>: <code>string</code>.</li>
+<li><strong>Descripción</strong>: Nombre descriptivo de la unidad.</li>
+<li><strong>Columna Fuente</strong>: <code>UNIDAD</code>.</li>
+</ul>
+</li>
+</ul>
 <hr />
-<h2 id="proposito-del-script">Propósito del Script<a class="headerlink" href="#proposito-del-script" title="Permanent link">&para;</a></h2>
+<h4 id="particiones">Particiones<a class="headerlink" href="#particiones" title="Permanent link">&para;</a></h4>
+<p><strong>1. Nombre de la Partición</strong>: <code>Partition</code>.</p>
+<p><strong>2. Vista de Datos</strong>: <code>full</code> (carga completa de los datos de la tabla).</p>
+<p><strong>3. Fuente</strong>:</p>
+<ul>
+<li><strong>Tipo</strong>: <code>m</code>.</li>
+<li><strong>Expresión</strong>:
+     <div class="highlight"><pre><span></span><code><span class="n">let</span>
+<span class="w">    </span><span class="k">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="ss">&quot;SQL/10 5 21 29\bi;DWH_COMFENALCO&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Transversal_DIM_UNIDAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Source</span><span class="err">{</span><span class="p">[</span><span class="k">Schema</span><span class="o">=</span><span class="ss">&quot;Transversal&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Item</span><span class="o">=</span><span class="ss">&quot;DIM_UNIDAD&quot;</span><span class="p">]</span><span class="err">}</span><span class="p">[</span><span class="k">Data</span><span class="p">]</span>
+<span class="k">in</span>
+<span class="w">    </span><span class="n">Transversal_DIM_UNIDAD</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h4 id="proposito">Propósito<a class="headerlink" href="#proposito" title="Permanent link">&para;</a></h4>
+<p>La dimensión <strong>DIM_UNIDAD</strong> se utiliza para:</p>
+<ul>
+<li>Proveer una referencia jerárquica o categórica para análisis y segmentaciones.</li>
+<li>Establecer relaciones con otras tablas, como hechos o medidas, en el modelo semántico del cubo.</li>
+</ul>
+<h4 id="relacion-con-el-cubo">Relación con el Cubo<a class="headerlink" href="#relacion-con-el-cubo" title="Permanent link">&para;</a></h4>
+<p>Esta tabla se integra con otras dimensiones y hechos para calcular medidas como:
+- Número de actividades por unidad.
+- Rendimiento de procesos específicos.</p>
+<p>Entendido, aquí está la documentación ajustada con la numeración en <strong>negritas</strong> dentro del formato Markdown:</p>
+<h3 id="tabla-transversal-dim_tiempo_mensual">Tabla: Transversal DIM_TIEMPO_MENSUAL<a class="headerlink" href="#tabla-transversal-dim_tiempo_mensual" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_1">Descripción General<a class="headerlink" href="#descripcion-general_1" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>Transversal DIM_TIEMPO_MENSUAL</strong> es una dimensión de tiempo que permite segmentar los datos en diferentes niveles temporales, como días, semanas, meses, bimestres, trimestres, cuatrimestres, semestres y años. Proporciona una estructura detallada para análisis cronológicos.</p>
+<p><img alt="alt text" src="../../images/Transversal%20DIM_TIEMPO_MENSUAL.png" /></p>
+<h4 id="estructura-de-la-tabla_1">Estructura de la Tabla<a class="headerlink" href="#estructura-de-la-tabla_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo de Datos</th>
+<th>Columna Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID_FECHA</td>
+<td>int64</td>
+<td>ID_FECHA</td>
+</tr>
+<tr>
+<td>FECHA</td>
+<td>dateTime</td>
+<td>FECHA</td>
+</tr>
+<tr>
+<td>DESC_FECHA</td>
+<td>string</td>
+<td>DESC_FECHA</td>
+</tr>
+<tr>
+<td>ID_SEMANA</td>
+<td>int64</td>
+<td>ID_SEMANA</td>
+</tr>
+<tr>
+<td>DESC_SEMANA</td>
+<td>string</td>
+<td>DESC_SEMANA</td>
+</tr>
+<tr>
+<td>ID_NO_MES</td>
+<td>int64</td>
+<td>ID_NO_MES</td>
+</tr>
+<tr>
+<td>DESC_NO_MES</td>
+<td>string</td>
+<td>DESC_NO_MES</td>
+</tr>
+<tr>
+<td>ID_MES</td>
+<td>int64</td>
+<td>ID_MES</td>
+</tr>
+<tr>
+<td>DESC_MES</td>
+<td>string</td>
+<td>DESC_MES</td>
+</tr>
+<tr>
+<td>DESC_MES_CORTA</td>
+<td>string</td>
+<td>DESC_MES_CORTA</td>
+</tr>
+<tr>
+<td>ID_BIMESTRE</td>
+<td>int64</td>
+<td>ID_BIMESTRE</td>
+</tr>
+<tr>
+<td>DESC_BIMESTRE</td>
+<td>string</td>
+<td>DESC_BIMESTRE</td>
+</tr>
+<tr>
+<td>ID_TRIMESTRE</td>
+<td>int64</td>
+<td>ID_TRIMESTRE</td>
+</tr>
+<tr>
+<td>DESC_TRIMESTRE</td>
+<td>string</td>
+<td>DESC_TRIMESTRE</td>
+</tr>
+<tr>
+<td>ID_CUATRIMESTRE</td>
+<td>int64</td>
+<td>ID_CUATRIMESTRE</td>
+</tr>
+<tr>
+<td>DESC_CUATRIMESTRE</td>
+<td>string</td>
+<td>DESC_CUATRIMESTRE</td>
+</tr>
+<tr>
+<td>ID_SEMESTRE</td>
+<td>int64</td>
+<td>ID_SEMESTRE</td>
+</tr>
+<tr>
+<td>DESC_SEMESTRE</td>
+<td>string</td>
+<td>DESC_SEMESTRE</td>
+</tr>
+<tr>
+<td>ID_ANIO</td>
+<td>int64</td>
+<td>ID_ANIO</td>
+</tr>
+<tr>
+<td>ID_ANIO_ANT</td>
+<td>int64</td>
+<td>ID_ANIO_ANT</td>
+</tr>
+<tr>
+<td>NUM_DIA_SEMANA</td>
+<td>int64</td>
+<td>NUM_DIA_SEMANA</td>
+</tr>
+<tr>
+<td>FESTIVO</td>
+<td>int64</td>
+<td>FESTIVO</td>
+</tr>
+<tr>
+<td>FECHA_CORTA</td>
+<td>dateTime</td>
+<td>FECHA_CORTA</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="particiones_1">Particiones<a class="headerlink" href="#particiones_1" title="Permanent link">&para;</a></h4>
+<p><strong>1. Nombre de la Partición</strong>: <code>Partition</code>.</p>
+<p><strong>2. Vista de Datos</strong>: <code>full</code> (carga completa de los datos).</p>
+<p><strong>3. Fuente</strong>:</p>
+<ul>
+<li><strong>Tipo</strong>: <code>m</code>.</li>
+<li><strong>Expresión</strong>:
+      <div class="highlight"><pre><span></span><code><span class="n">let</span>
+<span class="w">      </span><span class="k">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="ss">&quot;SQL/10 5 21 29\bi;DWH_COMFENALCO&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="n">Transversal_DIM_TIEMPO_MENSUAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Source</span><span class="err">{</span><span class="p">[</span><span class="k">Schema</span><span class="o">=</span><span class="ss">&quot;Transversal&quot;</span><span class="p">,</span><span class="n">Item</span><span class="o">=</span><span class="ss">&quot;DIM_TIEMPO_MENSUAL&quot;</span><span class="p">]</span><span class="err">}</span><span class="p">[</span><span class="k">Data</span><span class="p">]</span>
+<span class="k">in</span>
+<span class="w">      </span><span class="n">Transversal_DIM_TIEMPO_MENSUAL</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h4 id="proposito_1">Propósito<a class="headerlink" href="#proposito_1" title="Permanent link">&para;</a></h4>
+<p>La dimensión <strong>DIM_TIEMPO_MENSUAL</strong> se utiliza para:</p>
+<ul>
+<li>Segmentar datos en intervalos de tiempo específicos.</li>
+<li>Proporcionar jerarquías temporales para análisis (día, semana, mes, bimestre, trimestre, cuatrimestre, semestre y año).</li>
+<li>Relacionar datos temporales con otras dimensiones y hechos para análisis detallados.</li>
+</ul>
+<h3 id="tabla-transversal-dim_categoria">Tabla: Transversal DIM_CATEGORIA<a class="headerlink" href="#tabla-transversal-dim_categoria" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_2">Descripción General<a class="headerlink" href="#descripcion-general_2" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>Transversal DIM_CATEGORIA</strong> define las categorías utilizadas en el modelo para clasificar datos. Esta dimensión permite agrupar y segmentar información relacionada con diferentes áreas del sistema.</p>
+<p><img alt="alt text" src="../../images/Transversal%20DIM_CATEGORIA.png" /></p>
+<h4 id="estructura-de-la-tabla_2">Estructura de la Tabla<a class="headerlink" href="#estructura-de-la-tabla_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo de Datos</th>
+<th>Columna Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COD_CATEGORIA</td>
+<td>string</td>
+<td>COD_CATEGORIA</td>
+</tr>
+<tr>
+<td>DESCRIPCION</td>
+<td>string</td>
+<td>DESCRIPCION</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="particiones_2">Particiones<a class="headerlink" href="#particiones_2" title="Permanent link">&para;</a></h4>
+<p><strong>1. Nombre de la Partición</strong>: <code>Partition</code>.</p>
+<p><strong>2. Vista de Datos</strong>: <code>full</code> (carga completa de los datos).</p>
+<p><strong>3. Fuente</strong>:</p>
+<ul>
+<li><strong>Tipo</strong>: <code>m</code>.</li>
+<li><strong>Expresión</strong>:
+     <div class="highlight"><pre><span></span><code><span class="n">let</span>
+<span class="w">    </span><span class="k">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="ss">&quot;SQL/10 5 21 29\bi;DWH_COMFENALCO&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Transversal_DIM_CATEGORIA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Source</span><span class="err">{</span><span class="p">[</span><span class="k">Schema</span><span class="o">=</span><span class="ss">&quot;Transversal&quot;</span><span class="p">,</span><span class="n">Item</span><span class="o">=</span><span class="ss">&quot;DIM_CATEGORIA&quot;</span><span class="p">]</span><span class="err">}</span><span class="p">[</span><span class="k">Data</span><span class="p">]</span>
+<span class="k">in</span>
+<span class="w">    </span><span class="n">Transversal_DIM_CATEGORIA</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h4 id="proposito_2">Propósito<a class="headerlink" href="#proposito_2" title="Permanent link">&para;</a></h4>
+<p>La dimensión <strong>DIM_CATEGORIA</strong> se utiliza para:</p>
+<ul>
+<li>Clasificar información en grupos o categorías predefinidas.</li>
+<li>Relacionar datos categorizados con otras dimensiones y hechos para análisis más detallados.</li>
+<li>Facilitar la segmentación de datos en reportes y consultas.</li>
+</ul>
+<h3 id="tabla-transversal-fact_actividades">Tabla: Transversal FACT_ACTIVIDADES<a class="headerlink" href="#tabla-transversal-fact_actividades" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_3">Descripción General<a class="headerlink" href="#descripcion-general_3" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>Transversal FACT_ACTIVIDADES</strong> registra información detallada sobre las actividades realizadas por afiliados y empresas, incluyendo datos demográficos, económicos, y sobre aportes. Esta tabla es clave para el análisis de hechos y métricas relacionadas con las actividades.</p>
+<hr />
+<h4 id="estructura-de-la-tabla_3">Estructura de la Tabla<a class="headerlink" href="#estructura-de-la-tabla_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo de Datos</th>
+<th>Columna Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PARTNER</td>
+<td>string</td>
+<td>PARTNER</td>
+</tr>
+<tr>
+<td>ID_EMPRESA</td>
+<td>int64</td>
+<td>ID_EMPRESA</td>
+</tr>
+<tr>
+<td>ID_AFILIADO</td>
+<td>int64</td>
+<td>ID_AFILIADO</td>
+</tr>
+<tr>
+<td>ID_TIPO_AFILIADO</td>
+<td>int64</td>
+<td>ID_TIPO_AFILIADO</td>
+</tr>
+<tr>
+<td>TIPO_AFILIADO</td>
+<td>string</td>
+<td>TIPO_AFILIADO</td>
+</tr>
+<tr>
+<td>ID_CATEGORIA</td>
+<td>int64</td>
+<td>ID_CATEGORIA</td>
+</tr>
+<tr>
+<td>FECHA_AFILIACION</td>
+<td>dateTime</td>
+<td>FECHA_AFILIACION</td>
+</tr>
+<tr>
+<td>FECHA_RETIRO</td>
+<td>dateTime</td>
+<td>FECHA_RETIRO</td>
+</tr>
+<tr>
+<td>ID_GENERO</td>
+<td>int64</td>
+<td>ID_GENERO</td>
+</tr>
+<tr>
+<td>ID_ESTADO_CIVIL</td>
+<td>int64</td>
+<td>ID_ESTADO_CIVIL</td>
+</tr>
+<tr>
+<td>ID_PERTENENCIA_ETNICA</td>
+<td>int64</td>
+<td>ID_PERTENENCIA_ETNICA</td>
+</tr>
+<tr>
+<td>ID_FACTOR_VULNERABILIDAD</td>
+<td>int64</td>
+<td>ID_FACTOR_VULNERABILIDAD</td>
+</tr>
+<tr>
+<td>ESTRATO</td>
+<td>int64</td>
+<td>ESTRATO</td>
+</tr>
+<tr>
+<td>ID_CIUDAD</td>
+<td>int64</td>
+<td>ID_CIUDAD</td>
+</tr>
+<tr>
+<td>SALARIO_BASICO</td>
+<td>double</td>
+<td>SALARIO_BASICO</td>
+</tr>
+<tr>
+<td>FECHA_MENSUAL</td>
+<td>dateTime</td>
+<td>FECHA_MENSUAL</td>
+</tr>
+<tr>
+<td>ID_FECHA</td>
+<td>int64</td>
+<td>ID_FECHA</td>
+</tr>
+<tr>
+<td>ID_UNIDAD</td>
+<td>int64</td>
+<td>ID_UNIDAD</td>
+</tr>
+<tr>
+<td>ESTADOREGISTRO</td>
+<td>string</td>
+<td>ESTADOREGISTRO</td>
+</tr>
+<tr>
+<td>PARTNER_AFILIADO</td>
+<td>string</td>
+<td>PARTNER_AFILIADO</td>
+</tr>
+<tr>
+<td>PARTNER_EMPRESA</td>
+<td>string</td>
+<td>PARTNER_EMPRESA</td>
+</tr>
+<tr>
+<td>TIPO_POBLACION</td>
+<td>string</td>
+<td>TIPO_POBLACION</td>
+</tr>
+<tr>
+<td>ACTIVIDAD</td>
+<td>string</td>
+<td>ACTIVIDAD</td>
+</tr>
+<tr>
+<td>TOTAL_APORTES</td>
+<td>double</td>
+<td>TOTAL_APORTES</td>
+</tr>
+<tr>
+<td>NUMERO_APORTES</td>
+<td>int64</td>
+<td>NUMERO_APORTES</td>
+</tr>
+</tbody>
+</table>
+<h4 id="particiones_3">Particiones<a class="headerlink" href="#particiones_3" title="Permanent link">&para;</a></h4>
+<p><strong>1. Nombre de la Partición</strong>: <code>Partition</code>.</p>
+<p><strong>2. Vista de Datos</strong>: <code>full</code> (carga completa de los datos).</p>
+<p><strong>3. Fuente</strong>:</p>
+<ul>
+<li><strong>Tipo</strong>: <code>m</code>.</li>
+<li><strong>Expresión</strong>:
+     <div class="highlight"><pre><span></span><code><span class="n">let</span>
+<span class="w">    </span><span class="k">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="ss">&quot;SQL/10 5 21 29\bi;DWH_COMFENALCO&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Transversal_FACT_ACTIVIDADES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Source</span><span class="err">{</span><span class="p">[</span><span class="k">Schema</span><span class="o">=</span><span class="ss">&quot;Transversal&quot;</span><span class="p">,</span><span class="n">Item</span><span class="o">=</span><span class="ss">&quot;FACT_ACTIVIDADES&quot;</span><span class="p">]</span><span class="err">}</span><span class="p">[</span><span class="k">Data</span><span class="p">]</span>
+<span class="k">in</span>
+<span class="w">    </span><span class="n">Transversal_FACT_ACTIVIDADES</span>
+</code></pre></div></li>
+</ul>
+<h4 id="proposito_3">Propósito<a class="headerlink" href="#proposito_3" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>FACT_ACTIVIDADES</strong> se utiliza para:</p>
+<ul>
+<li>Analizar información demográfica, económica y de aportes de afiliados y empresas.</li>
+<li>Calcular métricas relacionadas con actividades y aportes.</li>
+<li>Proveer datos detallados para informes y análisis multidimensionales.</li>
+</ul>
+<h3 id="tabla-transversal-fact_personal">Tabla: Transversal FACT_PERSONAL<a class="headerlink" href="#tabla-transversal-fact_personal" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_4">Descripción General<a class="headerlink" href="#descripcion-general_4" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>Transversal FACT_PERSONAL</strong> almacena información relacionada con el personal, sus asignaciones y las horas contratadas. Es útil para el análisis de recursos humanos y la planificación operativa.</p>
+<hr />
+<h4 id="estructura-de-la-tabla_4">Estructura de la Tabla<a class="headerlink" href="#estructura-de-la-tabla_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo de Datos</th>
+<th>Columna Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID_FECHA</td>
+<td>int64</td>
+<td>ID_FECHA</td>
+</tr>
+<tr>
+<td>ID_PERSONAL</td>
+<td>int64</td>
+<td>ID_PERSONAL</td>
+</tr>
+<tr>
+<td>NOMBRE</td>
+<td>string</td>
+<td>NOMBRE</td>
+</tr>
+<tr>
+<td>CONCEPTO</td>
+<td>string</td>
+<td>CONCEPTO</td>
+</tr>
+<tr>
+<td>DESCRIPCION</td>
+<td>string</td>
+<td>DESCRIPCION</td>
+</tr>
+<tr>
+<td>FECHA_FIN</td>
+<td>dateTime</td>
+<td>FECHA_FIN</td>
+</tr>
+<tr>
+<td>HORAS_CONTRATADAS_MENSUAL</td>
+<td>int64</td>
+<td>HORAS_CONTRATADAS_MENSUAL</td>
+</tr>
+<tr>
+<td>ID_UNIDAD</td>
+<td>int64</td>
+<td>ID_UNIDAD</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="particiones_4">Particiones<a class="headerlink" href="#particiones_4" title="Permanent link">&para;</a></h4>
+<p><strong>1. Nombre de la Partición</strong>: <code>Partition</code>.</p>
+<p><strong>2. Vista de Datos</strong>: <code>full</code> (carga completa de los datos).</p>
+<p><strong>3. Fuente</strong>:</p>
+<ul>
+<li><strong>Tipo</strong>: <code>m</code>.</li>
+<li><strong>Expresión</strong>:
+     <div class="highlight"><pre><span></span><code><span class="n">let</span>
+<span class="w">    </span><span class="k">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="ss">&quot;SQL/10 5 21 29\bi;DWH_COMFENALCO&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Transversal_FACT_PERSONAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Source</span><span class="err">{</span><span class="p">[</span><span class="k">Schema</span><span class="o">=</span><span class="ss">&quot;Transversal&quot;</span><span class="p">,</span><span class="n">Item</span><span class="o">=</span><span class="ss">&quot;FACT_PERSONAL&quot;</span><span class="p">]</span><span class="err">}</span><span class="p">[</span><span class="k">Data</span><span class="p">]</span>
+<span class="k">in</span>
+<span class="w">    </span><span class="n">Transversal_FACT_PERSONAL</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h4 id="proposito_4">Propósito<a class="headerlink" href="#proposito_4" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>FACT_PERSONAL</strong> se utiliza para:</p>
+<ul>
+<li>Analizar las asignaciones y contratos del personal.</li>
+<li>Monitorear las horas contratadas mensualmente.</li>
+<li>Relacionar los datos del personal con otras dimensiones para informes y planificación estratégica.</li>
+</ul>
+<h3 id="tabla-transversal-fact_financiera">Tabla: Transversal FACT_FINANCIERA<a class="headerlink" href="#tabla-transversal-fact_financiera" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_5">Descripción General<a class="headerlink" href="#descripcion-general_5" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>Transversal FACT_FINANCIERA</strong> contiene información detallada sobre los datos financieros de la organización, incluyendo cuentas, ingresos, gastos, y resultados. Es una fuente fundamental para el análisis financiero y la generación de informes.</p>
+<hr />
+<h4 id="estructura-de-la-tabla_5">Estructura de la Tabla<a class="headerlink" href="#estructura-de-la-tabla_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo de Datos</th>
+<th>Columna Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID_FECHA</td>
+<td>int64</td>
+<td>ID_FECHA</td>
+</tr>
+<tr>
+<td>ID_ANIO</td>
+<td>int64</td>
+<td>ID_ANIO</td>
+</tr>
+<tr>
+<td>ID_MES</td>
+<td>int64</td>
+<td>ID_MES</td>
+</tr>
+<tr>
+<td>ID_CEBE</td>
+<td>string</td>
+<td>ID_CEBE</td>
+</tr>
+<tr>
+<td>CEBE</td>
+<td>string</td>
+<td>CEBE</td>
+</tr>
+<tr>
+<td>DESCRIPCION_CEBE</td>
+<td>string</td>
+<td>DESCRIPCION_CEBE</td>
+</tr>
+<tr>
+<td>DEPARTAMENTO</td>
+<td>string</td>
+<td>DEPARTAMENTO</td>
+</tr>
+<tr>
+<td>AREA</td>
+<td>string</td>
+<td>AREA</td>
+</tr>
+<tr>
+<td>SUBAREA</td>
+<td>string</td>
+<td>SUBAREA</td>
+</tr>
+<tr>
+<td>SEGMENTO</td>
+<td>string</td>
+<td>SEGMENTO</td>
+</tr>
+<tr>
+<td>DESCRIPCION_SEGMENTO</td>
+<td>string</td>
+<td>DESCRIPCION_SEGMENTO</td>
+</tr>
+<tr>
+<td>CODIGO_SSF</td>
+<td>int64</td>
+<td>CODIGO_SSF</td>
+</tr>
+<tr>
+<td>NOMBRE_SSF</td>
+<td>string</td>
+<td>NOMBRE_SSF</td>
+</tr>
+<tr>
+<td>ID_CUENTA</td>
+<td>string</td>
+<td>ID_CUENTA</td>
+</tr>
+<tr>
+<td>CUENTA</td>
+<td>string</td>
+<td>CUENTA</td>
+</tr>
+<tr>
+<td>CUENTA_HOMOLOGA</td>
+<td>string</td>
+<td>CUENTA_HOMOLOGA</td>
+</tr>
+<tr>
+<td>DESCRIPCION</td>
+<td>string</td>
+<td>DESCRIPCION</td>
+</tr>
+<tr>
+<td>TIPO_CUENTA</td>
+<td>string</td>
+<td>TIPO_CUENTA</td>
+</tr>
+<tr>
+<td>TIPO_OPERACION</td>
+<td>string</td>
+<td>TIPO_OPERACION</td>
+</tr>
+<tr>
+<td>GRUPO_CUENTA</td>
+<td>string</td>
+<td>GRUPO_CUENTA</td>
+</tr>
+<tr>
+<td>SUBGRUPO_CUENTA</td>
+<td>string</td>
+<td>SUBGRUPO_CUENTA</td>
+</tr>
+<tr>
+<td>GRUPO_OPERACION</td>
+<td>string</td>
+<td>GRUPO_OPERACION</td>
+</tr>
+<tr>
+<td>CUENTA_SSF</td>
+<td>string</td>
+<td>CUENTA_SSF</td>
+</tr>
+<tr>
+<td>DESCRIPCION_SSF</td>
+<td>string</td>
+<td>DESCRIPCION_SSF</td>
+</tr>
+<tr>
+<td>CUENTA_DESCRIPCION</td>
+<td>string</td>
+<td>CUENTA_DESCRIPCION</td>
+</tr>
+<tr>
+<td>CUENTA_DESCRIPCION_SSF</td>
+<td>string</td>
+<td>CUENTA_DESCRIPCION_SSF</td>
+</tr>
+<tr>
+<td>SIGNO_INGRESOS</td>
+<td>int64</td>
+<td>SIGNO_INGRESOS</td>
+</tr>
+<tr>
+<td>CLASIFICACION</td>
+<td>int64</td>
+<td>CLASIFICACION</td>
+</tr>
+<tr>
+<td>SEGMENT</td>
+<td>string</td>
+<td>SEGMENT</td>
+</tr>
+<tr>
+<td>IMPORTE</td>
+<td>int64</td>
+<td>IMPORTE</td>
+</tr>
+<tr>
+<td>INGRESOS</td>
+<td>int64</td>
+<td>INGRESOS</td>
+</tr>
+<tr>
+<td>INGRESOS_OPERACIONALES</td>
+<td>int64</td>
+<td>INGRESOS_OPERACIONALES</td>
+</tr>
+<tr>
+<td>GASTOS</td>
+<td>int64</td>
+<td>GASTOS</td>
+</tr>
+<tr>
+<td>GASTOS_OPERACIONALES</td>
+<td>int64</td>
+<td>GASTOS_OPERACIONALES</td>
+</tr>
+<tr>
+<td>GASTOS_OPERACIONALES_ADMIN</td>
+<td>int64</td>
+<td>GASTOS_OPERACIONALES_ADMIN</td>
+</tr>
+<tr>
+<td>RESULTADO_EJERCICIO</td>
+<td>int64</td>
+<td>RESULTADO_EJERCICIO</td>
+</tr>
+<tr>
+<td>COSTOS</td>
+<td>int64</td>
+<td>COSTOS</td>
+</tr>
+<tr>
+<td>ACTIVO</td>
+<td>int64</td>
+<td>ACTIVO</td>
+</tr>
+<tr>
+<td>PASIVO</td>
+<td>int64</td>
+<td>PASIVO</td>
+</tr>
+<tr>
+<td>PATRIMONIO</td>
+<td>int64</td>
+<td>PATRIMONIO</td>
+</tr>
+<tr>
+<td>GASTOS_CON_DISTRIBUCION</td>
+<td>int64</td>
+<td>GASTOS_CON_DISTRIBUCION</td>
+</tr>
+<tr>
+<td>GASTOS_SIN_DISTRIBUCION</td>
+<td>int64</td>
+<td>GASTOS_SIN_DISTRIBUCION</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="particiones_5">Particiones<a class="headerlink" href="#particiones_5" title="Permanent link">&para;</a></h4>
+<p><strong>1. Nombre de la Partición</strong>: <code>Partition</code>.</p>
+<p><strong>2. Vista de Datos</strong>: <code>full</code> (carga completa de los datos).</p>
+<p><strong>3. Fuente</strong>:</p>
+<ul>
+<li><strong>Tipo</strong>: <code>m</code>.</li>
+<li><strong>Expresión</strong>:
+     <div class="highlight"><pre><span></span><code><span class="n">let</span>
+<span class="w">    </span><span class="k">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="ss">&quot;SQL/10 5 21 29\bi;DWH_COMFENALCO&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Transversal_FACT_FINANCIERA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Source</span><span class="err">{</span><span class="p">[</span><span class="k">Schema</span><span class="o">=</span><span class="ss">&quot;Transversal&quot;</span><span class="p">,</span><span class="n">Item</span><span class="o">=</span><span class="ss">&quot;FACT_FINANCIERA&quot;</span><span class="p">]</span><span class="err">}</span><span class="p">[</span><span class="k">Data</span><span class="p">]</span>
+<span class="k">in</span>
+<span class="w">    </span><span class="n">Transversal_FACT_FINANCIERA</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h4 id="proposito_5">Propósito<a class="headerlink" href="#proposito_5" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>FACT_FINANCIERA</strong> se utiliza para:</p>
+<ul>
+<li>Analizar el comportamiento financiero de la organización.</li>
+<li>Evaluar ingresos, gastos, costos, y resultados financieros.</li>
+<li>Relacionar los datos financieros con otras dimensiones para análisis multidimensionales y generación de informes detallados.</li>
+</ul>
+<h3 id="tabla-transversal-fact_evaluacion_docente">Tabla: Transversal FACT_EVALUACION_DOCENTE<a class="headerlink" href="#tabla-transversal-fact_evaluacion_docente" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_6">Descripción General<a class="headerlink" href="#descripcion-general_6" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>Transversal FACT_EVALUACION_DOCENTE</strong> almacena información relacionada con las evaluaciones académicas de los docentes, incluyendo calificaciones definitivas, períodos académicos y datos personales. Es clave para el análisis del desempeño docente.</p>
+<hr />
+<h4 id="estructura-de-la-tabla_6">Estructura de la Tabla<a class="headerlink" href="#estructura-de-la-tabla_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo de Datos</th>
+<th>Columna Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PERIODO_ACADEMICO</td>
+<td>string</td>
+<td>PERIODO_ACADEMICO</td>
+</tr>
+<tr>
+<td>ID_UNIDAD</td>
+<td>int64</td>
+<td>ID_UNIDAD</td>
+</tr>
+<tr>
+<td>ID_PERSONAL</td>
+<td>int64</td>
+<td>ID_PERSONAL</td>
+</tr>
+<tr>
+<td>NOMBRE_DOCENTE</td>
+<td>string</td>
+<td>NOMBRE_DOCENTE</td>
+</tr>
+<tr>
+<td>CALIFICACION_DEFINITIVA</td>
+<td>string</td>
+<td>CALIFICACION_DEFINITIVA</td>
+</tr>
+<tr>
+<td>ID_FECHA</td>
+<td>int64</td>
+<td>ID_FECHA</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="particiones_6">Particiones<a class="headerlink" href="#particiones_6" title="Permanent link">&para;</a></h4>
+<p><strong>1. Nombre de la Partición</strong>: <code>Partition</code>.</p>
+<p><strong>2. Vista de Datos</strong>: <code>full</code> (carga completa de los datos).</p>
+<p><strong>3. Fuente</strong>:</p>
+<ul>
+<li><strong>Tipo</strong>: <code>m</code>.</li>
+<li><strong>Expresión</strong>:
+     <div class="highlight"><pre><span></span><code><span class="n">let</span>
+<span class="w">    </span><span class="k">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="ss">&quot;SQL/10 5 21 29\bi;DWH_COMFENALCO&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Transversal_FACT_EVALUACION_DOCENTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Source</span><span class="err">{</span><span class="p">[</span><span class="k">Schema</span><span class="o">=</span><span class="ss">&quot;Transversal&quot;</span><span class="p">,</span><span class="n">Item</span><span class="o">=</span><span class="ss">&quot;FACT_EVALUACION_DOCENTE&quot;</span><span class="p">]</span><span class="err">}</span><span class="p">[</span><span class="k">Data</span><span class="p">]</span>
+<span class="k">in</span>
+<span class="w">    </span><span class="n">Transversal_FACT_EVALUACION_DOCENTE</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h4 id="proposito_6">Propósito<a class="headerlink" href="#proposito_6" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>FACT_EVALUACION_DOCENTE</strong> se utiliza para:</p>
+<ul>
+<li>Analizar el desempeño académico de los docentes.</li>
+<li>Generar informes de calificaciones definitivas por período académico.</li>
+<li>Relacionar datos de evaluación docente con otras dimensiones como unidades y fechas.</li>
+</ul>
+<h3 id="tabla-calculatedtableindicadores">Tabla: CalculatedTableIndicadores<a class="headerlink" href="#tabla-calculatedtableindicadores" title="Permanent link">&para;</a></h3>
+<h4 id="descripcion-general_7">Descripción General<a class="headerlink" href="#descripcion-general_7" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>CalculatedTableIndicadores</strong> es una tabla calculada que contiene indicadores clave para el análisis y evaluación del rendimiento en diversas áreas, como cobertura, movilidad académica, promoción, deserción, matrículas, graduados, y satisfacción.</p>
+<p><img alt="alt text" src="../../images/CalculatedTableIndicadores.png" /></p>
+<h4 id="estructura-de-la-tabla_7">Estructura de la Tabla<a class="headerlink" href="#estructura-de-la-tabla_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo de Datos</th>
+<th>Columna Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>indicador</td>
+<td>string (calculada)</td>
+<td>[indicador]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="particiones_7">Particiones<a class="headerlink" href="#particiones_7" title="Permanent link">&para;</a></h4>
+<p><strong>1. Nombre de la Partición</strong>: <code>CalculatedTable 1</code>.</p>
+<p><strong>2. Fuente</strong>:</p>
+<ul>
+<li><strong>Tipo</strong>: <code>calculated</code>.</li>
+<li><strong>Expresión</strong>:
+     <div class="highlight"><pre><span></span><code><span class="n">DATATABLE</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="ss">&quot;indicador&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="err">{</span><span class="w"> </span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Cumplimiento Cobertura&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Cobertura Proyectada&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Movilidad Academica&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Porcentaje de Promoción&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Porcentaje de Deserción&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Cantidad de Matrículas&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Cantidad de Graduados&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Cantidad de PQRs&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Nivel de satisfacción a partir de la NSU promedio&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Promotores promedio del Proceso a partir de la NSU&quot;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">        </span><span class="err">{</span><span class="ss">&quot;Detractores promedio del Proceso a partir de la NSU&quot;</span><span class="err">}</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="p">)</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h4 id="proposito_7">Propósito<a class="headerlink" href="#proposito_7" title="Permanent link">&para;</a></h4>
+<p>La tabla <strong>CalculatedTableIndicadores</strong> se utiliza para:</p>
+<ul>
+<li>Listar y categorizar indicadores clave para el análisis.</li>
+<li>Servir como base para reportes y consultas específicas relacionadas con la evaluación del desempeño.</li>
+<li>Proveer una visión consolidada de los indicadores más relevantes para la organización.</li>
+</ul>
+<h2 id="relaciones-del-modelo">Relaciones del Modelo<a class="headerlink" href="#relaciones-del-modelo" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion-general_8">Descripción General<a class="headerlink" href="#descripcion-general_8" title="Permanent link">&para;</a></h3>
+<p>Las relaciones definen cómo las tablas del modelo interactúan entre sí, asegurando la coherencia y la integridad de los datos en los análisis. A continuación se detallan las relaciones establecidas entre las tablas del modelo.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nombre</strong></th>
+<th><strong>Tabla Origen</strong></th>
+<th><strong>Columna Origen</strong></th>
+<th><strong>Tabla Destino</strong></th>
+<th><strong>Columna Destino</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e8e7ee5e-2bb5-447c-8a42-40fa4ccf9143</td>
+<td>Transversal FACT_ACTIVIDADES</td>
+<td>ID_UNIDAD</td>
+<td>Transversal DIM_UNIDAD</td>
+<td>ID_UNIDAD</td>
+</tr>
+<tr>
+<td>1a8196d0-09e6-4d0c-9f29-4a8d0ff4ee13</td>
+<td>Transversal FACT_ACTIVIDADES</td>
+<td>ID_CATEGORIA</td>
+<td>Transversal DIM_CATEGORIA</td>
+<td>COD_CATEGORIA</td>
+</tr>
+<tr>
+<td>e4a99626-9ef6-4da8-89db-664ec2a6d8c8</td>
+<td>Transversal FACT_ACTIVIDADES</td>
+<td>ID_FECHA</td>
+<td>Transversal DIM_TIEMPO_MENSUAL</td>
+<td>ID_FECHA</td>
+</tr>
+<tr>
+<td>395ef55c-3800-4448-bc48-46690276bd39</td>
+<td>Transversal FACT_PERSONAL</td>
+<td>ID_FECHA</td>
+<td>Transversal DIM_TIEMPO_MENSUAL</td>
+<td>ID_FECHA</td>
+</tr>
+<tr>
+<td>cdfe13d4-3917-431a-b0c9-b496df147a20</td>
+<td>Transversal FACT_PERSONAL</td>
+<td>ID_UNIDAD</td>
+<td>Transversal DIM_UNIDAD</td>
+<td>ID_UNIDAD</td>
+</tr>
+<tr>
+<td>a8efdf32-e907-42ab-a950-937906c7b167</td>
+<td>Transversal FACT_EVALUACION_DOCENTE</td>
+<td>ID_UNIDAD</td>
+<td>Transversal DIM_UNIDAD</td>
+<td>ID_UNIDAD</td>
+</tr>
+<tr>
+<td>632bc53c-67b6-4634-82f9-8adbfc71e691</td>
+<td>Transversal FACT_EVALUACION_DOCENTE</td>
+<td>ID_FECHA</td>
+<td>Transversal DIM_TIEMPO_MENSUAL</td>
+<td>ID_FECHA</td>
+</tr>
+<tr>
+<td>7246e8e1-e2c3-4a17-89eb-c077680b0f6b</td>
+<td>Transversal FACT_FINANCIERA</td>
+<td>ID_FECHA</td>
+<td>Transversal DIM_TIEMPO_MENSUAL</td>
+<td>ID_FECHA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="diagrama-de-relaciones-y-tablas">Diagrama de Relaciones y Tablas<a class="headerlink" href="#diagrama-de-relaciones-y-tablas" title="Permanent link">&para;</a></h3>
+<p>A continuación, se presenta el diagrama de relaciones del modelo utilizando formato Mermaid para visualizar las conexiones entre tablas y sus relaciones:</p>
+<pre class="mermaid"><code>graph TD
+    FACT_ACTIVIDADES[Transversal FACT_ACTIVIDADES]
+    FACT_PERSONAL[Transversal FACT_PERSONAL]
+    FACT_FINANCIERA[Transversal FACT_FINANCIERA]
+    FACT_EVALUACION_DOCENTE[Transversal FACT_EVALUACION_DOCENTE]
+    DIM_UNIDAD[Transversal DIM_UNIDAD]
+    DIM_CATEGORIA[Transversal DIM_CATEGORIA]
+    DIM_TIEMPO[Transversal DIM_TIEMPO_MENSUAL]
+
+    FACT_ACTIVIDADES --&gt; DIM_UNIDAD[ID_UNIDAD]
+    FACT_ACTIVIDADES --&gt; DIM_CATEGORIA[ID_CATEGORIA]
+    FACT_ACTIVIDADES --&gt; DIM_TIEMPO[ID_FECHA]
+    FACT_PERSONAL --&gt; DIM_TIEMPO[ID_FECHA]
+    FACT_PERSONAL --&gt; DIM_UNIDAD[ID_UNIDAD]
+    FACT_FINANCIERA --&gt; DIM_TIEMPO[ID_FECHA]
+    FACT_EVALUACION_DOCENTE --&gt; DIM_UNIDAD[ID_UNIDAD]
+    FACT_EVALUACION_DOCENTE --&gt; DIM_TIEMPO[ID_FECHA]</code></pre>
+<hr />
+<h4 id="explicacion-del-diagrama">Explicación del Diagrama<a class="headerlink" href="#explicacion-del-diagrama" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Limpieza del Esquema</strong>:</li>
 <li>
-<p>Eliminación de tablas, restricciones de claves foráneas y el esquema existente para asegurar una implementación limpia.</p>
+<p><strong>Tablas de Hechos</strong>:</p>
+<ul>
+<li><strong>FACT_ACTIVIDADES</strong>: Conecta con <strong>DIM_UNIDAD</strong>, <strong>DIM_CATEGORIA</strong>, y <strong>DIM_TIEMPO_MENSUAL</strong>.</li>
+<li><strong>FACT_PERSONAL</strong>: Relacionada con <strong>DIM_UNIDAD</strong> y <strong>DIM_TIEMPO_MENSUAL</strong>.</li>
+<li><strong>FACT_FINANCIERA</strong>: Conecta con <strong>DIM_TIEMPO_MENSUAL</strong>.</li>
+<li><strong>FACT_EVALUACION_DOCENTE</strong>: Conecta con <strong>DIM_UNIDAD</strong> y <strong>DIM_TIEMPO_MENSUAL</strong>.</li>
+</ul>
 </li>
 <li>
-<p><strong>Creación de un Modelo Dimensional</strong>:</p>
+<p><strong>Tablas de Dimensiones</strong>:</p>
+<ul>
+<li><strong>DIM_UNIDAD</strong>: Relaciona hechos mediante el campo <code>ID_UNIDAD</code>.</li>
+<li><strong>DIM_CATEGORIA</strong>: Relaciona hechos mediante el campo <code>ID_CATEGORIA</code>.</li>
+<li><strong>DIM_TIEMPO_MENSUAL</strong>: Relaciona hechos mediante el campo <code>ID_FECHA</code>.</li>
+</ul>
 </li>
-<li><strong>Tablas de Dimensiones (<code>DIM</code>)</strong>: Almacenan datos descriptivos y categorizados de estudiantes, programas, periodos académicos, etc.</li>
-<li>
-<p><strong>Tablas de Hechos (<code>FACT</code>)</strong>: Contienen métricas y relaciones con dimensiones, enfocándose en datos transaccionales y analíticos.</p>
-</li>
-<li>
-<p><strong>Integridad Referencial</strong>:</p>
-</li>
-<li>Relaciones estrictas mediante claves foráneas entre las dimensiones y los hechos.</li>
 </ol>
-<hr />
-<h2 id="estructura-del-modelo">Estructura del Modelo<a class="headerlink" href="#estructura-del-modelo" title="Permanent link">&para;</a></h2>
-<h3 id="tablas-dimensionales">Tablas Dimensionales<a class="headerlink" href="#tablas-dimensionales" title="Permanent link">&para;</a></h3>
-<h4 id="1-dim_estudiantes">1. <strong>DIM_ESTUDIANTES</strong><a class="headerlink" href="#1-dim_estudiantes" title="Permanent link">&para;</a></h4>
-<p>Información básica de los estudiantes, como su tipo de documento y relaciones con otras dimensiones.</p>
-<table>
-<thead>
-<tr>
-<th>Columna</th>
-<th>Tipo</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ID_ESTUDIANTE</code></td>
-<td><code>int</code></td>
-<td>Identificador único del estudiante.</td>
-</tr>
-<tr>
-<td><code>TIPO_DOCUMENTO</code></td>
-<td><code>nvarchar</code></td>
-<td>Tipo de documento del estudiante.</td>
-</tr>
-<tr>
-<td><code>DOCUMENTO</code></td>
-<td><code>nvarchar</code></td>
-<td>Número de documento del estudiante.</td>
-</tr>
-<tr>
-<td><code>ID_EMPRESA</code></td>
-<td><code>int</code></td>
-<td>Relación con la tabla <code>DIM_EMPRESAS</code>.</td>
-</tr>
-<tr>
-<td><code>ID_AFILIADO</code></td>
-<td><code>int</code></td>
-<td>Relación con la tabla <code>DIM_AFILIADOS</code>.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="2-dim_periodo_academico">2. <strong>DIM_PERIODO_ACADEMICO</strong><a class="headerlink" href="#2-dim_periodo_academico" title="Permanent link">&para;</a></h4>
-<p>Define los periodos académicos asociados a programas y estudiantes.</p>
-<table>
-<thead>
-<tr>
-<th>Columna</th>
-<th>Tipo</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ID_PERIODO</code></td>
-<td><code>int</code></td>
-<td>Identificador único del periodo académico.</td>
-</tr>
-<tr>
-<td><code>PERIODO_ACADEMICO</code></td>
-<td><code>nvarchar</code></td>
-<td>Descripción del periodo académico.</td>
-</tr>
-<tr>
-<td><code>FECHA_INICIO</code></td>
-<td><code>datetime</code></td>
-<td>Fecha de inicio del periodo académico.</td>
-</tr>
-<tr>
-<td><code>FECHA_FIN</code></td>
-<td><code>datetime</code></td>
-<td>Fecha de finalización del periodo académico.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="3-dim_programa">3. <strong>DIM_PROGRAMA</strong><a class="headerlink" href="#3-dim_programa" title="Permanent link">&para;</a></h4>
-<p>Programas académicos asociados a estudiantes.</p>
-<table>
-<thead>
-<tr>
-<th>Columna</th>
-<th>Tipo</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ID_PROGRAMA</code></td>
-<td><code>int</code></td>
-<td>Identificador único del programa.</td>
-</tr>
-<tr>
-<td><code>PROGRAMA</code></td>
-<td><code>nvarchar</code></td>
-<td>Nombre del programa.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="tablas-de-hechos">Tablas de Hechos<a class="headerlink" href="#tablas-de-hechos" title="Permanent link">&para;</a></h3>
-<h4 id="1-fact_notas">1. <strong>FACT_NOTAS</strong><a class="headerlink" href="#1-fact_notas" title="Permanent link">&para;</a></h4>
-<p>Registra las notas de estudiantes por periodos académicos y módulos.</p>
-<table>
-<thead>
-<tr>
-<th>Columna</th>
-<th>Tipo</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ID_NOTA</code></td>
-<td><code>int</code></td>
-<td>Identificador único de la nota.</td>
-</tr>
-<tr>
-<td><code>ID_ESTUDIANTE</code></td>
-<td><code>int</code></td>
-<td>Relación con <code>DIM_ESTUDIANTES</code>.</td>
-</tr>
-<tr>
-<td><code>ID_PERIODO</code></td>
-<td><code>int</code></td>
-<td>Relación con <code>DIM_PERIODO_ACADEMICO</code>.</td>
-</tr>
-<tr>
-<td><code>PRIMER_CORTE</code></td>
-<td><code>decimal</code></td>
-<td>Nota del primer corte.</td>
-</tr>
-<tr>
-<td><code>SEGUNDO_CORTE</code></td>
-<td><code>decimal</code></td>
-<td>Nota del segundo corte.</td>
-</tr>
-<tr>
-<td><code>TERCER_CORTE</code></td>
-<td><code>decimal</code></td>
-<td>Nota del tercer corte.</td>
-</tr>
-<tr>
-<td><code>NOTA_FINAL</code></td>
-<td><code>decimal</code></td>
-<td>Nota final acumulada.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="2-fact_horario">2. <strong>FACT_HORARIO</strong><a class="headerlink" href="#2-fact_horario" title="Permanent link">&para;</a></h4>
-<p>Registra los horarios académicos por estudiante y módulo.</p>
-<table>
-<thead>
-<tr>
-<th>Columna</th>
-<th>Tipo</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ID_HORARIO</code></td>
-<td><code>int</code></td>
-<td>Identificador único del horario.</td>
-</tr>
-<tr>
-<td><code>ID_MODULO</code></td>
-<td><code>int</code></td>
-<td>Relación con <code>DIM_PLAN_CURRICULAR</code>.</td>
-</tr>
-<tr>
-<td><code>ID_JORNADA</code></td>
-<td><code>int</code></td>
-<td>Relación con <code>DIM_JORNADA</code>.</td>
-</tr>
-<tr>
-<td><code>DIA</code></td>
-<td><code>nvarchar</code></td>
-<td>Día de la clase.</td>
-</tr>
-<tr>
-<td><code>HORA_INICIO</code></td>
-<td><code>nvarchar</code></td>
-<td>Hora de inicio de la clase.</td>
-</tr>
-<tr>
-<td><code>HORA_FIN</code></td>
-<td><code>nvarchar</code></td>
-<td>Hora de fin de la clase.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="relaciones-dimensionales-y-tablas-de-hechos">Relaciones Dimensionales y Tablas de Hechos<a class="headerlink" href="#relaciones-dimensionales-y-tablas-de-hechos" title="Permanent link">&para;</a></h3>
-<h4 id="diagrama-general-del-modelo">Diagrama General del Modelo<a class="headerlink" href="#diagrama-general-del-modelo" title="Permanent link">&para;</a></h4>
-<pre class="mermaid"><code>erDiagram
-    DIM_ESTUDIANTES {
-        int ID_ESTUDIANTE PK
-        nvarchar TIPO_DOCUMENTO
-        nvarchar DOCUMENTO
-    }
-
-    DIM_PROGRAMA {
-        int ID_PROGRAMA PK
-        nvarchar PROGRAMA
-    }
-
-    DIM_PERIODO_ACADEMICO {
-        int ID_PERIODO PK
-        nvarchar PERIODO_ACADEMICO
-        datetime FECHA_INICIO
-        datetime FECHA_FIN
-    }
-
-    DIM_JORNADA {
-        int ID_JORNADA PK
-        nvarchar JORNADA
-    }
-
-    DIM_PLAN_CURRICULAR {
-        int ID_MODULO PK
-        nvarchar MODULO
-    }
-
-    FACT_NOTAS {
-        int ID_NOTA PK
-        int ID_ESTUDIANTE FK
-        int ID_PERIODO FK
-        int ID_MODULO FK
-        decimal PRIMER_CORTE
-        decimal NOTA_FINAL
-    }
-
-    FACT_HORARIO {
-        int ID_HORARIO PK
-        int ID_PERIODO FK
-        int ID_MODULO FK
-        int ID_JORNADA FK
-    }
-
-    DIM_ESTUDIANTES ||--o{ FACT_NOTAS : "ID_ESTUDIANTE"
-    DIM_PERIODO_ACADEMICO ||--o{ FACT_NOTAS : "ID_PERIODO"
-    DIM_PLAN_CURRICULAR ||--o{ FACT_NOTAS : "ID_MODULO"
-    DIM_PLAN_CURRICULAR ||--o{ FACT_HORARIO : "ID_MODULO"
-    DIM_PERIODO_ACADEMICO ||--o{ FACT_HORARIO : "ID_PERIODO"
-    DIM_JORNADA ||--o{ FACT_HORARIO : "ID_JORNADA"</code></pre>
-<hr />
-<h3 id="buenas-practicas-implementadas">Buenas Prácticas Implementadas<a class="headerlink" href="#buenas-practicas-implementadas" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Integridad Referencial</strong>:</li>
+<h4 id="proposito-de-las-relaciones">Propósito de las Relaciones<a class="headerlink" href="#proposito-de-las-relaciones" title="Permanent link">&para;</a></h4>
+<ul>
 <li>
-<p>Uso de claves foráneas para mantener la consistencia entre dimensiones y hechos.</p>
+<p><strong>Conexión entre hechos y dimensiones</strong>: Permitir que las tablas de hechos como <strong>FACT_ACTIVIDADES</strong>, <strong>FACT_PERSONAL</strong>, <strong>FACT_FINANCIERA</strong> y <strong>FACT_EVALUACION_DOCENTE</strong> se relacionen directamente con sus dimensiones correspondientes.</p>
 </li>
 <li>
-<p><strong>Eficiencia del Modelo</strong>:</p>
-</li>
-<li>Modelado dimensional para facilitar consultas analíticas.</li>
-<li>
-<p>Separación entre datos descriptivos (<code>DIM</code>) y métricas (<code>FACT</code>).</p>
+<p><strong>Integridad de Datos</strong>: Garantizar que los datos en el modelo estén relacionados de manera lógica y consistente.</p>
 </li>
 <li>
-<p><strong>Flexibilidad y Escalabilidad</strong>:</p>
+<p><strong>Facilitar el Análisis Multidimensional</strong>: Habilitar análisis por jerarquías y categorías, como tiempo, unidad, y categoría.</p>
 </li>
-<li>
-<p>Las tablas permiten agregar nuevas dimensiones y hechos sin afectar el esquema general.</p>
-</li>
-<li>
-<p><strong>Normalización</strong>:</p>
-</li>
-<li>Uso de dimensiones comunes para evitar redundancia.</li>
-</ol>
-<hr />
-<h2 id="conclusion">Conclusión<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>El esquema <code>Cedesarrollo</code> ofrece un modelo integral y escalable para gestionar datos académicos y administrativos en un entorno analítico. La estructura permite un análisis detallado de estudiantes, programas y resultados académicos, con un diseño flexible para futuros requerimientos.</p>
+</ul>
 
 
 

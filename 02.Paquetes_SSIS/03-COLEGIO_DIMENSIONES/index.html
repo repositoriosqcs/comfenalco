@@ -834,6 +834,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#componente-truncar-tabla-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Truncar Tabla Temporal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-consulta-sap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Consulta SAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-actualizar-dim_acudientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Actualizar DIM_ACUDIENTES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#componente-descargar_am-edf-153" class="md-nav__link">
     <span class="md-ellipsis">
       Componente Descargar_AM-EDF-153
@@ -852,9 +879,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#componente-agregar-1-a-dim_poblacion" class="md-nav__link">
+  <a href="#componente-validar-si-existe-tabla-para-guardar" class="md-nav__link">
     <span class="md-ellipsis">
-      Componente Agregar -1 a DIM_POBLACION
+      Componente Validar si existe tabla para guardar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-crear-procedimiento-anual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Crear procedimiento anual
     </span>
   </a>
   
@@ -1964,6 +2000,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../00.etl/Utils/download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../00.etl/Utils/Funciones_DM/" class="md-nav__link">
         
   
@@ -2074,6 +2131,27 @@
   
   <span class="md-ellipsis">
     fact_graduados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00.etl/Utils/fact_cotizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fact_cotizacion
   </span>
   
 
@@ -2452,6 +2530,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#componente-truncar-tabla-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Truncar Tabla Temporal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-consulta-sap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Consulta SAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-actualizar-dim_acudientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Actualizar DIM_ACUDIENTES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#componente-descargar_am-edf-153" class="md-nav__link">
     <span class="md-ellipsis">
       Componente Descargar_AM-EDF-153
@@ -2470,9 +2575,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#componente-agregar-1-a-dim_poblacion" class="md-nav__link">
+  <a href="#componente-validar-si-existe-tabla-para-guardar" class="md-nav__link">
     <span class="md-ellipsis">
-      Componente Agregar -1 a DIM_POBLACION
+      Componente Validar si existe tabla para guardar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componente-crear-procedimiento-anual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componente Crear procedimiento anual
     </span>
   </a>
   
@@ -2924,6 +3038,230 @@
     AdoNetSource -&gt;&gt; DataConversion: Salida de origen de ADO NET
     DataConversion -&gt;&gt; Lookup: Data Conversion Output
     Lookup -&gt;&gt; AdoNetDestination: Lookup No Match Output</code></pre>
+<h3 id="componente-truncar-tabla-temporal">Componente <strong><code>Truncar Tabla Temporal</code></strong><a class="headerlink" href="#componente-truncar-tabla-temporal" title="Permanent link">&para;</a></h3>
+<p>Este componente es una tarea de ejecución de SQL (Execute SQL Task) en el paquete SSIS, diseñada para limpiar la tabla temporal utilizada en el proceso ETL del módulo de Acudientes. Su función principal es eliminar todos los registros de la tabla <code>[STAGE_AREA].[Transversal].[TMP_ACUDIENTES_SAP]</code> antes de iniciar la carga de nuevos datos.</p>
+<hr />
+<h5 id="proposito-del-componente">Propósito del Componente<a class="headerlink" href="#proposito-del-componente" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Limpieza de Datos:</strong><br />
+  El objetivo principal es vaciar la tabla temporal para eliminar registros residuales de ejecuciones anteriores, garantizando que la nueva carga de datos se realice sobre una tabla limpia.</p>
+</li>
+<li>
+<p><strong>Garantizar la Integridad:</strong><br />
+  Al eliminar todos los datos anteriores, se evita la mezcla de información vieja y nueva, lo que contribuye a mantener la precisión y consistencia en el proceso ETL.</p>
+</li>
+</ul>
+<hr />
+<h5 id="descripcion-tecnica">Descripción Técnica<a class="headerlink" href="#descripcion-tecnica" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Tipo de Tarea:</strong><br />
+  Execute SQL Task.</p>
+</li>
+<li>
+<p><strong>Propiedades Clave:</strong></p>
+<ul>
+<li><strong>SQL Statement:</strong><br />
+  <div class="highlight"><pre><span></span><code><span class="k">TRUNCATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="p">[</span><span class="n">STAGE_AREA</span><span class="p">].[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">TMP_ACUDIENTES_SAP</span><span class="p">]</span>
+</code></pre></div></li>
+<li><strong>Conexión:</strong><br />
+  Se utiliza una conexión preconfigurada identificada por el GUID <code>{5972EC76-2533-4771-BB68-A92E1CDD645D}</code>, que apunta a la base de datos de destino.</li>
+</ul>
+</li>
+<li>
+<p><strong>Datos del Objeto:</strong></p>
+</li>
+<li><strong>Conexión Utilizada:</strong><br />
+<code>{5972EC76-2533-4771-BB68-A92E1CDD645D}</code></li>
+<li><strong>Sentencia SQL (código):</strong><br />
+    <div class="highlight"><pre><span></span><code><span class="k">TRUNCATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="p">[</span><span class="n">STAGE_AREA</span><span class="p">].[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">TMP_ACUDIENTES_SAP</span><span class="p">]</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h5 id="flujo-de-ejecucion">Flujo de Ejecución<a class="headerlink" href="#flujo-de-ejecucion" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p><strong>Inicio de la Tarea:</strong><br />
+   Al iniciar el paquete SSIS, se ejecuta la tarea de SQL correspondiente.</p>
+</li>
+<li>
+<p><strong>Ejecución de la Sentencia SQL:</strong><br />
+   La sentencia <code>TRUNCATE TABLE [STAGE_AREA].[Transversal].[TMP_ACUDIENTES_SAP]</code> se envía a la base de datos mediante el administrador de conexiones configurado.</p>
+</li>
+<li>
+<p><strong>Limpieza de la Tabla:</strong><br />
+   La tabla temporal se vacía de forma rápida y eficiente, sin registrar individualmente cada eliminación, lo que mejora el rendimiento.</p>
+</li>
+<li>
+<p><strong>Finalización de la Tarea:</strong><br />
+   Una vez completada la operación, la tarea finaliza, permitiendo que el proceso ETL continúe con las etapas siguientes de carga y transformación.</p>
+</li>
+</ol>
+<hr />
+<h5 id="diagrama-de-secuencia_1">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_1" title="Permanent link">&para;</a></h5>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SQLTask as Truncar Tabla Temporal
+    participant DB as Base de Datos
+
+    SQLTask -&gt;&gt; DB: Ejecuta "TRUNCATE TABLE [STAGE_AREA].[Transversal].[TMP_ACUDIENTES_SAP]"
+    DB --&gt;&gt; SQLTask: Confirmación de limpieza</code></pre>
+<h3 id="componente-consulta-sap">Componente <strong><code>Consulta SAP</code></strong><a class="headerlink" href="#componente-consulta-sap" title="Permanent link">&para;</a></h3>
+<p>Este componente es una tarea de flujo de datos (Data Flow Task) dentro del paquete SSIS, diseñada para extraer y consolidar datos provenientes del sistema SAP. Utiliza una consulta SQL compleja (con múltiples CTE) para obtener información detallada de los acudientes y estudiantes, integrando datos de diversas tablas de SAP y enriqueciendo la información mediante cálculos y conversiones. La salida de este componente se utiliza para alimentar procesos de integración posteriores en el flujo ETL.</p>
+<hr />
+<h5 id="proposito-del-componente_1">Propósito del Componente<a class="headerlink" href="#proposito-del-componente_1" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Extracción de Datos desde SAP:</strong><br />
+  Recuperar información relevante de acudientes y estudiantes a partir de múltiples fuentes de datos en el sistema SAP. Esto incluye datos personales, detalles de contactos (teléfonos, direcciones y correos electrónicos) y claves de identificación para su posterior vinculación en el proceso ETL.</p>
+</li>
+<li>
+<p><strong>Consolidación y Enriquecimiento:</strong><br />
+  Unir y transformar datos mediante CTEs para combinar información de tablas como HRP1001, BUT000, y otras, integrando además datos de contactos recientes (teléfonos, direcciones y emails) y claves de estudiantes. Esto permite obtener un dataset completo que relaciona la información de acudientes con la de estudiantes y sus datos asociados.</p>
+</li>
+</ul>
+<hr />
+<h5 id="descripcion-tecnica_1">Descripción Técnica<a class="headerlink" href="#descripcion-tecnica_1" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Tipo de Tarea:</strong><br />
+  Data Flow Task (Pipeline).</p>
+</li>
+<li>
+<p><strong>Propiedades Clave:</strong></p>
+<ul>
+<li><strong>SQL Command:</strong><br />
+  Se utiliza una instrucción SQL avanzada que emplea Common Table Expressions (CTE) para:</li>
+<li><strong>PartnerDetails:</strong> Extraer detalles del acudiente, incluyendo datos personales, estado civil, profesión y fecha de nacimiento.  </li>
+<li><strong>RecentPhones, RecentAddresses y RecentEmails:</strong> Obtener la información de contacto más reciente para cada acudiente.  </li>
+<li><strong>StudentKeys:</strong> Relacionar el acudiente con el estudiante mediante claves SAP.</li>
+</ul>
+<p>La consulta finaliza uniendo estos conjuntos de datos para producir un resultado consolidado con campos tales como:
+  - <code>BP_ACUDIENTE</code>, <code>OBJETO_SAP_ESTUDIANTE</code>, <code>BP_ESTUDIANTE</code>, <code>NUMERO_MATRICULA</code>
+  - <code>TIPO_DOCUMENTO</code>, <code>NUMERO_DOCUMENTO</code>
+  - <code>PRIMER_APELLIDO</code>, <code>SEGUNDO_APELLIDO</code>, <code>PRIMER_NOMBRE</code>, <code>SEGUNDO_NOMBRE</code>
+  - <code>GENERO</code>, <code>ESTADO_CIVIL</code>, <code>PROFESION</code>, <code>FECHA_NACIMIENTO</code>
+  - <code>PARENTESCO</code>, <code>RESPONSABLE_JURIDICO</code>
+  - <code>TELEFONO</code>, <code>PAIS</code>, <code>CIUDAD</code>, <code>DIRECCION</code>, <code>CORREO</code></p>
+</li>
+<li>
+<p><strong>Datos del Objeto:</strong></p>
+<ul>
+<li><strong>Conexión Utilizada:</strong><br />
+  Se conecta al sistema SAP a través del administrador de conexiones configurado con el identificador de conexión <code>{3A7D3F89-902D-4694-893E-02F1E08B0F72}</code> y el nombre de conexión <code>SAP_ERP</code>.</li>
+<li><strong>Modo de Acceso:</strong><br />
+  Utiliza el proveedor de datos .NET (DataReaderSourceAdapter) para ejecutar la consulta y extraer el conjunto de resultados.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h5 id="flujo-de-ejecucion_1">Flujo de Ejecución<a class="headerlink" href="#flujo-de-ejecucion_1" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p><strong>Inicio de la Tarea:</strong><br />
+   El componente inicia la ejecución de la consulta SQL definida en la propiedad <code>SqlCommand</code>.</p>
+</li>
+<li>
+<p><strong>Extracción y Transformación:</strong><br />
+   La consulta se ejecuta contra el sistema SAP y, mediante el uso de CTEs, extrae y transforma los datos, uniendo información de diferentes orígenes (detalles del acudiente, datos de contacto y claves de estudiante).</p>
+</li>
+<li>
+<p><strong>Salida de Datos:</strong><br />
+   El conjunto de resultados, con las columnas transformadas y consolidadas, se expone en la salida del componente ("Salida de origen de ADO NET"), que posteriormente alimenta otros procesos o destinos dentro del flujo ETL.</p>
+</li>
+</ol>
+<hr />
+<h5 id="diagrama-de-secuencia_2">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_2" title="Permanent link">&para;</a></h5>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SAPData as Componente ACUDIENTES SAP
+    participant SAP as Sistema SAP (ERP)
+    participant Dest as Destino de datos (TMP_ACUDIENTES_SAP)
+
+    SAPData -&gt;&gt; SAP: Ejecuta consulta SQL consolidada
+    SAP --&gt;&gt; SAPData: Retorna conjunto de resultados con datos de acudientes y estudiantes
+    SAPData -&gt;&gt; Dest: Transfiere datos transformados para carga posterior</code></pre>
+<h3 id="componente-actualizar-dim_acudientes">Componente <strong><code>Actualizar DIM_ACUDIENTES</code></strong><a class="headerlink" href="#componente-actualizar-dim_acudientes" title="Permanent link">&para;</a></h3>
+<p>Este componente es una tarea de flujo de datos (Data Flow Task) dentro del paquete SSIS, diseñada para actualizar la dimensión de acudientes en el ámbito Colegio. Su función principal es leer los datos consolidados en la tabla temporal de staging (<code>TMP_ACUDIENTES_SAP</code>), compararlos con la dimensión existente (<code>DIM_ACUDIENTES</code>) y cargar únicamente los registros nuevos o actualizados en la tabla de destino. Esto garantiza la integridad y actualización de la información de acudientes en el Data Warehouse.</p>
+<hr />
+<h5 id="proposito-del-componente_2">Propósito del Componente<a class="headerlink" href="#proposito-del-componente_2" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Integración de Datos de Acudientes:</strong><br />
+  Actualizar la dimensión <code>DIM_ACUDIENTES</code> en el esquema Colegio, asegurándose de que sólo se inserten los registros nuevos o modificados que no estén ya presentes en la dimensión. Esto permite mantener una base de datos actualizada y libre de duplicidades.</p>
+</li>
+<li>
+<p><strong>Validación y Consolidación de la Información:</strong><br />
+  El proceso realiza una comparación entre los datos provenientes de la tabla temporal en staging y la dimensión existente para filtrar registros ya cargados, permitiendo la actualización sólo de la información faltante o modificada.</p>
+</li>
+</ul>
+<hr />
+<h5 id="descripcion-tecnica_2">Descripción Técnica<a class="headerlink" href="#descripcion-tecnica_2" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Tipo de Tarea:</strong><br />
+  Data Flow Task.</p>
+</li>
+<li>
+<p><strong>Propiedades Clave:</strong></p>
+<ul>
+<li><strong>Destino de ADO NET:</strong><br />
+  Se utiliza un componente de destino ADO.NET para cargar los registros en la tabla de destino.</li>
+<li><strong>TableOrViewName:</strong><br />
+    La tabla destino se define mediante la expresión:
+    <div class="highlight"><pre><span></span><code>&quot;Colegio&quot;.&quot;DIM_ACUDIENTES&quot;
+</code></pre></div></li>
+<li><strong>BatchSize:</strong><br />
+    Se configura a <code>0</code>, utilizando el tamaño del búfer interno de SSIS.</li>
+<li><strong>CommandTimeout:</strong><br />
+    Establecido en <code>30</code> segundos.</li>
+<li><strong>UseBulkInsertWhenPossible:</strong><br />
+    Activado para mejorar el rendimiento durante la inserción masiva de datos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conexión:</strong><br />
+    La tarea se conecta a la base de datos destino mediante el administrador de conexiones configurado con el identificador <code>{C2A27DDB-56C2-4889-8A4B-7AA7124DFFD7}</code> y el nombre de conexión <code>DWH_COMFENALCO_Destino</code>.</p>
+</li>
+<li>
+<p><strong>Origen de Datos:</strong><br />
+    El componente extrae los datos desde la tabla temporal <code>[STAGE_AREA].[Transversal].[TMP_ACUDIENTES_SAP]</code> mediante un origen ADO.NET. La consulta de origen realiza un LEFT JOIN con la dimensión existente <code>[Colegio].[DIM_ACUDIENTES]</code> y un INNER JOIN con <code>[DIM_POBLACION_MATRICULA]</code> para asegurar que:</p>
+<ul>
+<li>Se seleccionen únicamente los registros en los que no existe coincidencia en <code>DIM_ACUDIENTES</code> (es decir, los registros nuevos).</li>
+<li>Se asegure que el campo <code>ID_POBLACION_MATRICULA</code> tenga un valor válido.</li>
+</ul>
+</li>
+<li>
+<p><strong>Flujo de Datos:</strong><br />
+  Los datos fluyen desde el origen (la consulta en la tabla temporal) hacia el destino de ADO.NET, garantizando que sólo se carguen los registros que aún no han sido incorporados en la dimensión.</p>
+</li>
+</ul>
+<hr />
+<h5 id="flujo-de-ejecucion_2">Flujo de Ejecución<a class="headerlink" href="#flujo-de-ejecucion_2" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p><strong>Extracción de Datos:</strong><br />
+   El componente de origen ADO.NET ejecuta la consulta SQL para leer los datos desde <code>[STAGE_AREA].[Transversal].[TMP_ACUDIENTES_SAP]</code> que cumplen las condiciones de actualización.</p>
+</li>
+<li>
+<p><strong>Validación de Registros:</strong><br />
+   Se realiza un cruce implícito (mediante la consulta SQL) que descarta los registros cuyo <code>BP_ESTUDIANTE</code> ya existe en la dimensión <code>[Colegio].[DIM_ACUDIENTES]</code> y que garantiza que <code>ID_POBLACION_MATRICULA</code> sea válido.</p>
+</li>
+<li>
+<p><strong>Carga de Datos:</strong><br />
+   Los registros que cumplen con las condiciones (nuevos o no encontrados en la dimensión) se cargan en la tabla <code>"Colegio"."DIM_ACUDIENTES"</code> utilizando la opción de Bulk Insert para optimizar el rendimiento.</p>
+</li>
+</ol>
+<hr />
+<h5 id="diagrama-de-secuencia_3">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_3" title="Permanent link">&para;</a></h5>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Origen as Origen de ADO NET (TMP_ACUDIENTES_SAP)
+    participant Transform as Proceso de Validación y Filtrado
+    participant Dest as Destino de ADO NET (DIM_ACUDIENTES)
+
+    Origen -&gt;&gt; Transform: Extrae datos desde TMP_ACUDIENTES_SAP
+    Transform -&gt;&gt; Transform: Compara registros con DIM_ACUDIENTES y DIM_POBLACION_MATRICULA
+    Transform -&gt;&gt; Dest: Envía registros nuevos para inserción
+    Dest -&gt;&gt; Dest: Inserta datos en "Colegio"."DIM_ACUDIENTES"</code></pre>
 <h3 id="componente-descargar_am-edf-153">Componente <strong><code>Descargar_AM-EDF-153</code></strong><a class="headerlink" href="#componente-descargar_am-edf-153" title="Permanent link">&para;</a></h3>
 <h4 id="descripcion-general_2">Descripción General<a class="headerlink" href="#descripcion-general_2" title="Permanent link">&para;</a></h4>
 <p>El componente <code>Descargar_AM-EDF-153</code> es una tarea de ejecución de proceso en un paquete SSIS que se encarga de ejecutar un script Python para conectar a SharePoint y descargar archivos manuales relacionados con el proyecto. Esta tarea utiliza la funcionalidad <code>Execute Process</code> de SSIS para garantizar una integración fluida con sistemas externos.</p>
@@ -2994,7 +3332,7 @@
 </li>
 </ol>
 <hr />
-<h4 id="diagrama-de-secuencia_1">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_1" title="Permanent link">&para;</a></h4>
+<h4 id="diagrama-de-secuencia_4">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_4" title="Permanent link">&para;</a></h4>
 <pre class="mermaid"><code>sequenceDiagram
     participant SSIS as Tarea SSIS
     participant Python as Script de Python
@@ -3081,7 +3419,7 @@
 </li>
 </ol>
 <hr />
-<h4 id="diagrama-de-secuencia_2">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_2" title="Permanent link">&para;</a></h4>
+<h4 id="diagrama-de-secuencia_5">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_5" title="Permanent link">&para;</a></h4>
 <pre class="mermaid"><code>sequenceDiagram
     participant ExcelSource as AM-EDF-153 (Fuente Excel)
     participant DataConversion as Data Conversion
@@ -3093,73 +3431,221 @@
     DataConversion-&gt;&gt;DerivedColumn: Salida de datos convertidos
     DerivedColumn-&gt;&gt;Lookup: Salida de columna derivada
     Lookup-&gt;&gt;AdoNetDestination: Salida de búsqueda no coincidente</code></pre>
-<h3 id="componente-agregar-1-a-dim_poblacion">Componente <strong><code>Agregar -1 a DIM_POBLACION</code></strong><a class="headerlink" href="#componente-agregar-1-a-dim_poblacion" title="Permanent link">&para;</a></h3>
-<h4 id="descripcion-general_4">Descripción General<a class="headerlink" href="#descripcion-general_4" title="Permanent link">&para;</a></h4>
-<p>El componente <code>Agregar -1 a DIM_POBLACION</code> es una tarea de ejecución SQL en un paquete SSIS. Su propósito es verificar si existe un registro con <code>ID_POBLACION_MATRICULA = -1</code> en la tabla <code>[DIM_POBLACION_MATRICULA]</code> del esquema <code>[Colegio]</code> y, si no existe, insertarlo con valores predeterminados.</p>
+<h3 id="componente-validar-si-existe-tabla-para-guardar">Componente <strong><code>Validar si existe tabla para guardar</code></strong><a class="headerlink" href="#componente-validar-si-existe-tabla-para-guardar" title="Permanent link">&para;</a></h3>
+<p>Este componente es una tarea de ejecución de SQL (Execute SQL Task) dentro del paquete SSIS "Procedimiento y Tabla para FACT_RETIROS". Su función es verificar si existe una tabla denominada <strong>RESULTS</strong> en el esquema actual y, en caso de que no exista, crearla. Esto asegura que, antes de iniciar el proceso de carga de datos para FACT_RETIROS, exista la estructura necesaria para almacenar los resultados.</p>
 <hr />
-<h4 id="componentes-del-flujo-de-datos_3">Componentes del Flujo de Datos<a class="headerlink" href="#componentes-del-flujo-de-datos_3" title="Permanent link">&para;</a></h4>
-<ol>
-<li><strong>Tarea Ejecutar SQL (<code>Agregar -1 a DIM_POBLACION</code>)</strong><ul>
-<li><strong>Descripción</strong>: Ejecuta un script SQL que realiza las siguientes operaciones:<ol>
-<li>Verifica si ya existe un registro con <code>ID_POBLACION_MATRICULA = -1</code>.</li>
-<li>Si no existe:<ul>
-<li>Activa <code>IDENTITY_INSERT</code> en la tabla para permitir la inserción de un valor específico en la columna de clave primaria.</li>
-<li>Inserta un registro con valores predeterminados.</li>
-<li>Desactiva <code>IDENTITY_INSERT</code>.</li>
+<h5 id="proposito-del-componente_3">Propósito del Componente<a class="headerlink" href="#proposito-del-componente_3" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Verificación y Creación de Estructura:</strong><br />
+  Asegurarse de que la tabla <strong>RESULTS</strong> esté presente en el entorno, creando la tabla si no existe, para evitar errores en fases posteriores del proceso ETL.</p>
+</li>
+<li>
+<p><strong>Preparación del Entorno de Carga:</strong><br />
+  Automatizar la validación y provisión de la infraestructura de datos necesaria para la integración y almacenamiento de la información de FACT_RETIROS.</p>
+</li>
 </ul>
+<hr />
+<h5 id="descripcion-tecnica_3">Descripción Técnica<a class="headerlink" href="#descripcion-tecnica_3" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Tipo de Tarea:</strong><br />
+  Execute SQL Task.</p>
 </li>
-</ol>
-</li>
-<li><strong>Propiedades</strong>:<ul>
-<li><strong>Conexión</strong>: <code>{C2A27DDB-56C2-4889-8A4B-7AA7124DFFD7}</code>.</li>
-<li><strong>Consulta SQL</strong>:
-  <div class="highlight"><pre><span></span><code><span class="c1">-- Verificar si el registro ya existe</span>
-<span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Colegio</span><span class="p">].[</span><span class="n">DIM_POBLACION_MATRICULA</span><span class="p">]</span>
-<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">ID_POBLACION_MATRICULA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
-<span class="p">)</span>
+<li>
+<p><strong>Propiedades Clave:</strong></p>
+<ul>
+<li><strong>SqlStatementSource:</strong><br />
+  El componente ejecuta la siguiente sentencia SQL para validar y crear la tabla en caso de ausencia:
+  <div class="highlight"><pre><span></span><code><span class="c1">-- Verificar si la tabla &#39;RESULTS&#39; existe y crearla si no es así</span>
+<span class="k">DO</span>
 <span class="k">BEGIN</span>
-<span class="w">    </span><span class="c1">-- Activar IDENTITY_INSERT para la tabla</span>
-<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">IDENTITY_INSERT</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Colegio</span><span class="p">].[</span><span class="n">DIM_POBLACION_MATRICULA</span><span class="p">]</span><span class="w"> </span><span class="k">ON</span><span class="p">;</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">table_count</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
 
-<span class="w">    </span><span class="c1">-- Insertar el registro con ID_POBLACION_MATRICULA = -1</span>
-<span class="w">    </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Colegio</span><span class="p">].[</span><span class="n">DIM_POBLACION_MATRICULA</span><span class="p">]</span>
-<span class="w">    </span><span class="p">(</span>
-<span class="w">        </span><span class="p">[</span><span class="n">ID_POBLACION_MATRICULA</span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="n">PARTNER</span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="n">TIPO_DOCUMENTO</span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="n">DOCUMENTO</span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="n">NOMBRE_COMPLETO</span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="n">GENERO</span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="n">DIRECCION</span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="n">TELEFONO</span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="n">CORREO</span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="n">FECHA_NACIMIENTO</span><span class="p">]</span>
-<span class="w">    </span><span class="p">)</span>
-<span class="w">    </span><span class="k">VALUES</span>
-<span class="w">    </span><span class="p">(</span>
-<span class="w">        </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">-- PARTNER</span>
-<span class="w">        </span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">-- TIPO_DOCUMENTO</span>
-<span class="w">        </span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">-- DOCUMENTO</span>
-<span class="w">        </span><span class="s1">&#39;Estudiantes sin cruce&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">-- NOMBRE_COMPLETO</span>
-<span class="w">        </span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">-- GENERO</span>
-<span class="w">        </span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">-- DIRECCION</span>
-<span class="w">        </span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">-- TELEFONO</span>
-<span class="w">        </span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">-- CORREO</span>
-<span class="w">        </span><span class="k">NULL</span><span class="w"> </span><span class="c1">-- FECHA_NACIMIENTO</span>
-<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">table_count</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">TABLES</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">TABLE_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;RESULTS&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="k">SCHEMA_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CURRENT_SCHEMA</span><span class="p">;</span>
 
-<span class="w">    </span><span class="c1">-- Desactivar IDENTITY_INSERT para la tabla</span>
-<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">IDENTITY_INSERT</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Colegio</span><span class="p">].[</span><span class="n">DIM_POBLACION_MATRICULA</span><span class="p">]</span><span class="w"> </span><span class="k">OFF</span><span class="p">;</span>
-<span class="k">END</span>
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">table_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="k">EXEC</span><span class="w"> </span><span class="s1">&#39;CREATE TABLE RESULTS (</span>
+<span class="s1">                OBJETO_SAP_ESTUDIANTE VARCHAR(20),</span>
+<span class="s1">                NUMERO_MATRICULA VARCHAR(20),</span>
+<span class="s1">                PARTNER_ESTUDIANTE VARCHAR(20),</span>
+<span class="s1">                ANIO_ACADEMICO VARCHAR(20),</span>
+<span class="s1">                APELLIDOS VARCHAR(50),</span>
+<span class="s1">                NOMBRES VARCHAR(50),</span>
+<span class="s1">                CURSO VARCHAR(20),</span>
+<span class="s1">                GRADO VARCHAR(20),</span>
+<span class="s1">                FECHA_RETIRO_SAP DATE,</span>
+<span class="s1">                FECHA_VALIDO_DESDE DATE,</span>
+<span class="s1">                FECHA_VALIDO_HASTA DATE</span>
+<span class="s1">              );&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
 </code></pre></div></li>
+<li><strong>Conexión:</strong><br />
+  Utiliza una conexión preconfigurada (identificada mediante el GUID <code>{3A7D3F89-902D-4694-893E-02F1E08B0F72}</code>) que apunta al servidor de base de datos adecuado para ejecutar la sentencia SQL.</li>
 </ul>
 </li>
 </ul>
+<hr />
+<h5 id="flujo-de-ejecucion_3">Flujo de Ejecución<a class="headerlink" href="#flujo-de-ejecucion_3" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p><strong>Inicio de la Tarea:</strong><br />
+   Al iniciar el paquete, se ejecuta la tarea de SQL para validar la existencia de la tabla <strong>RESULTS</strong>.</p>
+</li>
+<li>
+<p><strong>Verificación en la Base de Datos:</strong><br />
+   La tarea consulta el sistema de tablas para contar cuántas tablas con el nombre <strong>RESULTS</strong> existen en el esquema actual.</p>
+</li>
+<li>
+<p><strong>Creación Condicional:</strong><br />
+   Si el resultado es 0 (es decir, la tabla no existe), se ejecuta el comando SQL para crear la tabla con las columnas especificadas.</p>
+</li>
+<li>
+<p><strong>Finalización de la Tarea:</strong><br />
+   Tras la verificación (y creación, de ser necesaria), la tarea finaliza, permitiendo que el flujo ETL continúe con los siguientes pasos.</p>
 </li>
 </ol>
+<hr />
+<h5 id="diagrama-de-secuencia_6">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_6" title="Permanent link">&para;</a></h5>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as SSIS Package
+    participant SQLTask as Execute SQL Task
+    participant DB as Base de Datos
+
+    SSIS -&gt;&gt; SQLTask: Inicia "Validar si existe tabla para guardar"
+    SQLTask -&gt;&gt; DB: Ejecuta SQL para verificar existencia de "RESULTS"
+    DB --&gt;&gt; SQLTask: Devuelve el conteo de tablas
+    SQLTask -&gt;&gt; DB: Si no existe, ejecuta comando CREATE TABLE
+    DB --&gt;&gt; SQLTask: Confirma creación (o existencia) de la tabla
+    SQLTask -&gt;&gt; SSIS: Finaliza la tarea</code></pre>
+<h3 id="componente-crear-procedimiento-anual">Componente <strong><code>Crear procedimiento anual</code></strong><a class="headerlink" href="#componente-crear-procedimiento-anual" title="Permanent link">&para;</a></h3>
+<p>Este componente es una tarea de ejecución de SQL (Execute SQL Task) dentro del paquete SSIS "Procedimiento y Tabla para FACT_RETIROS". Su función es verificar si existe el procedimiento almacenado <strong>GetRetirosByYear</strong> en el esquema actual y, de no existir, crearlo. Este procedimiento se utiliza para obtener los retiros filtrados por año, lo cual es fundamental para el proceso ETL relacionado con FACT_RETIROS.</p>
+<hr />
+<h5 id="proposito-del-componente_4">Propósito del Componente<a class="headerlink" href="#proposito-del-componente_4" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Verificación y Creación de Procedimiento:</strong><br />
+  Se asegura que el procedimiento <strong>GetRetirosByYear</strong> esté definido en la base de datos antes de proceder con las operaciones de carga y procesamiento de datos de retiros.</p>
+</li>
+<li>
+<p><strong>Preparación del Entorno ETL:</strong><br />
+  Automatiza la creación del procedimiento almacenado en caso de ausencia, lo que evita fallos en etapas posteriores del flujo ETL.</p>
+</li>
+</ul>
+<hr />
+<h5 id="descripcion-tecnica_4">Descripción Técnica<a class="headerlink" href="#descripcion-tecnica_4" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Tipo de Tarea:</strong><br />
+  Execute SQL Task.</p>
+</li>
+<li>
+<p><strong>Propiedades Clave:</strong></p>
+<ul>
+<li><strong>SqlStatementSource:</strong><br />
+  El componente ejecuta la siguiente sentencia SQL para verificar y crear el procedimiento:
+  <div class="highlight"><pre><span></span><code><span class="c1">-- Verificar si el procedimiento &#39;GetRetirosByYear&#39; existe y crearlo si no es así</span>
+<span class="k">DO</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">proc_count</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">proc_count</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">PROCEDURES</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">PROCEDURE_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;GETRETIROSBYYEAR&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="k">SCHEMA_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CURRENT_SCHEMA</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">proc_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="k">EXEC</span><span class="w"> </span><span class="s1">&#39;CREATE PROCEDURE GetRetirosByYear (IN P_YEAR INT)</span>
+<span class="s1">               LANGUAGE SQLSCRIPT</span>
+<span class="s1">               AS</span>
+<span class="s1">               BEGIN</span>
+<span class="s1">                   DECLARE valid_from_date NVARCHAR(8); </span>
+<span class="s1">                   valid_from_date := CONCAT(P_YEAR, &#39;&#39;0101&#39;&#39;);</span>
+<span class="s1">                   INSERT INTO RESULTS</span>
+<span class="s1">                   SELECT </span>
+<span class="s1">                       DISTINCT </span>
+<span class="s1">                       h.objid AS OBJETO_SAP_ESTUDIANTE,</span>
+<span class="s1">                       p.short AS NUMERO_MATRICULA,</span>
+<span class="s1">                       b.PARTNER AS PARTNER_ESTUDIANTE,</span>
+<span class="s1">                       o.ayear AS ANIO_ACADEMICO,</span>
+<span class="s1">                       h.nachn AS APELLIDOS,</span>
+<span class="s1">                       h.vorna AS NOMBRES,</span>
+<span class="s1">                       i.prcl AS ID_CURSO,</span>
+<span class="s1">                       j.matrikel AS GRADO,</span>
+<span class="s1">                       m.END_KEY_DATE AS FECHA_RETIRO_SAP,</span>
+<span class="s1">                       i.mc_valid_from AS FECHA_VALIDO_DESDE,</span>
+<span class="s1">                       i.mc_valid_to AS FECHA_VALIDO_HASTA</span>
+<span class="s1">                   FROM SAPABAP1.hrp1702 AS h</span>
+<span class="s1">                   INNER JOIN SAPABAP1.hrp1000 AS p ON h.plvar = p.plvar AND h.otype = p.otype AND h.objid = p.objid AND h.endda = p.endda</span>
+<span class="s1">                   INNER JOIN SAPABAP1.hrp1705 AS j ON h.plvar = j.plvar AND h.otype = j.otype AND h.objid = j.objid AND h.endda = j.endda</span>
+<span class="s1">                   INNER JOIN SAPABAP1.hrp1737 AS k ON j.plvar = k.plvar AND j.otype = k.otype AND j.objid = k.objid AND j.endda = k.endda</span>
+<span class="s1">                   INNER JOIN SAPABAP1.hrt1737 AS i ON k.tabnr = i.tabnr</span>
+<span class="s1">                   INNER JOIN SAPABAP1.hrp1001 AS l ON l.plvar = h.plvar AND l.otype = h.otype AND l.objid = h.objid AND l.endda = h.endda</span>
+<span class="s1">                   INNER JOIN SAPABAP1.hrp1001 AS n ON n.plvar = l.plvar AND n.otype = l.sclas AND n.objid = l.sobid AND n.endda = l.endda</span>
+<span class="s1">                   INNER JOIN SAPABAP1.hrp1769 AS m ON m.plvar = n.plvar AND m.otype = n.otype AND m.objid = n.objid</span>
+<span class="s1">                   INNER JOIN SAPABAP1.hrp1771 AS o ON o.plvar = n.plvar AND o.otype = n.otype AND o.objid = n.objid</span>
+<span class="s1">                   INNER JOIN SAPABAP1.CMACBPST as b On p.objid = b.stobjid</span>
+<span class="s1">                   WHERE</span>
+<span class="s1">                       l.sclas = &#39;&#39;CS&#39;&#39; AND</span>
+<span class="s1">                       n.sclas = &#39;&#39;SC&#39;&#39; AND</span>
+<span class="s1">                       p.otype = &#39;&#39;ST&#39;&#39; AND</span>
+<span class="s1">                       p.plvar = &#39;&#39;01&#39;&#39; AND</span>
+<span class="s1">                       i.mc_valid_to &gt;= CURDATE() AND</span>
+<span class="s1">                       i.prog_type = &#39;&#39;4&#39;&#39; AND</span>
+<span class="s1">                       i.valid_from = valid_from_date AND</span>
+<span class="s1">                       m.begda &lt;= CURDATE() AND</span>
+<span class="s1">                       m.endda &lt;= CURDATE() AND</span>
+<span class="s1">                       o.prs_state = &#39;&#39;A&#39;&#39; AND</span>
+<span class="s1">                       o.ayear = P_YEAR AND</span>
+<span class="s1">                       m.END_PROCESS = &#39;&#39;RW01&#39;&#39; AND</span>
+<span class="s1">                       m.END_KEY_DATE &gt;= i.valid_from;</span>
+<span class="s1">               END;&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+</code></pre></div></li>
+<li><strong>Conexión:</strong><br />
+  Se utiliza una conexión preconfigurada (identificada mediante el GUID <code>{3A7D3F89-902D-4694-893E-02F1E08B0F72}</code>) que apunta al servidor de base de datos donde se encuentra el procedimiento.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h5 id="flujo-de-ejecucion_4">Flujo de Ejecución<a class="headerlink" href="#flujo-de-ejecucion_4" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p><strong>Inicio de la Tarea:</strong><br />
+   El paquete SSIS inicia la tarea de SQL "Crear procedimiento anual".</p>
+</li>
+<li>
+<p><strong>Verificación del Procedimiento:</strong><br />
+   La tarea consulta el catálogo de procedimientos para determinar si <strong>GETRETIROSBYYEAR</strong> ya existe en el esquema actual.</p>
+</li>
+<li>
+<p><strong>Creación Condicional:</strong>  </p>
+<ul>
+<li>Si el procedimiento no existe (conteo igual a 0), se ejecuta el comando SQL para crear el procedimiento almacenado con la definición especificada.</li>
+<li>Si ya existe, no se realiza ninguna acción adicional.</li>
+</ul>
+</li>
+<li>
+<p><strong>Finalización de la Tarea:</strong><br />
+   La tarea finaliza y el proceso ETL puede continuar con las siguientes etapas, sabiendo que la estructura necesaria para procesar los retiros está en su lugar.</p>
+</li>
+</ol>
+<hr />
+<h5 id="diagrama-de-secuencia_7">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_7" title="Permanent link">&para;</a></h5>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SSIS as SSIS Package
+    participant SQLTask as Execute SQL Task
+    participant DB as Base de Datos
+
+    SSIS -&gt;&gt; SQLTask: Inicia "Crear procedimiento anual"
+    SQLTask -&gt;&gt; DB: Ejecuta SQL para verificar existencia de 'GETRETIROSBYYEAR'
+    DB --&gt;&gt; SQLTask: Devuelve conteo de procedimientos
+    SQLTask -&gt;&gt; DB: Si no existe, ejecuta comando CREATE PROCEDURE
+    DB --&gt;&gt; SQLTask: Confirma creación (o existencia) del procedimiento
+    SQLTask -&gt;&gt; SSIS: Finaliza la tarea</code></pre>
 
 
 
