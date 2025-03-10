@@ -1564,39 +1564,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#restaurar-llaves-foraneas-esquema-cedesarrollo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restaurar llaves foraneas esquema Cedesarrollo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Restaurar llaves foraneas esquema Cedesarrollo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#documentacion-xml-del-componente-restaurar-llaves-foraneas-esquema-cedesarrollo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentación XML del Componente "Restaurar llaves foráneas esquema Cedesarrollo"
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#diagrama-de-secuencia_34" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagrama de Secuencia
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3820,39 +3787,6 @@
   <a href="#componente-procesar-fact_cotizaciones" class="md-nav__link">
     <span class="md-ellipsis">
       Componente Procesar FACT_COTIZACIONES
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restaurar-llaves-foraneas-esquema-cedesarrollo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restaurar llaves foraneas esquema Cedesarrollo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Restaurar llaves foraneas esquema Cedesarrollo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#documentacion-xml-del-componente-restaurar-llaves-foraneas-esquema-cedesarrollo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentación XML del Componente "Restaurar llaves foráneas esquema Cedesarrollo"
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#diagrama-de-secuencia_34" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagrama de Secuencia
     </span>
   </a>
   
@@ -6860,56 +6794,6 @@ Aquí tienes la documentación para el componente <strong>dim_Estudiantes py</st
     SSIS -&gt;&gt; SSIS: Ordena datos
     SSIS -&gt;&gt; SSIS: Combina flujos (Merge Join)
     SSIS -&gt;&gt; SQL: Carga datos en FACT_COTIZACIONES</code></pre>
-<h2 id="restaurar-llaves-foraneas-esquema-cedesarrollo">Restaurar llaves foraneas esquema Cedesarrollo<a class="headerlink" href="#restaurar-llaves-foraneas-esquema-cedesarrollo" title="Permanent link">&para;</a></h2>
-<h3 id="documentacion-xml-del-componente-restaurar-llaves-foraneas-esquema-cedesarrollo">Documentación XML del Componente "Restaurar llaves foráneas esquema Cedesarrollo"<a class="headerlink" href="#documentacion-xml-del-componente-restaurar-llaves-foraneas-esquema-cedesarrollo" title="Permanent link">&para;</a></h3>
-<h4 id="descripcion-general_50">Descripción General<a class="headerlink" href="#descripcion-general_50" title="Permanent link">&para;</a></h4>
-<p>El componente <strong>Restaurar llaves foráneas esquema Cedesarrollo</strong> es una tarea de ejecución de SQL en SSIS que se utiliza para restaurar las restricciones de clave foránea dentro del esquema <code>Cedesarrollo</code>. Además, este proceso limpia la tabla temporal <code>ForeignKeys_Cedesarrollo</code> al final de la ejecución.</p>
-<h4 id="detalles-del-componente_2">Detalles del Componente<a class="headerlink" href="#detalles-del-componente_2" title="Permanent link">&para;</a></h4>
-<ol>
-<li>
-<p><strong>Tarea Ejecutar SQL</strong></p>
-<ul>
-<li><strong>Descripción</strong>: Ejecuta un script SQL que reconstruye las claves foráneas en el esquema <code>Cedesarrollo</code>.</li>
-<li><strong>Conexión</strong>:</li>
-<li><code>ConnectionManagerID</code>: <code>{57F24C4D-9B0A-4EBB-AE46-43F9B341582B}</code> (Conexión al servidor SQL donde se encuentra el esquema <code>Cedesarrollo</code>).</li>
-<li><strong>Propiedades</strong>:</li>
-<li><code>SqlStatementSource</code>: Contiene el siguiente script SQL:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1">-- Restaurar restricciones de clave foránea para el esquema Cedesarrollo</span>
-<span class="k">DECLARE</span><span class="w"> </span><span class="o">@</span><span class="n">restoreSql_Cedesarrollo</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="k">MAX</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
-
-<span class="k">SELECT</span><span class="w"> </span><span class="o">@</span><span class="n">restoreSql_Cedesarrollo</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;ALTER TABLE &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="s1">&#39;Cedesarrollo&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">TableName</span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; ADD CONSTRAINT &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">ConstraintName</span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; FOREIGN KEY (&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">ColumnName</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;) REFERENCES &#39;</span><span class="w"> </span>
-<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span>
-<span class="w">        </span><span class="k">CASE</span><span class="w"> </span>
-<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">fk</span><span class="p">.</span><span class="n">ReferencedTableName</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;DIM_AFILIADOS&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_APORTANTE_NOAFILIADO&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_BENEFICIARIOS&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_CAPACIDAD_FISICA&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_CATEGORIA&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_CUENTA_CONTABLE&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_EMPRESAS&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_INFRAESTRUCTURA_CCF&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_PERSONAL&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_SEDES&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_TARIFAS_SERVICIOS&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_UNIDAD&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DIM_UNIDADES_ORGANIZATIVAS&#39;</span><span class="p">)</span>
-<span class="w">            </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Transversal&#39;</span>
-<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">fk</span><span class="p">.</span><span class="n">ReferencedTableName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;DIM_TIEMPO&#39;</span><span class="w"> </span>
-<span class="w">            </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Dwh&#39;</span><span class="w"> </span>
-<span class="w">            </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;Cedesarrollo&#39;</span>
-<span class="w">        </span><span class="k">END</span>
-<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">ReferencedTableName</span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QUOTENAME</span><span class="p">(</span><span class="n">fk</span><span class="p">.</span><span class="n">ReferencedColumnName</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;); &#39;</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">ForeignKeys_Cedesarrollo</span><span class="p">;</span>
-
-<span class="c1">-- Ejecutamos el SQL para restaurar las llaves foráneas del esquema Cedesarrollo</span>
-<span class="k">EXEC</span><span class="w"> </span><span class="n">sp_executesql</span><span class="w"> </span><span class="o">@</span><span class="n">restoreSql_Cedesarrollo</span><span class="p">;</span>
-
-<span class="c1">-- Limpiar la tabla persistente</span>
-<span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">ForeignKeys_Cedesarrollo</span><span class="p">;</span>
-</code></pre></div>
-</li>
-</ol>
-<h3 id="diagrama-de-secuencia_34">Diagrama de Secuencia<a class="headerlink" href="#diagrama-de-secuencia_34" title="Permanent link">&para;</a></h3>
-<h4 id="descripcion-del-proceso">Descripción del Proceso<a class="headerlink" href="#descripcion-del-proceso" title="Permanent link">&para;</a></h4>
-<pre class="mermaid"><code>sequenceDiagram
-    participant SSIS as SSIS Package
-    participant SQL as SQL Server
-    SSIS -&gt;&gt; SQL: Declara variable @restoreSql_Cedesarrollo
-    SQL -&gt;&gt; SQL: Construye sentencias ALTER TABLE dinámicamente
-    SQL -&gt;&gt; SQL: Ejecuta las sentencias con sp_executesql
-    SQL -&gt;&gt; SQL: Elimina la tabla temporal ForeignKeys_Cedesarrollo</code></pre>
 
 
 

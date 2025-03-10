@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fact_mineria" class="md-skip">
+        <a href="#etls_cubo" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -2169,11 +2169,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-paquete" class="md-nav__link">
+  <a href="#descripcion-del-paquete-ssis-etls_cubo" class="md-nav__link">
     <span class="md-ellipsis">
-      Descripción del Paquete
+      Descripción del Paquete SSIS "ETLS_CUBO"
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Descripción del Paquete SSIS "ETLS_CUBO"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacion-del-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Preparación del Entorno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modulo-mineria_colegio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Módulo MINERIA_COLEGIO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-modulo-mineria_educacion_tecnica_y_continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Módulo MINERIA_EDUCACION_TECNICA_Y_CONTINUA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2586,11 +2619,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-paquete" class="md-nav__link">
+  <a href="#descripcion-del-paquete-ssis-etls_cubo" class="md-nav__link">
     <span class="md-ellipsis">
-      Descripción del Paquete
+      Descripción del Paquete SSIS "ETLS_CUBO"
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Descripción del Paquete SSIS "ETLS_CUBO"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacion-del-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Preparación del Entorno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modulo-mineria_colegio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Módulo MINERIA_COLEGIO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-modulo-mineria_educacion_tecnica_y_continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Módulo MINERIA_EDUCACION_TECNICA_Y_CONTINUA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2883,56 +2949,76 @@
 
 
 <!-- markdownlint-disable -->
-<!-- ✒️ *Documentación generada para el paquete SSIS `FACT_MINERIA` (Componente: MINERIA_COLEGIO).* -->
+<!-- ✒️ *Documentación generada para el paquete SSIS `ETLS_CUBO` (Componente: MINERIA_COLEGIO).* -->
 <!-- markdownlint-disable -->
 
-<h1 id="fact_mineria">FACT_MINERIA<a class="headerlink" href="#fact_mineria" title="Permanent link">&para;</a></h1>
-<p>El paquete SSIS <strong>"FACT_MINERIA"</strong> está diseñado para procesar, transformar y cargar datos relacionados con actividades de minería de datos en el ámbito educativo. Este paquete consolida información para análisis avanzados en el Data Warehouse <code>DWH_COMFENALCO</code>, enfocándose en dos áreas principales: el Colegio y la Educación Técnica y Continua.</p>
+<h1 id="etls_cubo">ETLS_CUBO<a class="headerlink" href="#etls_cubo" title="Permanent link">&para;</a></h1>
+<p>El paquete SSIS <strong>"ETLS_CUBO"</strong> está diseñado para procesar, transformar y cargar datos relacionados con actividades de minería de datos en el ámbito educativo. Este paquete consolida información para análisis avanzados en el Data Warehouse <code>DWH_COMFENALCO</code>, enfocándose en dos áreas principales: el Colegio y la Educación Técnica y Continua.</p>
 <hr />
 <h2 id="proposito-del-paquete">Propósito del Paquete<a class="headerlink" href="#proposito-del-paquete" title="Permanent link">&para;</a></h2>
 <p>El objetivo principal es integrar datos operativos de diferentes fuentes para construir una base de datos analítica que soporte procesos de minería de datos, permitiendo identificar patrones, tendencias y relaciones en actividades educativas tanto en colegios como en programas de educación técnica y continua.</p>
-<hr />
-<h2 id="descripcion-del-paquete">Descripción del Paquete<a class="headerlink" href="#descripcion-del-paquete" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p><strong>Preparación del Entorno</strong>  </p>
+<h2 id="descripcion-del-paquete-ssis-etls_cubo">Descripción del Paquete SSIS "ETLS_CUBO"<a class="headerlink" href="#descripcion-del-paquete-ssis-etls_cubo" title="Permanent link">&para;</a></h2>
+<p>El paquete SSIS <strong>"ETLS_CUBO"</strong> está diseñado para procesar, transformar y cargar datos de actividades de minería de datos en el ámbito educativo hacia el Data Warehouse <code>DWH_COMFENALCO</code>. Su enfoque abarca tanto el área de colegios como la de educación técnica y continua. A continuación se redefine la estructura y el flujo del proceso ETL de acuerdo al contenido del archivo:</p>
+<h3 id="1-preparacion-del-entorno">1. Preparación del Entorno<a class="headerlink" href="#1-preparacion-del-entorno" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Truncar Tabla</strong>:<br />
- Elimina todos los registros existentes en la tabla <code>FACT_MINERIA</code> para evitar duplicaciones o inconsistencias durante la carga de nuevos datos.</li>
-<li><strong>Uso de <code>TRUNCATE TABLE</code></strong>:<br />
- Esta operación optimiza el rendimiento eliminando registros de forma masiva, sin afectar la estructura de la tabla.</li>
+  Se elimina de forma masiva la información de la tabla <code>FACT_MINERIA</code> (ubicada en el esquema <code>Transversal</code>) mediante el comando:</li>
 </ul>
-</li>
-<li>
-<p><strong>Módulo MINERIA_COLEGIO</strong>  </p>
+<div class="highlight"><pre><span></span><code><span class="k">TRUNCATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="p">[</span><span class="n">DWH_COMFENALCO</span><span class="p">].[</span><span class="n">Transversal</span><span class="p">].[</span><span class="n">FACT_MINERIA</span><span class="p">];</span>
+</code></pre></div>
+<p>Esto garantiza que la tabla esté limpia, previniendo duplicaciones o inconsistencias, y optimizando el rendimiento del proceso de carga.</p>
+<h3 id="2-modulo-mineria_colegio">2. Módulo MINERIA_COLEGIO<a class="headerlink" href="#2-modulo-mineria_colegio" title="Permanent link">&para;</a></h3>
+<p>Este módulo se encarga de procesar y consolidar los datos relativos a la minería en colegios, incluyendo:</p>
 <ul>
 <li><strong>Proceso Matrícula (Temporal)</strong>:<br />
- Procesa información detallada de inscripciones matriculares, calculando indicadores de gestión para codeudor, secretaría académica, psicología y coordinación académica.</li>
-<li><strong>Gestión Matrículas</strong>:<br />
- Transforma y carga datos relacionados con gestiones de matrícula escolar, asignando fechas iniciales, finales y clasificando actividades.</li>
-<li><strong>PQRs Colegio</strong>:<br />
- Integra información de peticiones, quejas y reclamos presentados por acudientes en el ámbito escolar.</li>
+  Extrae información detallada de inscripciones matriculares y calcula indicadores de gestión vinculados a:</li>
+<li>Codeudor</li>
+<li>Secretaría Académica</li>
+<li>Psicología  </li>
+<li>Coordinación Académica</li>
 </ul>
+<p>Se aplican técnicas como <code>OUTER APPLY</code> y <code>PIVOT</code> para transformar filas en columnas y obtener, por cada mes, los tiempos de gestión y el cumplimiento de los procesos relacionados con la matrícula.</p>
+<ul>
+<li><strong>Gestión Matrículas</strong>:<br />
+  Transforma y carga datos de gestiones de matrícula, donde se:</li>
+<li>Asignan fechas de inicio (convirtiendo <code>ID_FECHA</code> a <code>datetime</code>) y se calcula la fecha final mediante <code>DATEADD(SECOND, TIEMPO_SEGUNDOS, FECHA_INICIAL)</code>.</li>
+<li>
+<p>Se clasifica la actividad según el proceso gestionado (e.g., Codeudor, Secretaría, Psicología, Coordinación), lo que posibilita su análisis comparativo.</p>
 </li>
 <li>
-<p><strong>Módulo MINERIA_EDUCACION_TECNICA_Y_CONTINUA</strong>  </p>
-<ul>
-<li><strong>Inscripción</strong>:<br />
- Captura y procesa datos de inscripciones de estudiantes desde fuentes operativas en Cedesarrollo, segmentando por origen (afiliados, beneficiarios, empresas).</li>
-<li><strong>Admisión</strong>:<br />
- Gestiona información de admisiones, diferenciando entre estudiantes nuevos y antiguos.</li>
-<li><strong>Pago</strong>:<br />
- Procesa datos financieros relacionados con pagos de cursos, integrando información temporal y económica.</li>
-<li><strong>PQRs</strong>:<br />
- Consolida datos de peticiones, quejas y reclamos en programas de educación técnica y continua.</li>
-</ul>
+<p><strong>PQRs Colegio</strong>:<br />
+  Consolida la información de Peticiones, Quejas y Reclamos (PQRs) presentadas por los acudientes. Esto se realiza mediante una consulta SQL con múltiples expresiones comunes (CTE) que:</p>
 </li>
-</ol>
-<hr />
+<li>Calcula el período mensual (<code>ID_FECHA_MENSUAL</code>) a partir de la fecha de creación de la PQR.</li>
+<li>Construye el descriptor de actividad concatenando "PQR" con la causa reportada.</li>
+<li>Complementa los datos utilizando un LEFT JOIN con la información de inscripciones (que aporta datos como categoría, curso y tipo de estudiante).</li>
+</ul>
+<p>Los registros resultantes se cargan en la tabla <code>FACT_MINERIA</code> para análisis posterior.</p>
+<h3 id="3-modulo-mineria_educacion_tecnica_y_continua">3. Módulo MINERIA_EDUCACION_TECNICA_Y_CONTINUA<a class="headerlink" href="#3-modulo-mineria_educacion_tecnica_y_continua" title="Permanent link">&para;</a></h3>
+<p>Este módulo agrupa procesos ETL enfocados en la educación técnica y continua, abarcando:</p>
+<ul>
+<li>
+<p><strong>Inscripción</strong>:<br />
+  Captura y procesa datos de inscripciones de estudiantes provenientes de fuentes operativas en Cedesarrollo, segmentándolos según el origen (afiliados, beneficiarios o empresas). Se estructuran los datos para soportar análisis multidimensionales coordinados con la dimensión temporal.</p>
+</li>
+<li>
+<p><strong>Admisión</strong>:<br />
+  Gestiona la información de admisiones, diferenciando entre estudiantes nuevos y antiguos, facilitando el análisis del proceso de admisión y la evaluación de la eficiencia en su gestión.</p>
+</li>
+<li>
+<p><strong>Pago</strong>:<br />
+  Procesa datos financieros relacionados con los pagos de cursos, integrando tanto aspectos temporales como económicos. Esto permite evaluar la ejecución presupuestal y analizar el retorno de inversión en los programas educativos.</p>
+</li>
+<li>
+<p><strong>PQRs (Educación Técnica y Continua)</strong>:<br />
+  Consolida información sobre peticiones, quejas y reclamos en los programas técnicos y de educación continua, brindando una visión clara de la calidad y el servicio en estos procesos.</p>
+</li>
+</ul>
 <h2 id="diagramas">Diagramas<a class="headerlink" href="#diagramas" title="Permanent link">&para;</a></h2>
 <h3 id="1-diagrama-de-flujo-de-datos">1. <strong>Diagrama de Flujo de Datos</strong><a class="headerlink" href="#1-diagrama-de-flujo-de-datos" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>flowchart TD
-    A[Truncar Tabla] --&gt; B{Área Educativa}
+    A[Truncar Tabla FACT_MINERIA]
+       --&gt; B{Área Educativa}
     B --&gt;|Colegio| C[Proceso Matrícula Temporal]
     C --&gt; D[Gestión Matrículas]
     D --&gt; E[PQRs Colegio]
