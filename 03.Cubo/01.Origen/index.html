@@ -5120,34 +5120,36 @@
 </li>
 <li>
 <h4 id="detractores-promedio-del-proceso-a-partir-de-la-nsu"><strong>Detractores promedio del proceso a partir de la NSU</strong><a class="headerlink" href="#detractores-promedio-del-proceso-a-partir-de-la-nsu" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code>* **Objetivo:**
-  Calcular el porcentaje de detractores en el proceso, considerando las calificaciones por debajo de 7 en la actividad &quot;NSU&quot; en relación con el total de participantes.
+<ul>
+<li>
+<p><strong>Objetivo:</strong>
+  Calcular el porcentaje de detractores en el proceso, considerando las calificaciones por debajo de 7 en la actividad "NSU" en relación con el total de participantes.</p>
+</li>
+<li>
+<p><strong>Expresión DAX:</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">VAR</span><span class="w"> </span>Total = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;NSU&quot;</span>
+<span class="p">)</span>
 
-* **Expresión DAX:**
+<span class="nb">VAR</span><span class="w"> </span>Detractores = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">FILTER</span><span class="p">(</span>
+<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;NSU&quot;</span><span class="w"> </span>&amp;&amp;
+<span class="w">        </span><span class="nf">IFERROR</span><span class="p">(</span><span class="nf">VALUE</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[CALIFICACION]</span><span class="p">),</span><span class="w"> </span><span class="nf">BLANK</span><span class="p">())</span><span class="w"> </span>&lt; 7
+<span class="w">    </span><span class="p">)</span>
+<span class="p">)</span>
 
-  ```DAX
-  VAR Total = CALCULATE(
-      DISTINCTCOUNT(&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]),
-      &#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD] = &quot;NSU&quot;
-  )
+<span class="nb">var</span><span class="w"> </span>dev = Divide(Detractores, Total, 0)
 
-  VAR Detractores = CALCULATE(
-      DISTINCTCOUNT(&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]),
-      FILTER(
-          &#39;Transversal FACT_ACTIVIDADES&#39;,
-          &#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD] = &quot;NSU&quot; &amp;&amp;
-          IFERROR(VALUE(&#39;Transversal FACT_ACTIVIDADES&#39;[CALIFICACION]), BLANK()) &lt; 7
-      )
-  )
-
-  var dev = Divide(Detractores, Total, 0)
-
-  return dev
-  ```
-
-* **Formato:** Numérico.
+<span class="nb">return</span><span class="w"> </span>dev
 </code></pre></div>
-
+<ul>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
 </li>
 <li>
 <h4 id="afiliados-atendidos"><strong>%Afiliados Atendidos</strong><a class="headerlink" href="#afiliados-atendidos" title="Permanent link">&para;</a></h4>
