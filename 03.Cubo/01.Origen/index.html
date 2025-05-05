@@ -4187,34 +4187,36 @@
 </li>
 <li>
 <h4 id="promotores-promedio-del-proceso-a-partir-de-la-nsu"><strong>Promotores promedio del proceso  a partir de la NSU</strong><a class="headerlink" href="#promotores-promedio-del-proceso-a-partir-de-la-nsu" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code>* **Objetivo:**
-  Calcular el porcentaje de usuarios que calificaron con 9 o más en la actividad &quot;NSU&quot;, considerándolos como promotores del proceso evaluado.
+<ul>
+<li>
+<p><strong>Objetivo:</strong>
+    Calcular el porcentaje de usuarios que calificaron con 9 o más en la actividad "NSU", considerándolos como promotores del proceso evaluado.</p>
+</li>
+<li>
+<p><strong>Expresión DAX:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">VAR</span><span class="w"> </span>Total = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span><span class="w"> </span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;NSU&quot;</span>
+<span class="p">)</span>
 
-* **Expresión DAX:**
+<span class="nb">VAR</span><span class="w"> </span>Promotores = CALCULATE(
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">FILTER</span><span class="p">(</span>
+<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;NSU&quot;</span><span class="w"> </span>&amp;&amp;  
+<span class="w">        </span><span class="nf">IFERROR</span><span class="p">(</span><span class="nf">VALUE</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[CALIFICACION]</span><span class="p">),</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span>&gt;= 9
+<span class="w">    </span><span class="p">)</span>
+<span class="p">)</span>
 
-  ```DAX
-  VAR Total = CALCULATE(
-      DISTINCTCOUNT(&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]), 
-      &#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD] = &quot;NSU&quot;
-  )
+<span class="nb">var</span><span class="w"> </span>dev = DIVIDE(Promotores, Total, 0)
 
-  VAR Promotores = CALCULATE(
-      DISTINCTCOUNT(&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]),
-      FILTER(
-          &#39;Transversal FACT_ACTIVIDADES&#39;,
-          &#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD] = &quot;NSU&quot; &amp;&amp;  
-          IFERROR(VALUE(&#39;Transversal FACT_ACTIVIDADES&#39;[CALIFICACION]), 0) &gt;= 9
-      )
-  )
-
-  var dev = DIVIDE(Promotores, Total, 0)
-
-  return dev
-  ```
-
-* **Formato:** Numérico.
+<span class="nb">return</span><span class="w"> </span>dev
 </code></pre></div>
-
+</li>
+<li>
+<p><strong>Formato:</strong> Numérico.</p>
+</li>
+</ul>
 </li>
 <li>
 <h4 id="cantidad-de-matriculas"><strong>Cantidad de matriculas</strong><a class="headerlink" href="#cantidad-de-matriculas" title="Permanent link">&para;</a></h4>
@@ -5290,24 +5292,26 @@
 </li>
 <li>
 <h4 id="ingresos-ejecutados"><strong>Ingresos Ejecutados</strong><a class="headerlink" href="#ingresos-ejecutados" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code>* **Objetivo:**
-  Calcular el total de ingresos ejecutados en la actividad &quot;EJECUCION\_CONTABLE&quot; dentro de la tabla `Transversal FACT_FINANCIERA`.
+<ul>
+<li>
+<p><strong>Objetivo:</strong>
+  Calcular el total de ingresos ejecutados en la actividad "EJECUCION_CONTABLE" dentro de la tabla <code>Transversal FACT_FINANCIERA</code>.</p>
+</li>
+<li>
+<p><strong>Expresión DAX:</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">var</span><span class="w"> </span>Ingresos = 
+<span class="w">    </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">        </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[INGRESOS]</span><span class="p">),</span>
+<span class="w">        </span><span class="na">&#39;Transversal FACT_FINANCIERA&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;EJECUCION_CONTABLE&quot;</span>
+<span class="w">    </span><span class="p">)</span>
 
-* **Expresión DAX:**
-
-  ```DAX
-  var Ingresos = 
-      CALCULATE(
-          SUM(&#39;Transversal FACT_FINANCIERA&#39;[INGRESOS]),
-          &#39;Transversal FACT_FINANCIERA&#39;[ACTIVIDAD] = &quot;EJECUCION_CONTABLE&quot;
-      )
-
-  return IF(ISBLANK(Ingresos), 0, Ingresos)
-  ```
-
-* **Formato:** Numérico.
+<span class="nb">return</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>Ingresos), 0, Ingresos)
 </code></pre></div>
-
+<ul>
+<li><strong>Formato:</strong> Numérico.</li>
+</ul>
 </li>
 <li>
 <h4 id="ingresos-presupuestados"><strong>Ingresos Presupuestados</strong><a class="headerlink" href="#ingresos-presupuestados" title="Permanent link">&para;</a></h4>
@@ -5429,36 +5433,70 @@
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nb">VAR</span><span class="w"> </span>AfiliadosCalculo = 
-<span class="w">    </span><span class="nf">CALCULATE</span><span class="p">(</span>
-<span class="w">        </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
-<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="w"> </span>&lt;&gt; -1,
-<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span>
-<span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span><span class="w"> </span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="w"> </span>&lt;&gt; -1,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span>
+<span class="w">  </span><span class="p">)</span>
 
 <span class="nb">VAR</span><span class="w"> </span>AfiliadosCalculoSinFiltros = 
-<span class="w">    </span><span class="nf">CALCULATE</span><span class="p">(</span>
-<span class="w">        </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
-<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="w"> </span>&lt;&gt; -1,
-<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span><span class="w"> </span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="w"> </span>&lt;&gt; -1,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
 
 <span class="nb">VAR</span><span class="w"> </span>AfiliadosPotencialTecnica =
-<span class="w">    </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">  </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span><span class="w"> </span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="w"> </span>&lt;&gt; -1,
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[Mayor_igual_18_Anios]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SI&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[Menor_60_Anios]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SI&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
+
+<span class="nb">VAR</span><span class="w"> </span>AfiliadosPotencialProteccion =
+<span class="w">  </span><span class="nf">SWITCH</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">TRUE</span><span class="p">(),</span>
+<span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Proteccion DIM_PROGRAMA&#39;[ID_PROGRAMA]</span><span class="p">)</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">},</span>
+<span class="w">      </span><span class="nf">CALCULATE</span><span class="p">(</span>
 <span class="w">        </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
 <span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="w"> </span>&lt;&gt; -1,
 <span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[Mayor_igual_18_Anios]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SI&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[Menor_60_Anios]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SI&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[Mayor_igual_60_Anios]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SI&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Proteccion DIM_PROGRAMA&#39;</span><span class="p">)</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Proteccion DIM_PROGRAMA&#39;[ID_PROGRAMA]</span><span class="p">)</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">},</span>
+<span class="w">      </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">        </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="w"> </span>&lt;&gt; -1,
+<span class="w">        </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nf">VALUE</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[DISCAPACIDAD]</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Proteccion DIM_PROGRAMA&#39;</span><span class="p">)</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Proteccion DIM_PROGRAMA&#39;[ID_PROGRAMA]</span><span class="p">)</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">},</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">      </span><span class="nf">DISTINCTCOUNT</span><span class="p">(</span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[PARTNER]</span><span class="p">),</span>
+<span class="w">      </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ID_AFILIADO]</span><span class="w"> </span>&lt;&gt; -1,
+<span class="w">      </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[ACTIVIDAD]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AFILIACION&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="na">&#39;Transversal FACT_ACTIVIDADES&#39;[Potencial_Proteccion]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SI&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;</span><span class="p">),</span>
+<span class="w">      </span><span class="nf">REMOVEFILTERS</span><span class="p">(</span><span class="na">&#39;Proteccion DIM_PROGRAMA&#39;</span><span class="p">)</span>
 <span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
 
-<span class="nb">VAR</span><span class="w"> </span>dev = SWITCH(
+<span class="nb">VAR</span><span class="w"> </span>dev = 
+<span class="w">  </span><span class="nf">SWITCH</span><span class="p">(</span>
 <span class="w">    </span><span class="nf">TRUE</span><span class="p">(),</span>
 <span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="p">)</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
 <span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="p">)</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">},</span><span class="w"> </span>AfiliadosPotencialTecnica,
+<span class="w">    </span><span class="nf">SELECTEDVALUE</span><span class="p">(</span><span class="na">&#39;Transversal DIM_UNIDAD&#39;[ID_UNIDAD]</span><span class="p">)</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="p">{</span><span class="m">4</span><span class="p">},</span><span class="w"> </span>AfiliadosPotencialProteccion,
 <span class="w">    </span>AfiliadosCalculo
-<span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
 
 <span class="nb">RETURN</span><span class="w"> </span><span class="nf">IF</span><span class="p">(</span><span class="nf">ISBLANK</span><span class="p">(</span>dev), 0, dev)
 </code></pre></div>
